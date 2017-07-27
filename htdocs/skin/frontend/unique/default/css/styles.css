@@ -1397,8 +1397,8 @@ header#header .header-bg {position: absolute;}
 header#header {padding:0; margin: 0; background-color: #fff;}
 header#header > .container_12{background-color:#FFF;}
 header#header .header-top-left {margin-left: -20px; padding-left: 20px; text-align: center; padding-top: 1.5em; position: static;}
-header#header .header-top-right {border-left: solid 1px #eee; z-index: 1000;}
-header#header .header-top .first-line {border-bottom: solid 1px #eee; padding: .75em 20px; margin-bottom: 1.5em; margin-right: -39px;}
+header#header .header-top-right {z-index: 1000;}
+header#header .header-top .first-line {padding: .75em 20px; margin-bottom: 1.5em; margin-right: -39px;}
 header#header .header-top .second-line {margin-right: -40px; padding: 0 20px 1.5em;}
 header#header .header-phones,
 header#header .welcome-msg {float: left; font-size: 1em; line-height: 1.5em; color: #000505; margin-top: 2px;}
