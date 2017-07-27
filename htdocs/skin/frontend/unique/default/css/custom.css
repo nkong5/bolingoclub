@@ -276,7 +276,7 @@ ul.social-links li a:hover:before,
 #footer .contact-info li i:hover {background-color: #A36F53;}
 #footer .block-tags li a {border-color: #A36F53;}
 
-.nav-container a.level-top em, /*DCS*/ .nav-container a.level-top span {color: #FFFFFF;}
+.nav-container a.level-top em, /*DCS*/ .nav-container a.level-top span {color: #00aeef;}
 ul.social-links li a:hover i,
 #footer ul.social-links li a:hover i {background-color: #A36F53; border-color: #A36F53;}
 .nav-container a.level-top:hover em,
