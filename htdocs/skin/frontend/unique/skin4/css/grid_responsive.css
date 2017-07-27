@@ -3319,7 +3319,7 @@
 	body .content-text-banners .banner-content.skin-4 h3,
 	body .content-text-banners .banner-content.skin-3 h3 {font-size: 40px; line-height: .75em;}
 	body .text-banner .text-banner-content > div {right: auto;}
-	body .text-banner .text-banner-content h2 {width: 50%;}
+	body .text-banner .text-banner-content h2 {width: 50%:}
 	.map-container .map-block.left-top{top: 10px; left: 10px;}
 	.map-container .map-block.right-top{top: 10px; right: 10px;}
 	.map-container .map-block.left-bottom{bottom: 10px; left: 10px;}
