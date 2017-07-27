@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <Sisu_Checkout>
+            <version>1.2.0</version>
+        </Sisu_Checkout>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <sisu_checkout>
+                    <file>sisu-checkout.xml</file>
+                </sisu_checkout>
+            </updates>
+        </layout>
+        <events>
+          <controller_front_send_response_before>
+            <observers>
+              <sisu_checkout_category_export>
+                <type>singleton</type>
+                <class>Sisu_Checkout_Helper_Data</class>
+                <method>controllerFrontSendResponseBefore</method>
+              </sisu_checkout_category_export>
+            </observers>
+          </controller_front_send_response_before>
+        </events>
+    </frontend>
+    <global>
+      <helpers>
+        <sisu_checkout>
+          <class>Sisu_Checkout_Helper</class>
+        </sisu_checkout>
+      </helpers>
+    </global>
+    <!-- Default values for admin settings -->
+    <default>
+      <sisu_checkout>
+        <settings>
+          <partner_id></partner_id>
+          <shop_id></shop_id>
+          <allow_category_export>1</allow_category_export>
+        </settings>
+      </sisu_checkout>
+    </default>
+</config>
+

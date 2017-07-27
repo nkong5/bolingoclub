@@ -1,0 +1,17 @@
+<?php if ($countryTaxes = $this->getCountryTaxes()):?>
+    <p>
+    <strong>Vorschau: Länder Steuerberechnung</strong>
+    </p>
+
+    <p>
+    <select id="list_country_tax">
+        <?php foreach ($countryTaxes as $key => $value) : ?>
+            <option value="<?php echo $value['rate'] ?>"><?php echo $value['country_name']?></option>
+        <?php endforeach; ?>
+    </select>
+    </p>
+
+    <p>
+    Steuer <span id="country_tax"></span> % (Gesamtsumme unverändert)
+    </p>
+<?php endif; ?>

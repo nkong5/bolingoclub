@@ -1,0 +1,18 @@
+<config>    
+    <modules>
+        <Diecrema_News>
+            <version>0.1.0</version>
+        </Diecrema_News>
+    </modules>
+    <frontend>
+	<routers>
+           <news>
+	          <use>standard</use>
+    		      <args>
+	        	      <module>Diecrema_News</module>
+	                  <frontName>news</frontName>
+         		  </args>
+           </news>
+    </routers>
+    </frontend>
+</config> 

@@ -1,0 +1,26 @@
+
+<div  id="searchArea" class="textAlignRight">
+<form id="search_mini_form" action="<?php echo $this->helper('catalogsearch')->getResultUrl() ?>" method="get">
+    <div class="form-search floatRight bgrndBrown">
+        <input id="search" type="text" 
+        	name="<?php echo $this->helper('catalogsearch')->getQueryParamName() ?>" 
+        	value="<?php echo $this->helper('catalogsearch')->getEscapedQueryText() ?>" 
+        	class="textInputSearch h20" />
+        <button type="submit" title="<?php echo $this->__('Suchen') ?>" class="btnSearch">
+        	<span><span><?php echo $this->__('Suchen') ?></span></span>
+        </button>
+        <div id="search_autocomplete" class="btnSearch search-autocomplete"></div>
+        <script type="text/javascript">
+        //<![CDATA[
+            var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo $this->__('Produkt suchen...') ?>');
+            searchForm.initAutocomplete('<?php echo $this->helper('catalogsearch')->getSuggestUrl() ?>', 'search_autocomplete');
+        //]]>
+        </script>
+    </div>
+    
+</form>
+</div>
+<div class="clear"></div>
+<div class="textAlignRight">
+	<a href="<?php echo $this->getUrl('catalogsearch/advanced/') ;?>" >Erweiterte Suche</a>
+</div>

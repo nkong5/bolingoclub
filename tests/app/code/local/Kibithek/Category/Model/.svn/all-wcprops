@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/164/trunk/tests/app/code/local/Kibithek/Category/Model
+END
+GenerateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/kibithek/!svn/ver/730/trunk/tests/app/code/local/Kibithek/Category/Model/GenerateTest.php
+END
+ObserverTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/kibithek/!svn/ver/164/trunk/tests/app/code/local/Kibithek/Category/Model/ObserverTest.php
+END

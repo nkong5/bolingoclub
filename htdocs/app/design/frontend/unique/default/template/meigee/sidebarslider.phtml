@@ -1,0 +1,99 @@
+<?php 
+/*****/
+$meigee_unique_sidebarslider = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_sidebar');
+$sidebarSliderConfig = $meigee_unique_sidebarslider['sidebar_slider'];
+$sidebarSlidesList = explode(",", str_replace(" ", "", $sidebarSliderConfig ['slides']));
+if (($sidebarSliderConfig['status'] == 1)) : 
+/*****/
+?>
+<div class="sidebar-slider">
+	<div class="container">
+		<div class="iosSlider">
+			<div class="slider">
+				<?php
+					foreach ($sidebarSlidesList as $slideID) {
+						$html = '';
+						$html .= '<div class="item" id="item_' . $slideID . '">';
+						$html .= $this->getLayout()->createBlock('cms/block')->setBlockId($slideID)->toHtml();
+						$html .= '</div>';
+						echo $html;
+					}
+				?>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery(window).load(function(){
+		slider_items_length = jQuery('.sidebar-slider .iosSlider .item').size();
+		if(slider_items_length > 1){
+			var slider_bullets = '<ul class="sidebarSlideSelectors">';
+			for(i=1; i<=slider_items_length; i++){
+				if(i==1){selected_item = ' selected'}else{selected_item = ''}
+				slider_bullets += '<li class="button-item' + selected_item + '" id="item' + i + '">' + i + '</li>'
+			}
+			slider_bullets += '</ul>';
+			jQuery('.sidebar-slider .iosSlider').append(slider_bullets);
+		}
+		function sidebar_slider_set_height(){
+			if(jQuery('.sidebar-slider .iosSlider').length){
+				var sidebar_slider_height = 0;
+				var sidebar_slider_selectors_height = jQuery('.sidebar-slider .iosSlider .sidebarSlideSelectors').outerHeight();
+				jQuery('.sidebar-slider .iosSlider .slider .item').each(function(){
+					if(jQuery(this).height() > sidebar_slider_height){
+						sidebar_slider_height = jQuery(this).height();
+					}
+				});
+				jQuery('.sidebar-slider .iosSlider').css({
+					'min-height': sidebar_slider_height + sidebar_slider_selectors_height,
+					'max-height': sidebar_slider_height + sidebar_slider_selectors_height
+				});
+				jQuery('.sidebar-slider .iosSlider .sidebarSlideSelectors').css('top', sidebar_slider_height);
+			}
+		 }
+		//Slider Ratio
+		var sidebarSlider = jQuery('.sidebar-slider');
+		var sidebarSlider_img =  jQuery('.sidebar-slider .iosSlider .slider .item img:first');
+		var sidebarSliderHeight = sidebarSlider_img.height();
+		if(sidebarSlider_img.parent('a')){
+			sidebarSliderHeight = sidebarSlider_img.parent('a').outerHeight();
+		}
+		/* var FSRatio = Math.round((sidebarSliderHeight/sidebarSlider_img.width())*100);
+		sidebarSlider.css({
+			'padding-bottom': FSRatio + '%'
+		}); */
+		jQuery('.sidebar-slider .iosSlider').iosSlider({
+			responsiveSlideWidth: true,
+			snapToChildren: true,
+			desktopClickDrag: true,
+			infiniteSlider: false,
+			onSlideChange: sidebarSlideChange,
+			navSlideSelector: '.sidebar-slider .sidebarSlideSelectors .button-item',
+			onSliderResize: sidebarSliderResize,
+			<?php if(isset($sidebarSliderConfig ['autoSlide'])): ?>autoSlide: <?php echo $sidebarSliderConfig ['autoSlide']; ?><?php endif; ?>
+			<?php if(isset($sidebarSliderConfig ['autoSlideTimer'])): ?>, autoSlideTimer: <?php echo $sidebarSliderConfig ['autoSlideTimer']; ?><?php endif; ?>
+			<?php if(isset($sidebarSliderConfig ['autoSlideTransTimer'])): ?>, autoSlideTransTimer: <?php echo $sidebarSliderConfig ['autoSlideTransTimer']; endif; ?>
+			<?php if(isset($sidebarSliderConfig ['desktopClickDrag'])): ?>, desktopClickDrag: <?php echo $sidebarSliderConfig ['desktopClickDrag']; endif; ?>
+		});
+		function sidebarSliderLoaded(args) {
+			sidebarSlideChange(args);
+		}
+		function sidebarSlideChange(args) {
+			/* indicator */
+ 			jQuery('.sidebar-slider .sidebarSlideSelectors .button-item').removeClass('selected');
+			jQuery('.sidebar-slider .sidebarSlideSelectors .button-item:eq(' + (args.currentSlideNumber-1) + ')').addClass('selected'); 
+		} 
+		jQuery(window).on('orientationchange', function(e){
+			setTimeout(function(){
+				jQuery('.sidebar-slider .iosSlider').iosSlider('update');
+				sidebar_slider_set_height();
+			}, 1500);
+		});
+		function sidebarSliderResize(){
+			sidebar_slider_set_height();
+		}
+		sidebar_slider_set_height();
+		
+	});
+</script>
+<?php endif;

@@ -1,0 +1,111 @@
+<?php // Social Links
+$options = $this->getBrandsOptions();
+$brands = $this->getBrands();
+$brandsArr = explode(",", $brands);
+$randId = $this->getWidgetId();
+$buttonsPosition = $this->getButtonsPosition();
+if (count($brandsArr)) {
+?>
+	<div class="brands-wrapper">
+	<?php if ($options['viewtype'] == "slider"): ?>
+		<div class="brands slider-container">
+		<div id="brand-slider-<?php echo $randId; ?>">
+			<div class="widget-slider">
+				<ul class="brands">
+    <?php else: ?>
+    	<ul class="brands">
+	<?php endif; ?>
+	<?php
+		foreach($brandsArr as $value) {
+			$values = explode("=", $value);
+			$html = '<li>';
+			if ($options['brandsearch']) {
+				$html .= '<a ' . ($options['target'] ? 'target="_blank"' : false) . ' href="' . Mage::getBaseUrl() . 'catalogsearch/advanced/result/?name=&manufacturer=' . $values[0] . '">';
+			}
+			$html .= '<img alt="" src="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'brands/' . $values[1] . $options['imagesformat'] . '" ' . (Mage::getStoreConfig('meigee_unique_general/retina/status') ? 'data-srcX2="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'brands/' . $values[1] . '@x2' . $options['imagesformat'] . '"' : false) . ' />';
+			if ($options['brandsearch']) {
+				$html .= '</a>';
+			}
+			$html .= '</li>';
+			echo $html;
+		}
+	?>
+	<?php if ($options['viewtype'] == "slider"): ?>
+				</ul>
+			</div>
+			<?php if($buttonsPosition == 1): ?>
+				<div class="widget-slider-buttons">
+			<?php endif; ?>
+				<div class = "next"><i class="fa fa-angle-right"></i></div>
+				<div class = "prev unselectable"><i class="fa fa-angle-left"></i></div>
+			<?php if($buttonsPosition == 1): ?>
+				</div>
+			<?php endif; ?>
+		</div>
+		</div>
+		<script type="text/javascript">
+		jQuery(window).load(function(){
+			jQuery('brands.slider-container').each(function(){
+				if(!jQuery(this).prev().hasClass('page-title')){
+					jQuery(this).addClass('no-title');
+				}
+			});
+			function sliderLauncher<?php echo $randId; ?>(){
+				jQuery('#brand-slider-<?php echo $randId; ?> .widget-slider').iosSlider({
+					responsiveSlideWidth: true,
+					snapToChildren: true,
+					desktopClickDrag: true,
+					infiniteSlider: false,
+					navNextSelector: '#brand-slider-<?php echo $randId; ?> .next',
+					navPrevSelector: '#brand-slider-<?php echo $randId; ?> .prev'
+				});
+			}
+			function brands_slider_height_<?php echo $randId; ?>(){
+				setTimeout(function(){
+					var brands_slider_height = 0;
+					jQuery('#brand-slider-<?php echo $randId; ?> .brands li').each(function(){
+						if(jQuery(this).height() > brands_slider_height){
+							brands_slider_height = jQuery(this).height();
+						}
+					})
+					jQuery('#brand-slider-<?php echo $randId; ?> .widget-slider').css({
+						'min-height': (brands_slider_height+2),
+						'height': 'auto'
+					});
+					
+				}, 1000);
+			}
+			brands_slider_height_<?php echo $randId; ?>();
+			function sliderButtonsPosition_<?php echo $randId; ?>() {
+				if(jQuery('#brand-slider-<?php echo $randId; ?> .widget-slider-buttons').length){
+					var maxHeight = 0;
+					jQuery('#brand-slider-<?php echo $randId; ?> .brands li img').each(function() {
+						if (jQuery(this).height() > maxHeight){
+							maxHeight = jQuery(this).height();
+						}
+						jQuery('#brand-slider-<?php echo $randId; ?> .next, #brand-slider-<?php echo $randId; ?> .prev').css('top', (maxHeight/2));
+					});
+				}
+			}
+			sliderButtonsPosition_<?php echo $randId; ?>();
+			jQuery(window).resize(function(){brands_slider_height_<?php echo $randId; ?>(); sliderButtonsPosition_<?php echo $randId; ?>();});
+			
+			/* Slider Start */
+			slidesWidth = 0;
+			jQuery('#brand-slider-<?php echo $randId; ?> .brands li').each(function(){
+				slidesWidth += jQuery(this).outerWidth(true);
+			});
+			
+			if(slidesWidth > 1252){
+				sliderLauncher<?php echo $randId; ?>();
+			}else{
+				jQuery('#brand-slider-<?php echo $randId; ?>').addClass('slider-off');
+			}
+		 });
+		</script>
+	<?php else: ?>
+		</ul>
+	<?php endif; ?>
+	</div>
+	<?php
+}

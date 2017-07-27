@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Diecrema_Structure>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Diecrema_Structure>
+    </modules>
+</config>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Runner
+END
+Version.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Runner/Version.php
+END
+TestSuiteLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Runner/TestSuiteLoader.php
+END
+StandardTestSuiteLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Runner/StandardTestSuiteLoader.php
+END
+BaseTestRunner.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Runner/BaseTestRunner.php
+END

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Meigee_MeigeewidgetsUnique>
+			<version>0.0.1</version>
+		</Meigee_MeigeewidgetsUnique>
+	</modules>
+	<global>
+		<helpers>
+			<meigeewidgetsunique>
+				<class>Meigee_MeigeewidgetsUnique_Helper</class>
+			</meigeewidgetsunique>
+		</helpers>
+		<blocks>
+			 <meigeewidgetsunique>
+				<class>Meigee_MeigeewidgetsUnique_Block</class>
+			 </meigeewidgetsunique>
+		</blocks>
+		<models>
+			<!-- ... -->
+			<meigeewidgetsunique>
+				<class>Meigee_MeigeewidgetsUnique_Model</class>
+			</meigeewidgetsunique>   
+			<!-- ... -->
+		</models>
+	</global>
+	<!---->
+	<frontend>
+		<layout>
+			<updates>
+				<meigeewidgetsunique>
+					<file>meigee/widgetoptions.xml</file>
+				</meigeewidgetsunique>
+			</updates>
+		</layout>
+	</frontend>
+</config>

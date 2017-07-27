@@ -1,0 +1,109 @@
+<?php
+$arrFeaturedProduct = $this->getFeaturedProducts();
+if(count($arrFeaturedProduct)):
+?>
+<!-- New area -->
+<div id="newArea" class="clear" >
+	<div class="w864 pLeft48">
+		<div id="newBoxHead">
+			<div class="newBoxTab bgrndCoffeeBrown">
+				<h3 class="floatLeft white f14">Neuigkeiten</h3>
+				<img  src="<?php echo $this->getSkinUrl('images/star.png')?>"/>
+			</div>
+		</div>
+		<div id="newBoxBody" class="bgrndCoffeeBrown">
+			<div id="newBoxContent">
+				<?php
+				$intCounter = 0;
+				foreach( $arrFeaturedProduct as $objProduct ):
+
+				    // TODO also show bottomline of second to the last
+				    // in case the overall 'count' is odd
+					$strClasses = '';
+					if( $intCounter < count($arrFeaturedProduct)-2 ){
+					    $strClasses .= ' bgBottomLine';
+					}
+
+					if (!($intCounter % 2)) $strClasses .= ' clearLeft';
+					?>
+					<div class="newBoxItemContainer <?php echo $strClasses; ?>">
+						<div class="newBoxImageContainer">
+						<a href="<?php echo $objProduct->getProductUrl(); ?>" title="<?php echo $this->stripTags($this->getImageLabel($objProduct, 'small_image'), null, true) ?>" ><img src="<?php echo $this->helper('catalog/image')->init($objProduct, 'small_image')->resize(100, 125); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($objProduct, 'small_image'), null, true) ?>" /></a>
+						</div>
+						<div class="newBoxTextContainer">
+							<p><a href="<?php echo $objProduct->getProductUrl(); ?>" ><?php echo $objProduct->getName(); ?></a></p>
+							<?php echo $this->getPriceHtml($objProduct, false); ?>
+
+						    <?php //TODO isSaleable() seems not to be available in this template.
+						    // make it available here
+						     //if($objProduct->isSaleable()): ?>
+							<p class="cart">
+							    <a href="<?php echo $objProduct->getProductUrl(); ?>" class="btnBrown"><?php echo $this->__('Show') ?></a>
+								<?php /* No add to cart
+                            	<a href="#" class="btnBrown" onclick="setLocation('<?php echo $this->getAddToCartUrl($objProduct) ?>')"><?php echo $this->__('Add to Cart') ?></a>
+								*/ ?>
+							</p>
+                            <?php //endif; ?>
+
+							<?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                <p><a href="<?php echo $this->helper('wishlist')->getAddUrl($objProduct) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></p>
+                            <?php endif; ?>
+						</div>
+					</div>
+					<?php $intCounter++; ?>
+				<?php  endforeach; ?>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- End: New area -->
+<?php endif; ?>
+
+<?php
+//$block = $this->getLayout()->createBlock('cms/block')->load('intro_text');
+$block = Mage::getModel('cms/block')->load('intro_text');
+?>
+
+<div class="diecrema_description">
+    <div class="mTop24 overflowHidden clearBoth">
+    	<div class="diecrema_description_head">
+    	    <h1 class="f14 white">
+                <?= $block->getTitle(); ?>
+    	    </h1>
+    	</div>
+    </div>
+    <div class="diecrema_description_body">
+    	<div class="diecrema_description_box">
+        <?=$block->getContent()?>
+    	</div>
+    </div>
+
+    <div>
+    <p class="gray1 pTop12 f10">Alle Preise inkl. MwSt und zzgl.
+  		<a href="<?=$this->getUrl('liefer-und-versandkosten')?>">
+        		Versandkosten</a>.
+	</p>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('.diecrema_description_mehr').hide();
+
+	jQuery(".more").click(function(){
+		if (jQuery(this).html() == 'mehr...') {
+			jQuery('.diecrema_description_mehr').show(100);
+			jQuery(this).html('weniger...');
+		}else{
+			jQuery('.diecrema_description_mehr').hide();
+			jQuery(this).html('mehr...');
+		}
+
+		return false;
+	});
+});
+</script>

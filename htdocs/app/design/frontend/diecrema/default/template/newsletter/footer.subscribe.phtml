@@ -1,0 +1,55 @@
+<div id="newsletterBox" class="footerColumn">
+    <h5 class="f16"><?php echo $this->__('Newsletter') ?></h5>
+	<form action="<?php echo $this->getUrl('news/subscribe/new'); ?>" method="post" id="newsletter-validate-detail">
+    	<p>
+    		<input type="text" name="email" id="newsletter" 
+    			title="<?php echo $this->__('Sign up for our newsletter') ?>" 
+    			class="input-text required-entry validate-email w216" />
+    	</p>
+    	
+    	<div class="floatLeft">
+    		<input id="acceptNewsletterConditionId" type="checkbox" value="1" 
+    			name="acceptNewsletterCondition" />
+    	</div>
+    	<div class="floatLeft brown" style="width: 192px; margin-left: 6px; ">
+    		 <?php echo $this->__('I want to subscribe to the newsletter') ?>
+    	</div>
+    	<div class="clear"></div>
+    	<p><button id="subscribeNewsletter" type="submit" title="<?php echo $this->__('Subscribe') ?>" class="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button></p>
+		<div id="subscriptionFeedback"></div>
+	</form>
+	
+	 <script type="text/javascript">
+    //<![CDATA[
+        //var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+		jQuery(document).ready(function(){
+			
+			jQuery('#subscribeNewsletter').click(function(){
+
+				strEmail = jQuery('#newsletter').val(); 
+				strParam = 'email='+strEmail; 
+				if( jQuery('#acceptNewsletterConditionId').attr('checked') ){
+					strParam+='&conditionsAccepted=1'; 
+				}
+				
+            	jQuery.ajax({
+            	  url: "<?php echo $this->getUrl('news/subscribe/new'); ?>",
+				  data: strParam,
+				  type: "post",
+				  dataType: 'json',
+            	  success: function( data ){
+                	if(data.error){
+                		jQuery('#subscriptionFeedback').attr('class','errorFeedback');
+                	}	
+                	else{
+                		jQuery('#subscriptionFeedback').attr('class','successFeedback'); 
+                	}
+            		jQuery('#subscriptionFeedback').html( data.message );
+            	  }
+            	});
+            	return false; 
+           	});
+		});
+    //]]>
+    </script>
+</div>

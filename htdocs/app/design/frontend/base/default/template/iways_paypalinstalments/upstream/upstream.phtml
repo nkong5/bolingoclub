@@ -1,0 +1,243 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/** @var $this Iways_PaypalInstalments_Block_Upstream */
+if ($this->isUpstreamVisible()) { ?>
+    <div class="paypal-instalments-info-wrapper" <?php echo ($this->getPageType() == 'payment') ? 'id="payment_form_iways_paypalinstalments" style="display:none;"' : ''; ?>>
+        <?php // If price is not enough for financing
+        if (!$this->isFinanceable()) : ?>
+            <?php echo Mage::helper('iways_paypalinstalments')->__("Finanzierung verfügbar ab 99€ bis 5.000€ Warenkorbwert"); ?>
+        <?php // Price is enough for financing
+        else:
+            $price = $this->getCurrentPrice();
+            $qualifyingFinancingOptions = $this->getQualifyingFinancingOptions();
+            $numberOfOptions = sizeof($qualifyingFinancingOptions);
+
+            if ($numberOfOptions > 0) :
+                // Get financing option with minimum monthly payment
+                $minimumPaymentOption = $qualifyingFinancingOptions[$numberOfOptions - 1];
+                // If calculated values should be visible
+                if ($this->isCalculatedValueVisible()) :
+                    if ($minimumPaymentOption->credit_financing->apr == 0) : ?>
+                        <?php echo Mage::helper('iways_paypalinstalments')->__("Finanzierung ab %s€ im Monat möglich",
+                            $minimumPaymentOption->monthly_payment->value); ?>
+                        <br/>
+                        <a href="javascript:paypalInstalmentsOverlay.show();">
+                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                "Informationen zu möglichen Raten"
+                            ); ?></a>
+                    <?php else : ?>
+                        <p class="title text-left">
+                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                "Finanzierung ab %s€ in %s monatlichen Raten mit Ratenzahlung Powered by PayPal",
+                                number_format($minimumPaymentOption->monthly_payment->value, 2, ",", "."),
+                                $minimumPaymentOption->credit_financing->term
+                            ); ?>
+                        </p>
+                        <div class="small-font text-left">
+                            <p>
+                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                    "Repräsentatives Beispiel gem. § 6a PAngV:"
+                                ); ?>
+                            </p>
+                            <table class="indent">
+                                <tbody>
+                                <tr>
+                                    <td><?php echo Mage::helper('iways_paypalinstalments')->__("Nettodarlehensbetrag:"); ?></td>
+                                    <td><?php echo number_format($price, 2, ",", "."); ?>€</td>
+                                </tr>
+                                <tr>
+                                    <td><?php echo Mage::helper('iways_paypalinstalments')->__('fester Sollzinssatz:'); ?></td>
+                                    <td><?php echo number_format($minimumPaymentOption->credit_financing->nominal_rate,
+                                            2, ",", "."); ?>%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><?php echo Mage::helper('iways_paypalinstalments')->__('effekt. Jahreszins:'); ?></td>
+                                    <td><?php echo number_format($minimumPaymentOption->credit_financing->apr, 2, ",",
+                                            "."); ?>%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><?php echo Mage::helper('iways_paypalinstalments')->__('zu zahlender Gesamtbetrag:'); ?></td>
+                                    <td><?php echo number_format($minimumPaymentOption->total_cost->value, 2, ",",
+                                            "."); ?>€
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><?php echo $minimumPaymentOption->credit_financing->term . ' ' . Mage::helper('iways_paypalinstalments')->__('monatliche Raten in Höhe von je:'); ?></td>
+                                    <td><?php echo number_format($minimumPaymentOption->monthly_payment->value, 2, ",",
+                                            "."); ?>€
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                    "Darlehensgeber: %s",
+                                    Mage::getStoreConfig('payment/iways_paypalinstalments/lender')
+                                ); ?>
+                            </p>
+                            </p>
+                        </div>
+                        <p class="text-left">
+                            <a href="javascript:paypalInstalmentsOverlay.show();">
+                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                    "Informationen zu möglichen Raten"
+                                ); ?>
+                            </a>
+                        </p>
+                    <?php endif;
+
+                // If no calculated values should be visible
+                else : ?>
+                    <?php echo Mage::helper('iways_paypalinstalments')->__(
+                        "Sie können diesen %s auch finanzieren!",
+                        $this->getPageTypeExpression()
+                    ); ?>
+                    <br/>
+                    <a href="javascript:paypalInstalmentsOverlay.show();">
+                        <?php echo Mage::helper('iways_paypalinstalments')->__("Informationen zu möglichen Raten"); ?>
+                    </a>
+                <?php endif; ?>
+
+                <div class="paypal-instalments-overlay">
+                    <div class="paypal-instalments-overlay-close-button">
+                        <a href="javascript:paypalInstalmentsOverlay.hide()">×</a>
+                    </div>
+                    <div class="paypal-instalments-overlay-content">
+                        <img class="paypal-instalments-logo"
+                             src="<?php echo $this->getSkinUrl('images/Iways/PaypalInstalments/pp_credit-german_v_rgb.jpg'); ?>"/>
+                        <p style="font-size: larger; font-weight: bold;">
+                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                "Zahlen Sie bequem und einfach in monatlichen Raten"
+                            ); ?>
+                        </p>
+                        <p>
+                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                "Ihre Ratenzahlung und den passenden Finanzierungsplan können Sie im Rahmen des Bestellprozesses auswählen."
+                            ); ?><br/>
+                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                "Ihr Antrag erfolgt komplett online und wird in wenigen Schritten hier im Shop abgeschlossen."
+                            ); ?>
+                        </p>
+                        <p class="large-font"><?php echo Mage::helper('iways_paypalinstalments')->__("Nettodarlehensbetrag: %s€",
+                                $price); ?></p>
+
+                        <div class="paypal-instalments-overlay-options">
+                            <?php for ($i = 0; $i < $numberOfOptions; $i++) { ?>
+                                <?php $option = $qualifyingFinancingOptions[$i]; ?>
+                                <div class="paypal-instalments-overlay-option-col-1-<?php echo $numberOfOptions; ?>">
+                                    <div class="paypal-instalments-overlay-option-content">
+                                        <p><strong><?php echo Mage::helper('iways_paypalinstalments')->__("Plan %s",
+                                                    $i + 1); ?>
+                                                <?php
+                                                if ($i == $numberOfOptions - 1) {
+                                                    echo " *";
+                                                } ?></strong></p>
+                                        <p>
+                                        <div>
+                                        <p class="left-float">
+                                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                "%s monatliche Raten in Höhe von je",
+                                                $option->credit_financing->term
+                                            ); ?>
+                                        </p>
+                                        <p class="text-right">
+                                            <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                "<strong style=\"text-align: right\">%s€</strong>",
+                                                number_format($option->monthly_payment->value, 2, ",", ".")
+                                            ); ?>
+                                        </p>
+                                        </div>
+                                        <div class="small-font">
+                                            <p class="left-float">
+                                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                    "fester Sollzinssatz:"
+                                                ); ?>
+                                            </p>
+                                            <p class="text-right">
+                                                <?php echo number_format($option->credit_financing->nominal_rate, 2,
+                                                    ",", "."); ?>%
+                                            </p>
+                                        </div>
+                                        <div class="small-font">
+                                            <p class="left-float">
+                                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                    "effekt. Jahreszins:"
+                                                ); ?>
+                                            </p>
+                                            <p class="text-right">
+                                                <?php echo number_format($option->credit_financing->apr, 2, ",",
+                                                    "."); ?>%
+                                            </p>
+                                        </div>
+                                        <div class="small-font">
+                                            <p class="left-float">
+                                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                    "Zinsen:"
+                                                ); ?>
+                                            </p>
+                                            <p class="text-right">
+                                                <?php echo number_format($option->total_interest->value, 2, ",",
+                                                    "."); ?>€
+                                            </p>
+                                        </div>
+                                        <div class="small-font bold-font">
+                                            <p class="left-float">
+                                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                                    "Gesamtbetrag:"
+                                                ); ?>
+                                            </p>
+                                            <p class="text-right">
+                                                <?php echo number_format($option->total_cost->value, 2, ",", "."); ?>€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+
+                        <div class="paypal-instalments-overlay-footer">
+                            <p>
+                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                    "* Zugleich repräsentatives Beispiel gem. § 6a PAngV"
+                                ); ?>
+                            </p>
+                            <p>
+                                <?php echo Mage::helper('iways_paypalinstalments')->__(
+                                    "Darlehensgeber: %s",
+                                    Mage::getStoreConfig('payment/iways_paypalinstalments/lender')
+                                ); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            <?php endif;
+        endif; ?>
+
+    </div>
+<?php } ?>

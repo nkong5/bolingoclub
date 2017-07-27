@@ -1,0 +1,16 @@
+<config>    
+    <modules>
+        <Diecrema_Structure>
+            <version>0.1.0</version>
+        </Diecrema_Structure>
+    </modules>
+	<global>
+        <blocks>
+            <CatalogSearch>
+                <rewrite>
+                    <result>Diecrema_CatalogSearch_Block_Result</result>
+                </rewrite>
+            </CatalogSearch>
+        </blocks>
+    </global>
+</config> 

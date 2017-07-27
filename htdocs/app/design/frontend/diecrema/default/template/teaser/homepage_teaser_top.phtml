@@ -1,0 +1,166 @@
+<?php
+/****** Very important data for the display of home page ******/
+$data = Mage::helper('diecrema_startpage/pagecontent')->pagecontent();
+//echo '<pre>'.print_r($data, true).'</pre>';
+?>
+
+<script type="text/javascript">
+    //<![CDATA[
+		jQuery(document).ready(function(){
+			TeaserSwitcher.init();
+		});
+
+		var TeaserSwitcher = {
+		   arrImages: [],
+		   strActiveImageId: "",
+
+		   init:function() {
+				this.arrImages[0] = this.createImage(
+											'teaser_1',
+											'<?=$data['teaser_1_link']?>',
+                                            '<?=$data['teaser_1_large_above_txt']?>',
+                                            '<?=$data['teaser_1_large_below_txt']?>',
+											true);
+
+				this.arrImages[1] = this.createImage(
+											'teaser_2',
+                                            '<?=$data['teaser_2_link']?>',
+                                            '<?=$data['teaser_2_large_above_txt']?>',
+                                            '<?=$data['teaser_2_large_below_txt']?>',
+                    						false);
+
+				this.arrImages[2] = this.createImage(
+                    						'teaser_3',
+                                            '<?=$data['teaser_3_link']?>',
+                                            '<?=$data['teaser_3_large_above_txt']?>',
+                                            '<?=$data['teaser_3_large_below_txt']?>',
+                    						false);
+
+				this.initTimer();
+
+
+		   },
+
+		   setAsPoster: function( intContainerIndex ) {
+			   objImage = this.arrImages[intContainerIndex];
+
+			   //change poster-image-bg
+			   strImage = jQuery('#posterBox').css('background-image');
+			   strImage = strImage.replace( this.strActiveImageId, objImage.strImageId );
+			   jQuery('#posterBox').fadeOut("slow", function(){
+				   jQuery('#posterBox').css('background-image', strImage);
+				   jQuery('#posterBox').fadeIn("slow");
+
+				 //change title
+				   jQuery('#linkPosterBoxTitle').html(objImage.strProductTitle);
+
+				   //change price
+				   jQuery('#linkPosterBoxPrice').html(objImage.strProductPrice);
+
+				   //change url
+				   jQuery('#linkPosterBoxTitle').attr("href", objImage.strProductLink);
+				   jQuery('#linkPosterBoxPrice').attr("href", objImage.strProductLink);
+			    });
+		   },
+
+		   initTimer: function (){
+			   window.setTimeout(function() {
+				   intNextIndex = TeaserSwitcher.getNextIndex();
+				   TeaserSwitcher.setAsPoster(intNextIndex);
+				   TeaserSwitcher.activateIndex( intNextIndex );
+				   TeaserSwitcher.initTimer()
+				 }, 7000);
+		   },
+
+		   activateIndex: function( intNewIndex ){
+			   jQuery.each(this.arrImages, function( intIndex, objValue ){
+				   if( intNewIndex == intIndex ){
+					   TeaserSwitcher.strActiveImageId = objValue.strImageId;
+					   return false;
+				   }
+			   });
+		   },
+
+		   getNextIndex: function(){
+			   var intNextIndex;
+
+			   jQuery.each(this.arrImages, function( intIndex, objValue ){
+				   if(objValue.strImageId == TeaserSwitcher.strActiveImageId){
+					   if(intIndex < TeaserSwitcher.arrImages.length-1){
+						   intNextIndex = intIndex+1;
+						   return true;
+					   }
+					   else{
+						   intNextIndex = 0;
+						   return true;
+					   }
+				   }
+			   });
+			   return intNextIndex;
+		   },
+
+		   createImage: function( strImageId,
+				   				  strProductLink,
+				   				  strProductTitle,
+				   				  strProductPrice,
+				   				  bolIsActiveImageId  ) {
+			   objImage = new Object();
+			   objImage.strImageId = strImageId;
+			   objImage.strProductLink = strProductLink;
+			   objImage.strProductTitle = strProductTitle;
+			   objImage.strProductPrice = strProductPrice;
+
+			   if( bolIsActiveImageId ){
+			   		this.strActiveImageId = strImageId;
+			   }
+			   return objImage;
+		   },
+
+		}
+    //]]>
+</script>
+
+
+<div id="posterArea" style="background: #e6e6e6;" class="overflowHidden">
+      <div id="posterBox"
+      	style='float:left; background: url("<?=$this->getSkinUrl("images/teaser/{$data['teaser_1_large']}")?>")
+      	no-repeat left top;' >
+      	<div id="posterBoxHead"><h2 class="f22">
+      		<a id="linkPosterBoxTitle"
+      			href="<?=$data['teaser_1_link']?>">
+      			<?=$data['teaser_1_large_above_txt']?></a></h2></div>
+      	<div id="posterBoxFoot">
+      		<p class="textAlignCenter pBottom24">
+      			<span class="f16"><strong><a href="<?=$data['teaser_1_link']?>"
+      				id="linkPosterBoxPrice"><?=$data['teaser_1_large_below_txt']?></a></strong></span>
+      		</p>
+      	</div>
+      </div>
+      <div id="posterBoxGroup">
+      <div class="posterBoxSmall">
+          <div id="teaser_1_small" class="posterBoxImgBox"
+          	 style='background: url("<?=$this->getSkinUrl("images/teaser/{$data['teaser_1_small']}")?>") no-repeat center;'>
+          	 <a href="<?=$data['teaser_1_link']?>">
+          	<img id="teaser_1_small_text" src="<?=$this->getSkinUrl("images/teaser/{$data['teaser_1_small_txt']}")?>" />
+          	</a>
+          </div>
+      </div>
+      <div class="posterBoxSmall">
+          <div id="teaser_2_small" class="posterBoxImgBox"
+          	style='background: url("<?=$this->getSkinUrl("images/teaser/{$data['teaser_2_small']}")?>") no-repeat center;'>
+          	<a href="<?=$data['teaser_2_link']?>">
+          	<img id="teaser_2_small_text" src="<?=$this->getSkinUrl("images/teaser/{$data['teaser_2_small_txt']}")?>" />
+          	</a>
+          </div>
+      </div>
+      <div class="posterBoxSmall posterBoxSmallLast">
+          <div id="teaser_3_small" class="posterBoxImgBox"
+          	style='background: url("<?=$this->getSkinUrl("images/teaser/{$data['teaser_3_small']}")?>") no-repeat left top;'>
+          	<a href="<?=$data['teaser_3_link']?>">
+          	<img id="teaser_3_small_text" src="<?=$this->getSkinUrl("images/teaser/{$data['teaser_3_small_txt']}")?>" />
+          	</a>
+          </div>
+      </div>
+     </div>
+</div>
+<div class="h24"></div>

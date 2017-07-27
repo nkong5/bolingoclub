@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <nrapps_idealo translate="title" module="nrapps_idealo">
+                    <title>idealo Connect</title>
+                    <sort_order>-1</sort_order>
+                    <children>
+                        <attributes translate="title" module="nrapps_idealo">
+                            <title>Manage Attributes</title>
+                            <sort_order>40</sort_order>
+                            <action>adminhtml/idealo_attributes</action>
+                        </attributes>
+                        <settings translate="title" module="nrapps_idealo">
+                            <title>Settings</title>
+                            <sort_order>50</sort_order>
+                            <action>adminhtml/idealo_settings</action>
+                        </settings>
+                    </children>
+                </nrapps_idealo>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <nrapps_idealo translate="title">
+                                <title>idealo Connect</title>
+                                <sort_order>-1</sort_order>
+                                <children>
+                                    <attributes translate="title" module="nrapps_idealo">
+                                        <title>Manage Attributes</title>
+                                        <sort_order>40</sort_order>
+                                    </attributes>
+                                    <settings translate="title" module="nrapps_idealo">
+                                        <title>Settings</title>
+                                        <sort_order>50</sort_order>
+                                    </settings>
+                                </children>
+                            </nrapps_idealo>
+                            <config>
+                                <children>
+                                    <nrapps_idealo>
+                                        <title>idealo Connect</title>
+                                        <sort_order>100</sort_order>
+                                    </nrapps_idealo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

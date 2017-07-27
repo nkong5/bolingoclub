@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <startpage_index_index>
+        <reference name="content">
+            <block type="core/template" name="startpage" template="startpage/startpage.phtml" />
+        </reference>
+    </startpage_index_index>
+</layout>

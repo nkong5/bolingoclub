@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<root>
+    <cms>
+        <pages>
+            <item>
+                <title>Skin 2 Home Page</title>
+                <identifier>skin2_home</identifier>
+                <content><![CDATA[<hr class="indent-40 white-space" />
+<header class="widget-title">
+	<h2>New products</h2>
+</header>
+{{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/slider.phtml" products_amount="10" visible_products="4" product_name="1" price="1" add_to_cart="1" quickview="1" rating_stars="1" rating_cust_link="1" rating_add_review_link="1" widget_id="654"}}
+<div class="clear"></div> 
+<hr class="indent-28 white-space" />
+<div class="grid_3 alpha left-content">
+	<div class="indent">
+		{{block type="page/html" block_id="sidebar_slider_container" template="meigee/sidebarslider.phtml"}}
+		<hr class="indent-18 white-space" />
+		{{block type="newsletter/subscribe" block_id="content.newsletter" template="newsletter/content_subscribe.phtml"}}
+	</div>
+</div>
+<hr class="indent-18 white-space mobile" />
+<div class="grid_9 omega right-content">
+	<div class="content-text-banners">
+		<div class="banner">
+			<a href="#" title="Content Banner"><img src="{{media url="wysiwyg/sk2_content_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_content_banner_1@x2.jpg"}}" alt="" /></a>
+			<div class="banner-content skin-1">
+				<p>Premium offer</p>
+				<h3>Skate for life <span>Amazing</span> <strong>Skateboards</strong></h3>
+			</div>
+		</div>
+	</div>
+	<hr class="indent-28 white-space" />
+	<header class="widget-title">
+		<h2>New products</h2>
+	</header>
+    {{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/slider.phtml" products_amount="10" visible_products="3" product_name="1" price="1" add_to_cart="1" quickview="1" rating_stars="1" rating_cust_link="1" rating_add_review_link="1" widget_id="7495"}}
+</div>
+<div class="clear"></div>
+<hr class="indent-40 white-space" />
+<div class="content-text-banners">
+	<div class="banner grid_4 alpha">
+		<a href="#" title="Content Banner"><img src="{{media url="wysiwyg/sk2_content_banner_3.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_content_banner_3@x2.jpg"}}" alt="" /></a>
+		<div class="banner-content skin-2">
+			<p>Premium offer</p>
+			<h3>Winter collection -20% sale</h3>
+		</div>
+	</div>
+	<div class="banner grid_4">
+		<a href="#" title="Content Banner"><img src="{{media url="wysiwyg/sk2_content_banner_4.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_content_banner_4@x2.jpg"}}" alt="" /></a>
+		<div class="banner-content skin-2">
+			<p>Premium offer</p>
+			<h3>Sportage skooters German quality</h3>
+		</div>
+	</div>
+	<div class="banner grid_4 omega">
+		<a href="#" title="Content Banner"><img src="{{media url="wysiwyg/sk2_content_banner_5.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_content_banner_5@x2.jpg"}}" alt="" /></a>
+		<div class="banner-content skin-3">
+			<h2>Unique</h2>
+			<h3>Sportage skooters German quality</h3>
+			<p>Premium offer</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<hr class="indent-40 white-space" />
+{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+        </pages>
+		  <blocks>
+            <item>
+                <title>Unique Skin 2 Footer</title>
+                <identifier>unique_sk2_footer</identifier>
+                <content><![CDATA[<div class="container_12">
+	<div class="grid_12">
+		<div class="footer-top">
+			<div class="first-block">
+				<div class="left">
+					<div class="footer-logo">
+						<a href="#" title="Footer Logo" class="footer-logo"><img src="{{media url="wysiwyg/sk2_footer_logo.png"}}" data-srcX2="{{media url="wysiwyg/sk2_footer_logo@x2.png"}}" alt="" /></a>
+					</div>
+					<div class="footer-text">
+						Sharp look & Powerful fully responsive premium magento template with unlimited possibilities
+					</div>
+				</div>
+				<div class="right">
+					{{widget type="meigeewidgetsunique/sociallinks" twitter="http://twitter.com" rss="http://rss.com" facebook="http://facebook.com" googleplus="https://plus.google.com" linkedin="http://linkedin.com" pinterest="http://pinterest.com" template="meigee/meigeewidgetsunique/sociallinks.phtml"}}
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr class="indent-24 white-space" />
+			<div class="grid_3 alpha">
+				<div class="footer-block-title">
+					<h2>Accessories</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+				</ul>
+				<hr class="indent-24 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>T-Shirts</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+				</ul>
+				<hr class="indent-24 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>Shoes</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+				</ul>
+				<hr class="indent-24 white-space" />
+			</div>
+			<div class="grid_3 omega">
+				<div class="footer-block-title">
+					<h2>Apparel</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+				</ul>
+				<hr class="indent-24 white-space" />
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer-block">
+			<ul class="footer-links">
+				<li><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+				<li><a href="{{store direct_url="customer-service"}}">Customer Service</a></li>
+				<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+				<li><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Site Map </a></li>
+				<li><a href="{{store direct_url="catalogsearch/term/popular"}}">Search Terms</a></li>
+				<li><a href="{{store direct_url="catalogsearch/advanced/"}}">Advanced Search</a></li>
+				<li><a href="{{store direct_url="sales/guest/form/"}}">Orders and Returns</a></li>
+				<li class="last"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+			</ul>
+			<hr class="indent-18 white-space" />
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer-bottom">
+	<div class="container_12">
+		<div class="grid_12">
+			<div class="left">
+				<a href="#" title="Footer Small Logo" class="footer-small-logo"><img src="{{media url="wysiwyg/sk2_footer_small_logo.png"}}" data-srcX2="{{media url="wysiwyg/sk2_footer_small_logo@x2.png"}}" alt="" /></a>
+			</div>
+			<div class="left">
+				<address>{{config path="design/footer/copyright"}}</address>
+			</div>
+			<div class="right">
+				{{block type="page/switch" block_id="store_switcher" template="page/switch/stores.phtml"}}
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Header 2 Boxed Slide With Banners 1</title>
+                <identifier>unique_sk2_header2_boxed_slide_with_banners_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_header2_boxed_slide_1_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_header2_boxed_slide_1_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_8 alpha omega">
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Header 2 Boxed Slide With Banners 2</title>
+                <identifier>unique_sk2_header2_boxed_slide_with_banners_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_header2_boxed_slide_2_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_header2_boxed_slide_2_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_8 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Header 2 Boxed Slide With Banners 3</title>
+                <identifier>unique_sk2_header2_boxed_slide_with_banners_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_header2_boxed_slide_3_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_header2_boxed_slide_3_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_8 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Header 2 Slider Banners</title>
+                <identifier>unique_sk2_header2_slider_banners</identifier>
+                <content><![CDATA[<div class="banner-1">
+	<a href="#"><img src="{{media url="wysiwyg/sk2_header2_slider_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_header2_slider_banner_1@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Perfect selection exclusive collections</h2>
+	</div>
+</div>
+<div class="banner-2">
+	<a href="#"><img src="{{media url="wysiwyg/sk2_header2_slider_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_header2_slider_banner_2@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Winter never sleep <span>Orangepoint</span></h2>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Original Footer Logo</title>
+                <identifier>unique_sk2_original_footer_logo</identifier>
+                <content><![CDATA[<a href="#" title="Footer Logo" class="footer-small-logo"><img src="{{media url="wysiwyg/sk2_footer_small_logo.png"}}" data-srcX2="{{media url="wysiwyg/sk2_footer_small_logo@x2.png"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Sidebar Slide 1</title>
+                <identifier>unique_sk2_sidebar_slide_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_sidebar_slide_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_sidebar_slide_1@x2.jpg"}}" alt="" /></a>
+<div class="slide-banner-content">
+	<h3>only in our shop</h3>
+	<h2>100%Cotton perfect quality</h2>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Sidebar Slide 2</title>
+                <identifier>unique_sk2_sidebar_slide_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_sidebar_slide_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_sidebar_slide_2@x2.jpg"}}" alt="" /></a>
+<div class="slide-banner-content">
+	<h3>only in our shop</h3>
+	<h2>100%Cotton perfect quality</h2>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Skin 2 Sidebar Slide 3</title>
+                <identifier>unique_sk2_sidebar_slide_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sk2_sidebar_slide_3.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_sidebar_slide_3@x2.jpg"}}" alt="" /></a>
+<div class="slide-banner-content">
+	<h3>only in our shop</h3>
+	<h2>100%Cotton perfect quality</h2>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+		</blocks>
+    </cms>
+</root>

@@ -1,0 +1,27 @@
+<?php
+$meigee_unique_general = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_general');
+$meigee_unique_skin_design = $meigee_unique_general['design']['skin_design'];
+$meigee_unique_design = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_design'.$meigee_unique_skin_design.'');
+$appearance = $meigee_unique_design['appearance'];
+$toTop = $meigee_unique_general['otheroptions']['totop'];
+
+/* Font Replacement */
+if ($appearance['font_main'] == 1): 
+	echo '<link href="//fonts.googleapis.com/css?family=' . str_replace(' ', '+', $appearance['gfontmain']) . ':200,300,400,500,600,700,800" rel="stylesheet" type="text/css">';
+endif;
+if ($appearance['font'] == 1): 
+	echo '<link href="//fonts.googleapis.com/css?family=' . str_replace(' ', '+', $appearance['gfont']) . ':200,300,400,500,600,700,800" rel="stylesheet" type="text/css">';
+endif;
+
+/* toTop */
+if ($toTop): ?>
+	<script type="text/javascript">
+		jQuery(window).load(function() {
+			if(!((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i)))){
+				jQuery().UItoTop({
+					text: "<?php echo $this->__('Top'); ?>"
+				});
+			}
+		});
+	</script>
+<?php endif;

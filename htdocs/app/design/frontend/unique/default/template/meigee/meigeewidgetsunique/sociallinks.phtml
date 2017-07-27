@@ -1,0 +1,128 @@
+<?php // Social Links
+$html = $this->getSocialLinks();
+
+$twitterCustColors = $this->getTwitterCustColors();
+$twitterBg = $this->getTwitterBg();
+$twitterColor = $this->getTwitterColor();
+$twitterBorder = $this->getTwitterBorder();
+
+$rssCustColors = $this->getRssCustColors();
+$rssBg = $this->getRssBg();
+$rssColor = $this->getRssColor();
+$rssBorder = $this->getRssBorder();
+
+$facebookCustColors = $this->getFacebookCustColors();
+$facebookBg = $this->getFacebookBg();
+$facebookColor = $this->getFacebookColor();
+$facebookBorder = $this->getFacebookBorder();
+
+$gPlusCustColors = $this->getGPlusCustColors();
+$gPlusBg = $this->getGPlusBg();
+$gPlusColor = $this->getGPlusColor();
+$gPlusBorder = $this->getGPlusBorder();
+
+$linkedinCustColors = $this->getLinkedinCustColors();
+$linkedinBg = $this->getLinkedinBg();
+$linkedinColor = $this->getLinkedinColor();
+$linkedinBorder = $this->getLinkedinBorder();
+
+$pinterestCustColors = $this->getPinterestCustColors();
+$pinterestBg = $this->getPinterestBg();
+$pinterestColor = $this->getPinterestColor();
+$pinterestBorder = $this->getPinterestBorder();
+
+$vimeoCustColors = $this->getVimeoCustColors();
+$vimeoBg = $this->getVimeoBg();
+$vimeoColor = $this->getVimeoColor();
+$vimeoBorder = $this->getVimeoBorder();
+
+$youtubeCustColors = $this->getYoutubeCustColors();
+$youtubeBg = $this->getYoutubeBg();
+$youtubeColor = $this->getYoutubeColor();
+$youtubeBorder = $this->getYoutubeBorder();
+
+$flickrCustColors = $this->getFlickrCustColors();
+$flickrBg = $this->getFlickrBg();
+$flickrColor = $this->getFlickrColor();
+$flickrBorder = $this->getFlickrBorder();
+
+$instagramCustColors = $this->getInstagramCustColors();
+$instagramBg = $this->getInstagramBg();
+$instagramColor = $this->getInstagramColor();
+$instagramBorder = $this->getInstagramBorder();
+
+
+
+if($twitterCustColors || $rssCustColors || $facebookCustColors || $gPlusCustColors || $linkedinCustColors || $pinterestCustColors || $vimeoCustColors || $youtubeCustColors || $flickrCustColors || $instagramCustColors) : 
+
+	echo '<ul class="social-links custom-colors">';
+			if (!empty($html['twitter'])) echo '<li>
+				<a class="twitter" href="'.$html['twitter'].'">
+					<i class="fa fa-twitter" style="background-color: #' . $twitterBg . '; color: #' . $twitterColor . '; border-color: #' . $twitterBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['rss'])) echo '<li>
+				<a class="rss" href="'.$html['rss'].'">
+					<i class="fa fa-rss" style="background-color: #' . $rssBg . '; color: #' . $rssColor . '; border-color: #' . $rssBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['facebook'])) echo '<li>
+				<a class="facebook" href="'.$html['facebook'].'">
+					<i class="fa fa-facebook" style="background-color: #' . $facebookBg . ';  color: #' . $facebookColor . '; border-color: #' . $facebookBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['googleplus'])) echo '<li>
+				<a class="googleplus" href="'.$html['googleplus'].'">
+					<i class="fa fa-google-plus" style="background-color: #' . $gPlusBg . ';  color: #' . $gPlusColor . '; border-color: #' . $gPlusBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['linkedin'])) echo '<li>
+				<a class="linkedin" href="'.$html['linkedin'].'">
+					<i class="fa fa-linkedin" style="background-color: #' . $linkedinBg . ';  color: #' . $linkedinColor . '; border-color: #' . $linkedinBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['pinterest'])) echo '<li>
+				<a class="pinterest" href="'.$html['pinterest'].'">
+					<i class="fa fa-pinterest" style="background-color: #' . $pinterestBg . ';  color: #' . $pinterestColor . '; border-color: #' . $pinterestBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['vimeo'])) echo '<li>
+				<a class="vimeo" href="'.$html['vimeo'].'">
+					<i class="fa fa-vimeo-square" style="background-color: #' . $vimeoBg . ';  color: #' . $vimeoColor . '; border-color: #' . $vimeoBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['youtube'])) echo '<li>
+				<a class="youtube" href="'.$html['youtube'].'">
+					<i class="fa fa-youtube" style="background-color: #' . $youtubeBg . ';  color: #' . $youtubeColor . '; border-color: #' . $youtubeBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['flickr'])) echo '<li>
+				<a class="flickr" href="'.$html['flickr'].'">
+					<i class="fa fa-flickr" style="background-color: #' . $flickrBg . ';  color: #' . $flickrColor . '; border-color: #' . $flickrBorder . ';"></i>
+				</a>
+			</li>';
+			if (!empty($html['instagram'])) echo '<li>
+				<a class="instagram" href="'.$html['instagram'].'">
+					<i class="fa fa-instagram" style="background-color: #' . $instagramBg . ';  color: #' . $instagramColor . '; border-color: #' . $instagramBorder . ';"></i>
+				</a>
+			</li>';
+	echo '</ul>';
+
+else :
+
+	echo '<ul class="social-links">';
+			if (!empty($html['twitter'])) echo '<li><a class="twitter" href="'.$html['twitter'].'"><i class="fa fa-twitter"></i></a></li>';
+			if (!empty($html['rss'])) echo '<li><a class="rss" href="'.$html['rss'].'"><i class="fa fa-rss"></i></a></li>';
+			if (!empty($html['facebook'])) echo '<li><a class="facebook" href="'.$html['facebook'].'"><i class="fa fa-facebook"></i></a></li>';
+			if (!empty($html['googleplus'])) echo '<li><a class="googleplus" href="'.$html['googleplus'].'"><i class="fa fa-google-plus"></i></a></li>';
+			if (!empty($html['linkedin'])) echo '<li><a class="linkedin" href="'.$html['linkedin'].'"><i class="fa fa-linkedin"></i></a></li>';
+			if (!empty($html['pinterest'])) echo '<li><a class="pinterest" href="'.$html['pinterest'].'"><i class="fa fa-pinterest"></i></a></li>';
+			if (!empty($html['vimeo'])) echo '<li><a class="vimeo" href="'.$html['vimeo'].'"><i class="fa fa-vimeo-square"></i></a></li>';
+			if (!empty($html['youtube'])) echo '<li><a class="youtube" href="'.$html['youtube'].'"><i class="fa fa-youtube"></i></a></li>';
+			if (!empty($html['flickr'])) echo '<li><a class="flickr" href="'.$html['flickr'].'"><i class="fa fa-flickr"></i></a></li>';
+			if (!empty($html['instagram'])) echo '<li><a class="instagram" href="'.$html['instagram'].'"><i class="fa fa-instagram"></i></a></li>';
+	echo '</ul>';
+
+endif;
+
+?>

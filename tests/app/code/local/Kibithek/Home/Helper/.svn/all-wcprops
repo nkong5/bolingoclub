@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/kibithek/!svn/ver/168/trunk/tests/app/code/local/Kibithek/Home/Helper
+END
+FilterAjaxTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kibithek/!svn/ver/156/trunk/tests/app/code/local/Kibithek/Home/Helper/FilterAjaxTest.php
+END
+DataTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/kibithek/!svn/ver/168/trunk/tests/app/code/local/Kibithek/Home/Helper/DataTest.php
+END

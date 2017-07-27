@@ -1,0 +1,114 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php
+	$meigee_unique_general = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_general');
+	$customlogo = $meigee_unique_general['customlogo'];
+	$mediaurl = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('mediaurl');
+	$loginAjaxStatus = $meigee_unique_general['loginajax']['status'];
+	$customer = Mage::getSingleton('customer/session');
+	$categoriesQuantity = $meigee_unique_general['header_and_menu'];
+?>
+<div class="header-wrapper">
+	<header id="header" class="header-1">
+		<div class="container_12">
+			<div class="grid_12">
+				<div class="header-top">
+					<div class="first-block">
+						<div class="container_12">
+							<div class="grid_12">
+								<div class="left">
+									<?php if ($static_html = $this->getChildHtml('unique_header_phones')): ?>
+										<div class="header-phones"><?php echo $static_html; ?></div>
+									<?php endif; ?>
+									<?php if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
+										<p class="welcome-msg"><span><?php echo $this->getWelcome() ?><?php echo $this->getAdditionalHtml() ?></span></p>
+									<?php endif; ?>
+								</div>
+								<div class="right">
+									<?php echo $this->getChildHtml('currency') ?>
+									<?php echo $this->getChildHtml('store_language') ?>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="second-block">
+						<div class="container_12">
+							<div class="grid_12">
+								<div class="grid_3 header-top-left alpha omega">
+									<?php if ($customlogo['small_logo_type'] == 0) : ?>
+										<div class="resized-logo">
+									<?php endif; ?>
+										<?php if ($customlogo['logo_status'] == 0): ?>
+											<h2 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('logo'); ?> alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
+										<?php else:?>
+											<h2 class="logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="logo"><img src="<?php echo $mediaurl.$customlogo['logo']; ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+										<?php endif; ?>
+									<?php if ($customlogo['small_logo_type'] == 0) : ?>
+										</div>
+									<?php endif; ?>
+									<?php if ($customlogo['small_logo_type'] == 1) : ?>
+										<h2 class="small-logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="logo"><img src="<?php echo $mediaurl.$customlogo['small_logo']; ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('small_logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+									<?php endif; ?>
+								</div>
+								<div class="grid_9 header-top-right alpha omega right">
+									<div class="grid_5 alpha omega header-search">
+										<?php echo $this->getChildHtml('topSearch') ?>
+									</div>
+									<div class="grid_4 alpha omega right header-blocks">
+										<?php echo $this->getChildHtml('topLinks') ?>
+										<?php echo $this->getChildHtml('cart_sidebar') ?>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="grid_3 header-bottom-left alpha omega<?php if ($categoriesQuantity['menu_button_within_slider']): ?> button-within-slider<?php endif; ?>">
+						<?php echo $this->getChildHtml('topMenu') ?>
+						<?php if (Mage::getSingleton('cms/page')->getIdentifier() == 'home' && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms') : ?>
+							<div class="menu-button"><span class="mobile open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('Menu'); ?></span><span class="open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('More categories'); ?></span><span class="close"><i class="fa fa-times"></i><?php echo $this->__('Close'); ?></span></div>
+						<?php else : ?>
+							<div class="menu-button"><span class="mobile open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('Menu'); ?></span><span class="open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('Browse Categories'); ?></span><span class="close"><i class="fa fa-times"></i><?php echo $this->__('Close'); ?></span></div>
+						<?php endif; ?>
+					</div>
+					<div class="grid_9 header-bottom-right alpha omega">
+						<?php echo $this->getChildHtml('header_slider_container') ?>
+						<?php if(Mage::getSingleton('cms/page')->getIdentifier() != 'home' && Mage::app()->getFrontController()->getRequest()->getRouteName() != 'cms') :?>
+							<div class="clear"></div>
+							<div class="breadcrumbs-wrapper">
+								<?php echo $this->getLayout()->getBlock('breadcrumbs')->toHtml()?>
+								<?php if ($this->getLayout()->createBlock('cms/block')->setBlockId('unique_social_likes')->toHtml()) :?>
+									<div class="social-likes"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('unique_social_likes')->toHtml(); ?></div>
+								<?php endif; ?>
+							</div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+</div>
+<?php echo $this->getChildHtml('topContainer'); ?>
+<?php if($loginAjaxStatus): ?>
+	<script type="text/javascript">
+		/* Login ajax */
+		jQuery('.top-link-login').on('click', function(){
+			ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/') ?>", false);
+			return false;
+		});
+	</script>
+<?php endif; ?>

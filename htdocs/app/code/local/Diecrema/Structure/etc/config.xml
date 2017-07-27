@@ -1,0 +1,14 @@
+<config>    
+    <modules>
+        <Diecrema_Structure>
+            <version>0.1.0</version>
+        </Diecrema_Structure>
+    </modules>
+    <global>
+		<blocks>
+			<structure>
+				<class>Diecrema_Structure_Block</class>
+			</structure>
+		</blocks>
+	</global>
+</config> 

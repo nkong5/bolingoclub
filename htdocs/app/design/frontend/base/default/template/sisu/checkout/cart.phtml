@@ -1,0 +1,27 @@
+<?php
+    /** @var Sisu_Checkout_Helper_Data $helper */
+    $helper = Mage::helper('sisu_checkout');
+    list($products, $country) = $helper->getCartItems();
+?>
+<!--[if lt IE 8]>
+<script type="text/javascript">var _sunsupported = true;</script>
+<![endif]-->
+<script type="text/javascript">
+    if (typeof _sunsupported == 'undefined') {
+        if (window.Prototype) delete Array.prototype.toJSON;
+
+        var _sdbag = _sdbag || [];
+        _sdbag.push(['partnerId', <?php echo $helper->getPartnerId() ?>]);
+        _sdbag.push(['shopId', <?php echo $helper->getShopId() ?>]);
+        _sdbag.push(['country', '<?php echo $country; ?>']);
+        _sdbag.push(['products', <?php echo $products; ?>]);
+        _sdbag.push(['page', 'cart']);
+        _sdbag.push(['init', 'checkout']);
+
+        (function() {
+            var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
+            ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '<?php echo $helper->getJavascriptSource(); ?>';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ss, s);
+        })();
+    }
+</script>

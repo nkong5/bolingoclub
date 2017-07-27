@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sisu_Checkout>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Sisu_Checkout>
+    </modules>
+</config>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report
+END
+PHP.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/PHP.php
+END
+Factory.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/Factory.php
+END
+HTML.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/HTML.php
+END
+Clover.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/Clover.php
+END
+Text.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/Text.php
+END
+Node.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/Node.php
+END

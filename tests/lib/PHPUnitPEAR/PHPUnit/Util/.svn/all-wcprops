@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util
+END
+Configuration.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Configuration.php
+END
+XML.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/XML.php
+END
+Class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Class.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Filter.php
+END
+PHP.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/PHP.php
+END
+Printer.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Printer.php
+END
+Type.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Type.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/File.php
+END
+Getopt.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Getopt.php
+END
+ErrorHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/ErrorHandler.php
+END
+InvalidArgumentHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/InvalidArgumentHelper.php
+END
+DeprecatedFeature.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/DeprecatedFeature.php
+END
+Diff.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Diff.php
+END
+Filesystem.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Filesystem.php
+END
+Skeleton.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Skeleton.php
+END
+GlobalState.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/GlobalState.php
+END
+Fileloader.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Fileloader.php
+END
+String.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/String.php
+END
+Test.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/Test.php
+END
+TestSuiteIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/TestSuiteIterator.php
+END

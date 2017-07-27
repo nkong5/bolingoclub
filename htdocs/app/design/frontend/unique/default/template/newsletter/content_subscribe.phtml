@@ -1,0 +1,29 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+?>
+<div class="content-subscribe-block">
+	<div class="block-title"><h3><?php echo $this->__('Newsletter') ?></h3></div> 
+	<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+		<div class="block-content">            
+			<label for="newsletter"><?php echo $this->__('Subscribe to the Unique mailing list to receive updates on new arrivals, special offers and other discount information.') ?></label>
+			<div class="input-box">
+				<input type="text" name="email" id="newsletter" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" value="<?php echo $this->__('Enter your email'); ?>" onfocus="if (this.value=='<?php echo $this->__('Enter your email'); ?>') this.value = ''" onblur="if (this.value=='') this.value = '<?php echo $this->__('Enter your email'); ?>'" />
+				<button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="button"><span><span><i class="fa fa-chevron-right"></i></span></span></button>
+				<div class="clear"></div>
+			</div>
+			<span class="newsletter-icon"><i class="fa fa-envelope-o"></i></span>
+		</div>
+	</form>
+	<script type="text/javascript">
+	//<![CDATA[
+		var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+	//]]>
+	</script>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,45 @@
+<?php 
+$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+$_category = Mage::getModel('catalog/category')->load($rootCategoryId);
+$_helper = Mage::helper('catalog/category');
+$_subcategories = $_category->getChildrenCategories();
+?>
+<?php if (count($_subcategories) > 0): ?>
+  <ul>
+    <?php foreach($_subcategories as $_category): ?>
+      <li>
+        <a href="<?php echo $_helper->getCategoryUrl($_category) ?>">
+          <?php echo $_category->getName() ?>
+        </a>
+      </li>
+    <?php endforeach; ?>
+    <li><a href="<?php echo Mage::getBaseUrl();?>">Startseite</a></li>
+    
+    <li class="trusted_shops_seal">
+    	<!-- Trusted Shops Siegel -->
+    	
+    	<a target="_blank"
+    	   href="https://www.trustedshops.de/shop/certificate.php?shop_id=X2CCC6ADC746DCA455DADE91C741438ED">
+        	<img style="float: left; padding-right: 5px; height: 45px; border: 0px none;" 
+        		src="<?php echo $this->getSkinUrl('images/trustedshops_m.png')?>"
+        		title="Klicken Sie auf das G&uuml;tesiegel, um die G&uuml;ltigkeit zu pr&uuml;fen!" />
+    	</a>
+
+		<div style="padding-top: 4px;"> 
+        	<a title="Mehr Informationen zu diecrema.de" 
+               href="http://www.trustedshops.de/profil/diecrema-de_X2CCC6ADC746DCA455DADE91C741438ED.html" 
+               target="_blank">diecrema.de</a> 
+        		<span style="text-decoration:none;">
+        			ist ein von Trusted Shops geprüfter Onlinehändler mit Zertifikat und
+        		</span> 
+        	<a href="http://www.trustedshops.de/info/garantiebedingungen/" 
+        	   target="_blank">Käuferschutz.</a> 
+        	<a title="Mehr Informationen zu diecrema.de" 
+        	href="http://www.trustedshops.de/profil/diecrema-de_X2CCC6ADC746DCA455DADE91C741438ED.html" 
+        	target="_blank">Mehr...</a>
+    	</div>
+
+		<!-- / Trusted Shops Siegel -->
+    </li>
+  </ul>
+<?php endif; ?>

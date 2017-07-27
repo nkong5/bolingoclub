@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework
+END
+Comparator.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Comparator.php
+END
+ExpectationFailedException.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/ExpectationFailedException.php
+END
+IncompleteTestError.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/IncompleteTestError.php
+END
+TestFailure.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/TestFailure.php
+END
+Warning.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Warning.php
+END
+Constraint.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Constraint.php
+END
+ComparisonFailure.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/ComparisonFailure.php
+END
+SkippedTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/SkippedTest.php
+END
+TestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/TestCase.php
+END
+SyntheticError.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/SyntheticError.php
+END
+Assert.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Assert.php
+END
+SkippedTestError.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/SkippedTestError.php
+END
+TestListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/TestListener.php
+END
+TestSuite.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/TestSuite.php
+END
+OutputError.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/OutputError.php
+END
+Error.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Error.php
+END
+AssertionFailedError.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/AssertionFailedError.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Exception.php
+END
+TestResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/TestResult.php
+END
+IncompleteTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/IncompleteTest.php
+END
+SkippedTestSuiteError.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/SkippedTestSuiteError.php
+END
+Test.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Test.php
+END
+ComparatorFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/ComparatorFactory.php
+END
+SelfDescribing.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/SelfDescribing.php
+END

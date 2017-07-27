@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <paypal_payments>
+                    <express_checkout>
+                        <fields>
+                            <settings_ec>
+                                <fields>
+                                    <settings_ec_advanced>
+                                        <fields>
+                                            <iways_paypalinstalments type="group" translate="label comment" module="iways_paypalinstalments">
+                                                <label>PayPal Instalments Settings</label>
+                                                <comment>In order to use PayPal Instalments you have to be vetted by PayPal. Please contact PayPal directly.</comment>
+                                                <show_in_default>1</show_in_default>
+                                                <show_in_website>1</show_in_website>
+                                                <show_in_store>1</show_in_store>
+                                                <sort_order>98</sort_order>
+                                                <frontend_model>iways_paypalinstalments/adminhtml_system_settings
+                                                </frontend_model>
+                                                <fields>
+                                                    <active translate="label">
+                                                        <label>Enabled</label>
+                                                        <config_path>payment/iways_paypalinstalments/active</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>10</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </active>
+                                                    <payment_action translate="label">
+                                                        <label>Payment Action</label>
+                                                        <config_path>payment/iways_paypalinstalments/payment_action
+                                                        </config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>iways_paypalinstalments/system_config_source_paymentActions</source_model>
+                                                        <sort_order>40</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </payment_action>
+                                                    <debug translate="label">
+                                                        <label>Debug Mode</label>
+                                                        <config_path>payment/iways_paypalinstalments/debug</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno
+                                                        </source_model>
+                                                        <sort_order>70</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </debug>
+                                                    <sandbox_flag translate="label">
+                                                        <label>Test Mode</label>
+                                                        <config_path>payment/iways_paypalinstalments/sandbox_flag</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>60</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </sandbox_flag>
+                                                    <client_id translate="label comment">
+                                                        <label>Client ID</label>
+                                                        <frontend_type>obscure</frontend_type>
+                                                        <backend_model>adminhtml/system_config_backend_encrypted
+                                                        </backend_model>
+                                                        <config_path>payment/iways_paypalinstalments/client_id</config_path>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                        <sort_order>80</sort_order>
+                                                    </client_id>
+                                                    <client_secret translate="label comment">
+                                                        <label>Client Secret</label>
+                                                        <frontend_type>obscure</frontend_type>
+                                                        <backend_model>adminhtml/system_config_backend_encrypted
+                                                        </backend_model>
+                                                        <config_path>payment/iways_paypalinstalments/client_secret</config_path>
+                                                        <comment><![CDATA[<a href="https://www.paypalobjects.com/webstatic/de_DE/downloads/PayPal_Nutzung_der_REST_API.pdf" target="_blank">How to retrieve your PayPal API credentials.</a>]]></comment>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                        <sort_order>85</sort_order>
+                                                    </client_secret>
+                                                    <lender translate="label">
+                                                        <label>Lender</label>
+                                                        <config_path>payment/iways_paypalinstalments/lender</config_path>
+                                                        <frontend_type>text</frontend_type>
+                                                        <comment><![CDATA[Lender, Lender address]]></comment>
+                                                        <sort_order>90</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </lender>
+                                                    <upstream_homepage translate="label">
+                                                        <label>Show generic upstream promotion on home page</label>
+                                                        <config_path>payment/iways_paypalinstalments/upstream_homepage</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>95</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </upstream_homepage>
+                                                    <homepage_category translate="label">
+                                                        <label>Show generic upstream promotion on category pages</label>
+                                                        <config_path>payment/iways_paypalinstalments/upstream_category</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>100</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </homepage_category>
+                                                    <upstream_product translate="label">
+                                                        <label>Show specific upstream promotion on product page</label>
+                                                        <config_path>payment/iways_paypalinstalments/upstream_product</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>105</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </upstream_product>
+                                                    <upstream_cart translate="label">
+                                                        <label>Show specific upstream promotion on cart</label>
+                                                        <config_path>payment/iways_paypalinstalments/upstream_cart</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>110</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </upstream_cart>
+                                                    <upstream_payment_method translate="label">
+                                                        <label>Show specific upstream promotion on payment method</label>
+                                                        <config_path>payment/iways_paypalinstalments/upstream_payment_method</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>120</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </upstream_payment_method>
+                                                    <value_on_first_page translate="label">
+                                                        <label>Show specific upstream promotions with calculated values</label>
+                                                        <config_path>payment/iways_paypalinstalments/value_on_first_page</config_path>
+                                                        <frontend_type>select</frontend_type>
+                                                        <source_model>adminhtml/system_config_source_yesno</source_model>
+                                                        <sort_order>130</sort_order>
+                                                        <show_in_default>1</show_in_default>
+                                                        <show_in_website>1</show_in_website>
+                                                    </value_on_first_page>
+                                                </fields>
+                                            </iways_paypalinstalments>
+                                        </fields>
+                                    </settings_ec_advanced>
+                                </fields>
+                            </settings_ec>
+                        </fields>
+                    </express_checkout>
+                </paypal_payments>
+            </groups>
+        </payment>
+    </sections>
+</config>

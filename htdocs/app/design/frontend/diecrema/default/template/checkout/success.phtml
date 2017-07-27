@@ -1,0 +1,81 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+/********************************************
+ * Variablen fuer Trusted Shops Kaeuferschutz,
+ * diesen Codeblock unbedingt mit verwenden!
+********************************************/
+$orderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+$order = Mage::getSingleton('sales/order')->load($orderId);
+$subtotal = $order->getBaseSubtotal();
+$grandTotal = $order->getGrandTotal();
+$currencyCode = $order->getOrderCurrencyCode();
+$customerId = Mage::getSingleton('customer/session')->getCustomerId();
+$customer = Mage::getSingleton('customer/session')->getCustomer();
+$email = $order->getCustomerEmail();
+?>
+
+<div class="page-head">
+    <h3><?php echo $this->__('Your order has been received') ?></h3>
+</div>
+<p><strong><?php echo $this->__('Thank you for your purchase!') ?></strong></p>
+<p class="pTop24">
+    <?php echo $this->__("Your order # is: <a href='%s'>%s</a>", $this->getViewOrderUrl(), $this->getOrderId()) ?>.<br/>
+    <?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?><br/>
+    <?php if ($this->canPrint()) :?>
+    <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+    <?php endif;?>
+</p>
+
+<div class="pTop24">
+    <div class="floatLeft pRight24">
+        <form name="formSiegel" method="post" action="https://www.trustedshops.com/shop/certificate.php" target="_blank">
+            <input type="image" border="0" src="<?php echo $this->getSkinUrl('images/siegel.gif') ?>" title="Trusted Shops G&uuml;tesiegel - Bitte hier G&uuml;ltigkeit pr&uuml;fen!">
+            <input name="shop_id" type="hidden" value="X2CCC6ADC746DCA455DADE91C741438ED">
+        </form>
+    </div>
+
+    <div>
+        <form id="formTShops" name="formTShops" method="post" action="https://www.trustedshops.com/shop/protection.php" target="_blank">
+            <input name="_charset_" type="hidden" value="">
+            <input name="shop_id" type="hidden" value="X2CCC6ADC746DCA455DADE91C741438ED">
+            <input name="email" type="hidden" value="<?php echo $email ?>">
+            <input name="amount" type="hidden" value="<?php echo $grandTotal ?>">
+            <input name="curr" type="hidden" value="<?php echo $currencyCode ?>">
+            <input name="payment" type="hidden" value="">
+            <input name="KDNR" type="hidden" value="<?php echo $customerId ?>">
+            <input name="ORDERNR" type="hidden" value="<?php echo $orderId ?>">
+            Als zus&auml;tzlichen Service bieten wir Ihnen den Trusted Shops
+            K&auml;uferschutz an. Wir &uuml;bernehmen alle Kosten dieser Garantie,
+            Sie m&uuml;ssen sich lediglich anmelden.<br><br>
+            <input type="submit" id="btnProtect" name="btnProtect" value="Anmeldung zum Trusted Shops K&auml;uferschutz">
+        </form>
+    </div>
+</div>
+
+<div class="pTop24" style="clear: both;
+    text-align: right;">
+    <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>
+
+<?php if ($subtotal > 0): ?>
+
+<?php endif ?>

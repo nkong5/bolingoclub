@@ -1,0 +1,110 @@
+<!-- Footer -->
+<div id="footerArea" class="bgrndCoffeeBrown">
+    <div class="h12 clearBoth"></div>
+
+    <?php /*
+      		<div class="mwst_text pLeft60 pBottom12 overflowHidden brown">
+          		<span class="f16">*</span>
+          		<span>Alle Preise inkl. MwSt und zzgl.</span>
+          		<a class="white" href="<?=$this->getUrl('liefer-und-versandkosten')?>">
+                		Versandkosten</a>.
+          	</div>
+          	*/?>
+
+    <div id="serviceBox" class="footerColumn">
+        <h2 class="f16"><?php echo $this->__('Buyer protection'); ?></h2>
+        <div class="brown pTop6">
+            <!-- Trusted Shops Siegel -->
+
+            <a target="_blank"
+               href="https://www.trustedshops.de/shop/certificate.php?shop_id=X2CCC6ADC746DCA455DADE91C741438ED">
+                <img style="float: left; padding-right: 12px; border: 0px none;"
+                     src="<?php echo $this->getSkinUrl('images/trustedshops_m.png')?>"
+                     title="<?php echo $this->__('Click on the seal to check validity!'); ?>" />
+            </a>
+
+            <h3><?php echo $this->__('Certificate of quality'); ?></h3>
+
+            <a style="font-weight:normal;text-decoration:underline;"
+               title="<?php echo $this->__('Details for diecrema.de'); ?>"
+               href="http://www.trustedshops.de/profil/diecrema-de_X2CCC6ADC746DCA455DADE91C741438ED.html"
+               target="_blank">diecrema.de</a>
+                		<span style="font-weight:normal;text-decoration:none;">
+                			<?php echo $this->__('is a certified online shop with Trusted Shops Certificate'); ?>
+                		</span>
+            <a style="font-weight:normal;text-decoration:underline;"
+               href="http://www.trustedshops.de/info/garantiebedingungen/"
+               target="_blank"><?php echo $this->__('Buyer protection'); ?>.</a>
+            <a style="font-weight:normal;text-decoration:none;"
+               title="<?php echo $this->__('Details for diecrema.de'); ?>"
+               href="http://www.trustedshops.de/profil/diecrema-de_X2CCC6ADC746DCA455DADE91C741438ED.html"
+               target="_blank"><?php echo $this->__('more...'); ?></a>
+
+            <!-- / Trusted Shops Siegel -->
+        </div>
+    </div>
+
+    <div id="newsletterBox" class="footerColumn">
+        <?php echo $this->getChildHtml('footer.newsletter'); ?>
+        <h5 class="f16"><?php echo $this->__('Canals') ?></h5>
+        <p>
+            <a target="_blank" href="https://www.facebook.com/DieCrema">
+                <img src="<?php echo $this->getSkinUrl('images/logo_facebook.png')?>"
+                     alt="Facebook" style="background: white; padding:2px 2px" alt="Espresso TV" />
+            </a>
+            <a href="http://www.espresso-tv.eu/" target="_blank" alt="Epresso TV" >
+                <img src="<?php echo $this->getSkinUrl('images/logo_espresso_tv.png')?>"
+                     style="background: white;margin:0px 5px; padding:2px 5px" alt="Espresso TV" />
+            </a>
+
+        </p>
+    </div>
+
+    <div id="serviceBox" class="footerColumn footerColumn3" >
+        <h2 class="f16">Service</h2>
+        <p><a href="<?php echo $this->getUrl('ueber-uns') ;?>" ><?php echo $this->__('About us'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('showroom') ;?>" ><?php echo $this->__('Showroom'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('kontakt') ;?>" ><?php echo $this->__('Contact'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('kundendienst-hotline') ;?>" ><?php echo $this->__('Customer-service hotline'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('werkstattservice') ;?>" ><?php echo $this->__('Repair-service'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('garantie-gewaehrleistung') ;?>" ><?php echo $this->__('Guarantee and warranty'); ?></a></p>
+    </div>
+
+    <div id="infoBox" class="footerColumn footerColumnLast">
+        <h2 class="f16">Info</h2>
+        <p><a href="<?php echo $this->getUrl('liefer-und-versandkosten') ;?>" ><?php echo $this->__('Delivery- and shipping-costs'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('zahl-und-versandarten') ;?>" ><?php echo $this->__('Payment- and shipping-types'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('kaeuferschutz') ;?>" ><?php echo $this->__('Buyer protection'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('widerrufsrecht') ;?>" ><?php echo $this->__('Right of withdrawal'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('privatsphaere-und-datenschutz') ;?>" ><?php echo $this->__('Privacy and data protection'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('agb') ;?>" ><?php echo $this->__('Terms'); ?></a></p>
+        <p><a href="<?php echo $this->getUrl('impressum') ;?>" ><?php echo $this->__('Imprint'); ?></a></p>
+    </div>
+
+    <div class="h24 clearBoth f10 brown pLeft12">
+        &copy; <?php echo date("Y"); ?> DieCrema GbR. <?php echo $this->__('All Rights Reserved.'); ?>
+    </div>
+</div>
+<!-- End: Footer -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        //jQuery('.price').append("<span class='brown'>*</span>");
+
+        jQuery(".e_placeholder").each(function() {
+            domain = "diecrema.de";
+            elementHtml = jQuery(this).attr("name")+"@"+domain;
+            jQuery(this).html(elementHtml);
+
+            element = jQuery(this).attr("name")+"@"+domain;
+            jQuery(this).attr("href","mailto:"+element);
+        });
+
+        jQuery(".e_placeholder_siteby").each(function() {
+            domain = "bongkishiy.de";
+
+            element = jQuery(this).attr("name")+"@"+domain;
+            jQuery(this).attr("href","mailto:"+element);
+        });
+    });
+</script>

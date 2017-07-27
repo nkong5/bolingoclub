@@ -1,0 +1,185 @@
+<?php
+
+/**
+ *
+ *
+ * @author     Edgar Bongkishiy <edgar.bongkishiy@kibi.de>
+ *
+ * @backupGlobals disabled
+ */
+
+
+/**
+ * 
+ *
+ * 
+ * 
+ */
+abstract class Kibithek_PHPUnit_Controller_TestCase extends Zend_Test_PHPUnit_ControllerTestCase
+{
+
+    /**
+     * init
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
+    /**
+     * test done
+     * 
+     */
+    protected function tearDown()
+    {
+        parent::tearDown();
+    }
+
+    /**
+     * Dispatch the MVC
+     *
+     * If a URL is provided, sets it as the request URI in the request object.
+     * Then sets test case request and response objects in front controller,
+     * disables throwing exceptions, and disables returning the response.
+     * Finally, dispatches the front controller.
+     *
+     * @param  string|null $url
+     * @return void
+     */
+    public function dispatchXXXXXXXXXXXXXXXXXXX($url = null)
+    {
+        if ($url) {
+            $parts = explode('/', $url);
+            while (count($parts) < 3) {
+                $parts[] = 'index';
+            }
+
+
+
+            $this->getRequest()->setPathInfo($url);
+            /*
+
+              $this->getRequest()->setModuleName('test');
+              $this->getRequest()->setControllerName('index');
+              $this->getRequest()->setActionName('ctrl');
+              $this->getRequest()->setRequestUri($url);
+             * 
+             */
+        }
+        return parent::dispatch($url);
+    }
+
+    /**
+     * Dispatch the MVC
+     *
+     * If a URL is provided, sets it as the request URI in the request object.
+     * Then sets test case request and response objects in front controller,
+     * disables throwing exceptions, and disables returning the response.
+     * Finally, dispatches the front controller.
+     *
+     * @param  string|null $url
+     * @return void
+     */
+    public function dispatch($url = null)
+    {
+        // redirector should not exit
+        $redirector = Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
+        $redirector->setExit(false);
+
+        // json helper should not exit
+        $json = Zend_Controller_Action_HelperBroker::getStaticHelper('json');
+        $json->suppressExit = true;
+
+        $request = $this->getRequest();
+        if (isset($url)) {
+            $request->setRequestUri($url);
+        }
+        $request->setPathInfo(null);
+
+        $controller = $this->getFrontController();
+        $controller->setThrowExceptions(false);
+        $controller->setAutoSendResponse(false);
+
+        if ($bootstrap = $this->getBootstrap()) {
+            $bootstrap->run();
+        } else {
+            $controller->dispatch();
+        }
+    }
+
+    /**
+     * Retrieve front controller instance
+     *
+     * @return Zend_Controller_Front
+     */
+    public function getFrontController()
+    {
+        if (null === $this->_frontController) {
+            $this->_frontController = Mage::app()->getFrontController();
+        }
+        return $this->_frontController;
+    }
+
+    /**
+     * Retrieve test case request object
+     *
+     * @return Zend_Controller_Request_Abstract
+     */
+    public function getRequest()
+    {
+        if (null === $this->_request) {
+            $this->_request = Mage::app()->getRequest();
+        }
+        return $this->_request;
+    }
+
+    
+    /**
+     * Retrieve test case response object
+     *
+     * @return Zend_Controller_Response_Abstract
+     */
+    public function getResponse()
+    {
+        if (null === $this->_response) {
+            $this->_response = Mage::app()->getResponse();
+        }
+        return $this->_response;
+    }
+
+    
+
+    /**
+     * Reset the request object
+     *
+     * Useful for test cases that need to test multiple trips to the server.
+     *
+     * @return Zend_Test_PHPUnit_ControllerTestCase
+     */
+    public function resetRequest()
+    {
+        if ($this->_request instanceof Zend_Controller_Request_HttpTestCase) {
+            $this->_request->clearQuery()
+                           ->clearPost();
+        }
+        $this->_request = null;
+        return $this;
+    }
+
+    /**
+     * Reset the response object
+     *
+     * Useful for test cases that need to test multiple trips to the server.
+     *
+     * @return Zend_Test_PHPUnit_ControllerTestCase
+     */
+    public function resetResponse()
+    {
+        $this->_response = null;
+        $this->_resetPlaceholders();
+        return $this;
+    }
+    
+    
+    
+}

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Error
+END
+Notice.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Error/Notice.php
+END
+Warning.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Error/Warning.php
+END
+Deprecated.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/Error/Deprecated.php
+END

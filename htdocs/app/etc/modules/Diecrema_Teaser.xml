@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Diecrema_Teaser>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Diecrema_Teaser>
+    </modules>
+</config> 

@@ -1,0 +1,15 @@
+<?php /** @var Mage_Adminhtml_Block_Template $this */ ?>
+
+<p style="width: 100%; background: #0a3761; padding: 10px 10px 5px 10px;">
+    <img src="<?php echo $this->getSkinUrl('images/nrapps_idealo/idealo_logo_header.png') ?>" alt="idealo" />
+</p>
+<p style="padding: 5px;">
+    <?php echo $this->__('If you don\'t have access data yet, please activate the <strong>test mode</strong>.') ?><br />
+    <?php echo $this->__('Please configure and save this page now and then update the <strong>idealo Connect Index</strong>.') ?><br />
+    <?php echo $this->__('After that, you will find a <strong>CSV file</strong> in the <strong>%s</strong> directory of your shop.', '/media/nrapps_idealo/') ?><br />
+    <?php echo $this->__('Please send that file to <strong>%s</strong> via email, including the URL and name of your shop and your contact data.', 'csv@idealo.de') ?>
+</p>
+<p style="padding: 5px;">
+    <?php echo $this->__('Once you have receive access data by idealo, please fill them in here and deactivate the test mode.') ?><br />
+    <?php echo $this->__('The product data will then be transferred to idealo automatically. For that, you need to have a <strong>cron job</strong> running on your shop.') ?><br />
+</p>

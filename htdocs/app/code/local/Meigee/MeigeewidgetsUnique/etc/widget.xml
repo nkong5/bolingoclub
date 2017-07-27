@@ -1,0 +1,1644 @@
+<?xml version="1.0" ?>
+<widgets>
+	<unique_featuredcategory_extended type="meigeewidgetsunique/featuredcategory">
+		<name>Meigee - Unique/Featured Category Extended</name>
+		<description type="desc">Adds a list of products from featured category with advanced parameters</description>
+		<parameters>
+			<featured_category>
+				<visible>1</visible>
+				<label>Featured Category</label>
+				<required>1</required>
+				<type>label</type>
+				<helper_block>
+					<type>adminhtml/catalog_category_widget_chooser</type>
+					<data>
+						<button translate="open">
+							<open>Select Category...</open>
+						</button>
+					</data>
+				</helper_block>
+			</featured_category>
+			<template translate="label">
+				<label>Display as</label>
+				<description>If chosen slider make sure you have at least 5 products to display, otherwise widget won't be displayed.</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/templates</source_model>
+			</template>
+			<products_amount>
+				<label>Amount of Products to Display</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>10</value>
+			</products_amount>
+			<products_per_row>
+				<label>Products per Row</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<value>4</value>
+				<source_model>meigeewidgetsunique/productsperrow</source_model>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</products_per_row>
+			<visible_products>
+				<label>Amount of Visible Products</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/visible</source_model>
+				<value>4</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</visible_products>
+			<columns_ratio>
+				<label>Columns Ratio</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/columnsratio</source_model>
+				<value>2</value>
+				<description>First value is applied to the image, second - to the description block.</description>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</columns_ratio>
+			<product_name>
+				<label>Product Name</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</product_name>
+			<price>
+				<label>Product Price</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</price>
+			<add_to_cart>
+				<label>Button "Add to cart"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</add_to_cart>
+			<wishlist>
+				<label>Button "Wishlist"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</wishlist>
+			<compare>
+				<label>Button "Compare products"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</compare>
+			<quickview>
+				<label>Quick view</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</quickview>
+			<quickview_position_grid>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_grid>
+			<quickview_position_list>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_list>
+			<quickview_position_slider>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_slider>
+			<rating_stars>
+				<label>Rating Stars</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_stars>
+			<rating_cust_link>
+				<label>Ratings Customer link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_cust_link>
+			<rating_add_review_link>
+				<label>"Add your review" link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_add_review_link>
+			<buttons_position>
+				<label>Paging Buttons Position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/buttonsposition</source_model>
+				<value>1</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</buttons_position>
+			<!-- <column_count>
+				<label>Columns count</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>3</value>
+				<depends>
+					<template><value>meigee/meigeewidgetsunique/grid.phtml</value></template>
+				</depends>
+			</column_count> -->
+			<autoSlide translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</autoSlide>
+			<autoSlide_2 translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+				</depends>
+			</autoSlide_2>
+			<autoSlideTimer translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer>
+			<autoSlideTimer_2 translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer_2>
+			<autoSlideTransTimer translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer>
+			<autoSlideTransTimer_2 translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer_2>
+			<widget_id translate="label">
+				<label>Widget ID</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/number</source_model>
+				<description>Generated automatically</description>
+			</widget_id>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_featuredcategory_extended>
+	<unique_newproducts_extended type="meigeewidgetsunique/newproducts">
+		<name>Meigee - Unique/New Products Extended</name>
+		<description type="desc">Adds a list of new products with advanced parameters</description>
+		<parameters>
+			<template translate="label">
+				<label>Display as</label>
+				<description>If chosen slider make sure you have at least 5 products to display, otherwise widget won't be displayed.</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/templates</source_model>
+			</template>
+			<products_amount>
+				<label>Amount of Products to Display</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>10</value>
+			</products_amount>
+			<products_per_row>
+				<label>Products per Row</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<value>4</value>
+				<source_model>meigeewidgetsunique/productsperrow</source_model>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</products_per_row>
+			<visible_products>
+				<label>Amount of Visible Products</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/visible</source_model>
+				<value>4</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</visible_products>
+			<columns_ratio>
+				<label>Columns Ratio</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/columnsratio</source_model>
+				<value>2</value>
+				<description>First value is applied to the image, second - to the description block.</description>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</columns_ratio>
+			<product_name>
+				<label>Product Name</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</product_name>
+			<price>
+				<label>Product Price</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</price>
+			<add_to_cart>
+				<label>Button "Add to cart"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</add_to_cart>
+			<wishlist>
+				<label>Button "Wishlist"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</wishlist>
+			<compare>
+				<label>Button "Compare products"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</compare>
+			<quickview>
+				<label>Quick view</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</quickview>
+			<quickview_position_grid>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_grid>
+			<quickview_position_list>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_list>
+			<quickview_position_slider>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_slider>
+			<rating_stars>
+				<label>Rating Stars</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_stars>
+			<rating_cust_link>
+				<label>Ratings Customer link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_cust_link>
+			<rating_add_review_link>
+				<label>"Add your review" link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_add_review_link>
+			<buttons_position>
+				<label>Paging Buttons Position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/buttonsposition</source_model>
+				<value>1</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</buttons_position>
+			<!-- <column_count>
+				<label>Columns count</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>3</value>
+				<depends>
+					<template><value>meigee/meigeewidgetsunique/grid.phtml</value></template>
+				</depends>
+			</column_count> -->
+			<autoSlide translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</autoSlide>
+			<autoSlide_2 translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+				</depends>
+			</autoSlide_2>
+			<autoSlideTimer translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer>
+			<autoSlideTimer_2 translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer_2>
+			<autoSlideTransTimer translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer>
+			<autoSlideTransTimer_2 translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer_2>
+			<widget_id translate="label">
+				<label>Widget ID</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/number</source_model>
+				<description>Generated automatically</description>
+			</widget_id>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_newproducts_extended>
+	<unique_saleproducts_extended type="meigeewidgetsunique/saleproducts">
+		<name>Meigee - Unique/On Sale Products Extended</name>
+		<description type="desc">Adds a list of on sale products with advanced parameters</description>
+		<parameters>
+			<template translate="label">
+				<label>Display as</label>
+				<description>If chosen slider make sure you have at least 5 products to display, otherwise widget won't be displayed.</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/templates</source_model>
+			</template>
+			<products_amount>
+				<label>Amount of Products to Display</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>10</value>
+			</products_amount>
+			<products_per_row>
+				<label>Products per Row</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<value>4</value>
+				<source_model>meigeewidgetsunique/productsperrow</source_model>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</products_per_row>
+			<visible_products>
+				<label>Amount of Visible Products</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/visible</source_model>
+				<value>4</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</visible_products>
+			<columns_ratio>
+				<label>Columns Ratio</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/columnsratio</source_model>
+				<value>2</value>
+				<description>First value is applied to the image, second - to the description block.</description>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</columns_ratio>
+			<product_name>
+				<label>Product Name</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</product_name>
+			<price>
+				<label>Product Price</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</price>
+			<add_to_cart>
+				<label>Button "Add to cart"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</add_to_cart>
+			<wishlist>
+				<label>Button "Wishlist"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</wishlist>
+			<compare>
+				<label>Button "Compare products"</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</compare>
+			<quickview>
+				<label>Quick view</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</quickview>
+			<quickview_position_grid>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/grid.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_grid>
+			<quickview_position_list>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/list.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_list>
+			<quickview_position_slider>
+				<label>Quick view position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/quickviewposition</source_model>
+				<value>0</value>
+				<depends>
+					<quickview>
+						<value>1</value>
+					</quickview>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</quickview_position_slider>
+			<rating_stars>
+				<label>Rating Stars</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_stars>
+			<rating_cust_link>
+				<label>Ratings Customer link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_cust_link>
+			<rating_add_review_link>
+				<label>"Add your review" link</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<value>1</value>
+			</rating_add_review_link>
+			<buttons_position>
+				<label>Paging Buttons Position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/buttonsposition</source_model>
+				<value>1</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</buttons_position>
+			<!-- <column_count>
+				<label>Columns count</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>3</value>
+				<depends>
+					<template><value>meigee/meigeewidgetsunique/grid.phtml</value></template>
+				</depends>
+			</column_count> -->
+			<autoSlide translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+				</depends>
+			</autoSlide>
+			<autoSlide_2 translate="label">
+				<label>Auto Slide</label>
+				<description>Enables automatic cycling through slides</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>0</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+				</depends>
+			</autoSlide_2>
+			<autoSlideTimer translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer>
+			<autoSlideTimer_2 translate="label">
+				<label>Auto Slide Timer</label>
+				<description>The time (in milliseconds) that a slide will wait before automatically navigating to the next slide</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTimer_2>
+			<autoSlideTransTimer translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer>
+			<autoSlideTransTimer_2 translate="label">
+				<label>Auto Slide Trans Timer</label>
+				<description>The time (in milliseconds) required for all automatic animations to move between slides</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/slider_2.phtml</value>
+					</template>
+					<autoSlide>
+						<value>1</value>
+					</autoSlide>
+				</depends>
+			</autoSlideTransTimer_2>
+			<widget_id translate="label">
+				<label>Widget ID</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/number</source_model>
+				<description>Generated automatically</description>
+			</widget_id>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_saleproducts_extended>
+	<unique_social_links type="meigeewidgetsunique/sociallinks">
+		<name>Meigee - Unique/Social links widget</name>
+		<description type="desc">Adds social links to any pages or static blocks</description>
+		<parameters>
+			<twitter translate="label">
+				<label>Twitter</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>1</sort_order>
+				<description>Example: http://twitter.com (Leave empty to hide)</description>
+			</twitter>
+			<twitter_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>2</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</twitter_custom_colors>
+			<twitter_bg translate="label">
+				<label>Twitter Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>3</sort_order>
+				<value>4ecfff</value>
+				<description>Click to select color</description>
+				<depends>
+					<twitter_custom_colors>
+						<value>1</value>
+					</twitter_custom_colors>
+				</depends>
+			</twitter_bg>
+			<twitter_color translate="label">
+				<label>Twitter Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>4</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<twitter_custom_colors>
+						<value>1</value>
+					</twitter_custom_colors>
+				</depends>
+			</twitter_color>
+			<twitter_border translate="label">
+				<label>Twitter Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>5</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<twitter_custom_colors>
+						<value>1</value>
+					</twitter_custom_colors>
+				</depends>
+			</twitter_border>
+			<rss translate="label">
+				<label>RSS</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>6</sort_order>
+				<description>Example: http://rss.com (Leave empty to hide)</description>
+			</rss>
+			<rss_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>7</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</rss_custom_colors>
+			<rss_bg translate="label">
+				<label>RSS Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>8</sort_order>
+				<value>ff801a</value>
+				<description>Click to select color</description>
+				<depends>
+					<rss_custom_colors>
+						<value>1</value>
+					</rss_custom_colors>
+				</depends>
+			</rss_bg>
+			<rss_color translate="label">
+				<label>RSS Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>9</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<rss_custom_colors>
+						<value>1</value>
+					</rss_custom_colors>
+				</depends>
+			</rss_color>
+			<rss_border translate="label">
+				<label>RSS Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>10</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<rss_custom_colors>
+						<value>1</value>
+					</rss_custom_colors>
+				</depends>
+			</rss_border>
+			<facebook translate="label">
+				<label>Facebook</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>11</sort_order>
+				<description>Example: http://facebook.com (Leave empty to hide)</description>
+			</facebook>
+			<facebook_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>12</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</facebook_custom_colors>
+			<facebook_bg translate="label">
+				<label>Facebook Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>13</sort_order>
+				<value>327bd5</value>
+				<description>Click to select color</description>
+				<depends>
+					<facebook_custom_colors>
+						<value>1</value>
+					</facebook_custom_colors>
+				</depends>
+			</facebook_bg>
+			<facebook_color translate="label">
+				<label>Facebook Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>14</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<facebook_custom_colors>
+						<value>1</value>
+					</facebook_custom_colors>
+				</depends>
+			</facebook_color>
+			<facebook_border translate="label">
+				<label>Facebook Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>15</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<facebook_custom_colors>
+						<value>1</value>
+					</facebook_custom_colors>
+				</depends>
+			</facebook_border>
+			<googleplus translate="label">
+				<label>Google +</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>16</sort_order>
+				<description>Example: https://plus.google.com/ (Leave empty to hide)</description>
+			</googleplus>
+			<googleplus_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>17</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</googleplus_custom_colors>
+			<googleplus_bg translate="label">
+				<label>Google + Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>18</sort_order>
+				<value>ff5858</value>
+				<description>Click to select color</description>
+				<depends>
+					<googleplus_custom_colors>
+						<value>1</value>
+					</googleplus_custom_colors>
+				</depends>
+			</googleplus_bg>
+			<googleplus_color translate="label">
+				<label>Google + Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>19</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<googleplus_custom_colors>
+						<value>1</value>
+					</googleplus_custom_colors>
+				</depends>
+			</googleplus_color>
+			<googleplus_border translate="label">
+				<label>Google + Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>20</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<googleplus_custom_colors>
+						<value>1</value>
+					</googleplus_custom_colors>
+				</depends>
+			</googleplus_border>
+			<linkedin translate="label">
+				<label>Linkedin</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>21</sort_order>
+				<description>Example: http://linkedin.com (Leave empty to hide)</description>
+			</linkedin>
+			<linkedin_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>22</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</linkedin_custom_colors>
+			<linkedin_bg translate="label">
+				<label>Linkedin Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>23</sort_order>
+				<value>3565a0</value>
+				<description>Click to select color</description>
+				<depends>
+					<linkedin_custom_colors>
+						<value>1</value>
+					</linkedin_custom_colors>
+				</depends>
+			</linkedin_bg>
+			<linkedin_color translate="label">
+				<label>Linkedin Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>24</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<linkedin_custom_colors>
+						<value>1</value>
+					</linkedin_custom_colors>
+				</depends>
+			</linkedin_color>
+			<linkedin_border translate="label">
+				<label>Linkedin Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>25</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<linkedin_custom_colors>
+						<value>1</value>
+					</linkedin_custom_colors>
+				</depends>
+			</linkedin_border>
+			<pinterest translate="label">
+				<label>Pinterest</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>26</sort_order>
+				<description>Example: http://pinterest.com/ (Leave empty to hide)</description>
+			</pinterest>
+			<pinterest_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>27</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</pinterest_custom_colors>
+			<pinterest_bg translate="label">
+				<label>Pinterest Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>28</sort_order>
+				<value>e82d2d</value>
+				<description>Click to select color</description>
+				<depends>
+					<pinterest_custom_colors>
+						<value>1</value>
+					</pinterest_custom_colors>
+				</depends>
+			</pinterest_bg>
+			<pinterest_color translate="label">
+				<label>Pinterest Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>29</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<pinterest_custom_colors>
+						<value>1</value>
+					</pinterest_custom_colors>
+				</depends>
+			</pinterest_color>
+			<pinterest_border translate="label">
+				<label>Pinterest Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>30</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<pinterest_custom_colors>
+						<value>1</value>
+					</pinterest_custom_colors>
+				</depends>
+			</pinterest_border>
+			<vimeo translate="label">
+				<label>Vimeo</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>31</sort_order>
+				<description>Example: https://vimeo.com/ (Leave empty to hide)</description>
+			</vimeo>
+			<vimeo_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>32</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</vimeo_custom_colors>
+			<vimeo_bg translate="label">
+				<label>Vimeo Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>33</sort_order>
+				<value>41B2DC</value>
+				<description>Click to select color</description>
+				<depends>
+					<vimeo_custom_colors>
+						<value>1</value>
+					</vimeo_custom_colors>
+				</depends>
+			</vimeo_bg>
+			<vimeo_color translate="label">
+				<label>Vimeo Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>34</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<vimeo_custom_colors>
+						<value>1</value>
+					</vimeo_custom_colors>
+				</depends>
+			</vimeo_color>
+			<vimeo_border translate="label">
+				<label>Vimeo Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>35</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<vimeo_custom_colors>
+						<value>1</value>
+					</vimeo_custom_colors>
+				</depends>
+			</vimeo_border>
+			<youtube translate="label">
+				<label>Youtube</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>36</sort_order>
+				<description>Example: http://youtube.com/ (Leave empty to hide)</description>
+			</youtube>
+			<youtube_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>37</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</youtube_custom_colors>
+			<youtube_bg translate="label">
+				<label>Youtube Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>38</sort_order>
+				<value>FE3432</value>
+				<description>Click to select color</description>
+				<depends>
+					<youtube_custom_colors>
+						<value>1</value>
+					</youtube_custom_colors>
+				</depends>
+			</youtube_bg>
+			<youtube_color translate="label">
+				<label>Youtube Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>39</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<youtube_custom_colors>
+						<value>1</value>
+					</youtube_custom_colors>
+				</depends>
+			</youtube_color>
+			<youtube_border translate="label">
+				<label>Youtube Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>40</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<youtube_custom_colors>
+						<value>1</value>
+					</youtube_custom_colors>
+				</depends>
+			</youtube_border>
+			<flickr translate="label">
+				<label>Flickr</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>41</sort_order>
+				<description>Example: http://flickr.com/ (Leave empty to hide)</description>
+			</flickr>
+			<flickr_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>42</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</flickr_custom_colors>
+			<flickr_bg translate="label">
+				<label>Flickr Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>43</sort_order>
+				<value>FF0084</value>
+				<description>Click to select color</description>
+				<depends>
+					<flickr_custom_colors>
+						<value>1</value>
+					</flickr_custom_colors>
+				</depends>
+			</flickr_bg>
+			<flickr_color translate="label">
+				<label>Flickr Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>44</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<flickr_custom_colors>
+						<value>1</value>
+					</flickr_custom_colors>
+				</depends>
+			</flickr_color>
+			<flickr_border translate="label">
+				<label>Flickr Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>45</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<flickr_custom_colors>
+						<value>1</value>
+					</flickr_custom_colors>
+				</depends>
+			</flickr_border>
+			<instagram translate="label">
+				<label>Instagram</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>46</sort_order>
+				<description>Example: http://instagram.com/ (Leave empty to hide)</description>
+			</instagram>
+			<instagram_custom_colors translate="label">
+				<label>Custom Colors</label>
+				<type>select</type>
+				<visible>1</visible>
+				<sort_order>47</sort_order>
+				<value>0</value>
+				<source_model>adminhtml/system_config_source_enabledisable</source_model>
+				<description>Enable or Disable custom colors</description>
+			</instagram_custom_colors>
+			<instagram_bg translate="label">
+				<label>Instagram Background Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>48</sort_order>
+				<value>517FA4</value>
+				<description>Click to select color</description>
+				<depends>
+					<instagram_custom_colors>
+						<value>1</value>
+					</instagram_custom_colors>
+				</depends>
+			</instagram_bg>
+			<instagram_color translate="label">
+				<label>Instagram Text Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>49</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<instagram_custom_colors>
+						<value>1</value>
+					</instagram_custom_colors>
+				</depends>
+			</instagram_color>
+			<instagram_border translate="label">
+				<label>Instagram Border Color</label>
+				<type>text</type>
+				<visible>1</visible>
+				<sort_order>50</sort_order>
+				<value>ffffff</value>
+				<description>Click to select color</description>
+				<depends>
+					<instagram_custom_colors>
+						<value>1</value>
+					</instagram_custom_colors>
+				</depends>
+			</instagram_border>
+			<template translate="label">
+				<label>Display as</label>
+				<visible>0</visible>
+				<required>1</required>
+				<type>select</type>
+				<value>meigee/meigeewidgetsunique/sociallinks.phtml</value>
+			</template>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_social_links>
+	<unique_latest_tweets type="meigeewidgetsunique/tweets">
+		<name>Meigee - Unique/Latest Tweets</name>
+		<description type="desc">Adds a list of your latest tweets</description>
+		<parameters>
+			<template translate="label">
+				<label>Display as</label>
+				<visible>0</visible>
+				<required>1</required>
+				<type>select</type>
+				<value>meigee/meigeewidgetsunique/tweets.phtml</value>
+			</template>
+			<twitter_username>
+				<label>Twitter Username</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value></value>
+			</twitter_username>
+			<twitter_widget_id>
+				<label>Twitter Widget ID</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<description><![CDATA[You can find it on your twitter widget settings page]]></description>
+				<value></value>
+			</twitter_widget_id>
+			<tweet_limit>
+				<label>Tweet limit</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<description>A preset number of Tweets. Value may be set between 1 and 20</description>
+				<value>2</value>
+			</tweet_limit>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_latest_tweets>
+	<unique_brandslider type="meigeewidgetsunique/brandslider">
+		<name>Meigee - Unique/Brands Showcase</name>
+		<description type="desc"><![CDATA[Adds a list of your manufacturers. <span style="color:red">Refer to the user guide before adding this widget</span>]]></description>
+		<parameters>
+			<brands translate="label">
+				<label>Brands</label>
+				<description>Select brands you want to be displayed</description>
+				<visible>1</visible>
+				<required>1</required>
+				<type>multiselect</type>
+				<source_model>meigeewidgetsunique/brandslist</source_model>
+			</brands>
+			<viewtype translate="label">
+				<label>Display as</label>
+				<description><![CDATA[<span style="color:red">Choose "slider" option only if the sum width of your brand images is greater than 1252px, otherwise slider won't run</span>]]></description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/brandsview</source_model>
+			</viewtype>
+			<brandsearch translate="label">
+				<label>Link to brand search</label>
+				<description>Images will refer to search products by brand</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>1</value>
+			</brandsearch>
+			<target translate="label">
+				<label>Link target blank</label>
+				<description>Choose "Yes" if you want open links in a new tab</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<value>1</value>
+				<depends>
+					<brandsearch>
+						<value>1</value>
+					</brandsearch>
+				</depends>
+			</target>
+			<imagesformat translate="label">
+				<label>Images Format</label>
+				<description>All of your images must have the same format</description>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/imagesformat</source_model>
+			</imagesformat>
+			<template translate="label">
+				<label>Display as</label>
+				<visible>0</visible>
+				<required>0</required>
+				<type>select</type>
+				<value>meigee/meigeewidgetsunique/manufacturers.phtml</value>
+			</template>
+			<buttons_position>
+				<label>Paging Buttons Position</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/buttonsposition</source_model>
+				<value>1</value>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/manufacturers.phtml</value>
+					</template>
+					<viewtype>
+						<value>slider</value>
+					</viewtype>
+				</depends>
+			</buttons_position>
+			<widget_id translate="label">
+				<label>Widget ID</label>
+				<visible>1</visible>
+				<required>0</required>
+				<type>select</type>
+				<source_model>meigeewidgetsunique/number</source_model>
+				<depends>
+					<template>
+						<value>meigee/meigeewidgetsunique/manufacturers.phtml</value>
+					</template>
+					<viewtype>
+						<value>slider</value>
+					</viewtype>
+				</depends>
+				<description>Generated automatically</description>
+			</widget_id>
+			<cache_lifetime translate="label description">
+				<label>Cache Lifetime (Seconds)</label>
+				<description>86400 by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+			</cache_lifetime>
+		</parameters>
+	</unique_brandslider>
+</widgets>

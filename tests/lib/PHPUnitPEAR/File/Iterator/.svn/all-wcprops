@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/File/Iterator
+END
+Autoload.php.in
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/File/Iterator/Autoload.php.in
+END
+Facade.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/File/Iterator/Facade.php
+END
+Factory.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/File/Iterator/Factory.php
+END
+Autoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/File/Iterator/Autoload.php
+END

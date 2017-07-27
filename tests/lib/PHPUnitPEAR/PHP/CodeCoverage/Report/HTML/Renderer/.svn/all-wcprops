@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/HTML/Renderer
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/HTML/Renderer/File.php
+END
+Directory.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/HTML/Renderer/Directory.php
+END
+Dashboard.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHP/CodeCoverage/Report/HTML/Renderer/Dashboard.php
+END

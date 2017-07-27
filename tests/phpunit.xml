@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    backupGlobals="false"
+    bootstrap="./bootstrap.php"
+    strict="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    colors="true"
+    verbose="true">
+        
+    <testsuites>
+        <testsuite name="Library">
+            <directory>app/lib</directory>
+        </testsuite>
+        <testsuite name="Shop modules">
+            <directory>app/code</directory>
+        </testsuite>
+    </testsuites>
+    
+    
+</phpunit>

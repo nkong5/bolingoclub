@@ -1,0 +1,29 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+?>
+<div class="footer-subscribe">
+	<div class="footer-block-title">
+		<h2><?php echo $this->__('Newsletter') ?></h2> 
+	</div>
+	<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="footer-newsletter-validate-detail">
+		<div class="block-content">            
+			<label for="footer-newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
+			<div class="input-box">
+				<input type="text" name="email" id="footer-newsletter" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" value="<?php echo $this->__('Sign up for our newsletter') ?>" onblur="if (this.value=='') this.value = '<?php echo $this->__('Sign up for our newsletter') ?>'" onfocus="if (this.value=='<?php echo $this->__('Sign up for our newsletter') ?>') this.value = ''" />
+				<button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+	//<![CDATA[
+		var footerNewsletterSubscriberFormDetail = new VarienForm('footer-newsletter-validate-detail');
+	//]]>
+	</script>
+</div>

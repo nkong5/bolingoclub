@@ -1,0 +1,143 @@
+<?php
+/**
+ * @see NRApps_Idealo_Block_Adminhtml_Attributes
+ * @var $this NRApps_Idealo_Block_Adminhtml_Attributes
+ */
+?>
+
+<div class="content-header">
+    <h3><?php echo $this->__('idealo Connect - Manage Attributes') ?></h3>
+    <p class="form-buttons">
+        <?php echo $this->getButtonHtml(Mage::helper('adminhtml')->__('Save'), 'attributesForm.submit();', 'save'); ?>
+    </p>
+</div>
+
+<div class="entry-edit">
+    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="attributes_form">
+        <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+
+        <?php foreach($this->getAttributeData() as $attribute): ?>
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $attribute->getLabel() ?></h4>
+            <div class="form-buttons"></div>
+        </div>
+
+        <div class="fieldset" id="group_<?php echo $attribute->getCode() ?>">
+            <?php if ($attribute->getNote()): ?>
+            <div class="hor-scroll">
+                <?php echo $attribute->getNote() ?>
+            </div>
+            <?php endif ?>
+            <div class="hor-scroll">
+                <table cellspacing="0" class="form-list">
+                    <colgroup>
+                        <col width="220" />
+                        <col width="300" />
+                        <col width="*" />
+                    </colgroup>
+                    <tbody>
+                    <?php Mage::log($attribute->getCode()); Mage::log($this->attributeExists($attribute)); ?>
+                        <?php if (!$this->attributeExists($attribute)): ?>
+                            <?php
+                            $types = $attribute->getType();
+                            if (!is_array($types)) {
+                                $types = array($types);
+                            }
+                            ?>
+                        <tr>
+                            <td class="value">
+                                <input
+                                    type="radio"
+                                    name="attribute[<?php echo $attribute->getCode() ?>]"
+                                    id="attribute_<?php echo $attribute->getCode() ?>_create"
+                                    class="radio" value="create"
+                                    <?php if ($this->getSelectedAttributeCode($attribute)): ?>checked="checked"<?php endif ?>
+                                />
+                                <label for="attribute_<?php echo $attribute->getCode() ?>_create">
+                                    <?php echo $this->__('Create new attribute') ?>:
+                                </label>
+                            </td>
+                            <td class="value">
+                                <?php if (sizeof($types) > 1): ?>
+                                    <select class="new-attribute" name="new_attribute_type[<?php echo $attribute->getCode() ?>]">
+                                        <?php foreach($types as $type): ?>
+                                            <option value="<?php echo $type ?>"><?php echo $this->getAttributeTypeLabel($type) ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                <?php else: ?>
+                                    <?php echo $this->getAttributeTypeLabel(current($types)) ?>
+                                    <input type="hidden" name="new_attribute_type[<?php echo $attribute->getCode() ?>]" value="<?php echo current($types) ?>" />
+                                <?php endif ?>
+                            </td>
+                        </tr>
+                        <?php endif ?>
+
+                        <tr>
+                            <td class="value">
+                                <input
+                                    type="radio"
+                                    name="attribute[<?php echo $attribute->getCode() ?>]"
+                                    id="attribute_<?php echo $attribute->getCode() ?>_existing"
+                                    class="radio" value="existing"
+                                    <?php if ($this->attributeExists($attribute) || $this->getSelectedAttributeCode($attribute) != $attribute->getCode()): ?>checked="checked"<?php endif ?>
+                                />
+                                <label for="attribute_<?php echo $attribute->getCode() ?>_existing">
+                                    <?php echo $this->__('Use existing attribute') ?>:
+                                </label>
+                            </td>
+                            <td class="value">
+                                <select class="existing-attribute" name="existing_attribute[<?php echo $attribute->getCode() ?>]">
+                                    <?php foreach($this->getProductAttributes($attribute->getType()) as $productAttribute): ?>
+                                        <option
+                                            value="<?php echo $productAttribute->getAttributeCode() ?>"
+                                            <?php if ($this->getSelectedAttributeCode($attribute) == $productAttribute->getAttributeCode()): ?> selected="selected"<?php endif ?>
+                                        ><?php echo $productAttribute->getFrontendLabel() ?> [<?php echo $productAttribute->getAttributeCode() ?>]</option>
+                                    <?php endforeach ?>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <?php if (!$this->attributeExists($attribute)): ?>
+                        <tr>
+                            <td class="value" colspan="2">
+                                <input
+                                    type="radio"
+                                    name="attribute[<?php echo $attribute->getCode() ?>]"
+                                    id="attribute_<?php echo $attribute->getCode() ?>_none"
+                                    class="radio" value="none"
+                                    <?php if ($this->isAttributeNone($attribute)): ?>checked="checked"<?php endif ?>
+                                    />
+                                <label for="attribute_<?php echo $attribute->getCode() ?>_none">
+                                    <?php echo $this->__('Do not use this attribute') ?>
+                                </label>
+                            </td>
+                        </tr>
+                        <?php endif ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php endforeach ?>
+    </form>
+</div>
+<script type="text/javascript">
+    attributesForm = new varienForm('attributes_form', '');
+
+    $$('.existing-attribute').each(function(element) {
+        element.observe('change', function() {
+
+            this.up().up().select('input.radio').each(function(radio) {
+                radio.checked = 'checked';
+            });
+        });
+    });
+
+    $$('.new-attribute').each(function(element) {
+        element.observe('change', function() {
+
+            this.up().up().select('input.radio').each(function(radio) {
+                radio.checked = 'checked';
+            });
+        });
+    });
+</script>

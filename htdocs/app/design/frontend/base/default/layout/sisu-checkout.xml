@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/index.phtml" />
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/success.phtml" />
+        </reference>
+    </checkout_onepage_success>
+    <!-- OneStepCheckout http://www.onestepcheckout.com -->
+    <onestepcheckout_index_index>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/index.phtml" />
+        </reference>
+    </onestepcheckout_index_index>
+    <!-- ONE STEP / PAGE CHECKOUT https://www.iwdagency.com/extensions/magento-one-step-checkout-module.html -->
+    <opc_index_index>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/index.phtml" />
+        </reference>
+    </opc_index_index>
+    <!-- Firecheckout http://templates-master.com/magento-one-page-checkout.html -->
+    <firecheckout_index_index>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/index.phtml" />
+        </reference>
+    </firecheckout_index_index>
+    <checkout_cart_index>
+        <reference name="before_body_end">
+            <block type="core/template" template="sisu/checkout/cart.phtml" />
+        </reference>
+    </checkout_cart_index>
+</layout>

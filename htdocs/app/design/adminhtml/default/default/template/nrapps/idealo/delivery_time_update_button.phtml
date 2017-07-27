@@ -1,0 +1,18 @@
+<?php /** @var Mage_Adminhtml_Block_Template $this */ ?>
+
+<tr>
+    <td class="label"></td>
+    <td class="value">
+        <div>
+            <button type="button" class="button updateButton"
+                    onclick="window.location = '<?php echo $this->getUrl('adminhtml/idealo_settings/updateDeliveryTime') ?>';">
+                <span><span><?php echo $this->__('Update Mapping with new Options') ?></span></span>
+            </button>
+        </div>
+        <p class="note">
+            <span><?php echo $this->__('Unsaved changes will be lost. Please save your changes before.') ?></span>
+        </p>
+    </td>
+    <td class="scope-label"></td>
+    <td class=""></td>
+</tr>

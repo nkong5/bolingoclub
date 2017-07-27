@@ -1,0 +1,7 @@
+<h2><span>DieCrema.de steht für:</span></h2>
+<ul>
+	<li>***Hochwertige Espresso-Maschinen, Mühlen und excellenten Kaffee</li>
+	<li>Volle Gewährleistung</li>
+	<li>Top Rabatte</li>
+	<li>Markenübergreifende, individuelle Beratung</li>
+</ul>

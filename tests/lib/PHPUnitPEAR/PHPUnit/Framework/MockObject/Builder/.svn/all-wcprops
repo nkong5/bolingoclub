@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder
+END
+InvocationMocker.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/InvocationMocker.php
+END
+MethodNameMatch.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/MethodNameMatch.php
+END
+Namespace.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/Namespace.php
+END
+ParametersMatch.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/ParametersMatch.php
+END
+Identity.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/Identity.php
+END
+Stub.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/Stub.php
+END
+Match.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Builder/Match.php
+END

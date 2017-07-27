@@ -1,0 +1,30 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+?>
+<div class="wide-subscribe-wrapper">
+	<div class="background-wrapper"></div>
+	<div class="wide-subscribe">
+		<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="wide-newsletter-validate-detail">
+			<i class="fa fa-envelope-o"></i>
+			<div class="block-content">
+				<label for="wide-newsletter"><?php echo $this->__('Subscribe to the Unique mailing list to receive updates on new arrivals, special offers and other discount information.') ?></label>
+				<div class="input-box">
+					<input type="text" name="email" id="wide-newsletter" title="<?php echo $this->__('Enter your email') ?>" class="input-text required-entry validate-email" value="<?php echo $this->__('Enter your email') ?>" onblur="if (this.value=='') this.value = '<?php echo $this->__('Enter your email') ?>'" onfocus="if (this.value=='<?php echo $this->__('Enter your email') ?>') this.value = ''" />
+					<button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript">
+		//<![CDATA[
+			var wideNewsletterSubscriberFormDetail = new VarienForm('wide-newsletter-validate-detail');
+		//]]>
+		</script>
+	</div>
+</div>

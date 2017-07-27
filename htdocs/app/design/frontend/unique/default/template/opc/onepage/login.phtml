@@ -1,0 +1,23 @@
+<p class="text-login"><?php echo $this->__('Fill in the Fields below to complete your purchase!') ?> <?php echo $this->__('Already registered?') ?> <a class="login-trigger"><?php echo $this->__('Login here')?></a></p>
+<script type="text/javascript">
+    //<![CDATA[
+        var dataForm1 = new VarienForm('login-form', true);
+    //]]>
+	
+	/* Login ajax */
+	<?php if(!Mage::getStoreConfig('customer/startup/redirect_dashboard') and !$this->helper('customer')->isLoggedIn()): ?>
+	<?php $pageUrl = Mage::helper('core/url')->getCurrentUrl(); ?>
+	var redirectUrl = "<?php echo str_replace('login', 'loginPost', $this->helper('customer')->getLoginUrl()); ?>?pageurl=<?php echo $pageUrl; ?>";
+	<?php else: ?>
+	var redirectUrl = false;
+	<?php endif; ?>
+	
+	jQuery('.login-trigger').on('click', function(){
+		<?php if (Mage::app()->getStore()->isCurrentlySecure()): ?>
+		ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/', array('_secure'=>true)) ?>", false, redirectUrl);
+		<?php else : ?>
+		ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/', array('_secure'=>false)) ?>", false, redirectUrl);
+		<?php endif; ?>
+		return false;
+	});
+</script>

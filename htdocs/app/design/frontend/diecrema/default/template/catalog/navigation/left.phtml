@@ -1,0 +1,88 @@
+<?php if (!Mage::registry('current_category')) return ?>
+<?php $_categories = $this->getCurrentChildCategories() ?>
+<?php 
+$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+$_category = Mage::getModel('catalog/category')->load($rootCategoryId);
+$_helper = Mage::helper('catalog/category');
+
+$intCategoryMainToLoad = 0; 
+$intCurrentCategoryId = Mage::registry('current_category')->getId(); 
+$_categories = $_category->getChildrenCategories();
+foreach( $_categories as $objCategoryMain ){
+    $arrIds = $objCategoryMain->getAllChildren(true); 
+    if( is_array($arrIds) ){
+        if( in_array( $intCurrentCategoryId, $arrIds ) ){
+            $intCategoryMainToLoad = $objCategoryMain->getId();
+        }
+    }
+}
+if($intCategoryMainToLoad){
+    $_category = Mage::getModel('catalog/category')->load($intCategoryMainToLoad);
+    $_categories = $_category->getChildrenCategories();
+}
+
+//$_categories = $_category->getAllChildren(true);
+?>
+<?php $_count = is_array($_categories)?count($_categories):$_categories->count(); ?>
+<?php if($_count): ?>
+<div id="navCategories" class="widgetBox">
+	<div class="p12">
+		<h2 class="f16"><?php echo $_category->getName(); ?></h2>
+		
+		<ul class="navVertical pTop6">
+		     <?php foreach ($_categories as $_category): ?>
+                <?php if($_category->getIsActive()): 
+                    $arrChildren = $_category->getChildrenCategories();
+                    $iArrow = ((count($arrChildren)) && $this->isCategoryActive($_category))
+                        ? 'i_arrow_open.png' : 'i_arrow_closed.png';
+                ?>
+                    <li>
+                    	<img src="<?=$this->getSkinUrl('images/' . $iArrow);?>" />
+                        <a href="<?php echo $this->getCategoryUrl($_category) ?>"<?php if ($this->isCategoryActive($_category)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($_category->getName()) ?></a>
+                    </li>
+                    <?php 
+                    $arrSubIds = $_category->getAllChildren(true);
+                    if( is_array( $arrSubIds )
+                        && !in_array( $intCurrentCategoryId, $arrSubIds ) ){
+                        continue;    
+                    }
+                     
+                    if(count($arrChildren)):
+                    foreach ($arrChildren as $objChildCategory): 
+                        $arrChildrenSub = $objChildCategory->getChildrenCategories(); 
+                        $iArrowLevel2 = ((count($arrChildrenSub)) && $this->isCategoryActive($objChildCategory))
+                            ? 'i_arrow_open.png' : 'i_arrow_closed.png';
+                        ?>
+                        <?php if($objChildCategory->getIsActive()): ?>
+                        <li class="level2">
+                        	<img src="<?=$this->getSkinUrl('images/' . $iArrowLevel2);?>" />
+                            <a href="<?php echo $this->getCategoryUrl($objChildCategory) ?>"<?php if ($this->isCategoryActive($objChildCategory)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($objChildCategory->getName()) ?></a>
+                        </li>
+                        <?php 
+                        $arrSubIds = $objChildCategory->getAllChildren(true);
+                        if( is_array( $arrSubIds )
+                            && !in_array( $intCurrentCategoryId, $arrSubIds ) ){
+                            continue;    
+                        }
+                        
+                        if(count($arrChildrenSub)):
+                        foreach ($arrChildrenSub as $objChildCategory): ?>
+                            <?php if($objChildCategory->getIsActive()): ?>
+                            <li class="level3">
+                            	<img src="<?=$this->getSkinUrl('images/i_arrow_closed.png');?>" />
+                                <a href="<?php echo $this->getCategoryUrl($objChildCategory) ?>"<?php if ($this->isCategoryActive($objChildCategory)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($objChildCategory->getName()) ?></a>
+                            </li>
+                            <?php endif; ?>
+                        <?php endforeach;
+                        endif; ?>
+                        
+                        <?php endif; ?>
+                    <?php endforeach;
+                    endif; ?>
+                <?php endif; ?>
+                
+            <?php endforeach ?>
+		</ul>
+	</div>	
+</div>
+<?php endif; ?>

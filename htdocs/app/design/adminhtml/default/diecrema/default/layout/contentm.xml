@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <contentm_adminhtml_contentm_index>
+        <reference name="content">
+            <block type="contentm/adminhtml_contentm" name="contentm" />
+        </reference>
+    </contentm_adminhtml_contentm_index>
+ 
+    <contentm_adminhtml_contentm_edit>
+        <reference name="content">
+            <block type="contentm/adminhtml_contentm_edit" name="contentm_edit" />
+        </reference>
+    </contentm_adminhtml_contentm_edit>
+         
+</layout>

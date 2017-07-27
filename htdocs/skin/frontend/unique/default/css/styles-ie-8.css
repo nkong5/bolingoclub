@@ -1,0 +1,57 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_blank
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ 
+.fancybox-overlay,
+.ajax-box-overlay{
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4D000000,endColorstr=#4D000000);
+	zoom: 1;
+}
+.lockshowloading,
+.ajax-box-overlay i.load{
+	display: none;
+}
+
+/* Grids */
+body .category-products .products-grid.grid-2-columns li.item,
+body .category-products .products-grid.grid-3-columns li.item,
+body .category-products .products-grid.grid-4-columns li.item,
+body .category-products .products-grid.grid-5-columns li.item,
+body .category-products .products-grid.grid-6-columns li.item,
+body .category-products .products-grid.grid-7-columns li.item,
+body .category-products .products-grid.grid-8-columns li.item{clear:none;}
+
+html {margin-left: 0!important;}
+.product-tabs li.current,
+.product-tabs li:hover {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
+	zoom: 1;
+}
+.content-subscribe-block .newsletter-icon i {
+	display: none;
+}
+header#header .links li a.top-link-login:hover > i,
+header#header .customer-name:hover > i,
+header#header .top-cart .block-title .title-cart:hover > i  {display: none;}
+.products-grid.widget-grid li.item .product-container {margin-left: 10px!important; margin-right: 10px!important;}

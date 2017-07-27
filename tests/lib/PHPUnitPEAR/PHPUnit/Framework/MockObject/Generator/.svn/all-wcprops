@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator
+END
+mocked_class.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/mocked_class.tpl.dist
+END
+unmocked_clone.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/unmocked_clone.tpl.dist
+END
+wsdl_class.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/wsdl_class.tpl.dist
+END
+mocked_static_method.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/mocked_static_method.tpl.dist
+END
+wsdl_method.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/wsdl_method.tpl.dist
+END
+mocked_object_method.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/mocked_object_method.tpl.dist
+END
+mocked_clone.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/mocked_clone.tpl.dist
+END
+trait_class.tpl.dist
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Framework/MockObject/Generator/trait_class.tpl.dist
+END

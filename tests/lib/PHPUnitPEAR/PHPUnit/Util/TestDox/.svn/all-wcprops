@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/TestDox
+END
+ResultPrinter.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/TestDox/ResultPrinter.php
+END
+NamePrettifier.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kibithek/!svn/ver/36/trunk/tests/lib/PHPUnitPEAR/PHPUnit/Util/TestDox/NamePrettifier.php
+END

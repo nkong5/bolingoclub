@@ -1,0 +1,16 @@
+<config>
+    <modules>
+        <Diecrema_Core>
+            <version>0.1.0</version>
+        </Diecrema_Core>
+    </modules>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <email_template>Diecrema_Core_Model_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>    
+    </global>
+</config>

@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<root>
+    <cms>
+        <pages>
+            <item>
+                <title>Home Page</title>
+                <identifier>home</identifier>
+                <content><![CDATA[<div class="grid_3 alpha left-content">
+	<div class="indent">
+		{{block type="page/html" block_id="sidebar_slider_container" template="meigee/sidebarslider.phtml"}}
+		{{block type="newsletter/subscribe" block_id="content.newsletter" template="newsletter/content_subscribe.phtml"}}
+		<header class="widget-title">
+			<h2>Backpacks</h2>
+		</header>
+		{{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/list_small.phtml" products_amount="3" product_name="1" price="1" add_to_cart="1" rating_stars="1" rating_cust_link="1" widget_id="1893"}}
+	</div>
+</div>
+<div class="grid_9 omega right-content">
+	<header class="widget-title">
+		<h2>New products</h2>
+	</header>
+         {{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/slider.phtml" products_amount="10" visible_products="3" product_name="1" price="1" add_to_cart="1" wishlist="1" compare="1" quickview="1" rating_stars="1" rating_cust_link="1" rating_add_review_link="1" widget_id="7495"}}
+	<hr class="indent-28 white-space" />
+	<header class="widget-title">
+		<h2>Hoodies & Sweatshirts</h2>
+	</header>
+	 {{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/slider.phtml" products_amount="10" visible_products="3" product_name="1" price="1" add_to_cart="1" wishlist="1" compare="1" quickview="1" rating_stars="1" rating_cust_link="1" rating_add_review_link="1" widget_id="385"}}
+</div>
+<div class="clear"></div>
+<hr class="indent-36 white-space" />
+<div class="text-banner" style="padding: 9em 0 6.67em;">
+	<div class="background-wrapper">
+		<img src="{{media url="wysiwyg/text_banner_img.jpg"}}" data-srcX2="{{media url="wysiwyg/text_banner_img@x2.jpg"}}" alt="" />
+	</div>
+	<div class="text-banner-content container_12">
+		<h3>only in our shop</h3>
+		<h2>Unbelievable stuff<br /> Special offers 2014</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum mattis sapien, sit amet sodales velit. Mauris eget metus dui. Quisque et sem quam. Nam pretium a metus ut convallis. Etiam sit amet ullamcorper sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+		<button class="button"><span><span>Buy theme</span></span></button>
+	</div>
+</div>
+<hr class="indent-18 white-space" />
+<header class="widget-title">
+	<h2>Backpacks</h2>
+</header>
+{{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/slider.phtml" products_amount="10" product_name="1" price="1" add_to_cart="1" quickview="1" rating_stars="1" rating_cust_link="1" visible_products="6" widget_id="2311"}}
+<hr class="indent-36 white-space" />
+<div class="products-tabs-wrapper">
+	<div class="product-tabs-bg">
+		<img src="{{media url="wysiwyg/products_tabs_bg.jpg"}}" data-srcX2="{{media url="wysiwyg/products_tabs_bg@x2.jpg"}}" alt="" />
+	</div>
+	<div class="product-tabs-box visible">{{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/grid.phtml" products_amount="4" products_per_row="4" quickview="1" quickview_position_grid="1" widget_id="9772"}}</div>
+	<div class="product-tabs-box">{{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/grid.phtml" products_amount="4" products_per_row="4" quickview="1" quickview_position_grid="1" widget_id="9141"}}</div>
+	<div class="product-tabs-box">{{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/grid.phtml" products_amount="4" products_per_row="4" quickview="1" quickview_position_grid="1" widget_id="3875"}}</div>
+	<ul class="product-tabs">
+		<li class="current"><span>Hoodies & Sweatshirts</span></li>
+		<li><span>Suits</span></li>
+		<li><span>Backpacks</span></li>
+	</ul>
+</div>
+<hr class="indent-18 white-space" />
+<div class="products-list-wrapper">
+	<div class="grid_3 alpha">
+		<header class="widget-title">
+			<h2>Backpacks</h2>
+		</header>
+		{{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/list_small.phtml" products_amount="2" product_name="1" price="1" add_to_cart="1" rating_stars="1" rating_cust_link="1" widget_id="6847"}}
+	</div>
+	<div class="grid_3">
+		<header class="widget-title">
+			<h2>Backpacks</h2>
+		</header>
+		{{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/list_small.phtml" products_amount="2" product_name="1" price="1" add_to_cart="1" rating_stars="1" rating_cust_link="1" widget_id="5584"}}
+	</div>
+	<div class="grid_3">
+		<header class="widget-title">
+			<h2>Backpacks</h2>
+		</header>
+		{{widget type="meigeewidgetsunique/newproducts" template="meigee/meigeewidgetsunique/list_small.phtml" products_amount="2" product_name="1" price="1" add_to_cart="1" rating_stars="1" rating_cust_link="1" widget_id="5872"}}
+	</div>
+	<div class="grid_3 omega">
+		<header class="widget-title">
+			<h2>Backpacks</h2>
+		</header>
+		{{widget type="meigeewidgetsunique/saleproducts" template="meigee/meigeewidgetsunique/list_small.phtml" products_amount="2" product_name="1" price="1" add_to_cart="1" rating_stars="1" rating_cust_link="1" widget_id="5900"}}
+	</div>
+</div>
+<hr class="indent-36 white-space" />
+<div class="content-banners">
+	<div class="background-wrapper" style="background-color: #eee;"></div>
+	<div class="grid_4 alpha">
+		<a href="#" title="Content Banner 1"><img src="{{media url="wysiwyg/home_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/home_banner_1@x2.jpg"}}" alt="" /></a>
+	</div>
+	<div class="grid_4">
+		<a href="#" title="Content Banner 2"><img src="{{media url="wysiwyg/home_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/home_banner_2@x2.jpg"}}" alt="" /></a>
+	</div>
+	<div class="grid_4 omega">
+		<a href="#" title="Content Banner 3"><img src="{{media url="wysiwyg/home_banner_3.jpg"}}" data-srcX2="{{media url="wysiwyg/home_banner_3@x2.jpg"}}" alt="" /></a>
+	</div>
+	<div class="clear"></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+        </pages>
+        <blocks>
+            <item>
+                <title>Unique Footer</title>
+                <identifier>unique_footer</identifier>
+                <content><![CDATA[<div class="container_12">
+	<div class="grid_12">
+		<div class="footer-top">
+			<div class="grid_3 alpha">
+				<div class="footer-block-title">
+					<h2>About us</h2>
+				</div>
+				<div class="footer-info">
+					<a href="#" title="Footer Logo" class="footer-logo"><img src="{{media url="wysiwyg/footer_logo.png"}}" data-srcX2="{{media url="wysiwyg/footer_logo@x2.png"}}" alt="" /></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet urna ac turpis pellentesque tristique. Aenean pulvinar at ante non tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					<button class="button"><span><span>Buy theme</span></span></button>
+				</div>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>Cloth</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+				</ul>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>Contact Us</h2>
+				</div>
+				<ul class="contact-info">
+					<li>
+						<i class="fa fa-phone"></i>
+						<span>
+							<strong>(555) 264-924-2698</strong>
+							<strong>(555) 264-924-2699</strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-home"></i>
+						<span>
+							<strong>172/3 Brooklyn Avenue</strong>
+							<strong>New York, NY 90024. USA</strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-envelope-o"></i>
+						<span>
+							<strong><a href="mailto:unique@info.com">unique@info.com</a></strong>
+							<strong><a href="mailto:unique.shop@info.com">unique.shop@info.com</a></strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-clock-o"></i>
+						<span>
+							<strong>From Monday to Friday</strong>
+							<strong>9:00 a.m. to 5:00 p.m.</strong>
+						</span>
+					</li>
+				</ul>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3 omega">
+				<div class="footer-block-title">
+					<h2>Latest tweets</h2>
+				</div>
+				{{widget type="meigeewidgetsunique/tweets" template="meigee/meigeewidgetsunique/tweets.phtml" twitter_username="meigeeteam" twitter_widget_id="349107793481043968" tweet_limit="2"}}
+			</div>
+			<div class="clear"></div>
+		</div>
+		<hr class="solid" />
+		<div class="footer-block">
+			<div class="left">
+				{{widget type="meigeewidgetsunique/sociallinks" twitter="http://twitter.com" rss="http://rss.com" facebook="http://facebook.com" googleplus="https://plus.google.com" linkedin="http://linkedin.com" pinterest="http://pinterest.com" template="meigee/meigeewidgetsunique/sociallinks.phtml"}}
+			</div>
+                        <hr class="solid mobile" />
+			<div class="right">
+				<ul class="footer-links">
+					<li><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+					<li><a href="{{store direct_url="customer-service"}}">Customer Service</a></li>
+					<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+					<li><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Site Map </a></li>
+					<li><a href="{{store direct_url="catalogsearch/term/popular"}}">Search Terms</a></li>
+					<li><a href="{{store direct_url="catalogsearch/advanced/"}}">Advanced Search</a></li>
+					<li><a href="{{store direct_url="sales/guest/form/"}}">Orders and Returns</a></li>
+					<li class="last"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer-bottom">
+	<div class="container_12">
+		<div class="grid_12">
+			<div class="left">
+				<a href="#" title="Footer Small Logo" class="footer-small-logo"><img src="{{media url="wysiwyg/footer_small_logo.png"}}" data-srcX2="{{media url="wysiwyg/footer_small_logo@x2.png"}}" alt="" /></a>
+			</div>
+			<div class="left">
+				<address>{{config path="design/footer/copyright"}}</address>
+			</div>
+			<div class="right">
+				{{block type="page/switch" block_id="store_switcher" template="page/switch/stores.phtml"}}
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Unique Footer 2</title>
+                <identifier>unique_footer_2</identifier>
+                <content><![CDATA[<div class="footer-bottom">
+	<div class="container_12">
+		<div class="grid_12">
+			<div class="grid_3 alpha">
+				<div class="footer-block-title">
+					<h2>About us</h2>
+				</div>
+				<div class="footer-info">
+					<a href="#" title="Footer Logo" class="footer-logo"><img src="{{media url="wysiwyg/footer_logo_2.png"}}" data-srcX2="{{media url="wysiwyg/footer_logo_2@x2.png"}}" alt="" /></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet urna ac turpis pellentesque tristique. Aenean pulvinar at ante non tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					<button class="button"><span><span>Buy theme</span></span></button>
+				</div>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>Cloth</h2>
+				</div>
+				<ul>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+					<li><a href="#" title="Donec interdum">Donec interdum</a></li>
+					<li><a href="#" title="Cras dolor est, pellentesque">Cras dolor est, pellentesque</a></li>
+					<li><a href="#" title="Consectetur auctor ligula">Consectetur auctor ligula</a></li>
+				</ul>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3">
+				<div class="footer-block-title">
+					<h2>Contact Us</h2>
+				</div>
+				<ul class="contact-info">
+					<li>
+						<i class="fa fa-phone"></i>
+						<span>
+							<strong>(555) 264-924-2698</strong>
+							<strong>(555) 264-924-2699</strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-home"></i>
+						<span>
+							<strong>172/3 Brooklyn Avenue</strong>
+							<strong>New York, NY 90024. USA</strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-envelope-o"></i>
+						<span>
+							<strong><a href="mailto:unique@info.com">unique@info.com</a></strong>
+							<strong><a href="mailto:unique.shop@info.com">unique.shop@info.com</a></strong>
+						</span>
+					</li>
+					<li>
+						<i class="fa fa-clock-o"></i>
+						<span>
+							<strong>From Monday to Friday</strong>
+							<strong>9:00 a.m. to 5:00 p.m.</strong>
+						</span>
+					</li>
+				</ul>
+				<hr class="indent-36 white-space" />
+			</div>
+			<div class="grid_3 omega">
+				<div class="footer-block-title">
+					<h2>Latest tweets</h2>
+				</div>
+				{{widget type="meigeewidgetsunique/tweets" template="meigee/meigeewidgetsunique/tweets.phtml" twitter_username="meigeeteam" twitter_widget_id="349107793481043968" tweet_limit="2"}}
+			</div>
+			<div class="clear"></div>
+			<hr class="solid" />
+			<div class="footer-block">
+				<ul class="footer-links">
+					<li><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+					<li><a href="{{store direct_url="customer-service"}}">Customer Service</a></li>
+					<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+					<li><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Site Map </a></li>
+					<li><a href="{{store direct_url="catalogsearch/term/popular"}}">Search Terms</a></li>
+					<li><a href="{{store direct_url="catalogsearch/advanced/"}}">Advanced Search</a></li>
+					<li><a href="{{store direct_url="sales/guest/form/"}}">Orders and Returns</a></li>
+					<li class="last"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+				</ul>
+				<div class="clear"></div>
+				<hr class="indent-18 white-space" />
+			</div>
+			<div class="clear"></div>
+			<hr class="solid indent-18 white-space" />
+			<div class="left">
+				<a href="#" title="Footer Small Logo" class="footer-small-logo"><img src="{{media url="wysiwyg/footer_small_logo.png"}}" data-srcX2="{{media url="wysiwyg/footer_small_logo@x2.png"}}" alt="" /></a>
+			</div>
+			<div class="left">
+				<address>{{config path="design/footer/copyright"}}</address>
+			</div>
+			<div class="right">
+				{{block type="page/switch" block_id="store_switcher" template="page/switch/stores.phtml"}}
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Unique Header Phones</title>
+                <identifier>unique_header_phones</identifier>
+                <content><![CDATA[<p>Call us free 24/7: (555) 525-624-7244, (555) 325-415-7147</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide 1</title>
+                <identifier>unique_header1_boxed_slide_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_1.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_1@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_9 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide 2</title>
+                <identifier>unique_header1_boxed_slide_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_2.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_2@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_9 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Real</span> products quality 100% guarantee</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide 3</title>
+                <identifier>unique_header1_boxed_slide_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_3.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_3@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin-2 grid_9 alpha omega">
+	<div class="right">
+		<h3>only in our shop</h3>
+		<h2>Really unbelievable features</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis.</p>
+	</div>
+	<div class="left">
+		<h4><img src="{{media url="wysiwyg/boxed_slide_3_additional_image.png"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_3_additional_image@x2.png"}}" alt="" /></h4>
+	</div>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide With Banners 1</title>
+                <identifier>unique_header1_boxed_slide_with_banners_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_1_with_banner.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_1_with_banner@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_6 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide With Banners 2</title>
+                <identifier>unique_header1_boxed_slide_with_banners_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_2_with_banner.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_2_with_banner@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_6 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Real</span> products quality 100% guarantee</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Boxed Slide With Banners 3</title>
+                <identifier>unique_header1_boxed_slide_with_banners_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/boxed_slide_3_with_banner.jpg"}}" data-srcX2="{{media url="wysiwyg/boxed_slide_3_with_banner@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin-2 grid_6 alpha omega">
+	<h3>only in our shop</h3>
+	<h2>Really unbelievable features</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis.</p>
+	<h4><img src="{{media url="wysiwyg/slide_3_with_banners_additional_image.png"}}" data-srcX2="{{media url="wysiwyg/slide_3_with_banners_additional_image@x2.png"}}" alt="" /></h4>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide 1</title>
+                <identifier>unique_header2_boxed_slide_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_1.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_1@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin container_12">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide 2</title>
+                <identifier>unique_header2_boxed_slide_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_2.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_2@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin container_12">
+	<h3>only in our shop</h3>
+	<h2><span>Real</span> products quality 100% guarantee</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide 3</title>
+                <identifier>unique_header2_boxed_slide_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_3.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_3@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin-2 container_12">
+	<div class="right">
+		<h3>only in our shop</h3>
+		<h2>Really unbelievable features</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis.</p>
+	</div>
+	<div class="left">
+		<h4><img src="{{media url="wysiwyg/header2_boxed_slide_3_additional_image.png"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_3_additional_image@x2.png"}}" alt="" /></h4>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide With Banners 1</title>
+                <identifier>unique_header2_boxed_slide_with_banners_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_1_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_1_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_8 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide With Banners 2</title>
+                <identifier>unique_header2_boxed_slide_with_banners_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_2_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_2_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin grid_8 alpha omega">
+	<h3>only in our shop</h3>
+	<h2><span>Real</span> products quality 100% guarantee</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Boxed Slide With Banners 3</title>
+                <identifier>unique_header2_boxed_slide_with_banners_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/header2_boxed_slide_3_with_banners.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_boxed_slide_3_with_banners@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin-2 grid_8 alpha omega">
+	<h3>only in our shop</h3>
+	<h2>Really unbelievable features</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis.</p>
+	<h4><img src="{{media url="wysiwyg/header2_slide_3_with_banners_additional_image.png"}}" data-srcX2="{{media url="wysiwyg/header2_slide_3_with_banners_additional_image@x2.png"}}" alt="" /></h4>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Slider Banners</title>
+                <identifier>unique_header2_slider_banners</identifier>
+                <content><![CDATA[<div class="banner-1">
+	<a href="#"><img src="{{media url="wysiwyg/header2_slider_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_slider_banner_1@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Perfect selection exclusive collections</h2>
+	</div>
+</div>
+<div class="banner-2">
+	<a href="#"><img src="{{media url="wysiwyg/header2_slider_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/header2_slider_banner_2@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Winter never sleep <span>Green</span>point</h2>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Product Banner</title>
+                <identifier>unique_product_banner</identifier>
+                <content><![CDATA[<div class="banner">
+	<h2>September amazing offers</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan quis ipsum id lacinia. </p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Sidebar Slide 1</title>
+                <identifier>unique_sidebar_slide_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sidebar_slide_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sidebar_slide_1@x2.jpg"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Sidebar Slide 2</title>
+                <identifier>unique_sidebar_slide_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sidebar_slide_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sidebar_slide_2@x2.jpg"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Sidebar Slide 3</title>
+                <identifier>unique_sidebar_slide_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sidebar_slide_3.jpg"}}" data-srcX2="{{media url="wysiwyg/sidebar_slide_3@x2.jpg"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Sidebar Slide 4</title>
+                <identifier>unique_sidebar_slide_4</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/sidebar_slide_4.jpg"}}" data-srcX2="{{media url="wysiwyg/sidebar_slide_4@x2.jpg"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Wide Slide 1</title>
+                <identifier>unique_header2_wide_slide_1</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/slide_1.jpg"}}" data-srcX2="{{media url="wysiwyg/slide_1@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin container_12">
+	<h3>only in our shop</h3>
+	<h2><span>Unbelievable</span> stuff Special offers 2014</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Wide Slide 2</title>
+                <identifier>unique_header2_wide_slide_2</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/slide_2.jpg"}}" data-srcX2="{{media url="wysiwyg/slide_2@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin container_12">
+	<h3>only in our shop</h3>
+	<h2><span>Real</span> products quality 100% guarantee</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis. Sed quis facilisis risus.</p>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 2 Wide Slide 3</title>
+                <identifier>unique_header2_wide_slide_3</identifier>
+                <content><![CDATA[<a href="#"><img src="{{media url="wysiwyg/slide_3.jpg"}}" data-srcX2="{{media url="wysiwyg/slide_3@x2.jpg"}}" alt="" /></a>
+<div class="slide-container slide-skin-2 container_12">
+	<div class="right">
+		<h3>only in our shop</h3>
+		<h2>Really unbelievable features</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dui egestas, eleifend sem quis, molestie turpis.</p>
+	</div>
+	<div class="left">
+		<h4><img src="{{media url="wysiwyg/slide_3_additional_image.png"}}" data-srcX2="{{media url="wysiwyg/slide_3_additional_image@x2.png"}}" alt="" /></h4>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Header 1 Slider Banners</title>
+                <identifier>unique_header1_slider_banners</identifier>
+                <content><![CDATA[<div class="banner-1">
+	<a href="#"><img src="{{media url="wysiwyg/slider_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/slider_banner_1@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Perfect selection exclusive collections</h2>
+	</div>
+</div>
+<div class="banner-2">
+	<a href="#"><img src="{{media url="wysiwyg/slider_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/slider_banner_2@x2.jpg"}}" alt="" /></a>
+	<div class="banner-content">
+		<h3>Premium offers</h3>
+		<h2>Winter never sleep <span>Green</span>point</h2>
+	</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Social Likes</title>
+                <identifier>unique_social_likes</identifier>
+                <content><![CDATA[<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="meigeeteam">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Unique Original Footer Logo</title>
+                <identifier>unique_original_footer_logo</identifier>
+                <content><![CDATA[<a href="#" title="Footer Logo" class="footer-small-logo"><img src="{{media url="wysiwyg/footer_small_logo.png"}}" data-srcX2="{{media url="wysiwyg/footer_small_logo@x2.png"}}" alt="" /></a>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Unique Contact Map Block</title>
+                <identifier>unique_contact_map_block</identifier>
+                <content><![CDATA[<div class="block-title"><h3>Our address</h3></div>
+<p>No. 315, Jersey City, New York, USA<br/>
+Call Us : (555) 723-649-4920<br/>
+Email : <a href="mailto:unique@info.com">unique@info.com</a></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+        </blocks>
+    </cms>
+</root>

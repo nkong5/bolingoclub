@@ -1,0 +1,25 @@
+<div class="block block-list block-compare">
+<div class="block-title"><strong><span><?php echo $this->__('Please confirm your payment:')?></span></strong></div>
+	<div style="margin: 10px" class="block-hcd-payment ">
+	<form method="post" action="#" id="hcdForm" autocomplete="off">
+	<?php if ($this->getHcdUrl() !== false) { ?>
+		<?php /* Only for creditcard and debitcard */
+				
+				if ($this->getHcdCode() == "hcdcc" or
+					$this->getHcdCode() == "hcddc") {
+		?>
+		<iframe id="paymentFrame" class="<?php echo $this->getHcdCode() ?>_payment_frame" src="<?php echo trim($this->getHcdUrl()) ?>"></iframe>
+		<?php }; /* end creditcard and debitcard  */ ?>
+			<br /><br />
+			<button id="button_hcd" class="button" title="<?php echo $this->__('pay now') ?>" type="submit">
+				<span>
+						<span class="heidelpay-pay-now"><?php echo $this->__('pay now') ?></span>
+				</span>
+			</button>
+			<span id="heidelpay-please-wait" style="display: none;">
+           				 <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please wait ...') ?>" title="<?php echo $this->__('Please wait ...') ?>" class="v-middle" /> <?php echo $this->__('Please wait ...') ?>
+			</span>
+	<?php }; ?>
+	</form>
+	</div>
+</div>

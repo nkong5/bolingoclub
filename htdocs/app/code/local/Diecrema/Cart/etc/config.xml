@@ -1,0 +1,20 @@
+<config>
+    <modules>
+        <Diecrema_Cart>
+            <version>0.1.0</version>
+        </Diecrema_Cart>
+    </modules>
+    <global>
+        <blocks>
+            <diecrema_cart>
+                <class>Diecrema_Cart_Block</class>
+            </diecrema_cart>
+        </blocks>
+
+        <helpers>
+            <diecrema_cart>
+                <class>Diecrema_Cart_Helper</class>
+            </diecrema_cart>
+        </helpers>
+    </global>
+</config>

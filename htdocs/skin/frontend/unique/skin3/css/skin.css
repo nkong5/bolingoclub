@@ -1,0 +1,1377 @@
+/**
+*
+* This file is generated automaticaly. Please do no edit it directly cause all changes will be lost.
+*
+*/
+/*====== Font Replacement - Titles =======*/ 
+header.rating-title h2,
+body .widget .widget-title h1,
+body .widget .widget-title h2,
+body .widget-title h1,
+body .widget-title h2,
+.page-title h1,
+.page-title h2,
+.page-title h3,
+.page-title h4,
+.page-title h5,
+.page-title h6,
+#footer h3,
+aside.sidebar .block .block-title strong span,
+.product-name h1,
+.block-related h2, 
+.dashboard .box-head h2,
+.product-name a,
+.price,
+button.button span span,
+.content-subscribe-block .block-title h3,
+.text-banner .text-banner-content h2,
+.product-tabs li span,
+header#header .top-cart .block-title .title-cart,
+.nav-container a.level-top > span,
+header#header .slider-banners .banner-content h2,
+.header-slider-container .iosSlider .slider .item h2,
+#footer .footer-block-title h2,
+.menu-button,
+aside.sidebar .block.block-layered-nav dl dt.filter-label,
+aside.sidebar .actions a,
+.sorter .view-mode .grid,
+.sorter .view-mode .list,
+.sorter label,
+.label-new,
+.label-sale,
+.pages li.current,
+.pages li a,
+.catalog-product-view .box-reviews h2,
+.meigee-tabs a,
+.more-views h2,
+aside .block-related .block-title span,
+aside .block-related .related-button a,
+.product-sibebar-banner .banner h2,
+.product-options dt label,
+.related-wrapper-bottom .block-related .block-title strong span,
+.product-collateral h2,
+#login-holder form .fieldset .legend,
+.dashboard .welcome-msg .hello,
+.box-title h2,
+.box-title h3,
+.box-title h4,
+.dashboard .box-head h3,
+.dashboard .box-head h2,
+.fieldset .legend,
+.order-details h2.table-caption,
+#my-orders-table h3.product-name,
+#checkout-review-table h3.product-name,
+.product-review .product-name,
+.cart header h2,
+aside.sidebar .block .block-subtitle,
+aside.sidebar .block.block-wishlist li.item .product-details .product-name a,
+#cart-accordion h3.accordion-title,
+.gift-messages-form .item .details .product-name,
+.opc .step-title h2,
+.nav-wide#nav-wide ul.level0 li.level1 span.subtitle,
+#login-form h2,
+.add-to-cart-success a,
+.cart-remove-box a,
+header#header .top-cart .block-content .actions a,
+header#header .top-cart .block-content .subtotal .label,
+header#header .top-cart .block-content .subtotal .price,
+.menu-tags h5,
+.menu-categories h5,
+.menu-recent h5,
+a.aw-blog-read-more,
+.products-grid .availability-only,
+.products-list .availability-only,
+.ajax-index-options .product-view .product-shop .product-name h2,
+.products-grid li.item .quick-view-wrapper .btn-quick-view span span,
+.products-list li.item .quick-view-wrapper .btn-quick-view span span,
+#footer .block-title strong span,
+.widget-latest li h3 a,
+.content-text-banner .banner-content h3,
+.opc-wrapper-opc .opc-block-title h3,
+.content-text-banners .banner-content h2,
+.content-text-banners .banner-content h3,
+.content-text-banners .banner-content h4,
+.sidebar-slider .slide-banner-content h2,
+#footer .footer-text,
+.block-poll .block-title strong span {font-family: Nunito, sans-serif;} 
+
+/*====== Site Bg =======*/
+body,
+body.boxed-layout {background-color:#FFFFFF;}
+
+/*====== Skin Color #1 =======*/
+a,
+.price,
+.header-slider-container .iosSlider .slider .item h2 span,
+.catalog-product-view .box-reviews .form-add h3 span,
+.block-account li strong,
+header#header .top-cart .block-content .subtotal .price,
+.block-account li a:hover,
+.content-text-banners .banner-content h3 span {color:#FF98BA;}
+
+.content-subscribe-block,
+header#header .links.custom li a.top-link-login,
+header#header .customer-name,
+aside.sidebar .block.block-layered-nav .ui-slider .ui-slider-handle,
+.pages li.current,
+.catalog-product-view .box-reviews .data-table thead,
+.catalog-product-view .box-reviews .full-review,
+#login-holder form .actions button span span,
+.cart-table .btn-continue span span,
+.my-wishlist .buttons-set .btn-update span span,
+header#header .form-search .indent:hover button > span,
+.iwdbutton button.button:hover span span,
+.cart .btn-proceed-checkout:hover span span,
+header#header .top-cart .block-content .actions button.button:hover span span,
+.wide-subscribe-wrapper .background-wrapper,
+.content-text-banner > i,
+#footer .footer-block-title:before,
+#footer .block-title strong:before  {background-color:#FF98BA;}
+
+.products-grid li.item .quick-view-wrapper,
+.products-list li.item .quick-view-wrapper {background-color: rgba(255,152,186,.9);}
+
+header#header .form-search .indent:hover,
+header#header .form-search.focus .indent {border-color:#FF98BA;}
+
+
+/*====== Skin Color #2 =======*/
+a:hover,
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li.level1 a:hover,
+.toolbar .sorter .view-mode strong,
+.catalog-product-view .box-reviews ul li small span,
+.products-list .add-to-links i:hover,
+.products-grid .btn-quick-view:hover span,
+.products-list .btn-quick-view:hover span,
+.products-list.small .product-name a:hover,
+.sorter .view-mode a:hover,
+.sorter a.asc:hover,
+.sorter a.desc:hover,
+.ratings .rating-links a:hover,
+.products-grid .add-to-links li i:hover,
+.block-vertical-nav li a:hover,
+aside.sidebar .product-name a:hover,
+.tags-list li a:hover,
+nav.breadcrumbs li a:hover,
+header#header nav.breadcrumbs li a:hover,
+.product-view .product-shop .add-to-links-box i:hover,
+.product-options-bottom .add-to-links i:hover,
+.product-options-bottom .email-friend i:hover,
+div.quantity-decrease i:hover,
+div.quantity-increase i:hover,
+aside .block-related .related-button a:hover,
+.block-related .product-name a:hover,
+.related-wrapper-bottom .block-subtitle a:hover,
+.block-compare li.item .btn-remove i:hover,
+#login-holder .close-button i:hover,
+#login-holder .forgot-link:hover,
+#login-holder .link-box a:hover,
+.dashboard .box-title a i:hover,
+.dashboard .box-head a i:hover,
+aside.sidebar .block.block-wishlist li.item .product-details .btn-remove i:hover,
+aside.sidebar .block.block-wishlist li.item .product-details .product-name a:hover,
+header#header .top-cart .product-name a:hover,
+header#header .top-cart .btn-edit i:hover,
+header#header .top-cart .btn-remove i:hover,
+.products-grid .product-name a:hover,
+.postTitle h2 a:hover,
+.block-blog li a:hover,
+.crosssell .product-details button.button:hover span,
+.crosssell .product-details .add-to-links i:hover,
+.crosssell .product-details .product-name a:hover,
+.widget-latest li h3 a:hover,
+.sidebar-slider .slide-banner-content h2 span,
+.content-subscribe-block .block-title h2 span,
+.content-text-banners .banner-content p span {color:#33ABFF;}
+
+button.button:hover span span,
+header#header .top-cart .block-title .title-cart,
+.ui-slider-horizontal .ui-slider-range,
+.products-grid .availability-only,
+.products-list .availability-only,
+.label-sale,
+.sidebar-slider .sidebarSlideSelectors li.selected,
+.product-view .add-to-cart button.button span span,
+.cart .btn-proceed-checkout span span,
+header#header .top-cart .block-content .actions button.button span span,
+.slider-container .prev i:hover,
+.slider-container .next i:hover,
+.header-slider-container .iosSlider .prev i:hover,
+.header-slider-container .iosSlider .next i:hover,
+aside.sidebar .actions a:hover,
+aside .block-related .prev i:hover,
+aside .block-related .next i:hover,
+.product-view .product-prev i:hover,
+.product-view .product-next i:hover,
+.more-views .prev i:hover,
+.more-views .next i:hover,
+.catalog-product-view .box-reviews .full-review:hover,
+.related-wrapper-bottom .block-related .next i:hover,
+.related-wrapper-bottom .block-related .prev i:hover,
+aside.sidebar .block.block-wishlist .link-cart i:hover,
+.block-wishlist .prev i:hover,
+.block-wishlist .next i:hover,
+#login-holder form .actions button:hover span span,
+.cart-table .btn-continue:hover span span,
+.my-wishlist .buttons-set .btn-update:hover span span,
+a.aw-blog-read-more:hover,
+#toTopHover i:hover,
+.products-list .button-holder .button:hover > span,
+.products-grid .button-holder .button:hover > span,
+#footer .block-tags li a:hover {background-color:#33ABFF}
+
+#footer .block-tags li a:hover {border-color: #33ABFF;}
+
+.label-type-5 div.label-sale:before,
+.products-grid.label-type-5 .availability-only:before,
+.products-list.label-type-5 .availability-only:before {border-top-color: #33ABFF;}
+.label-type-5 div.label-sale:after,
+.products-grid.label-type-5 .availability-only:after,
+.products-list.label-type-5 .availability-only:after {border-bottom-color: #33ABFF;}
+
+
+/*====== Category Labels =======*/
+.nav-wide#nav-wide li.level-top .category-label.label_one { 
+    background-color: #EB4C4C;
+    border-color: #EB4C4C;
+    color: #FFFFFF;
+}
+
+.header-bottom-left .nav-wide#nav-wide a.level-top > .category-label.label_one,
+.header-2 .nav-wide#nav-wide a.level-top > .category-label.label_one,
+.header-3 .nav-wide#nav-wide a.level-top > .category-label.label_one {color: #EB4C4C;}
+.nav-wide#nav-wide li.level-top.over .category-label.label_one { 
+    background-color: #9EDE42;
+    border-color: #9EDE42;
+    color: #FFFFFF;
+}
+.header-bottom-left .nav-wide#nav-wide .over a.level-top > .category-label.label_one,
+.header-2 .nav-wide#nav-wide .over a.level-top > .category-label.label_one,
+.header-3 .nav-wide#nav-wide .over a.level-top > .category-label.label_one {color: #9EDE42;}
+.nav-wide#nav-wide li.level-top .category-label.label_two { 
+    background-color: #4D8AB0;
+    border-color: #4D8AB0;
+    color: #FFFFFF;
+}
+.header-bottom-left .nav-wide#nav-wide a.level-top > .category-label.label_two,
+.header-2 .nav-wide#nav-wide a.level-top > .category-label.label_two,
+.header-3 .nav-wide#nav-wide a.level-top > .category-label.label_two {color: #4D8AB0;}
+.nav-wide#nav-wide li.level-top.over .category-label.label_two { 
+    background-color: #4FA9E1;
+    border-color: #4FA9E1;
+    color: #FFFFFF;
+}
+.header-bottom-left .nav-wide#nav-wide .over a.level-top > .category-label.label_two,
+.header-2 .nav-wide#nav-wide .over a.level-top > .category-label.label_two,
+.header-3 .nav-wide#nav-wide .over a.level-top > .category-label.label_two {color: #4FA9E1;}
+.nav-wide#nav-wide li.level-top .category-label.label_three { 
+    background-color: #FF712F;
+    border-color: #FF712F;
+    color: #FFFFFF;
+}
+.header-bottom-left .nav-wide#nav-wide a.level-top > .category-label.label_three,
+.header-2 .nav-wide#nav-wide a.level-top > .category-label.label_three,
+.header-3 .nav-wide#nav-wide a.level-top > .category-label.label_three {color: #FF712F;}
+.nav-wide#nav-wide li.level-top.over .category-label.label_three { 
+    background-color: #FF712F;
+    border-color: #FF712F;
+    color: #FFFFFF;
+}
+
+.header-bottom-left .nav-wide#nav-wide .over a.level-top > .category-label.label_three,
+.header-2 .nav-wide#nav-wide .over a.level-top > .category-label.label_three,
+.header-3 .nav-wide#nav-wide .over a.level-top > .category-label.label_three {color: #FF712F;}
+
+/*====== Header ======*/
+
+header#header,
+header#header > .container_12 {background-color: #FFFFFF;}
+header#header,
+header#header .header-phones,
+header#header .welcome-msg {color: #FFFFFF;}
+header#header a,
+header#header .links.default li a {color: #FFFFFF;}
+header#header a:hover,
+header#header .links.default li a:hover {color: #FF98BA;}
+header#header .header-top-right,
+header#header .header-top .first-line,
+header#header .second-block,
+body.boxed-layout header#header .second-block .container_12 {
+	border-color: #EEEEEE;
+	border-width: 1px;
+}
+header#header .header-phones,
+header#header .links.default li,
+header#header .form-currency:after {border-color: #FFFFFF;}
+header#header .header-top .first-line,
+header#header .first-block,
+body.boxed-layout .first-block .container_12 {background-color:  #3DAFFF ;}
+header#header .sbOptions {background-color: #EEEEEE;}
+header#header .sbOptions li {background-color: #EEEEEE;}
+header#header .sbOptions li a,
+header#header .sbOptions li a:hover {color: #000505;}
+header#header .sbOptions li:hover {background-color: #DDDDDD;}
+header#header .sbOptions li:hover a {color: #000505;}
+header#header .form-currency > a {color: #FFFFFF;}
+header#header .form-currency > a:hover {color: #FF98BA;}
+
+/**** Sticky Header ****/
+header#header.floating,
+header#header.floating .header-bottom-left,
+header#header.floating > .container_12,
+header#header.floating.skin4 .second-block,
+header#header.header-2.floating .header-bottom-wrapper,
+body.boxed-layout header#header.header-2.floating .header-bottom-wrapper .container_12,
+header#header.header-3.floating .header-bottom-wrapper .container_12 {background-color: #FFFFFF;} 
+header#header .sbSelector {
+	background-color: #EEEEEE;
+	border-color: #EEEEEE;
+	border-width: 0px;
+	color: #000505;
+}
+
+/**** Header Search ****/
+header#header .form-search .indent {
+	background-color:  #EEEEEE ;
+	border-color:  #EEEEEE ;
+	border-width: 1px;
+}
+header#header .form-search .indent input {
+	color: #54565b;
+}
+header#header .form-search button > span {background-color:  #EEEEEE ;}
+header#header .form-search button span i {color: #AAAAAA}
+header#header .form-search.focus .indent {
+	border-color:  #3DAFFF ;
+}
+header#header .form-search.focus .indent {background-color:  #FFFFFF ;}
+header#header .form-search.focus button > span {background-color: rgba(255,255,255, 1);}
+header#header .form-search.focus .indent input {color: #54565b;}
+header#header .form-search.focus button span i {color: #AAAAAA}
+
+header#header .form-search .indent:hover {border-color:  #3DAFFF ;}
+header#header .form-search .indent:hover {background-color:  #FFFFFF ;}
+header#header .form-search .indent:hover input {color: #54565b;}
+header#header .form-search .indent:hover button > span {background-color:  #3DAFFF ;}
+header#header .form-search .indent:hover button span i {color: #FFFFFF;}
+
+/**** Header Cart ****/
+header#header .top-cart .block-title .title-cart {
+	background-color:  #FF98BA ;
+	color: #FFFFFF;
+	border-color: #FF98BA;
+	border-width: 2px;
+}
+header#header .top-cart .block-title .title-cart:hover {
+	background-color: #222222;
+	color: #FFFFFF;
+	border-color: #222222;
+}
+header#header .top-cart .block-title .active .title-cart {
+	background-color: rgba(34,34,34,.8);
+	color: #FFFFFF;
+	border-color: rgba(34,34,34,.8);
+}
+header#header .top-cart .block-content {
+	background-color: #FFFFFF;
+	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+}
+header#header .top-cart .product-name a {color: #222222;}
+header#header .top-cart .product-name a:hover {color: #FF98BA;}
+header#header .top-cart .block-content .mini-products-list .product-details .price {color: #33ABFF;}
+header#header .top-cart .cart-price-qt strong {
+	background-color: #DDDDDD;
+	color: #000505;
+}
+header#header .top-cart .block-content .item-options dt {color: #54565b;}
+header#header .top-cart .block-content .item-options dd {color: #666666;}
+header#header .top-cart .btn-edit i,
+header#header .top-cart .btn-remove i {color: #DDDDDD;}
+header#header .top-cart .btn-edit i:hover,
+header#header .top-cart .btn-remove i:hover {color: #E53B3F;}
+header#header .top-cart .block-content .subtotal .label {color: #222222;}
+header#header .top-cart .block-content .subtotal .price {color: #33ABFF;}
+header#header .top-cart .block-content .actions {
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+header#header .top-cart .block-content .actions a {color: #54565b;}
+header#header .top-cart .block-content .actions a:hover {color: #FF98BA;}
+
+/**** Login and Register Popup ****/
+header#header .links.custom li a.top-link-login {
+	background-color:  #33ABFF ;
+	color: #FFFFFF;
+	border-color: #33ABFF;
+	border-width: 2px;
+}
+header#header .links.custom li a.top-link-login:hover {
+	background-color: #222222;
+	color: #FFFFFF;
+	border-color: #222222;
+}
+#login-holder {background-color: #FFFFFF;}
+#login-holder form p.required,
+#login-holder .form-list label.required em {color: #E85131;}
+#login-holder .page-title h2 {color: #222222;}
+#login-holder form p {color: #000505;}
+#login-holder form .fieldset .legend {color: #222222;}
+#login-holder form .input-box input {
+	background-color: #EEEEEE;
+	border-color: #EEEEEE;
+	color: #54565b;
+}
+#login-holder .link-box a {color: #000505;}
+#login-holder .link-box a:hover {color: #FF98BA;}
+#login-holder .close-button i {color: #BBBBBB;}
+#login-holder .close-button i:hover {color: #FF98BA;}
+#login-holder .account-create .form-list label {color: #666666;}
+
+/**** Wishlist ****/
+header#header .header-blocks > .top-link-wishlist a {
+	color: #222222;
+	background-color: rgba(255,255,255, 0);
+}
+header#header .header-blocks > .top-link-wishlist:hover a {
+	color: #FFFFFF;
+	background-color: #222222;
+}
+
+/**** Account Block ****/
+header#header .customer-name {
+	background-color:  #33ABFF ;
+	color: #FFFFFF;
+	border-color: #33ABFF;
+	border-width: 2px;
+}
+header#header .customer-name:hover {
+	background-color: #222222;
+	color: #FFFFFF;
+	border-color: #222222;
+}
+header#header .customer-name + .links {background-color: #FFFFFF;}
+header#header .customer-name + .links li {
+	border-color: #EEEEEE;
+	border-width: 1px;
+}
+header#header .customer-name + .links li a {
+	color: #54565b;
+	background-color: #FFFFFF;
+}
+header#header .customer-name + .links li a:hover {
+	color: #54565b;
+	background-color: #FAFAFA;
+} 
+
+/*====== Header Slider ======*/
+
+/**** Buttons ****/
+.header-slider-container .iosSlider .prev i,
+.header-slider-container .iosSlider .next i {
+	background-color: #FFFFFF;
+	color: #222222;
+}
+.header-slider-container .iosSlider .prev i:hover,
+.header-slider-container .iosSlider .next i:hover {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.header-slider-container .iosSlider .headerSliderSelectors .button-item {background-color: #FFFFFF}
+
+/**** Type 1 ****/
+.header-slider-container .iosSlider .slider .item h3 {color: #33ABFF;}
+.header-slider-container .iosSlider .slider .item h2 {color: #54565b;}
+.header-slider-container .iosSlider .slider .item h2 span {color: #FF98BA;}
+.header-slider-container .iosSlider .slider .item h2 strong {color: #222222;}
+.header-slider-container .iosSlider .slider .item p {color: #54565b;}
+.header-slider-container .iosSlider .slider .item button.button span span {
+	background-color: #EEEEEE;
+	color: #000505;
+}
+.header-slider-container .iosSlider .slider .item button.button > span {
+	border-width: 0px;
+	border-color: #EEEEEE;
+}
+.header-slider-container .iosSlider .slider .item button.button:hover span span {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.header-slider-container .iosSlider .slider .item button.button:hover > span {
+	border-color: #FF98BA;
+}
+
+/**** Type 2 ****/
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 h3 {color: #FFFFFF;} 
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 h2 {color: #222222;}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 h2 span {color: #FF98BA;}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 h2 strong {color: #222222;}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 p {color: #FFFFFF;}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 button.button span span {
+	background-color: #EEEEEE;
+	color: #000505;
+}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 button.button > span {
+	border-width: 0px;
+	border-color: #EEEEEE;
+}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 button.button:hover span span {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 button.button:hover > span {
+	border-color: #FF98BA;
+}
+
+/**** Banners Type 1 ****/
+header#header .slider-banners .banner-1 .banner-content h2 {color: #FFFFFF;}
+header#header .slider-banners .banner-1 .banner-content h2 span {color: #85C638;}
+header#header .slider-banners .banner-1 .banner-content h2 strong {color: #FFFFFF;}
+header#header .slider-banners .banner-1 .banner-content h3 {color: #FFFFFF;}
+
+/**** Banners Type 2 ****/
+header#header .slider-banners .banner-2 .banner-content h2 {color: #54565b;}
+header#header .slider-banners .banner-2 .banner-content h2 span {color: #FF98BA;}
+header#header .slider-banners .banner-2 .banner-content h2 strong {color: #222222;}
+header#header .slider-banners .banner-2 .banner-content h3 {color: #33ABFF;}
+
+/*====== Menu ======*/
+
+header#header .header-bottom-left,
+header#header.header-2 .header-bottom-wrapper,
+body.boxed-layout header#header.header-2 .header-bottom-wrapper .container_12,
+header#header.header-3 .header-bottom-wrapper .container_12 {background-color:  #EEEEEE ;}
+
+/**** Button ****/
+.menu-button {
+	background-color:  #DDDDDD ;
+	color: #54565b;
+}
+.menu-button:hover {
+	background-color:  #33ABFF ;
+	color: #FFFFFF;
+}
+
+/**** Top Level ****/
+.nav-container a.level-top {background-color:  #EEEEEE ;}
+.nav-container a.level-top > span {color: #000505;}
+.nav-container a.level-top em {color: #000505;}
+.nav-container a.level-top i {color: #000505;}
+.nav-container a.level-top:hover,
+.nav-container li.active a.level-top,
+.nav-container li.over a.level-top {background-color:  rgba(34,34,34, 0);}
+.nav-container a.level-top:hover > span,
+.nav-container li.active a.level-top > span,
+.nav-container li.over a.level-top > span {color: #FFFFFF;}
+.nav-container a.level-top:hover em,
+.nav-container li.active a.level-top em,
+.nav-container li.over a.level-top em {color: #FFFFFF;}
+.nav-container a.level-top:hover i,
+.nav-container li.active a.level-top i,
+.nav-container li.over a.level-top i {color: #FFFFFF;}
+
+/**** Top Level Custom ****/
+.nav-container .nav-1 a.level-top span,
+.nav-container .nav-1 a.level-top i,
+.nav-container .nav-10 a.level-top span,
+.nav-container .nav-10 a.level-top i {color: #B69D68;}
+
+header#header.header-2 .nav-container .nav-1 a.level-top,
+header#header.header-3 .nav-container .nav-1 a.level-top,
+header#header.header-2 .nav-container .nav-10 a.level-top,
+header#header.header-3 .nav-container .nav-10 a.level-top {border-color: #B69D68;}
+
+.nav-container .nav-2 a.level-top span,
+.nav-container .nav-2 a.level-top i,
+.nav-container .nav-11 a.level-top span,
+.nav-container .nav-11 a.level-top i {color: #CD4444;}
+
+header#header.header-2 .nav-container .nav-2 a.level-top,
+header#header.header-3 .nav-container .nav-2 a.level-top,
+header#header.header-2 .nav-container .nav-11 a.level-top,
+header#header.header-3 .nav-container .nav-11 a.level-top {border-color: #CD4444;}
+
+.nav-container .nav-3 a.level-top i,
+.nav-container .nav-3 a.level-top span,
+.nav-container .nav-12 a.level-top i,
+.nav-container .nav-12 a.level-top span {color: #D940A9;}
+
+header#header.header-2 .nav-container .nav-3 a.level-top,
+header#header.header-3 .nav-container .nav-3 a.level-top,
+header#header.header-2 .nav-container .nav-12 a.level-top,
+header#header.header-3 .nav-container .nav-12 a.level-top {border-color: #D940A9;}
+
+.nav-container .nav-4 a.level-top i,
+.nav-container .nav-4 a.level-top span,
+.nav-container .nav-13 a.level-top i,
+.nav-container .nav-13 a.level-top span {color: #36DB46;}
+
+header#header.header-2 .nav-container .nav-4 a.level-top,
+header#header.header-3 .nav-container .nav-4 a.level-top,
+header#header.header-2 .nav-container .nav-13 a.level-top,
+header#header.header-3 .nav-container .nav-13 a.level-top {border-color: #36DB46;}
+
+.nav-container .nav-5 a.level-top i,
+.nav-container .nav-5 a.level-top span,
+.nav-container .nav-14 a.level-top i,
+.nav-container .nav-14 a.level-top span {color: #FF4545;}
+
+header#header.header-2 .nav-container .nav-5 a.level-top,
+header#header.header-3 .nav-container .nav-5 a.level-top,
+header#header.header-2 .nav-container .nav-14 a.level-top,
+header#header.header-3 .nav-container .nav-14 a.level-top {border-color: #FF4545;}
+
+.nav-container .nav-6 a.level-top i,
+.nav-container .nav-6 a.level-top span,
+.nav-container .nav-15 a.level-top i,
+.nav-container .nav-15 a.level-top span {color: #4385FF;}
+
+header#header.header-2 .nav-container .nav-6 a.level-top,
+header#header.header-3 .nav-container .nav-6 a.level-top,
+header#header.header-2 .nav-container .nav-15 a.level-top,
+header#header.header-3 .nav-container .nav-15 a.level-top {border-color: #4385FF;}
+
+.nav-container .nav-7 a.level-top i,
+.nav-container .nav-7 a.level-top span,
+.nav-container .nav-16 a.level-top i,
+.nav-container .nav-16 a.level-top span {color: #44C4FF;}
+
+header#header.header-2 .nav-container .nav-7 a.level-top,
+header#header.header-3 .nav-container .nav-7 a.level-top,
+header#header.header-2 .nav-container .nav-16 a.level-top,
+header#header.header-3 .nav-container .nav-16 a.level-top {border-color: #44C4FF;}
+
+.nav-container .nav-8 a.level-top i,
+.nav-container .nav-8 a.level-top span,
+.nav-container .nav-17 a.level-top i,
+.nav-container .nav-17 a.level-top span {color: #FF6009;}
+
+header#header.header-2 .nav-container .nav-8 a.level-top,
+header#header.header-3 .nav-container .nav-8 a.level-top,
+header#header.header-2 .nav-container .nav-17 a.level-top,
+header#header.header-3 .nav-container .nav-17 a.level-top {border-color: #FF6009;}
+
+.nav-container .nav-9 a.level-top i,
+.nav-container .nav-9 a.level-top span,
+.nav-container .nav-18 a.level-top i,
+.nav-container .nav-18 a.level-top span {color: #000505;}
+
+header#header.header-2 .nav-container .nav-9 a.level-top,
+header#header.header-3 .nav-container .nav-9 a.level-top,
+header#header.header-2 .nav-container .nav-18 a.level-top,
+header#header.header-3 .nav-container .nav-18 a.level-top {border-color: #000505;}
+
+.nav-container .nav-1 a.level-top:hover span,
+.nav-container .nav-1 a.level-top:hover i,
+.nav-container .nav-1.over a.level-top span,
+.nav-container .nav-1.over a.level-top i,
+.nav-container .nav-1.active a.level-top span,
+.nav-container .nav-1.active a.level-top i,
+.nav-container .nav-10 a.level-top:hover span,
+.nav-container .nav-10 a.level-top:hover i,
+.nav-container .nav-10.over a.level-top span,
+.nav-container .nav-10.over a.level-top i,
+.nav-container .nav-10.active a.level-top span,
+.nav-container .nav-10.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-1 a.level-top:hover,
+header#header.header-3 .nav-container .nav-1 a.level-top:hover,
+header#header.header-2 .nav-container .nav-1.over a.level-top,
+header#header.header-3 .nav-container .nav-1.over a.level-top,
+header#header.header-2 .nav-container .nav-1.active a.level-top,
+header#header.header-3 .nav-container .nav-1.active a.level-top,
+header#header.header-2 .nav-container .nav-10 a.level-top:hover,
+header#header.header-3 .nav-container .nav-10 a.level-top:hover,
+header#header.header-2 .nav-container .nav-10.over a.level-top,
+header#header.header-3 .nav-container .nav-10.over a.level-top,
+header#header.header-2 .nav-container .nav-10.active a.level-top,
+header#header.header-3 .nav-container .nav-10.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-2 a.level-top:hover span,
+.nav-container .nav-2 a.level-top:hover i,
+.nav-container .nav-2.over a.level-top span,
+.nav-container .nav-2.over a.level-top i,
+.nav-container .nav-2.active a.level-top span,
+.nav-container .nav-2.active a.level-top i,
+.nav-container .nav-11 a.level-top:hover span,
+.nav-container .nav-11 a.level-top:hover i,
+.nav-container .nav-11.over a.level-top span,
+.nav-container .nav-11.over a.level-top i,
+.nav-container .nav-11.active a.level-top span,
+.nav-container .nav-11.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-2 a.level-top:hover,
+header#header.header-3 .nav-container .nav-2 a.level-top:hover,
+header#header.header-2 .nav-container .nav-2.over a.level-top,
+header#header.header-3 .nav-container .nav-2.over a.level-top,
+header#header.header-2 .nav-container .nav-2.active a.level-top,
+header#header.header-3 .nav-container .nav-2.active a.level-top,
+header#header.header-2 .nav-container .nav-11 a.level-top:hover,
+header#header.header-3 .nav-container .nav-11 a.level-top:hover,
+header#header.header-2 .nav-container .nav-11.over a.level-top,
+header#header.header-3 .nav-container .nav-11.over a.level-top,
+header#header.header-2 .nav-container .nav-11.active a.level-top,
+header#header.header-3 .nav-container .nav-11.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-3 a.level-top:hover i,
+.nav-container .nav-3 a.level-top:hover span,
+.nav-container .nav-3.over a.level-top span,
+.nav-container .nav-3.over a.level-top i,
+.nav-container .nav-3.active a.level-top span,
+.nav-container .nav-3.active a.level-top i,
+.nav-container .nav-12 a.level-top:hover i,
+.nav-container .nav-12 a.level-top:hover span,
+.nav-container .nav-12.over a.level-top span,
+.nav-container .nav-12.over a.level-top i,
+.nav-container .nav-12.active a.level-top span,
+.nav-container .nav-12.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-3 a.level-top:hover,
+header#header.header-3 .nav-container .nav-3 a.level-top:hover,
+header#header.header-2 .nav-container .nav-3.over a.level-top,
+header#header.header-3 .nav-container .nav-3.over a.level-top,
+header#header.header-2 .nav-container .nav-3.active a.level-top,
+header#header.header-3 .nav-container .nav-3.active a.level-top,
+header#header.header-2 .nav-container .nav-12 a.level-top:hover,
+header#header.header-3 .nav-container .nav-12 a.level-top:hover,
+header#header.header-2 .nav-container .nav-12.over a.level-top,
+header#header.header-3 .nav-container .nav-12.over a.level-top,
+header#header.header-2 .nav-container .nav-12.active a.level-top,
+header#header.header-3 .nav-container .nav-12.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-4 a.level-top:hover i,
+.nav-container .nav-4 a.level-top:hover span,
+.nav-container .nav-4.over a.level-top span,
+.nav-container .nav-4.over a.level-top i,
+.nav-container .nav-4.active a.level-top span,
+.nav-container .nav-4.active a.level-top i,
+.nav-container .nav-13 a.level-top:hover i,
+.nav-container .nav-13 a.level-top:hover span,
+.nav-container .nav-13.over a.level-top span,
+.nav-container .nav-13.over a.level-top i,
+.nav-container .nav-13.active a.level-top span,
+.nav-container .nav-13.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-4 a.level-top:hover,
+header#header.header-3 .nav-container .nav-4 a.level-top:hover,
+header#header.header-2 .nav-container .nav-4.over a.level-top,
+header#header.header-3 .nav-container .nav-4.over a.level-top,
+header#header.header-2 .nav-container .nav-4.active a.level-top,
+header#header.header-3 .nav-container .nav-4.active a.level-top,
+header#header.header-2 .nav-container .nav-13 a.level-top:hover,
+header#header.header-3 .nav-container .nav-13 a.level-top:hover,
+header#header.header-2 .nav-container .nav-13.over a.level-top,
+header#header.header-3 .nav-container .nav-13.over a.level-top,
+header#header.header-2 .nav-container .nav-13.active a.level-top,
+header#header.header-3 .nav-container .nav-13.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-5 a.level-top:hover i,
+.nav-container .nav-5 a.level-top:hover span,
+.nav-container .nav-5.over a.level-top span,
+.nav-container .nav-5.over a.level-top i,
+.nav-container .nav-5.active a.level-top span,
+.nav-container .nav-5.active a.level-top i,
+.nav-container .nav-14 a.level-top:hover i,
+.nav-container .nav-14 a.level-top:hover span,
+.nav-container .nav-14.over a.level-top span,
+.nav-container .nav-14.over a.level-top i,
+.nav-container .nav-14.active a.level-top span,
+.nav-container .nav-14.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-5 a.level-top:hover,
+header#header.header-3 .nav-container .nav-5 a.level-top:hover,
+header#header.header-2 .nav-container .nav-5.over a.level-top,
+header#header.header-3 .nav-container .nav-5.over a.level-top,
+header#header.header-2 .nav-container .nav-5.active a.level-top,
+header#header.header-3 .nav-container .nav-5.active a.level-top,
+header#header.header-2 .nav-container .nav-14 a.level-top:hover,
+header#header.header-3 .nav-container .nav-14 a.level-top:hover,
+header#header.header-2 .nav-container .nav-14.over a.level-top,
+header#header.header-3 .nav-container .nav-14.over a.level-top,
+header#header.header-2 .nav-container .nav-14.active a.level-top,
+header#header.header-3 .nav-container .nav-14.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-6 a.level-top:hover i,
+.nav-container .nav-6 a.level-top:hover span,
+.nav-container .nav-6.over a.level-top span,
+.nav-container .nav-6.over a.level-top i,
+.nav-container .nav-6.active a.level-top span,
+.nav-container .nav-6.active a.level-top i,
+.nav-container .nav-15 a.level-top:hover i,
+.nav-container .nav-15 a.level-top:hover span,
+.nav-container .nav-15.over a.level-top span,
+.nav-container .nav-15.over a.level-top i,
+.nav-container .nav-15.active a.level-top span,
+.nav-container .nav-15.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-6 a.level-top:hover,
+header#header.header-3 .nav-container .nav-6 a.level-top:hover,
+header#header.header-2 .nav-container .nav-6.over a.level-top,
+header#header.header-3 .nav-container .nav-6.over a.level-top,
+header#header.header-2 .nav-container .nav-6.active a.level-top,
+header#header.header-3 .nav-container .nav-6.active a.level-top,
+header#header.header-2 .nav-container .nav-15 a.level-top:hover,
+header#header.header-3 .nav-container .nav-15 a.level-top:hover,
+header#header.header-2 .nav-container .nav-15.over a.level-top,
+header#header.header-3 .nav-container .nav-15.over a.level-top,
+header#header.header-2 .nav-container .nav-15.active a.level-top,
+header#header.header-3 .nav-container .nav-15.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-7 a.level-top:hover i,
+.nav-container .nav-7 a.level-top:hover span,
+.nav-container .nav-7.over a.level-top span,
+.nav-container .nav-7.over a.level-top i,
+.nav-container .nav-7.active a.level-top span,
+.nav-container .nav-7.active a.level-top i,
+.nav-container .nav-16 a.level-top:hover i,
+.nav-container .nav-16 a.level-top:hover span,
+.nav-container .nav-16.over a.level-top span,
+.nav-container .nav-16.over a.level-top i,
+.nav-container .nav-16.active a.level-top span,
+.nav-container .nav-16.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-7 a.level-top:hover,
+header#header.header-3 .nav-container .nav-7 a.level-top:hover,
+header#header.header-2 .nav-container .nav-7.over a.level-top,
+header#header.header-3 .nav-container .nav-7.over a.level-top,
+header#header.header-2 .nav-container .nav-7.active a.level-top,
+header#header.header-3 .nav-container .nav-7.active a.level-top,
+header#header.header-2 .nav-container .nav-16 a.level-top:hover,
+header#header.header-3 .nav-container .nav-16 a.level-top:hover,
+header#header.header-2 .nav-container .nav-16.over a.level-top,
+header#header.header-3 .nav-container .nav-16.over a.level-top,
+header#header.header-2 .nav-container .nav-16.active a.level-top,
+header#header.header-3 .nav-container .nav-16.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-8 a.level-top:hover i,
+.nav-container .nav-8 a.level-top:hover span,
+.nav-container .nav-8.over a.level-top span,
+.nav-container .nav-8.over a.level-top i,
+.nav-container .nav-8.active a.level-top span,
+.nav-container .nav-8.active a.level-top i,
+.nav-container .nav-17 a.level-top:hover i,
+.nav-container .nav-17 a.level-top:hover span,
+.nav-container .nav-17.over a.level-top span,
+.nav-container .nav-17.over a.level-top i,
+.nav-container .nav-17.active a.level-top span,
+.nav-container .nav-17.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-8 a.level-top:hover,
+header#header.header-3 .nav-container .nav-8 a.level-top:hover,
+header#header.header-2 .nav-container .nav-8.over a.level-top,
+header#header.header-3 .nav-container .nav-8.over a.level-top,
+header#header.header-2 .nav-container .nav-8.active a.level-top,
+header#header.header-3 .nav-container .nav-8.active a.level-top,
+header#header.header-2 .nav-container .nav-17 a.level-top:hover,
+header#header.header-3 .nav-container .nav-17 a.level-top:hover,
+header#header.header-2 .nav-container .nav-17.over a.level-top,
+header#header.header-3 .nav-container .nav-17.over a.level-top,
+header#header.header-2 .nav-container .nav-17.active a.level-top,
+header#header.header-3 .nav-container .nav-17.active a.level-top {border-color: #222222;}
+
+.nav-container .nav-9 a.level-top:hover i,
+.nav-container .nav-9 a.level-top:hover span,
+.nav-container .nav-9.over a.level-top span,
+.nav-container .nav-9.over a.level-top i,
+.nav-container .nav-9.active a.level-top span,
+.nav-container .nav-9.active a.level-top i,
+.nav-container .nav-18 a.level-top:hover i,
+.nav-container .nav-18 a.level-top:hover span,
+.nav-container .nav-18.over a.level-top span,
+.nav-container .nav-18.over a.level-top i,
+.nav-container .nav-18.active a.level-top span,
+.nav-container .nav-18.active a.level-top i {color: #222222;}
+
+header#header.header-2 .nav-container .nav-9 a.level-top:hover,
+header#header.header-3 .nav-container .nav-9 a.level-top:hover,
+header#header.header-2 .nav-container .nav-9.over a.level-top,
+header#header.header-3 .nav-container .nav-9.over a.level-top,
+header#header.header-2 .nav-container .nav-9.active a.level-top,
+header#header.header-3 .nav-container .nav-9.active a.level-top,
+header#header.header-2 .nav-container .nav-18 a.level-top:hover,
+header#header.header-3 .nav-container .nav-18 a.level-top:hover,
+header#header.header-2 .nav-container .nav-18.over a.level-top,
+header#header.header-3 .nav-container .nav-18.over a.level-top,
+header#header.header-2 .nav-container .nav-18.active a.level-top,
+header#header.header-3 .nav-container .nav-18.active a.level-top {border-color: #222222;}
+
+/**** Sticky Header Top Level ****/
+header#header.floating .nav-container a.level-top {background-color:  #FFFFFF ;}
+header#header.floating .nav-container a.level-top > span,
+header#header.floating .nav-container a.level-top i {color: #000505;}
+header#header.floating .nav-container a.level-top:hover,
+header#header.floating .nav-container li.active a.level-top,
+header#header.floating .nav-container li.over a.level-top {background-color: rgba(34,34,34, 0.2);}
+header#header.floating .nav-container a.level-top:hover > span,
+header#header.floating .nav-container li.active a.level-top > span,
+header#header.floating .nav-container li.over a.level-top > span,
+header#header.floating .nav-container a.level-top:hover i,
+header#header.floating .nav-container li.active a.level-top i,
+header#header.floating .nav-container li.over a.level-top i {color: #FFFFFF;}
+
+/**** Submenu ****/
+.nav-wide#nav-wide .menu-wrapper,
+#nav ul {
+	background-color: #FFFFFF;
+	color: #000505;
+} 
+.nav-wide#nav-wide .menu-wrapper a {color: #000505;}
+.nav-wide#nav-wide ul.level0 li.level1 span.subtitle {
+	background-color: #EEEEEE;
+	color: #222222;
+}
+.nav-wide#nav-wide ul.level0 li.level1 span.subtitle:hover {
+	background-color: #EEEEEE;
+	color: #222222;
+}
+.nav-wide#nav-wide ul.level1 a,
+#nav ul li a,
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li.level1 a {
+	background-color: #FFFFFF;
+	color: #000505;
+}
+.nav-wide#nav-wide ul li,
+.nav-wide#nav-wide ul.level1 ul,
+#nav ul li,
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li {
+	border-color: #EEEEEE;
+	border-width: 1px;
+}
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li.level1 a:hover span,
+.nav-wide#nav-wide ul.level1 a:hover,
+#nav ul li a:hover,
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li.level1 a:hover {
+	background-color: #FFFFFF;
+	color: #FF98BA;
+}
+.nav-wide#nav-wide ul li:hover,
+.nav-wide#nav-wide ul.level1 ul:hover,
+#nav ul li:hover,
+.nav-wide#nav-wide .menu-wrapper.default-menu ul.level0 li:hover {border-color: #EEEEEE;}
+.nav-wide#nav-wide .bottom-content,
+.nav-wide#nav-wide .top-content {
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+.nav-wide#nav-wide .contact-info li i {
+	background-color: #FFFFFF;
+	border-color: #DDDDDD;
+	color: #54565b;
+}
+.nav-wide#nav-wide .contact-info li i:hover {
+	background-color: #FFFFFF;
+	border-color: #DDDDDD;
+	color: #54565b;
+}
+
+/*====== Content ======*/
+
+header.rating-title h2,
+body .widget .widget-title h1,
+body .widget .widget-title h2,
+body .widget-title h1,
+body .widget-title h2,
+.page-title h1,
+.page-title h2,
+.page-title h3,
+.page-title h4,
+.page-title h5,
+.page-title h6,
+.product-name h1,
+.block-related h2,
+.opc-wrapper-opc h2.opc-title,
+.op_block_title,
+.related-wrapper-bottom .block-related .block-title strong span,
+.postTitle h2 a,
+.block-poll .block-title strong span {color: #222222;}
+body .widget .widget-title,
+body .widget-title,
+.page-title,
+header.rating-title,
+.related-wrapper-bottom .block-related .block-title {
+	border-bottom-color: #DDDDDD;
+	border-bottom-width: 0px;
+}
+
+/**** Toolbar ****/
+.sorter label {color: #000505;}
+.toolbar .sbSelector,
+.toolbar .sbOptions,
+.toolbar .sbSelector:hover,
+.toolbar .sbHolder .sbToggleOpen + .sbSelector {background-color: #EEEEEE;}
+.toolbar .sbSelector > span.text {color: #54565b;}
+.toolbar .sbSelector span.text + span {border-top-color: #54565b;}
+.toolbar .sbOptions li {background-color: #EEEEEE;}
+.toolbar .sbOptions li a {color: #000505;}
+.toolbar .sbOptions li:hover {background-color: #DDDDDD;}
+.toolbar .sbOptions li:hover a {color: #000505;}
+
+/**** Pager ****/
+.pages li {background-color: #EEEEEE;}
+.pages li a {color: #000505;}
+.pages li:hover {background-color: #DDDDDD;}
+.pages li:hover a {color: #000505;}
+.pages li.current {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+
+/*====== Buttons ======*/
+
+/**** Type 1 ****/
+button.button span span,
+aside.sidebar .actions a,
+aside.sidebar .block.block-wishlist .link-cart i,
+a.aw-blog-read-more,
+.add-to-cart-success a,
+.cart-remove-box a {
+	background-color: #EEEEEE;
+	color: #000505;
+}
+button.button.progress-buttons {background-color: #EEEEEE;}
+.products-list.small .button-holder .button i {color: #000505;}
+button.button > span,
+aside.sidebar .actions a,
+aside.sidebar .block.block-wishlist .link-cart i,
+a.aw-blog-read-more,
+.add-to-cart-success a,
+.cart-remove-box a {
+	border-width: 0px;
+	border-color: #222222;
+}
+button.button:hover span span,
+aside.sidebar .actions a:hover,
+aside.sidebar .block.block-wishlist .link-cart i:hover,
+a.aw-blog-read-more:hover,
+.add-to-cart-success a:hover,
+.cart-remove-box a:hover,
+.products-list .button-holder .button:hover > span,
+.products-grid .button-holder .button:hover > span {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+button.button.progress-buttons:hover {background-color: #FF98BA;}
+button.button.progress-buttons.state-loading,
+button.button.progress-buttons.state-success {background-color: #FF98BA;}
+button.button.progress-buttons.state-loading span,
+button.button.progress-buttons.state-success span {color: #FFFFFF}
+
+.products-list.small button.button.progress-buttons.state-loading span i,
+.products-list.small button.button.progress-buttons.state-success span i,
+.products-list.small .button-holder .button i:hover {color: #FFFFFF;}
+button.button:hover > span,
+aside.sidebar .actions a:hover,
+aside.sidebar .block.block-wishlist .link-cart i:hover,
+a.aw-blog-read-more:hover,
+.add-to-cart-success a:hover,
+.cart-remove-box a:hover {
+	border-color: #FF98BA;
+}
+
+/**** Type 2 ****/
+.product-view .add-to-cart button.button span span,
+.iwdbutton button.button span span,
+.cart .btn-proceed-checkout span span,
+header#header .top-cart .block-content .actions button.button span span,
+#login-holder form .actions button:hover span span,
+.cart-table .btn-continue:hover span span,
+.my-wishlist .buttons-set .btn-update:hover span span {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.product-view .add-to-cart button.button.progress-buttons {background-color: #FF98BA;}
+.product-view .add-to-cart button.button > span,
+.iwdbutton button.button > span,
+.cart .btn-proceed-checkout > span,
+header#header .top-cart .block-content .actions button.button > span,
+#login-holder form .actions button > span,
+.cart-table .btn-continue > span,
+.my-wishlist .buttons-set .btn-update > span {border-width: 0px;}
+#login-holder form .actions button span span,
+.cart-table .btn-continue span span,
+.my-wishlist .buttons-set .btn-update span span,
+.iwdbutton button.button:hover span span,
+.cart .btn-proceed-checkout:hover span span,
+header#header .top-cart .block-content .actions button.button:hover span span {
+	background-color: #33ABFF;
+	color: #FFFFFF;
+}
+.product-view .add-to-cart button.button.progress-buttons:hover {background-color: #33ABFF;}
+.product-view .add-to-cart button.button > span,
+.iwdbutton button.button > span,
+.cart .btn-proceed-checkout > span,
+header#header .top-cart .block-content .actions button.button > span,
+#login-holder form .actions button:hover > span,
+.cart-table .btn-continue:hover > span,
+.my-wishlist .buttons-set .btn-update:hover > span {border-color: #FF98BA;}
+#login-holder form .actions button > span,
+.cart-table .btn-continue > span,
+.my-wishlist .buttons-set .btn-update > span,
+.product-view .add-to-cart button.button:hover > span,
+.iwdbutton button.button:hover > span,
+.cart .btn-proceed-checkout:hover > span,
+header#header .top-cart .block-content .actions button.button:hover > span {border-color: #33ABFF;}
+
+/**** Wide Subscribe Button ****/
+.wide-subscribe button.button span span {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.wide-subscribe button.button > span {
+	border-width: 2px;
+	border-color: #FFFFFF;
+}
+.wide-subscribe button.button:hover span span {
+	background-color: #33ABFF;
+	color: #FFFFFF;
+}
+.wide-subscribe button.button:hover > span {
+	border-color: #33ABFF;
+}
+
+/*====== Products ======*/
+
+.products-list li.item .product-img-box,
+.products-grid li.item .product-img-box {
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
+	border-width: 0px;
+} 
+.products-grid .product-name a,
+.products-list .product-name a {color: #222222;}
+.products-grid .product-name a:hover,
+.products-list .product-name a:hover {color: #FF98BA;}
+.products-grid .desc,
+.products-list .desc {color: #54565b;}
+.products-grid .desc a,
+.products-list .desc a {color: #FF98BA;}
+.products-grid .desc a:hover,
+.products-list .desc a:hover {color: #33ABFF;}
+.products-grid .price,
+.products-list .price {color: #FF98BA;}
+.products-grid .old-price .price,
+.products-list .old-price .price {color: #54565b;}
+.products-grid .special-price .price,
+.products-list .special-price .price {color: #FF98BA;}
+
+/**** Product Labels ****/
+.label-new {
+	background-color: #222222;
+	color: #FFFFFF;
+}
+.label-type-5 span.label-new:before {border-top-color: #222222;}
+.label-type-5 span.label-new:after {border-bottom-color: #222222;}
+.products-grid .availability-only,
+.products-list .availability-only,
+.label-sale {
+	background-color: #FF98BA;
+	color: #FFFFFF;
+}
+.label-type-5 div.label-sale:before,
+.products-grid.label-type-5 .availability-only:before,
+.products-list.label-type-5 .availability-only:before {border-top-color: #FF98BA;}
+.label-type-5 div.label-sale:after,
+.products-grid.label-type-5 .availability-only:after,
+.products-list.label-type-5 .availability-only:after {border-bottom-color: #FF98BA;}
+
+/*====== Social Links ======*/
+
+ul.social-links li a i,
+#footer ul.social-links li a i {
+	background-color: #393939;
+	border-color: #222222;
+	border-width: 0px;
+	color: #54565b;
+}
+ul.social-links li a:before,
+#footer ul.social-links li a:before {
+	border-color: #222222;
+	border-width: 1px;
+}
+ul.social-links li a:hover i,
+#footer ul.social-links li a:hover i {
+	background-color: #4E4E4E;
+	border-color: #4E4E4E; 
+	color: #CCCCCC;
+} 
+ul.social-links li a:hover:before,
+#footer ul.social-links li a:hover:before {
+	border-color: #222222; 
+}
+
+/*====== Footer ======*/
+
+/**** Top Block ****/
+#footer {
+	background-color: #FFFFFF;
+	color: #000505;
+}
+#footer a {color: #FF98BA;}
+#footer a:hover {color: #33ABFF;}
+#footer hr.solid,
+#footer hr.dashed,
+#footer hr.dotted {
+	border-width: 1px;
+	border-color: #DDDDDD;
+}
+#footer .footer-block-title {
+	background-color: #FFFFFF;
+	border-color: #4E4E4E;
+	border-width: 0px;
+}
+#footer .footer-block-title h2 {color: #222222;}
+
+#footer button.button > span {
+	border-width: 2px;
+	border-color: #DDDDDD;
+}
+#footer button.button span span {
+	background: #FFFFFF;
+	color: #000505;
+}
+#footer button.button:hover > span {
+	border-color: #EEEEEE;
+}
+#footer button.button:hover span span {
+	background-color: #EEEEEE;
+	color: #000505;
+}
+#footer ul li:before,
+#footer .footer-links li a {background-color: #FFFFFF;}
+#footer ul li a,
+#footer .footer-links li a {color: #000505;}
+#footer ul li a:before {background-color: #000505;}
+#footer ul li,
+#footer .footer-links li {
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+#footer ul li:after,
+#footer .footer-links li a:hover {background-color: #DDDDDD;}
+#footer ul li a:hover,
+#footer .footer-links li a:hover {color: #54565b;}
+#footer ul li:hover,
+#footer .footer-links li:hover {border-color: #DDDDDD;}
+#footer .contact-info li i {
+	background-color: #FFFFFF;
+	border-color: #DDDDDD;
+	color: #54565b;
+	box-shadow: 0 0 1px #DDDDDD;
+}
+#footer .contact-info li i:hover {
+	background-color: #F5F5F5;
+	border-color: #DDDDDD;
+	color: #54565b;
+	box-shadow: 0 0 1px #DDDDDD;
+}
+#footer .contact-info li span,
+#footer .contact-info li span a {color: #54565b;}
+
+/**** Bottom Block ****/
+#footer .footer-bottom,
+body.boxed-layout #footer .footer-bottom .container_12,
+#footer.original,
+body.boxed-layout #footer.original .container_12 {
+	background-color: #FFFFFF;
+	color: #000505;
+}
+#footer .footer-bottom a {color: #000505;}
+#footer .footer-bottom hr.solid,
+#footer .footer-bottom hr.dashed,
+#footer .footer-bottom hr.dotted {
+	border-width: 1px;
+	border-color: #DDDDDD;
+}
+#footer .footer-bottom .footer-block-title {
+	background-color: #EEEEEE;
+	border-color: #DDDDDD;
+	border-width: 0px;
+}
+#footer .footer-bottom .footer-block-title h2 {color: #222222;}
+#footer .footer-bottom ul li:before,
+#footer .footer-bottom .footer-links li a {background-color: #FFFFFF;}
+#footer .footer-bottom ul li a,
+#footer .footer-bottom .footer-links li a {color: #54565b;}
+#footer .footer-bottom ul li,
+#footer .footer-bottom .footer-links li {
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+#footer .footer-bottom ul li:after,
+#footer .footer-bottom .footer-links li a:hover {background-color: #F5F5F5;}
+#footer .footer-bottom ul li a:hover,
+#footer .footer-bottom .footer-links li a:hover {color: #54565b;}
+#footer .footer-bottom ul li:hover,
+#footer .footer-bottom .footer-links li:hover {border-color: #DDDDDD;}
+#footer .footer-bottom .contact-info li i {
+	background-color: #FFFFFF;
+	border-color: #DDDDDD;
+	color: #54565b;
+	box-shadow: 0 0 1px #DDDDDD;
+}
+#footer .footer-bottom .contact-info li i:hover {
+	background-color: #F5F5F5;
+	border-color: #DDDDDD;
+	color: #54565b;
+	box-shadow: 0 0 1px #DDDDDD;
+}
+#footer .footer-bottom .contact-info li span,
+#footer .footer-bottom .contact-info li span a {color: #54565b;}
+#footer.original,
+body.boxed-layout #footer.original .container_12 {
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+#footer.original .footer-links {background-color: #EEEEEE;}
+
+/**** Contact Form ****/
+
+#footer #AjaxcontactForm li .input-box input,
+#footer #AjaxcontactForm li textarea {
+	background-color: #FFFFFF;
+	border-color: #DDDDDD;
+	color: #54565b;
+}
+#footer #AjaxcontactForm li label {color: #54565b;}
+
+/**** Tags Block ****/
+
+#footer .block-tags li a {
+	background-color: #222222;
+	border-color: #393939;
+	color: #54565b;
+}
+#footer .block-tags li a:hover {
+	background-color: #33ABFF;
+	border-color: #33ABFF;
+	color: #FFFFFF;
+}
+
+/**** Newsletter ****/
+
+#footer .footer-subscribe label {color: #54565b;}
+#footer .footer-subscribe input {
+	background-color: #222222;
+	border-color: #444444;
+	color: #54565b;
+}
+
+/**** Store Switcher ****/
+
+#footer .store-switcher label {color: #000505;}
+#footer .store-switcher .sbSelector {
+	background-color: #EEEEEE; 
+	color: #54565b;
+	border-color: #FFFFFF; 
+	border-width: 0px; 
+}
+#footer .store-switcher .sbSelector span.text + span {border-top-color: #54565b;}
+#footer .store-switcher .sbOptions {
+	background-color: #FFFFFF; 
+	border-color: #DDDDDD; 
+}
+#footer .store-switcher .sbOptions li {background-color: #FFFFFF;} 
+#footer .store-switcher .sbOptions li a {color: #54565b;}
+#footer .store-switcher .sbOptions li:hover {background-color: #DDDDDD;} 
+#footer .store-switcher .sbOptions li:hover a {color: #54565b;}
+
+    

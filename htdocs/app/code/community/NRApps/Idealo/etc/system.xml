@@ -1,0 +1,840 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <nrapps_idealo translate="label" module="nrapps_idealo">
+            <label>idealo Connect</label>
+            <tab>catalog</tab>
+            <sort_order>101</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <description translate="label">
+                            <label></label>
+                            <frontend_model>nrapps_idealo/config_description</frontend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </description>
+                        <is_active translate="label">
+                            <sort_order>10</sort_order>
+                            <label>idealo Connect is active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </is_active>
+                        <test_mode translate="label,comment">
+                            <sort_order>20</sort_order>
+                            <label>Test Mode</label>
+                            <comment>Only generation of files, no transfer</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </test_mode>
+                        <shop_id translate="label,comment">
+                            <sort_order>40</sort_order>
+                            <label>idealo Shop ID</label>
+                            <comment>Contact csv@idealo.de to gain access.</comment>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><test_mode>0</test_mode></depends>
+                        </shop_id>
+                        <user translate="label">
+                            <sort_order>50</sort_order>
+                            <label>idealo User</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><test_mode>0</test_mode></depends>
+                        </user>
+                        <password translate="label">
+                            <sort_order>60</sort_order>
+                            <label>idealo Password</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><test_mode>0</test_mode></depends>
+                        </password>
+                        <api_update_url translate="label,comment">
+                            <sort_order>70</sort_order>
+                            <label>API URL for Update Requests</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </api_update_url>
+                        <api_get_url translate="label,comment">
+                            <sort_order>75</sort_order>
+                            <label>API URL for Get Requests</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </api_get_url>
+                        <disable_certificate_check translate="label,comment">
+                            <sort_order>80</sort_order>
+                            <label>Disable check of SSL certificate</label>
+                            <comment>In case you have problems with the connection</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><test_mode>0</test_mode></depends>
+                        </disable_certificate_check>
+                        <logging translate="label,comment">
+                            <sort_order>90</sort_order>
+                            <label>Activate logging for all requests</label>
+                            <comment>Logs can be found in media/nrapps_idealo/log/idealo_requests.txt</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><test_mode>0</test_mode></depends>
+                        </logging>
+                    </fields>
+                </settings>
+
+                <product_options>
+                    <label>Product Options</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <allowed_product_types translate="label">
+                            <sort_order>10</sort_order>
+                            <label>Allowed Product Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>nrapps_idealo/source_productTypes</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowed_product_types>
+                        <allowed_attribute_sets translate="label">
+                            <sort_order>20</sort_order>
+                            <label>Allowed Attribute Sets</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>nrapps_idealo/source_attributeSets</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowed_attribute_sets>
+                        <configurable_export_type translate="label">
+                            <sort_order>30</sort_order>
+                            <label>Export Type for Configurable Products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_configurableTypes</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_export_type>
+                        <configurable_child_products_price translate="label,comment">
+                            <sort_order>40</sort_order>
+                            <label>Calculate price of configurable child products as</label>
+                            <comment>Use option "child product" or "parent product without modifications" for better performance. There can be memory leaks with the option "parent product &lt;strong&gt;with&lt;/strong&gt; modifications".</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_configurableChildProductsPriceType</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurable_child_products_price>
+                        <add_attributes_to_export translate="label">
+                            <sort_order>50</sort_order>
+                            <label>Add contents of the following attribute(s) to the export</label>
+                            <frontend_model>nrapps_idealo/config_attributesNoSortOrder</frontend_model>
+                            <backend_model>nrapps_idealo/backend_serialized_array</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </add_attributes_to_export>
+                        <add_attribute_contents_to_name translate="label">
+                            <sort_order>60</sort_order>
+                            <label>Add contents of the following attribute(s) to product name</label>
+                            <frontend_model>nrapps_idealo/config_attributes</frontend_model>
+                            <backend_model>nrapps_idealo/backend_serialized_array</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </add_attribute_contents_to_name>
+                        <export_flexible_price_bundles translate="label,comment">
+                            <sort_order>70</sort_order>
+                            <label>Export Bundle Products without a fixed price</label>
+                            <comment>No Price will be available for those products</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </export_flexible_price_bundles>
+                    </fields>
+                </product_options>
+
+                <email>
+                    <label>Email Options</label>
+                    <sort_order>25</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <error_recipient translate="label">
+                            <label>Error Messages: Recipient Email Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_recipient>
+                        <error_identity translate="label">
+                            <label>Error Messages: Identity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_identity</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_identity>
+                        <error_template translate="label">
+                            <label>Error Messages: Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_template>
+                    </fields>
+                </email>
+
+                <listing translate="label">
+                    <label>Listing</label>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <listing_at translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Listing at</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>nrapps_idealo/source_listingCountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </listing_at>
+                    </fields>
+                </listing>
+                
+                <delivery_times translate="label">
+                    <label>Delivery Times</label>
+                    <sort_order>35</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <mapping translate="label,comment">
+                            <label>Mapping</label>
+                            <comment>If no country specific value is set, delivery time will not be exported.</comment>
+                            <frontend_model>nrapps_idealo/config_deliveryTimeMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mapping>
+                        <button translate="label">
+                            <label></label>
+                            <frontend_model>nrapps_idealo/config_deliveryTimeUpdateButton</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                    </fields>
+                </delivery_times>
+                
+                <shipping translate="label">
+                    <label>Shipping Cost idealo.de</label>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping>
+
+                <shipping_at translate="label">
+                    <label>Shipping Cost idealo.at</label>
+                    <sort_order>41</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_at>
+                
+                <shipping_uk translate="label">
+                    <label>Shipping Cost idealo.co.uk</label>
+                    <sort_order>42</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_uk>
+                
+                <shipping_fr translate="label">
+                    <label>Shipping Cost idealo.fr</label>
+                    <sort_order>43</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_fr>
+                
+                <shipping_it translate="label">
+                    <label>Shipping Cost idealo.it</label>
+                    <sort_order>44</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_it>
+                
+                <shipping_es translate="label">
+                    <label>Shipping Cost idealo.es</label>
+                    <sort_order>45</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_es>
+                
+                <shipping_pl translate="label">
+                    <label>Shipping Cost idealo.pl</label>
+                    <sort_order>46</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_pl>
+
+                <shipping_in translate="label">
+                    <label>Shipping Cost idealo.in</label>
+                    <sort_order>47</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_costs_calculation_method translate="label,comment">
+                            <sort_order>10</sort_order>
+                            <label>Shipping Costs Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_shippingCostsMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_calculation_method>
+                        <shipping_costs translate="label,comment">
+                            <label>Shipping Cost based on Price</label>
+                            <comment>Only for Shipping Costs Calculation Method "Price" (see above)</comment>
+                            <frontend_model>nrapps_idealo/config_shippingCosts</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs>
+                        <shipping_costs_by_weight translate="label,comment">
+                            <label>Shipping Cost based on Weight</label>
+                            <comment><![CDATA[Only for Shipping Costs Calculation Method "Weight" (see above)<br />Product attribute "Weight" [weight] will be used to determine weight.]]></comment>
+                            <frontend_model>nrapps_idealo/config_shippingCostsWeight</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_costs_by_weight>
+                        <payment_methods translate="label">
+                            <label>Activated Payment Methods</label>
+                            <frontend_model>nrapps_idealo/config_paymentMethods</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_methods>
+                        <percental_surcharge_calculation_method translate="label,comment">
+                            <sort_order>60</sort_order>
+                            <label>Percental Surcharge Calculation Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>nrapps_idealo/source_percentalSurchargeCalculationMethod</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </percental_surcharge_calculation_method>
+                    </fields>
+                </shipping_in>
+                
+                <default_values translate="label,comment">
+                    <label>Default Values</label>
+                    <comment><![CDATA[You can find the settings for the <strong>minimum order amount</strong> in System -> Configuration -> Sales]]></comment>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shipping_comments translate="label,comment">
+                            <label>Shipping Comments</label>
+                            <comment>max. 150 chars</comment>
+                            <frontend_model>nrapps_idealo/config_shippingComments</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping_comments>
+                        <is_ecommerce_checkout_approved translate="label,comment">
+                            <label>idealo direct sale allowed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </is_ecommerce_checkout_approved>
+                    </fields>
+                </default_values>
+
+                <minimum_order_surcharge translate="label">
+                    <label>Minimum Order Surcharge</label>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <is_active translate="label">
+                            <label>Is Active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </is_active>
+                        <minimum_order_value translate="label">
+                            <label>Minimum Order Value</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </minimum_order_value>
+                        <surcharge translate="label">
+                            <label>Surcharge for Orders below Minimum Order Value</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </surcharge>
+                    </fields>
+                </minimum_order_surcharge>
+
+                <minimum_order_weight_surcharge translate="label">
+                    <label>Minimum Order Weight Surcharge</label>
+                    <sort_order>70</sort_order>
+                    <show_in_default>0</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <is_active translate="label">
+                            <label>Is Active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </is_active>
+                        <minimum_order_weight translate="label">
+                            <label>Minimum Order Weight</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </minimum_order_weight>
+                        <surcharge translate="label">
+                            <label>Surcharge for Orders below Minimum Order Weight</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </surcharge>
+                        <unit translate="label,comment">
+                            <label>Unit for Weight</label>
+                            <comment>i.e. g, lb, kg</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </unit>
+                    </fields>
+                </minimum_order_weight_surcharge>
+            </groups>
+        </nrapps_idealo>
+    </sections>
+</config>

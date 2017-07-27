@@ -1,0 +1,67 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Shopping cart totals template
+ *
+ * @see Mage_Checkout_Block_Cart_Totals
+ */
+?>
+
+<table id="shopping-cart-totals-table">
+    <col />
+    <col width="1" />
+    <tfoot>
+    <?php echo $this->renderTotals('footer'); ?>
+    </tfoot>
+    <tbody>
+    <?php echo $this->renderTotals(); ?>
+    </tbody>
+</table>
+
+<div class="cartShippingHint">
+    <div class="cartShippingHintCol1">
+        <?php echo $this->getChildHtml('hint_tax'); ?>
+    </div>
+    <div class="cartShippingHintCol2">
+        <p><?php echo $this->__('All prices include VAT'); ?></p>
+        <p class="floatRight">
+            <a href="<?=$this->getUrl('liefer-und-versandkosten')?>"><?php echo $this->__('Shipping Prices'); ?></a> |
+            <a href="<?=$this->getUrl('zahl-und-versandarten')?>"><?php echo $this->__('Payment Methods'); ?></a>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('#country_tax').html(jQuery('#list_country_tax').val());
+
+        jQuery('#list_country_tax').change(function() {
+            jQuery('#country_tax').html(jQuery('#list_country_tax').val());
+        });
+    });
+</script>

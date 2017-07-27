@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+-->
+<layout version="0.1.0">
+    <iways_paypalinstalments_instalments_review translate="label">
+        <label>PayPal Express Order Review Form</label>
+        <remove name="right"/>
+        <remove name="left"/>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="iways_paypalinstalments/review" name="paypal.express.review" template="iways_paypalinstalments/review.phtml">
+                <block type="iways_paypalinstalments/review" name="express.review.shipping.method" as="shipping_method" template="iways_paypalinstalments/review/shipping/method.phtml"/>
+                <block type="iways_paypalinstalments/review_details" name="paypal.express.review.details" as="details" template="iways_paypalinstalments/review/details.phtml">
+                    <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>checkout/onepage/review/item.phtml</template></action>
+                    <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/onepage/review/item.phtml</template></action>
+                    <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/onepage/review/item.phtml</template></action>
+                    <block type="checkout/cart_totals" name="paypal.express.review.details.totals" as="totals" template="checkout/onepage/review/totals.phtml"/>
+                </block>
+                <block type="checkout/agreements" name="paypal.express.review.details.agreements" as="agreements" template="checkout/onepage/agreements.phtml"/>
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/checkout/review.js</name></action>
+        </reference>
+        <block type="core/text_list" name="additional.product.info" />
+    </iways_paypalinstalments_instalments_review>
+
+    <iways_paypalinstalments_instalments_review_details>
+        <block type="iways_paypalinstalments/review_details" name="root" output="toHtml" template="iways_paypalinstalments/review/details.phtml">
+            <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>checkout/onepage/review/item.phtml</template></action>
+            <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/onepage/review/item.phtml</template></action>
+            <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/onepage/review/item.phtml</template></action>
+            <block type="checkout/cart_totals" name="paypal.express.review.details.totals" as="totals" template="checkout/onepage/review/totals.phtml"/>
+        </block>
+    </iways_paypalinstalments_instalments_review_details>
+    <sales_order_view>
+            <reference name="order_totals">
+                <block type="iways_paypalinstalments/sales_fee" name="fee" />
+            </reference>
+        </sales_order_view>
+    <sales_order_print>
+        <reference name="order_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_order_print>
+    <sales_email_order_items>
+        <reference name="items">
+            <action method="setTemplate"><template>iways_paypalinstalments/email/order/items.phtml</template></action>
+        </reference>
+        <reference name="order_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_email_order_items>
+    <sales_order_invoice>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/Iways/PaypalInstalments/style.css</name></action>
+        </reference>
+        <reference name="invoice_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_order_invoice>
+    <sales_order_printinvoice>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/Iways/PaypalInstalments/style.css</name></action>
+        </reference>
+        <reference name="invoice_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_order_printinvoice>
+    <sales_email_order_invoice_items>
+        <reference name="invoice_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_email_order_invoice_items>
+    <sales_order_creditmemo>
+        <reference name="creditmemo_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_order_creditmemo>
+    <sales_order_printcreditmemo>
+        <reference name="creditmemo_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_order_printcreditmemo>
+    <sales_email_order_creditmemo_items>
+        <reference name="creditmemo_totals">
+            <block type="iways_paypalinstalments/sales_fee" name="fee" />
+        </reference>
+    </sales_email_order_creditmemo_items>
+    <!--<default>-->
+        <!--<reference name="head">-->
+            <!--<action method="addCss">-->
+                <!--<stylesheet>css/Iways/PaypalInstalments/style.css</stylesheet>-->
+            <!--</action>-->
+            <!--<action method="addJs">-->
+                <!--<script>Iways/PaypalInstalments/script.js</script>-->
+            <!--</action>-->
+        <!--</reference>-->
+    <!--</default>-->
+    <sales_order_print>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/Iways/PaypalInstalments/style.css</name></action>
+        </reference>
+    </sales_order_print>
+    <checkout_cart_index>
+        <reference name="checkout.cart.methods">
+            <block type="iways_paypalinstalments/upstream"
+                   name="ppp-upstream"
+                   template="iways_paypalinstalments/upstream/upstream.phtml"
+                   before="-">
+                <action method="setPageType">
+                    <type>cart</type>
+                </action>
+            </block>
+        </reference>
+    </checkout_cart_index>
+    <catalog_product_view>
+        <reference name="product.info.addtocart">
+            <block type="iways_paypalinstalments/upstream"
+                   name="ppp-upstream"
+                   template="iways_paypalinstalments/upstream/upstream.phtml"
+                   after="-">
+                <action method="setPageType">
+                    <type>product</type>
+                </action>
+            </block>
+        </reference>
+    </catalog_product_view>
+    <cms_index_index>
+        <reference name="before_body_end">
+            <block type="core/template"
+                   name="paypal_upstream_logo"
+                   after="-">
+                <action method="setTemplate" ifconfig="payment/iways_paypalinstalments/upstream_homepage">
+                    <template>iways_paypalinstalments/upstream/logo.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </cms_index_index>
+    <catalog_category_view>
+        <reference name="before_body_end">
+            <block type="core/template"
+                   name="paypal_upstream_logo"
+                   after="-">
+                <action method="setTemplate" ifconfig="payment/iways_paypalinstalments/upstream_category">
+                    <template>iways_paypalinstalments/upstream/logo.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_view>
+</layout>

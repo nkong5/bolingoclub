@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/kibithek/!svn/ver/729/trunk/tests/app/code/local/Kibithek/Import/Model/Onix
+END
+DirTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/729/trunk/tests/app/code/local/Kibithek/Import/Model/Onix/DirTest.php
+END
+XmlTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kibithek/!svn/ver/729/trunk/tests/app/code/local/Kibithek/Import/Model/Onix/XmlTest.php
+END

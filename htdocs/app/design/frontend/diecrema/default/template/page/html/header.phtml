@@ -1,0 +1,62 @@
+<div id="header">
+    		<div id="logoArea">
+	    		<div id="logoArea1">
+	    			<a href="<?php echo $this->getUrl(); ?>">
+	    				<img alt="DieCrema" src="<?php echo $this->getSkinUrl('images/diecrema_logo.png');?>" /></a>
+	    		</div>
+	    		<div id="logoArea2">
+	    			
+	    			<div class="floatRight">
+    	    			<div class="floatLeft">
+    	    				<p>
+    	    				<?php 
+    	    				if(!Mage::getSingleton('customer/session')->isLoggedIn()) { 
+    	    				?>
+    		    			<a href="<?php echo $this->getUrl('customer/account/login/') ;?>" ><?php echo $this->__('Login'); ?></a> |
+    		    			<a href="<?php echo $this->getUrl('customer/account/create/') ;?>" ><?php echo $this->__('Register'); ?></a> |
+    	    				<?php 
+    	    				}
+    	    				else{
+    	    				?>  
+    	    				<span><?php echo Mage::getSingleton('customer/session')->getCustomer()->getName(); ?></span> |
+    	    				<a href="<?php echo $this->getUrl('customer/account/logout') ;?>" ><?php echo $this->__('Logout'); ?></a> |
+    	    				<a href="<?php echo $this->getUrl('customer/account') ;?>" ><?php echo $this->__('My Account'); ?></a> |
+    	    				<?php   
+    	    				}
+    		    			?>
+    		    			<a href="<?php echo $this->getUrl('kundendienst-hotline') ;?>" ><?php echo $this->__('Customer Service'); ?></a>
+    		    			</p>
+    		    			<p class="textAlignRight">
+    		    			0800-9911899
+    		    			</p>
+    		    		</div>
+    		    		<div class="floatLeft w12">&nbsp;</div>
+    		    		<div class="floatLeft">
+    		    			<img src="<?php echo $this->getSkinUrl('images/bag.png')?>"/>
+    		    		</div>
+    		    		<div class="floatLeft w12">&nbsp;</div>
+    		    		<div class="floatLeft">
+    	    				
+    		    			<p class="textAlignRight">
+        		    			<a href="<?php echo $this->getUrl('checkout/cart/'); ?>"><?php echo $this->__('Cart'); ?>
+        		    			(<?php echo $this->helper('checkout/cart')->getItemsCount();?>)
+    		    				</a>
+    		    			</p>
+    		    			<p class="textAlignRight">
+    		    			(<?php echo $this->helper('checkout')->formatPrice(Mage::getSingleton('checkout/cart')->getQuote()->getGrandTotal()); ?>)
+    		    			</p>
+    		    		</div>
+    		    	</div>
+		    		<?php echo $this->getChildHtml('topSearch') ?>
+	    		</div>
+    		</div>
+    	</div>
+
+  		
+    	
+    	<div class="h12 clear"></div>
+       
+      	<div id="navArea">
+      	<?php echo $this->getChildHtml('mainnavi'); ?>
+      	<?php //echo $this->getChildHtml('topLinks') ?>
+      	</div>

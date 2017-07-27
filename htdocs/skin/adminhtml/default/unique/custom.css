@@ -1,0 +1,651 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_blank
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+select#meigee_theming_paterns_patern option[value="first_aid_kit"] {
+	background:url(images/paterns/first_aid_kit.png) 0 0 no-repeat;
+	width:20px;
+	height:20px;
+	padding: 0 0 0 0;
+	text-indent:-999em;
+	float: left;
+}
+select#meigee_theming_paterns_patern option[value="light_wool"] {
+	background:url(images/paterns/light_wool.png) 0 0 no-repeat;
+	width:20px;
+	height:20px;
+	padding: 0 0 0 0;
+	width:20px;
+	text-indent:-999em;
+	float: left;
+}
+
+/*********************************************************************/
+#meigee_unique_general_appearance table,
+#meigee_unique_general_design table,
+#meigee_unique_general_layout table,
+#meigee_unique_general_menu table,
+#meigee_unique_general_customlogo table,
+#meigee_unique_general_lang_switcher table,
+#meigee_unique_general_curr_switcher table,
+#meigee_unique_general_fancybox table,
+#meigee_unique_general_rollover table,
+#meigee_unique_general_otheroptions table,
+#meigee_unique_productpage_general table,
+#meigee_unique_productpage_layout table,
+#meigee_unique_productpage_brand table,
+#meigee_unique_productpage_additional table,
+#meigee_unique_sidebar_block_categories table,
+#meigee_unique_sidebar_block_shop_by table,
+#meigee_unique_sidebar_block_compare table,
+#meigee_unique_sidebar_block_compared table,
+#meigee_unique_sidebar_block_viewed table,
+#meigee_unique_sidebar_block_wishlist table,
+#meigee_unique_sidebar_block_tags table,
+#meigee_unique_sidebar_block_orders table,
+#meigee_unique_sidebar_block_subscribe table,
+#headerslider_coin table,
+#meigee_unique_bgslider_slides table,
+#meigee_unique_bgslider_slideroptions table, 
+#meigee_unique_sidebar_sidebar_slider table,
+#meigee_unique_general_retina table,
+#meigee_unique_general_header_and_menu table,
+#meigee_unique_general_footer table,
+#meigee_unique_general_productlisting table,
+#meigee_unique_general_productimages table,
+#meigee_unique_general_productlabels table,
+#meigee_unique_general_loginajax table,
+#meigee_unique_general_mycart table,
+#meigee_unique_design_appearance table,
+#meigee_unique_design_icons table,
+#meigee_unique_design_base table,
+#meigee_unique_design_catlabels table,
+#meigee_unique_design_header table,
+#meigee_unique_design_headerslider table,
+#meigee_unique_design_menu table,
+#meigee_unique_design_content table,
+#meigee_unique_design_buttons table,
+#meigee_unique_design_products table,
+#meigee_unique_design_social_links table,
+#meigee_unique_design_footer table,
+#meigee_unique_design_options table,
+#meigee_unique_design_skin1_appearance table,
+#meigee_unique_design_skin1_icons table,
+#meigee_unique_design_skin1_base table,
+#meigee_unique_design_skin1_catlabels table,
+#meigee_unique_design_skin1_header table,
+#meigee_unique_design_skin1_headerslider table,
+#meigee_unique_design_skin1_menu table,
+#meigee_unique_design_skin1_content table,
+#meigee_unique_design_skin1_buttons table,
+#meigee_unique_design_skin1_products table,
+#meigee_unique_design_skin1_social_links table,
+#meigee_unique_design_skin1_footer table,
+#meigee_unique_design_skin1_options table,
+
+#meigee_unique_design_skin2_appearance table,
+#meigee_unique_design_skin2_icons table,
+#meigee_unique_design_skin2_base table,
+#meigee_unique_design_skin2_catlabels table,
+#meigee_unique_design_skin2_header table,
+#meigee_unique_design_skin2_headerslider table,
+#meigee_unique_design_skin2_menu table,
+#meigee_unique_design_skin2_content table,
+#meigee_unique_design_skin2_buttons table,
+#meigee_unique_design_skin2_products table,
+#meigee_unique_design_skin2_social_links table,
+#meigee_unique_design_skin2_footer table,
+#meigee_unique_design_skin2_options table,
+
+#meigee_unique_design_skin3_appearance table,
+#meigee_unique_design_skin3_icons table,
+#meigee_unique_design_skin3_base table,
+#meigee_unique_design_skin3_catlabels table,
+#meigee_unique_design_skin3_header table,
+#meigee_unique_design_skin3_headerslider table,
+#meigee_unique_design_skin3_menu table,
+#meigee_unique_design_skin3_content table,
+#meigee_unique_design_skin3_buttons table,
+#meigee_unique_design_skin3_products table,
+#meigee_unique_design_skin3_social_links table,
+#meigee_unique_design_skin3_footer table,
+#meigee_unique_design_skin3_options table,
+
+#meigee_unique_design_skin4_appearance table,
+#meigee_unique_design_skin4_icons table,
+#meigee_unique_design_skin4_base table,
+#meigee_unique_design_skin4_catlabels table,
+#meigee_unique_design_skin4_header table,
+#meigee_unique_design_skin4_headerslider table,
+#meigee_unique_design_skin4_menu table,
+#meigee_unique_design_skin4_content table,
+#meigee_unique_design_skin4_buttons table,
+#meigee_unique_design_skin4_products table,
+#meigee_unique_design_skin4_social_links table,
+#meigee_unique_design_skin4_footer table,
+#meigee_unique_design_skin4_options table
+{
+	border-spacing:0 5px !important;
+}
+#meigee_unique_general_appearance table td,
+#meigee_unique_general_design table td,
+#meigee_unique_general_layout table td,
+#meigee_unique_general_menu table td,
+#meigee_unique_general_customlogo td,
+#meigee_unique_general_lang_switcher table td,
+#meigee_unique_general_curr_switcher table td,
+#meigee_unique_general_fancybox table td,
+#meigee_unique_general_rollover table td,
+#meigee_unique_general_otheroptions table td,
+#meigee_unique_productpage_general table td,
+#meigee_unique_productpage_layout table td,
+#meigee_unique_productpage_brand table td,
+#meigee_unique_productpage_additional table td,
+#meigee_unique_sidebar_block_categories table td,
+#meigee_unique_sidebar_block_shop_by table td,
+#meigee_unique_sidebar_block_compare table td,
+#meigee_unique_sidebar_block_compared table td,
+#meigee_unique_sidebar_block_viewed table td,
+#meigee_unique_sidebar_block_wishlist table td,
+#meigee_unique_sidebar_block_tags table td,
+#meigee_unique_sidebar_block_orders table td,
+#meigee_unique_sidebar_block_subscribe table td,
+#headerslider_coin table td,
+#meigee_unique_bgslider_slides td,
+#meigee_unique_bgslider_slideroptions td,
+#meigee_unique_sidebar_sidebar_slider td,
+#meigee_unique_general_retina table td,
+#meigee_unique_general_header_and_menu table td,
+#meigee_unique_general_footer table td,
+#meigee_unique_general_productlisting table td,
+#meigee_unique_general_productimages table td,
+#meigee_unique_general_productlabels table td,
+#meigee_unique_general_loginajax table td,
+#meigee_unique_general_mycart table td,
+#meigee_unique_design_appearance table td,
+#meigee_unique_design_icons table td,
+#meigee_unique_design_base table td,
+#meigee_unique_design_catlabels table td,
+#meigee_unique_design_header table td,
+#meigee_unique_design_headerslider table td,
+#meigee_unique_design_menu table td,
+#meigee_unique_design_content table td,
+#meigee_unique_design_buttons table td,
+#meigee_unique_design_products table td,
+#meigee_unique_design_social_links table td,
+#meigee_unique_design_footer table td,
+#meigee_unique_design_options table td,
+#meigee_unique_design_skin1_appearance table td,
+#meigee_unique_design_skin1_icons table td,
+#meigee_unique_design_skin1_base table td,
+#meigee_unique_design_skin1_catlabels table td,
+#meigee_unique_design_skin1_header table td,
+#meigee_unique_design_skin1_headerslider table td,
+#meigee_unique_design_skin1_menu table td,
+#meigee_unique_design_skin1_content table td,
+#meigee_unique_design_skin1_buttons table td,
+#meigee_unique_design_skin1_products table td,
+#meigee_unique_design_skin1_social_links table td,
+#meigee_unique_design_skin1_footer table td,
+#meigee_unique_design_skin1_options table td,
+
+#meigee_unique_design_skin2_appearance table td,
+#meigee_unique_design_skin2_icons table td,
+#meigee_unique_design_skin2_base table td,
+#meigee_unique_design_skin2_catlabels table td,
+#meigee_unique_design_skin2_header table td,
+#meigee_unique_design_skin2_headerslider table td,
+#meigee_unique_design_skin2_menu table td,
+#meigee_unique_design_skin2_content table td,
+#meigee_unique_design_skin2_buttons table td,
+#meigee_unique_design_skin2_products table td,
+#meigee_unique_design_skin2_social_links table td,
+#meigee_unique_design_skin2_footer table td,
+#meigee_unique_design_skin2_options table td,
+
+#meigee_unique_design_skin3_appearance table td,
+#meigee_unique_design_skin3_icons table td,
+#meigee_unique_design_skin3_base table td,
+#meigee_unique_design_skin3_catlabels table td,
+#meigee_unique_design_skin3_header table td,
+#meigee_unique_design_skin3_headerslider table td,
+#meigee_unique_design_skin3_menu table td,
+#meigee_unique_design_skin3_content table td,
+#meigee_unique_design_skin3_buttons table td,
+#meigee_unique_design_skin3_products table td,
+#meigee_unique_design_skin3_social_links table td,
+#meigee_unique_design_skin3_footer table td,
+#meigee_unique_design_skin3_options table td,
+
+#meigee_unique_design_skin4_appearance table td,
+#meigee_unique_design_skin4_icons table td,
+#meigee_unique_design_skin4_base table td,
+#meigee_unique_design_skin4_catlabels table td,
+#meigee_unique_design_skin4_header table td,
+#meigee_unique_design_skin4_headerslider table td,
+#meigee_unique_design_skin4_menu table td,
+#meigee_unique_design_skin4_content table td,
+#meigee_unique_design_skin4_buttons table td,
+#meigee_unique_design_skin4_products table td,
+#meigee_unique_design_skin4_social_links table td,
+#meigee_unique_design_skin4_footer table td,
+#meigee_unique_design_skin4_options table td
+{ 
+	padding: 20px !important;
+}
+#meigee_unique_general_appearance td.label,
+#meigee_unique_general_design td.label,
+#meigee_unique_general_layout td.label,
+#meigee_unique_general_menu td.label,
+#meigee_unique_general_customlogo td.label,
+#meigee_unique_general_lang_switcher td.label,
+#meigee_unique_general_curr_switcher td.label,
+#meigee_unique_general_fancybox td.label,
+#meigee_unique_general_rollover td.label,
+#meigee_unique_general_otheroptions td.label,
+#meigee_unique_productpage_general td.label,
+#meigee_unique_productpage_layout td.label,
+#meigee_unique_productpage_brand td.label,
+#meigee_unique_productpage_additional td.label,
+#meigee_unique_sidebar_block_categories td.label,
+#meigee_unique_sidebar_block_shop_by td.label,
+#meigee_unique_sidebar_block_compare td.label,
+#meigee_unique_sidebar_block_compared td.label,
+#meigee_unique_sidebar_block_viewed td.label,
+#meigee_unique_sidebar_block_wishlist td.label,
+#meigee_unique_sidebar_block_tags td.label,
+#meigee_unique_sidebar_block_orders td.label,
+#meigee_unique_sidebar_block_subscribe td.label,
+#headerslider_coin td.label,
+#meigee_unique_bgslider_slides td.label,
+#meigee_unique_bgslider_slideroptions td.label,
+#meigee_unique_sidebar_sidebar_slider td.label,
+#meigee_unique_general_retina td.label,
+#meigee_unique_general_header_and_menu td.label,
+#meigee_unique_general_footer td.label,
+#meigee_unique_general_productlisting td.label,
+#meigee_unique_general_productimages td.label,
+#meigee_unique_general_productlabels td.label,
+#meigee_unique_general_loginajax td.label,
+#meigee_unique_general_mycart td.label,
+#meigee_unique_design_appearance table td.label,
+#meigee_unique_design_icons table td.label,
+#meigee_unique_design_base table td.label,
+#meigee_unique_design_catlabels table td.label,
+#meigee_unique_design_header table td.label,
+#meigee_unique_design_headerslider table td.label,
+#meigee_unique_design_menu table td.label,
+#meigee_unique_design_content table td.label,
+#meigee_unique_design_buttons table td.label,
+#meigee_unique_design_products table td.label,
+#meigee_unique_design_social_links table td.label,
+#meigee_unique_design_footer table td.label,
+#meigee_unique_design_options table td.label,
+#meigee_unique_design_skin1_appearance table td.label,
+#meigee_unique_design_skin1_icons table td.label,
+#meigee_unique_design_skin1_base table td.label,
+#meigee_unique_design_skin1_catlabels table td.label,
+#meigee_unique_design_skin1_header table td.label,
+#meigee_unique_design_skin1_headerslider table td.label,
+#meigee_unique_design_skin1_menu table td.label,
+#meigee_unique_design_skin1_content table td.label,
+#meigee_unique_design_skin1_buttons table td.label,
+#meigee_unique_design_skin1_products table td.label,
+#meigee_unique_design_skin1_social_links table td.label,
+#meigee_unique_design_skin1_footer table td.label,
+#meigee_unique_design_skin1_options table td.label,
+
+#meigee_unique_design_skin2_appearance table td.label,
+#meigee_unique_design_skin2_icons table td.label,
+#meigee_unique_design_skin2_base table td.label,
+#meigee_unique_design_skin2_catlabels table td.label,
+#meigee_unique_design_skin2_header table td.label,
+#meigee_unique_design_skin2_headerslider table td.label,
+#meigee_unique_design_skin2_menu table td.label,
+#meigee_unique_design_skin2_content table td.label,
+#meigee_unique_design_skin2_buttons table td.label,
+#meigee_unique_design_skin2_products table td.label,
+#meigee_unique_design_skin2_social_links table td.label,
+#meigee_unique_design_skin2_footer table td.label,
+#meigee_unique_design_skin2_options table td.label,
+
+#meigee_unique_design_skin3_appearance table td.label,
+#meigee_unique_design_skin3_icons table td.label,
+#meigee_unique_design_skin3_base table td.label,
+#meigee_unique_design_skin3_catlabels table td.label,
+#meigee_unique_design_skin3_header table td.label,
+#meigee_unique_design_skin3_headerslider table td.label,
+#meigee_unique_design_skin3_menu table td.label,
+#meigee_unique_design_skin3_content table td.label,
+#meigee_unique_design_skin3_buttons table td.label,
+#meigee_unique_design_skin3_products table td.label,
+#meigee_unique_design_skin3_social_links table td.label,
+#meigee_unique_design_skin3_footer table td.label,
+#meigee_unique_design_skin3_options table td.label,
+
+#meigee_unique_design_skin4_appearance table td.label,
+#meigee_unique_design_skin4_icons table td.label,
+#meigee_unique_design_skin4_base table td.label,
+#meigee_unique_design_skin4_catlabels table td.label,
+#meigee_unique_design_skin4_header table td.label,
+#meigee_unique_design_skin4_headerslider table td.label,
+#meigee_unique_design_skin4_menu table td.label,
+#meigee_unique_design_skin4_content table td.label,
+#meigee_unique_design_skin4_buttons table td.label,
+#meigee_unique_design_skin4_products table td.label,
+#meigee_unique_design_skin4_social_links table td.label,
+#meigee_unique_design_skin4_footer table td.label,
+#meigee_unique_design_skin4_options table td.label
+{
+	background: #f5f5f5 !important;
+	border:1px solid #ebebeb !important;
+	border-right:none !important;
+	font-weight:bold;
+}
+#meigee_unique_general_appearance td.value,
+#meigee_unique_general_design td.value,
+#meigee_unique_general_layout td.value,
+#meigee_unique_general_menu td.value,
+#meigee_unique_general_customlogo td.value,
+#meigee_unique_general_lang_switcher td.value,
+#meigee_unique_general_curr_switcher td.value,
+#meigee_unique_general_fancybox td.value,
+#meigee_unique_general_rollover td.value,
+#meigee_unique_general_otheroptions td.value,
+#meigee_unique_productpage_general td.value,
+#meigee_unique_productpage_layout td.value,
+#meigee_unique_productpage_brand td.value,
+#meigee_unique_productpage_additional td.value,
+#meigee_unique_sidebar_block_categories td.value,
+#meigee_unique_sidebar_block_shop_by td.value,
+#meigee_unique_sidebar_block_compare td.value,
+#meigee_unique_sidebar_block_compared td.value,
+#meigee_unique_sidebar_block_viewed td.value,
+#meigee_unique_sidebar_block_wishlist td.value,
+#meigee_unique_sidebar_block_tags td.value,
+#meigee_unique_sidebar_block_orders td.value,
+#meigee_unique_sidebar_block_subscribe td.value,
+#headerslider_coin td.value,
+#meigee_unique_bgslider_slides td.value,
+#meigee_unique_bgslider_slideroptions td.value,
+#meigee_unique_sidebar_sidebar_slider td.value,
+#meigee_unique_general_retina td.value,
+#meigee_unique_general_header_and_menu td.value,
+#meigee_unique_general_footer td.value,
+#meigee_unique_general_productlisting td.value,
+#meigee_unique_general_productimages td.value,
+#meigee_unique_general_productlabels td.value,
+#meigee_unique_general_loginajax td.value,
+#meigee_unique_general_mycart td.value,
+#meigee_unique_design_appearance table td.value,
+#meigee_unique_design_icons table td.value,
+#meigee_unique_design_base table td.value,
+#meigee_unique_design_catlabels table td.value,
+#meigee_unique_design_header table td.value,
+#meigee_unique_design_headerslider table td.value,
+#meigee_unique_design_menu table td.value,
+#meigee_unique_design_content table td.value,
+#meigee_unique_design_buttons table td.value,
+#meigee_unique_design_products table td.value,
+#meigee_unique_design_social_links table td.value,
+#meigee_unique_design_footer table td.value,
+#meigee_unique_design_options table td.value,
+#meigee_unique_design_skin1_appearance table td.value,
+#meigee_unique_design_skin1_icons table td.value,
+#meigee_unique_design_skin1_base table td.value,
+#meigee_unique_design_skin1_catlabels table td.value,
+#meigee_unique_design_skin1_header table td.value,
+#meigee_unique_design_skin1_headerslider table td.value,
+#meigee_unique_design_skin1_menu table td.value,
+#meigee_unique_design_skin1_content table td.value,
+#meigee_unique_design_skin1_buttons table td.value,
+#meigee_unique_design_skin1_products table td.value,
+#meigee_unique_design_skin1_social_links table td.value,
+#meigee_unique_design_skin1_footer table td.value,
+#meigee_unique_design_skin1_options table td.value,
+
+#meigee_unique_design_skin2_appearance table td.value,
+#meigee_unique_design_skin2_icons table td.value,
+#meigee_unique_design_skin2_base table td.value,
+#meigee_unique_design_skin2_catlabels table td.value,
+#meigee_unique_design_skin2_header table td.value,
+#meigee_unique_design_skin2_headerslider table td.value,
+#meigee_unique_design_skin2_menu table td.value,
+#meigee_unique_design_skin2_content table td.value,
+#meigee_unique_design_skin2_buttons table td.value,
+#meigee_unique_design_skin2_products table td.value,
+#meigee_unique_design_skin2_social_links table td.value,
+#meigee_unique_design_skin2_footer table td.value,
+#meigee_unique_design_skin2_options table td.value,
+
+#meigee_unique_design_skin3_appearance table td.value,
+#meigee_unique_design_skin3_icons table td.value,
+#meigee_unique_design_skin3_base table td.value,
+#meigee_unique_design_skin3_catlabels table td.value,
+#meigee_unique_design_skin3_header table td.value,
+#meigee_unique_design_skin3_headerslider table td.value,
+#meigee_unique_design_skin3_menu table td.value,
+#meigee_unique_design_skin3_content table td.value,
+#meigee_unique_design_skin3_buttons table td.value,
+#meigee_unique_design_skin3_products table td.value,
+#meigee_unique_design_skin3_social_links table td.value,
+#meigee_unique_design_skin3_footer table td.value,
+#meigee_unique_design_skin3_options table td.value,
+
+#meigee_unique_design_skin4_appearance table td.value,
+#meigee_unique_design_skin4_icons table td.value,
+#meigee_unique_design_skin4_base table td.value,
+#meigee_unique_design_skin4_catlabels table td.value,
+#meigee_unique_design_skin4_header table td.value,
+#meigee_unique_design_skin4_headerslider table td.value,
+#meigee_unique_design_skin4_menu table td.value,
+#meigee_unique_design_skin4_content table td.value,
+#meigee_unique_design_skin4_buttons table td.value,
+#meigee_unique_design_skin4_products table td.value,
+#meigee_unique_design_skin4_social_links table td.value,
+#meigee_unique_design_skin4_footer table td.value,
+#meigee_unique_design_skin4_options table td.value
+{
+	width:400px;
+	background: #f5f5f5 !important;
+	border:1px solid #ebebeb !important;
+	border-left:none !important;
+	border-right:none !important;
+}
+#meigee_unique_general_appearance td.scope-label,
+#meigee_unique_general_design td.scope-label,
+#meigee_unique_general_layout td.scope-label,
+#meigee_unique_general_menu td.scope-label,
+#meigee_unique_general_customlogo td.scope-label,
+#meigee_unique_general_lang_switcher td.scope-label,
+#meigee_unique_general_curr_switcher td.scope-label,
+#meigee_unique_general_fancybox td.scope-label,
+#meigee_unique_general_rollover td.scope-label,
+#meigee_unique_general_otheroptions td.scope-label,
+#meigee_unique_productpage_general td.scope-label,
+#meigee_unique_productpage_layout td.scope-label,
+#meigee_unique_productpage_brand td.scope-label,
+#meigee_unique_productpage_additional td.scope-label,
+#meigee_unique_sidebar_block_categories td.scope-label,
+#meigee_unique_sidebar_block_shop_by td.scope-label,
+#meigee_unique_sidebar_block_compare td.scope-label,
+#meigee_unique_sidebar_block_compared td.scope-label,
+#meigee_unique_sidebar_block_viewed td.scope-label,
+#meigee_unique_sidebar_block_wishlist td.scope-label,
+#meigee_unique_sidebar_block_tags td.scope-label,
+#meigee_unique_sidebar_block_orders td.scope-label,
+#meigee_unique_sidebar_block_subscribe td.scope-label,
+#headerslider_coin td.scope-label,
+#meigee_unique_bgslider_slides td.scope-label,
+#meigee_unique_bgslider_slideroptions td.scope-label,
+#meigee_unique_sidebar_sidebar_slider td.scope-label,
+#meigee_unique_general_retina td.scope-label,
+#meigee_unique_general_header_and_menu td.scope-label,
+#meigee_unique_general_footer td.scope-label,
+#meigee_unique_general_productlisting td.scope-label,
+#meigee_unique_general_productimages td.scope-label,
+#meigee_unique_general_productlabels td.scope-label,
+#meigee_unique_general_loginajax td.scope-label,
+#meigee_unique_general_mycart td.scope-label,
+#meigee_unique_design_appearance table td.scope-label,
+#meigee_unique_design_icons table td.scope-label,
+#meigee_unique_design_base table td.scope-label,
+#meigee_unique_design_catlabels table td.scope-label,
+#meigee_unique_design_header table td.scope-label,
+#meigee_unique_design_headerslider table td.scope-label,
+#meigee_unique_design_menu table td.scope-label,
+#meigee_unique_design_content table td.scope-label,
+#meigee_unique_design_buttons table td.scope-label,
+#meigee_unique_design_products table td.scope-label,
+#meigee_unique_design_social_links table td.scope-label,
+#meigee_unique_design_footer table td.scope-label,
+#meigee_unique_design_options table td.scope-label,
+#meigee_unique_design_skin1_appearance table td.scope-label,
+#meigee_unique_design_skin1_icons table td.scope-label,
+#meigee_unique_design_skin1_base table td.scope-label,
+#meigee_unique_design_skin1_catlabels table td.scope-label,
+#meigee_unique_design_skin1_header table td.scope-label,
+#meigee_unique_design_skin1_headerslider table td.scope-label,
+#meigee_unique_design_skin1_menu table td.scope-label,
+#meigee_unique_design_skin1_content table td.scope-label,
+#meigee_unique_design_skin1_buttons table td.scope-label,
+#meigee_unique_design_skin1_products table td.scope-label,
+#meigee_unique_design_skin1_social_links table td.scope-label,
+#meigee_unique_design_skin1_footer table td.scope-label,
+#meigee_unique_design_skin1_options table td.scope-label,
+
+#meigee_unique_design_skin2_appearance table td.scope-label,
+#meigee_unique_design_skin2_icons table td.scope-label,
+#meigee_unique_design_skin2_base table td.scope-label,
+#meigee_unique_design_skin2_catlabels table td.scope-label,
+#meigee_unique_design_skin2_header table td.scope-label,
+#meigee_unique_design_skin2_headerslider table td.scope-label,
+#meigee_unique_design_skin2_menu table td.scope-label,
+#meigee_unique_design_skin2_content table td.scope-label,
+#meigee_unique_design_skin2_buttons table td.scope-label,
+#meigee_unique_design_skin2_products table td.scope-label,
+#meigee_unique_design_skin2_social_links table td.scope-label,
+#meigee_unique_design_skin2_footer table td.scope-label,
+#meigee_unique_design_skin2_options table td.scope-label,
+
+#meigee_unique_design_skin3_appearance table td.scope-label,
+#meigee_unique_design_skin3_icons table td.scope-label,
+#meigee_unique_design_skin3_base table td.scope-label,
+#meigee_unique_design_skin3_catlabels table td.scope-label,
+#meigee_unique_design_skin3_header table td.scope-label,
+#meigee_unique_design_skin3_headerslider table td.scope-label,
+#meigee_unique_design_skin3_menu table td.scope-label,
+#meigee_unique_design_skin3_content table td.scope-label,
+#meigee_unique_design_skin3_buttons table td.scope-label,
+#meigee_unique_design_skin3_products table td.scope-label,
+#meigee_unique_design_skin3_social_links table td.scope-label,
+#meigee_unique_design_skin3_footer table td.scope-label,
+#meigee_unique_design_skin3_options table td.scope-label,
+
+#meigee_unique_design_skin4_appearance table td.scope-label,
+#meigee_unique_design_skin4_icons table td.scope-label,
+#meigee_unique_design_skin4_base table td.scope-label,
+#meigee_unique_design_skin4_catlabels table td.scope-label,
+#meigee_unique_design_skin4_header table td.scope-label,
+#meigee_unique_design_skin4_headerslider table td.scope-label,
+#meigee_unique_design_skin4_menu table td.scope-label,
+#meigee_unique_design_skin4_content table td.scope-label,
+#meigee_unique_design_skin4_buttons table td.scope-label,
+#meigee_unique_design_skin4_products table td.scope-label,
+#meigee_unique_design_skin4_social_links table td.scope-label,
+#meigee_unique_design_skin4_footer table td.scope-label,
+#meigee_unique_design_skin4_options table td.scope-label
+{
+	background: #f5f5f5 !important;
+	border:1px solid #ebebeb !important;
+	border-left:none !important;
+}
+
+/***********************************************************************/
+
+div.meigee-please {
+	background: #fff;
+	position: relative;
+	min-height: 35px;
+	margin: -9px -9px -6px -33px;
+	padding: 0;
+}
+
+.meigee-thumb { 
+}
+.meigee-radio {
+	margin-right:10px; 
+	margin-bottom:10px; 
+}
+
+/* Sidebars */
+.sidebars-row {
+	overflow: hidden;
+}
+/**/
+
+/* Background Paterns */
+.paterns-row {
+	height:365px;
+	overflow: auto;
+}
+.paterns-row .meigee-thumb { 
+	width:54px; 
+	height:54px;
+}
+/**/
+
+#meigee_unique_design_icons .fa {display: block; font-size: 36px;}
+#meigee_unique_design_icons input { font-size: 2px;}
+
+#meigee_unique_design_skin1_icons .fa {display: block; font-size: 36px;}
+#meigee_unique_design_skin1_icons input { font-size: 2px;}
+
+#meigee_unique_design_skin2_icons .fa {display: block; font-size: 36px;}
+#meigee_unique_design_skin2_icons input { font-size: 2px;}
+
+#meigee_unique_design_skin3_icons .fa {display: block; font-size: 36px;}
+#meigee_unique_design_skin3_icons input { font-size: 2px;}
+
+#meigee_unique_design_skin4_icons .fa {display: block; font-size: 36px;}
+#meigee_unique_design_skin4_icons input { font-size: 2px;}
+
+.adminhtml2-restore-index div.side-col,
+.adminhtml2-activation-index div.side-col {margin-right: -310px; width: 310px;}
+.adminhtml2-restore-index div.main-col,
+.adminhtml2-activation-index div.main-col {margin-left: 310px;}
+.adminhtml2-restore-index .columns,
+.adminhtml2-activation-index .columns {background-position: 307px 0;}
+
+#row_meigee_unique_general_header_and_menu_headertype3_comments,
+#row_meigee_unique_general_header_and_menu_headertype1_comments,
+#row_meigee_unique_general_header_and_menu_headertype2_comments,
+#row_meigee_unique_headerslider_coin_header2boxedslider_comment,
+#row_meigee_unique_headerslider_coin_header2boxedsbannerlider_comment,
+#row_meigee_unique_headerslider_coin_boxedslider_comment,
+#row_meigee_unique_headerslider_coin_boxedbannerslider_comment,
+#row_meigee_unique_headerslider_coin_wideslider_comment{display: none;}
+
+#row_meigee_unique_headerslider_coin_slidertype p.note span{color:red;}
+

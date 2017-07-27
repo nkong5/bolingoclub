@@ -1,0 +1,16 @@
+<config>    
+    <modules>
+        <Diecrema_Structure>
+            <version>0.1.0</version>
+        </Diecrema_Structure>
+    </modules>
+	<global>
+        <blocks>
+            <customer>
+                <rewrite>
+                    <account_navigation>Diecrema_Customer_Block_Account_Navigation</account_navigation>
+                </rewrite>
+            </customer>
+        </blocks>
+    </global>
+</config> 

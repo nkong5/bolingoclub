@@ -1,0 +1,29 @@
+<?xml version="1.0"?> 
+<config>
+    <modules>
+        <Diecrema_Paypal>
+            <version>0.1.0</version>
+        </Diecrema_Paypal>
+    </modules>
+    <global>
+        <models>
+            <diecrema_paypal>
+                <rewrite>
+                    <ipn>Diecrema_Paypal_Model_Ipn</ipn>
+                    <standard>Diecrema_Paypal_Model_Standard</standard>                   
+                </rewrite>
+            </diecrema_paypal>
+        </models>    
+        <!--  
+        <checkout_success>
+            <order>
+                <auto_state>
+                    <payment_method_blacklist>
+                        <paypal_standard />
+                    </payment_method_blacklist>
+                </auto_state>
+            </order>
+        </checkout_success>
+        -->
+    </global>
+</config>

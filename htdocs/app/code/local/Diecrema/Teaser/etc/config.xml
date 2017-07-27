@@ -1,0 +1,15 @@
+<config>    
+    <modules>
+        <Diecrema_Teaser>
+            <version>0.1.0</version>
+        </Diecrema_Teaser>
+    </modules>
+    
+    <global>
+		<blocks>
+			<teaser>
+				<class>Diecrema_Teaser_Block</class>
+			</teaser>
+		</blocks>
+	</global>
+</config>

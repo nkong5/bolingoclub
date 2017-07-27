@@ -1,0 +1,119 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php
+	$meigee_unique_general = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_general');
+	$customlogo = $meigee_unique_general['customlogo'];
+	$mediaurl = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('mediaurl');
+	$loginAjaxStatus = $meigee_unique_general['loginajax']['status'];
+	$meigee_unique_headerslider = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_headerslider');
+	$headerSliderConfig = $meigee_unique_headerslider['coin'];
+	$customer = Mage::getSingleton('customer/session');
+	if($meigee_minimalism_general['header_and_menu']['headertype3_bg']){
+		$header_bg = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'images/'.$meigee_minimalism_general['header_and_menu']['headertype3_bg'];
+	}else{
+		$header_bg = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'wysiwyg/header3_bg.jpg';
+	}
+	if($meigee_minimalism_general['header_and_menu']['headertype3_bg_retina']) {
+		$header_bgX2 = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'images/'.$meigee_minimalism_general['header_and_menu']['headertype3_bg_retina'];
+	}else{
+		$header_bgX2 =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'wysiwyg/header3_bg@x2.jpg';
+	}
+?>
+<div class="header-wrapper">
+	<header id="header" class="header-3">
+		<div class="header-bg">
+			<img src="<?php echo $header_bg; ?>" data-scrx2="<?php echo $header_bgX2; ?>" alt="">
+		</div>
+		<div class="header-top">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="grid_3 header-top-left alpha omega">
+						<?php if ($customlogo['small_logo_type'] == 0) : ?>
+							<div class="resized-logo">
+						<?php endif; ?>
+							<?php if ($customlogo['logo_status'] == 0): ?>
+								<h2 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('logo'); ?> alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
+							<?php else:?>
+								<h2 class="logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="logo"><img src="<?php echo $mediaurl.$customlogo['logo']; ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+							<?php endif; ?>
+						<?php if ($customlogo['small_logo_type'] == 0) : ?>
+							</div>
+						<?php endif; ?>
+						<?php if ($customlogo['small_logo_type'] == 1) : ?>
+							<h2 class="small-logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="logo"><img src="<?php echo $mediaurl.$customlogo['small_logo']; ?>" <?php echo MAGE::helper('ThemeOptionsUnique/Retina')->getRetinaData('small_logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+						<?php endif; ?>
+					</div>
+					<div class="grid_9 header-top-right alpha omega">
+						<div class="first-line">
+							<div class="grid_5 alpha omega">
+								<?php if ($static_html = $this->getChildHtml('unique_header_phones')): ?>
+									<div class="header-phones"><?php echo $static_html; ?></div>
+								<?php endif; ?>
+								<?php if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
+									<p class="welcome-msg"><span><?php echo $this->getWelcome() ?><?php echo $this->getAdditionalHtml() ?></span></p>
+								<?php endif; ?>
+							</div>
+							<div class="grid_4 alpha omega right">
+								<?php echo $this->getChildHtml('currency') ?>
+								<?php echo $this->getChildHtml('store_language') ?>
+							</div>
+						</div>
+						<div class="second-line">
+							<div class="grid_3 alpha omega header-search">
+								<?php echo $this->getChildHtml('topSearch') ?>
+							</div>
+							<div class="grid_6 alpha omega right header-blocks">
+								<?php echo $this->getChildHtml('topLinks') ?>
+								<?php echo $this->getChildHtml('cart_sidebar') ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="header-bottom-wrapper">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="header-bottom<?php if($meigee_unique_general['header_and_menu']['display']){echo ' accordion-menu';} ?>">
+						<?php echo $this->getChildHtml('topMenu') ?>
+						<div class="menu-button"><span class="mobile open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('Menu'); ?></span><span class="open"><?php echo MAGE::helper('ThemeOptionsUnique')->getIcon('mobilemenu'); ?><?php echo $this->__('More categories'); ?></span><span class="close"><i class="fa fa-times"></i><?php echo $this->__('Close'); ?></span></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<?php if($headerSliderConfig['slidertype'] != 0): ?>
+		<div class="container_12">
+			<div class="grid_12">
+		<?php endif; ?>
+				<?php echo $this->getChildHtml('header_slider_container') ?>
+		<?php if($headerSliderConfig['slidertype'] != 0): ?>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<?php endif; ?>
+	</header>
+</div>
+<?php echo $this->getChildHtml('topContainer'); ?>
+<?php if($loginAjaxStatus): ?>
+	<script type="text/javascript">
+		/* Login ajax */
+		jQuery('.top-link-login').on('click', function(){
+			ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/') ?>", false);
+			return false;
+		});
+	</script>
+<?php endif; ?>

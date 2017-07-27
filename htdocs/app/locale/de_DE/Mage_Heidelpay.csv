@@ -1,0 +1,59 @@
+"Creditcard (Heidelpay)","Kreditkarte (Heidelpay)"
+"Dear {NAME}, you used the following creditcard on your last visit. Do you want to re-use it?","Sehr geehrter Herr {NAME}, beim letzten Besuch haben Sie folgende Kreditkarte verwendet, m&ouml;chten Sie diese wieder verwenden?"
+"Yes, I want to re-use my creditcard.","Ja, Ich m&ouml;chte meine Kreditkarte erneut benutzen."
+"Re-use last creditcard.","Letzte Kreditkarte nutzen."
+
+"Debitcard (Heidelpay)","Debitkarte (Heidelpay)"
+"Dear {NAME}, you used the following debitcard on your last visit. Do you want to re-use it?","Sehr geehrter Herr {NAME}, beim letzten Besuch haben Sie folgende Debitkarte verwendet, m&ouml;chten Sie diese wieder verwenden?"
+"Yes, I want to re-use my debitcard.","Ja, Ich m&ouml;chte meine Debitkarte erneut benutzen."
+"Re-use last debitcard.","Letzte Debitkarte nutzen."
+
+"Your order has been received.","Ihre Bestellung ist eingegangen."
+
+"Credit Card","Kreditkarte"
+"Debit Card","Debitkarte"
+"Debitcard","Debitkarte"
+"Direct Debit","Lastschrift"
+"Direct E-Banking","Sofort&uuml;berweisung"
+"T-Pay Online Transfer","T-Pay Online&uuml;berweisung"
+"Giropay","Giropay"
+"Pay Pal","Pay Pal"
+"EPS","EPS"
+"iDeal","iDeal"
+"Prepayment","Vorkasse"
+
+"DescCreditCard","Sicher zahlen mit Kreditkarte<br><br>"
+"DescDebitCard","Sicher zahlen mit Debitkarte<br><br>"
+"DescDirectDebit","Sicher zahlen mit Lastschrift<br><br>"
+"DescEPS","Sicher zahlen mit EPS"
+"DescGiropay","Sicher zahlen mit Giropay"
+"DescIdeal","Sicher zahlen mit iDeal"
+"DescPayPal","Sicher zahlen mit PayPal"
+"DescPrepaid","Sicher zahlen mit Vorkasse"
+"DescDirectEBanking","Sicher zahlen mit Sofort&uuml;berweisung"
+"DescTPay","Sicher zahlen mit T-Pay Online&uuml;berweisung"
+
+
+"No.","Nr."
+"Valid until:","G&uuml;ltig bis:"
+"close","schliessen"
+"Cardtype:","Kartentyp:"
+"Account No","Konto"
+"Bankcode","BLZ"
+"Owner","Inhaber"
+"Please enter account no.","Bitte Konto angeben."
+"Please enter bankcode.","Bitte BLZ angeben."
+"Please enter owner.","Bitte Inhaber angeben."
+"Enter additional information for the payment.","Geben Sie weitere Zahlungsinformationen ein."
+"HP_SUCCESS_PREPAID","Ihre Transaktion war erfolgreich!
+
+            Ueberweisen Sie uns den Betrag von {CURRENCY} {AMOUNT} auf folgendes Konto
+            Land :         {ACC_COUNTRY}
+            Kontoinhaber : {ACC_OWNER}
+            Konto-Nr. :    {ACC_NUMBER}
+            Bankleitzahl:  {ACC_BANKCODE}
+            IBAN:          {ACC_IBAN}
+            BIC:           {ACC_BIC}
+            Geben sie bitte im Verwendungszweck UNBEDINGT die Identifikationsnummer
+        {SHORTID}
+        und NICHTS ANDERES an."

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Diecrema_Startpage>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Diecrema_Startpage>
+    </modules>
+</config> 
