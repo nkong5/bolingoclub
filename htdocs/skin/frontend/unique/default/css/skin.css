@@ -1058,4 +1058,16 @@ body.boxed-layout #footer.original .container_12 {
 #footer .store-switcher .sbOptions li:hover {background-color: #DDDDDD;} 
 #footer .store-switcher .sbOptions li:hover a {color: #54565b;}
 
+.slider__headline {
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.slider__link_claret {
+	color: #00aeef;
+	font-size: 2.5em;
+	display: block;
+	margin: 0.8em 0;
+}
+
     
