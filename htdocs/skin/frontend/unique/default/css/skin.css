@@ -1058,7 +1058,7 @@ body.boxed-layout #footer.original .container_12 {
 #footer .store-switcher .sbOptions li:hover {background-color: #DDDDDD;} 
 #footer .store-switcher .sbOptions li:hover a {color: #54565b;}
 
-header#header.header-2 .slider__headline {
+header#header.header-2 .slider-with-banners .header-slider-container .iosSlider .slider .item .slider__headline {
 	color: #fff;
 	font-size: 1.3em;
 }
