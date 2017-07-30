@@ -1063,6 +1063,10 @@ header#header.header-2 .slider-with-banners .header-slider-container .iosSlider 
 	font-size: 1.3em;
 }
 
+header#header.header-2 .slider-with-banners .header-slider-container .iosSlider .slider .item .slider__headline:hover {
+	color: #a36f53;
+}
+
 header#header .slider__link_claret {
 	color: #00aeef;
 	font-size: 2.5em;
