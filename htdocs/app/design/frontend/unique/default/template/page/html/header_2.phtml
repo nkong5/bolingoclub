@@ -46,14 +46,14 @@
 								<a href="https://www.diecrema.com/"><img src="<?php echo $this->getSkinUrl('images/lang/English.png') ?>" alt="" /></a>
 								<a href="https://www.diecrema.de/"><img src="<?php echo $this->getSkinUrl('images/lang/German.png') ?>" alt="" /></a>
 							</div>
-							<div class="grid_5 alpha omega">
-								<?php if ($static_html = $this->getChildHtml('unique_header_phones')): ?>
+							<!-- <div class="grid_5 alpha omega">
+								<?php /* if ($static_html = $this->getChildHtml('unique_header_phones')): ?>
 									<div class="header-phones"><?php echo $static_html; ?></div>
 								<?php endif; ?>
 								<?php if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
 									<p class="welcome-msg"><span><?php echo $this->getWelcome() ?><?php echo $this->getAdditionalHtml() ?></span></p>
-								<?php endif; ?>
-							</div>
+								<?php endif; */ ?>
+							</div> -->
 							<div class="grid_4 alpha omega right">
 								<?php echo $this->getChildHtml('currency') ?>
 								<?php echo $this->getChildHtml('store_language') ?>

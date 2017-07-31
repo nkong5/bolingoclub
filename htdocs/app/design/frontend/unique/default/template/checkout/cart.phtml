@@ -96,17 +96,12 @@
 		<section class="grid_3 alpha crosssell-wrapper">
 			<?php echo $this->getChildHtml('crosssell') ?>
 		</section>
-		<?php if($this->getChildHtml('coupon')): ?>
-			<section class="grid_3">
-				<?php echo $this->getChildHtml('coupon') ?>
-			</section>
-		<?php endif; ?>
-		<?php if (!$this->getIsVirtual()): ?>
-			<section class="grid_3">
-				<?php echo $this->getChildHtml('shipping'); ?>
-			</section>
-		<?php endif; ?>
-		<section class="grid_3 omega">
+		<?php //if (!$this->getIsVirtual()): ?>
+			<!-- <section class="grid_3">
+				<?php //echo $this->getChildHtml('shipping'); ?>
+			</section> -->
+		<?php //endif; ?>
+		<section class="grid_3 right omega">
 			<div class="totals">
 				<header class="cart-blocks-title">
 					<h2><?php echo $this->__('Total') ?></h2>
@@ -125,6 +120,11 @@
 				</div>
 			</div>
 		</section>
+		<?php if($this->getChildHtml('coupon')): ?>
+			<section class="grid_3 right">
+				<?php echo $this->getChildHtml('coupon') ?>
+			</section>
+		<?php endif; ?>
 		<div class="clear"></div>
 	<?php endif; ?>
 	<?php if ($cartpage == 'cart_accordion'): ?>

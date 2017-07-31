@@ -219,23 +219,24 @@ header#header .customer-name:hover {background-color: #A36F53; border-color: #A3
 .header-slider-container .iosSlider .slider .item .slide-container.slide-skin-2 h2 span {color: #451F05;}
 header#header .header-bottom-left,
 header#header.header-2 .header-bottom-wrapper,
-body.boxed-layout header#header.header-2 .header-bottom-wrapper .container_12 {background-color: #451F05;}
-.nav-container a.level-top {background-color: #451F05;}
+body.boxed-layout header#header.header-2 .header-bottom-wrapper .container_12 {background-color: #fff;}
+.nav-container a.level-top {background-color: #fff;}
 header#header.floating .nav-container a.level-top > span,
 header#header.floating .nav-container a.level-top i {color: #451F05;}
 .nav-wide#nav-wide ul.level0 li.level1 span.subtitle {color: #6DC5EE; font-weight: normal; background-color: transparent; font-size: 1.16em; text-transform: none;}
 .nav-wide#nav-wide ul.level0 li.level1 span.subtitle:hover {color: #A36F53; background-color: transparent;}
-#footer ul.social-links li a i {background-color: #451F05; border-color: #451F05; color: #fff;}
+#footer ul.social-links li a i {background-color: #00adf2; border-color: #00adf2; color: #fff;}
 #footer ul.social-links li a:hover i {color: #fff;}
 #footer,
-#footer > .container_12 {background-color: #451F05;}
+#footer > .container_12 {background-color: #fff;}
+#footer > .container_12{border-top: 2px solid #222; padding-top: 2.5em;}
 #footer > .container_12 button span span {background: #451F05;}
 #footer ul li:before,
-#footer .footer-links li a {background-color: #451F05;}
+#footer .footer-links li a {background-color: #fff;}
 #footer #AjaxcontactForm li .input-box input,
 #footer #AjaxcontactForm li textarea {background-color: #451F05;}
 #footer .block-tags li a {background-color: #451F05;}
-
+#footer .footer-block-title h2 {color: #54565b; font-weight: 900; font-size: 18px;}
 
 .menu-button:hover {background-color: #451f05;}
 .menu-button > span.mobile{background: none;}
@@ -266,9 +267,9 @@ ul.social-links li a:hover:before,
 #footer hr.dashed,
 #footer hr.dotted {border-color: #A36F53;}
 #footer .footer-block-title,
-#footer .block-title strong { /* DCS */ /* background-color: #A36F53; */ background: none; border-bottom: solid 1px #A36F53}
+#footer .block-title strong { /* DCS */ /* background-color: #A36F53; */ background: none; border-bottom: none; margin-bottom: 0;}
 #footer ul li,
-#footer .footer-links li {border-color: #A36F53;}
+#footer .footer-links li {border-color: #A36F53; border-width: 0;}
 #footer ul li:after,
 #footer .footer-links li a:hover {/* DCS */ /* background-color: #A36F53; */ background: none;}
 #footer ul li:hover,
@@ -284,13 +285,14 @@ ul.social-links li a:hover i,
 .nav-container li.over a.level-top em,
 /* DCS */ .nav-container a.level-top:hover span,
 .nav-container li.active a.level-top span,
-.nav-container li.over a.level-top span {color: #A36F53;}
+.nav-container li.over a.level-top span {color: #00aeef;}
 
 #footer .footer-links {margin: 1.2em 0;}
 #footer .footer-links li a {display: inline-block;}
 
 #footer ul li a,
-#footer .footer-links li a {color: #fff;}
+#footer .footer-links li a {color: #00aeef; padding-top: 4px; padding-bottom: 4px;}
+#footer ul li a:before{content:none;}
 
 #footer ul li a:hover, 
 #footer .footer-links li a:hover { /* DCS */ /*color: #fff; */ color: #A36F53;}
@@ -680,12 +682,24 @@ header#header .welcome-msg{
 }
 header#header a.top-link-wishlist{
 	font-size: 0;
-	display: block;
+	display: none;
 	float: left;
 }
 header#header .top-link-wishlist i{line-height: 24px;}
 header#header .links.custom li a.top-link-login > span{text-transform: uppercase;}
 header#header .customer-name{text-transform: uppercase;}
+
+header#header .header-top .second-line{text-align: right;}
+header#header .header-search{display: inline-block; float: none;}
+header#header .header-blocks{
+	width: auto;
+    padding-left: 20px;
+	display: inline-block;
+}
+header#header .nav-container a.level-top > span {font-size: 1.5em; line-height: 1.44em; font-weight: 800;}
+
+.cms-index-index .main-container .std .left-content{display: none;}
+.cms-index-index .main-container .std div.left-content + div.right-content{width: 100%;}
 
 
 @media only screen and (max-width: 1280px) and (min-width: 978px){
