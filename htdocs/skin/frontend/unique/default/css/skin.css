@@ -297,7 +297,7 @@ header#header,
 header#header .header-phones,
 header#header .welcome-msg {color: #000505;}
 header#header a,
-header#header .links.default li a {color: #000505;}
+header#header .links.default li a {color: #00aeef;}
 header#header a:hover,
 header#header .links.default li a:hover {color: #a36f53;}
 header#header .header-top-right,
