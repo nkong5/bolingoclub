@@ -6045,3 +6045,7 @@ header#header:after,
 
 .checkout-express { }
 .checkout-express li { float:left; margin:0 5px 10px 0; }
+
+#dd_method_paymentnetwork_pnsofortueberweisung a {
+	display: none;
+}
