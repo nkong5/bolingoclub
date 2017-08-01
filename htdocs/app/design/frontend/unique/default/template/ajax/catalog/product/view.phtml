@@ -460,7 +460,8 @@
 		if ($productpage_collateral == 'collateral_tabs'  or $productpage_collateral == 'collateral_tabs_vertical'):
 		   echo $this->getChildHtml('info_tabs');
 		else:
-		    foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):
+			echo $this->getLayout()->createBlock('catalog/product_view_description')->setTemplate('catalog/product/view/description.phtml')->toHtml();
+			foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):
 	           if ($title = $this->getChildData($alias, 'title')):
 	           	echo '<h2>' . $this->escapeHtml($title) . '</h2>';
 	           endif;
@@ -468,7 +469,7 @@
 		    endforeach;
 			echo $this->getChildHtml('upsell_products');
 			echo $this->getChildHtml('product_additional_data');
-		   
+			   
 			if ($_product->getUniquePrtabs()):
 			  $productpage_additional = $this->_product->getUniquePrtabs();
 			else:

@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <mediotype_ticket>
+                        <title>Event &amp; Ticket</title>
+                        <sort_order>10</sort_order>
+                        <children>
+                            <adminhtml_index>
+                                <title>Manage Tickets</title>
+                                <children>
+                                    <index>
+                                        <title>Redeem Ticket</title>
+                                        <sort_order>1</sort_order>
+                                    </index>
+                                    <revoke>
+                                        <title>Revoke Ticket</title>
+                                        <sort_order>2</sort_order>
+                                    </revoke>
+                                    <reinstate>
+                                        <title>Reinstate Ticket</title>
+                                        <sort_order>3</sort_order>
+                                    </reinstate>
+                                </children>
+                            </adminhtml_index>
+                            <adminhtml_reports>
+                                <title>Reports</title>
+                                <children>
+                                    <print>
+                                        <title>Print Tickets</title>
+                                        <sort_order>0</sort_order>
+                                    </print>
+                                    <sales>
+                                        <title>Ticket Sales Report</title>
+                                        <sort_order>1</sort_order>
+                                        <children>
+                                            <export>
+                                                <title>Export</title>
+                                            </export>
+                                        </children>
+                                    </sales>
+                                    <ticket>
+                                        <title>Ticket Status Report</title>
+                                        <sort_order>2</sort_order>
+                                        <children>
+                                            <export>
+                                                <title>Export</title>
+                                            </export>
+                                        </children>
+                                    </ticket>
+                                    <scan>
+                                        <title>Ticket Scan Report</title>
+                                        <sort_order>3</sort_order>
+                                        <children>
+                                            <export>
+                                                <title>Export</title>
+                                            </export>
+                                        </children>
+                                    </scan>
+                                </children>
+                            </adminhtml_reports>
+                        </children>
+                    </mediotype_ticket>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mediotype_ticket>
+                                        <title>Mediotype Event &amp; Ticket</title>
+                                    </mediotype_ticket>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <mediotype_ticket>
+            <title>Event &amp; Ticket</title>
+            <sort_order>35</sort_order>
+            <children>
+                <adminhtml_reports>
+                    <title>Manage Tickets</title>
+                    <children>
+                        <print>
+                            <title>Print Tickets</title>
+                            <action>mediotype_ticket/adminhtml_reports/print</action>
+                        </print>
+                        <sales>
+                            <title>Ticket Sales Report</title>
+                            <action>mediotype_ticket/adminhtml_reports/sales</action>
+                        </sales>
+                        <status>
+                            <title>Ticket Status Report</title>
+                            <action>mediotype_ticket/adminhtml_reports/status</action>
+                        </status>
+                        <scan>
+                            <title>Ticket Scan Report</title>
+                            <action>mediotype_ticket/adminhtml_reports/scan</action>
+                        </scan>
+                    </children>
+
+                </adminhtml_reports>
+
+            </children>
+        </mediotype_ticket>
+    </menu>
+
+</config>

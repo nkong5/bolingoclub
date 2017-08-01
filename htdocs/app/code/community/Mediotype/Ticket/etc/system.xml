@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <mediotype_ticket translate="label" module="mediotype_ticket">
+            <label>Event &amp; Ticket</label>
+            <tab>mediotype</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1001</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <apple_passbook_settings translate="label" module="mediotype_ticket">
+                    <label>Apple Passbook Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <passbook_enabled translate="label">
+                            <sort_order>0</sort_order>
+                            <label>Passbook Enabled</label>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+                                This module was developed by <a href="http://www.mediotype.com" target="_blank">Mediotype.com</a> - <b>Magento Extension Experts</b>.
+                                <br/> Enables Apple Passbook Creation for Mediotype Ticket / Event Products.
+                                <br/> For information about aquiring an Apple Developer account (Required to use Passbook) visit <a href="https://developer.apple.com/passbook/">Passbook Documentation</a>
+                                </div>
+                                  ]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </passbook_enabled>
+                        <passbook_team_identifier translate="label">
+                            <sort_order>5</sort_order>
+                            <label>Apple Developer Team Identifier (like: 2YR34QP458)</label>
+                            <comment>Required for passbook creation to be authenticated by devices</comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </passbook_team_identifier>
+                        <passbook_organization_name translate="label">
+                            <sort_order>10</sort_order>
+                            <label>The name of your company / organization</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </passbook_organization_name>
+                        <passbook_certificate translate="label">
+                            <sort_order>15</sort_order>
+                            <label>Passtype Certificate ( *.p12 )</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>mediotype_ticket/system_config_backend_certificate</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </passbook_certificate>
+                        <passbook_certificate_password translate="label">
+                            <sort_order>20</sort_order>
+                            <label>Certificate Password (optional)</label>
+                            <comment>Required if your passtype certificate has a password</comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </passbook_certificate_password>
+                    </fields>
+                </apple_passbook_settings>
+                <ticket_email translate="label" module="mediotype_ticket">
+                    <label>Ticket Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <allow_guest_add_to_cart translate="label">
+                            <label>Allow Guest Add To Cart</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin:7px 0px 7px 0px;">
+                                <p>
+                                If you allow Guests to add to cart, they will be required to create an account at checkout.
+                                It is critical that a purchaser has an account to access their tickets later and to download Passbook files.
+                                </p>
+                                </div>
+                                  ]]>
+                            </comment>
+                        </allow_guest_add_to_cart>
+                        <ticket_is_available_on translate="label">
+                            <label>Order Status For Ticket Availability</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin:7px 0px 7px 0px;">
+                                Please email diveinto@mediotype.com if there is any confusion about these settings.
+                                <p>
+                                This setting allows a merchant to limit ticket availability based on order status. For instance, in the USA most merchants capture Credit Card funds
+                                 at the time of transaction. In other countries, checks may be mailed to the merchant, and tickets may be preferred accessible only
+                                 after funds are collected for control measures. In Magento the default order status after an order is fully invoiced and shipped is
+                                 'Complete'. An order consisting of tickets and products will not be complete until shipment and invoicing has occured.
+                                </p>
+                                </div>
+                                  ]]>
+                            </comment>
+                        </ticket_is_available_on>
+                        <stock_update_on_available translate="label">
+                            <label>Lower Ticket Stock With Ticket Availability</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin:7px 0px 7px 0px;">
+                                Please email diveinto@mediotype.com if there is any confusion about these settings.
+                                <p>
+                                This setting allows a merchant to choose when ticket stock updates on order status. Default behavior lowers item stock at the same time as regular
+                                 items purchased on the placement of an order. When set to 'Yes,' ticket stock only lowers when the ticket becomes available to the customer.
+                                 In Magento the default order status after an order is fully invoiced and shipped is
+                                 'Complete'. An order consisting of tickets and products will not be complete until shipment and invoicing has occured.
+                                </p>
+                                </div>
+                                  ]]>
+                            </comment>
+                        </stock_update_on_available>
+                        <ticket_print_download translate="label">
+                            <label>Show Print/Download link on Success Page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin:7px 0px 7px 0px;">
+                                Please email diveinto@mediotype.com if there is any confusion about these settings.
+                                <p>
+                                Show print link and download passbook links on order success page if ticket available status criteria is met.
+                                </p>
+                                </div>
+                                  ]]>
+                            </comment>
+                        </ticket_print_download>
+                        <canceled_status translate="label">
+                            <label>Order Status To Cancel Tickets</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin:7px 0px 7px 0px;">
+                                Please email diveinto@mediotype.com if there is any confusion about these settings.
+                                <p>
+                                This setting allows a merchant to limit ticket availability based on order status. For instance, in the USA most merchants capture Credit Card funds
+                                 at the time of transaction. In other countries, checks may be mailed to the merchant, and tickets may be preferred accessible only
+                                 after funds are collected for control measures. In Magento the default order status after an order is fully invoiced and shipped is
+                                 'Complete'. An order consisting of tickets and products will not be complete until shipment and invoicing has occured.
+                                </p>
+                                </div>
+                                  ]]>
+                            </comment>
+                        </canceled_status>
+
+
+                        <send_on_checkout translate="label">
+                            <label>Email Tickets On Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </send_on_checkout>
+                        <template translate="label">
+                            <label>Mediotype Ticket Email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </template>
+                    </fields>
+                </ticket_email>
+            </groups>
+        </mediotype_ticket>
+    </sections>
+</config>

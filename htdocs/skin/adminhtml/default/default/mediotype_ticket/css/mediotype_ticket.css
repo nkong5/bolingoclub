@@ -1,0 +1,39 @@
+* { margin: 0px; padding: 0px; }
+ul{ list-style: none !important }
+
+.hand{ cursor: pointer}
+
+.events .box-account .box-head .button{width:16px; height:16px; display:inline-block}
+.events .box-account .box-head .button img{padding:0}
+.events .box-account .box-head .button.first img{padding:2px 0 0}
+
+.print-ticket { width: auto; border: 0; margin: 0 5%; padding: 0; float: none !important; }
+
+.horizontal table{ margin: 15px auto 25px; border: 1px solid #a9a9a9 }
+.horizontal li{ margin-bottom: 20px }
+.horizontal table table{ margin: 0; min-width: 300px;max-width:600px; border: none !important }
+.horizontal .td-top{text-align:right}
+.horizontal .td-left{ padding: 5px; text-align: left }
+.horizontal .td-right{ text-align:right; padding: 15px 5px; border-left: 1px solid #eee; }
+.horizontal table table .td-right{border:none}
+.horizontal .qr-code{ text-align: left }
+.horizontal .p-by{ text-align: left }
+.horizontal .name{ text-align: left }
+
+.vertical table{ text-align: center; border: 1px solid #a9a9a9; width: 225px; height: 250px; padding: 15px; margin: 15px 0px 35px 0px }
+.vertical .td-top{padding:5px;text-align:left}
+.vertical .td-left{ padding: 5px }
+.vertical .td-right{ padding: 37px 5px }
+.vertical .qr-code{ text-align: center }
+
+.events .box-account img{padding-left: 10px}
+.events p { margin-bottom: 1px !important }
+.event-dsc{ padding-bottom: 20px !important}
+
+@media all {
+    .page-break	{ display: none; }
+}
+
+@media print {
+    .page-break	{ display: block; page-break-before: always; }
+}

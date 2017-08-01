@@ -1,0 +1,54 @@
+<?php /** @var $this Mediotype_Ticket_Block_Ticket */ ?>
+<?php $ticketOrderModel = $this->getTicketOrderModel(); ?>
+<?php $ticketProduct = $this->getTicketProduct(); ?>
+<?php /** @var $typeModel Mediotype_Ticket_Model_Product_Type_Simpleticket */ ?>
+<?php $typeModel = $ticketProduct->getTypeInstance() ?>
+<table>
+    <tr>
+        <td class="td-left">
+            <img class="qr-code" src="<?php echo $ticketOrderModel->getQrcodeUrl(); ?>"
+                 alt="<?php echo $ticketProduct->getEventTitle() ?>"/>
+        </td>
+        <td class="td-right">
+            <table>
+                <tr>
+                    <td class="td-top" colspan="2">
+                        <h1><?php echo $ticketProduct->getEventTitle() ?></h1>
+
+                        <p class="description left"><?php echo $ticketProduct->getEventSubtitle() ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-left">
+                    </td>
+                    <td class="td-right">
+                        <p class="right"><?php echo $this->__('DATE') ?>
+                            <br/><?php echo $typeModel->getFormatDateTime('F jS') ?></p>
+                    </td>
+                </tr>
+                <?php $location = $ticketProduct->getVenueName() ?>
+                <?php if ($location): ?>
+                    <tr>
+                        <td class="td-left" colspan="2">
+                            <p class="venue-phone"><?php echo $this->__('Location') ?></br> <?php echo $location ?></p>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+                <tr>
+                    <td class="td-left">
+                        <p class="right"><?php echo $this->__('TIME') ?>
+                            <br/><?php echo $typeModel->getFormatDateTime('g:i A') ?></p>
+                    </td>
+                    <?php $phone = $ticketProduct->getVenuePhone() ?>
+                    <?php if ($phone): ?>
+                        <td class="td-right">
+                            <p class="venue-phone"><?php echo $this->__('CONTACT') ?></br><?php echo $phone ?></p>
+                        </td>
+                    <?php else: ?>
+                        <td>&nbsp;</td>
+                    <?php endif; ?>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<layout version="0.1.0">
+    <mediotype_ticket_adminhtml_reports_print>
+        <reference name="content">
+            <block type="mediotype_ticket/adminhtml_reports_print"/>
+        </reference>
+    </mediotype_ticket_adminhtml_reports_print>
+
+
+    <mediotype_ticket_adminhtml_reports_sales>
+        <reference name="content">
+            <block type="mediotype_ticket/adminhtml_reports_sales"/>
+        </reference>
+    </mediotype_ticket_adminhtml_reports_sales>
+
+    <mediotype_ticket_adminhtml_reports_scan>
+        <reference name="content">
+            <block type="mediotype_ticket/adminhtml_reports_scan"/>
+        </reference>
+    </mediotype_ticket_adminhtml_reports_scan>
+
+    <mediotype_ticket_adminhtml_reports_status>
+        <reference name="content">
+            <block type="mediotype_ticket/adminhtml_reports_status"/>
+        </reference>
+    </mediotype_ticket_adminhtml_reports_status>
+
+    <mediotype_ticket_adminhtml_index_index>
+        <reference name="content">
+            <block type="mediotype_ticket/adminhtml_order_view" name="ticket_overview">
+                <reference name="content">
+                    <block type="mediotype_ticket/adminhtml_ticket_view_info" name="ticket_info"/>
+                    <block type="adminhtml/sales_order_view_info" name="order_info" template="mediotype/ticket/sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_view_items" name="order_items" template="sales/order/view/items.phtml">
+                        <action method="addItemRender">
+                            <type>default</type>
+                            <block>adminhtml/sales_order_view_items_renderer_default</block>
+                            <template>sales/order/view/items/renderer/default.phtml</template>
+                        </action>
+                        <action method="addColumnRender">
+                            <column>qty</column>
+                            <block>adminhtml/sales_items_column_qty</block>
+                            <template>sales/items/column/qty.phtml</template>
+                        </action>
+                        <action method="addColumnRender">
+                            <column>name</column>
+                            <block>adminhtml/sales_items_column_name</block>
+                            <template>sales/items/column/name.phtml</template>
+                        </action>
+                        <action method="addColumnRender">
+                            <column>name</column>
+                            <block>adminhtml/sales_items_column_name_grouped</block>
+                            <template>sales/items/column/name.phtml</template>
+                            <type>grouped</type>
+                        </action>
+                        <block type="core/text_list" name="order_item_extra_info"/>
+                    </block>
+                </reference>
+            </block>
+        </reference>
+    </mediotype_ticket_adminhtml_index_index>
+
+    <mediotype_ticket_adminhtml_reports_printtickets>
+        <reference name="root">
+            <!--<action method="setTemplate"><template>page/empty.phtml</template></action>-->
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <name>mediotype_ticket/css/mediotype_ticket.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+        </reference>
+    </mediotype_ticket_adminhtml_reports_printtickets>
+</layout>

@@ -1,0 +1,40 @@
+<?php
+/** @var $this Mediotype_Ticket_Block_Checkout_Onepage_Success */
+if($this->showPrintLinks() && $this->hasTicketProductsInCart()): ?>
+    <?php foreach($this->getTickets() as $ticket): ?>
+        <?php /** @var $ticketProduct Mage_Catalog_Model_Product */ ?>
+        <?php $ticketProduct = $ticket['product'] ?>
+        <?php /** @var $ticketModel Mediotype_Ticket_Model_Order */ ?>
+        <?php $ticketModel = $ticket['ticket_model'] ?>
+        <?php if((bool)$ticketModel->getTicketAvailable()): ?>
+            <p><a href="<?php echo $ticketProduct->getTypeInstance()->getPrintUrl() ?>" target="_blank"><?php echo $this->__('Click here to print %1$s tickets',$ticketProduct->getName()) ?></a></p>
+            <?php if($this->getPassbookEnabled($ticketProduct)): ?>
+                <p><a onclick="downloadPassbooks('<?php echo $ticketProduct->getTypeInstance()->getPassbookUrl() ?>')" style="cursor:pointer"><?php echo $this->__('Click here to download %1$s tickets',$ticketProduct->getName()) ?></a></p>
+            <?php endif; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <a id="iosfix" href="/ticket/" target="_blank"></a>
+    <script type="text/javascript">
+        function downloadPassbooks(url) {
+            var pUrls = new Array();
+            new Ajax.Request(url, {
+                asynchronous:false,
+                onSuccess:function (transport) {
+                    var check = transport.responseText;
+
+                    if (!check) {
+                        throw "No response";
+                    }
+
+                    var response = eval('(' + transport.responseText + ')');
+                    for (var i = 0; i < response.length; i++) {
+                        pUrls.push(response[i]);
+                        var clicker = document.getElementById("iosfix");
+                        clicker.setAttribute("href", '/ticket/index/downloadpass/filename/' + response[i]);
+                        clicker.click();
+                    }
+                }
+            });
+        }
+    </script>
+<?php endif; ?>

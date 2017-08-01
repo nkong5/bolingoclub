@@ -1,0 +1,56 @@
+Mediotype
+www.mediotype.com
+
+A SOFTWARE LICENSE (HERE AFTER "Agreement") IS A CONTRACT BETWEEN THE COMPANY OR
+PERSON BEING LICENSED (HERE AFTER "Licensee") TO US THIS SOFTWARE AND ALL ASSOCIATED RESOURCES AND MEDIOTYPE.
+THIS AGREEMENT APPLIES TO ALL SOFTWARE, CODE, SERVICES, PRODUCTS, AND COLLATERAL (HERE AFTER "Licensed Material") PURCHASED
+FROM MEDIOTYPE.
+
+1. The licensee acknowledges that this agreement has been read by having purchased a Mediotype product.
+   The licensee agrees in full to the content of this agreements and the terms herein and agrees that
+   the use of the Licensed Material will be in compliance with this agreement.
+
+2. The effective date of this agreement is the exact time at which Licensed Material was purchased from
+   Mediotype.
+
+3. Mediotype holds all rights to the intellectual property and copyright of the Licensed Material.
+   All licensed material will be treated as copyright material that is protected by US & International law.
+   A violation of the copyright will be treated as prosecutable. This license may be revoked at Mediotype's 
+   discretion.
+
+4. The Licensee here after has the right to use the Licensed Material on one domain per licensing fee. The
+   licensed material may be used for business or personal usage. An additional license is required for 
+   additional domains. The Licensed Material may not be distributed to anyone other than the Licensee by
+   any party besides Mediotype. Any unauthorized re-distributed is a violation and will be prosecuted.
+
+5. All programming code material available in the Licensed Material may not be re-used in whole or part in
+   any other software or product or website other than for the domain which has been licensed.
+
+6. The Licensee may not rent, lease, lend, sell, distribute, or give away any portion of the software or
+   documentation. Additionally if the Licensed Material has been purchased to build a service intended to
+   be licensed to purchasers an increased use license must be purchased from Mediotype.
+
+7. Mediotype reserves the right to control, distribute, and use all information about customers of the 
+   Licensed Material.
+
+8. The Licensee agrees to indemnify and hold harmless Mediotype, its principal officers, agents, owners, 
+   employees, and any other stakeholder from all claims, losses, expenses, fees including attorney fees, 
+   costs, and judgments that may be asserted against Mediotype.
+
+9. Mediotype is not liable for any damages arising from the use or inability to use the Licensed Material.
+
+10. If any dispute arises during the execution of this Agreement, resolution shall be conducted by way of 
+    confidential arbitration to be conducted in the state of Colorado and paid for by the Licensee. 
+
+11. Any breech of this Agreement will result in revocation of the License.
+
+12. Mediotype reserves the right to alter, make modifications, and change this agreement at any time.
+    Any License changes will be deemed in effect once the new license is emailed to the Licensee.
+
+13. This Agreement is effective until it is terminated. Mediotype reserves the right to terminate your license
+    at its sole discretion if any term in this agreement is not adhered to.
+
+14. If the software is used after a license is terminated via notice, the Licensee agrees to accept an injunction
+    from the continued use of the software and pay all costs (including attorneys fees) to enforce a revocation of
+    the Licensee's right to use the software. The Licensee agrees that reasonable damages will be paid if continued
+    use of a revoked license occurs.

@@ -1,0 +1,137 @@
+<?php /** @var $this Mediotype_Ticket_Block_Account_View */ ?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="events">
+    <div class="page-title">
+        <h1 class="account-head"><?php echo $this->__('My Tickets') ?></h1>
+    </div>
+    <div>
+        <?php $upcoming = $this->getUpcomingEvents()?>
+        <?php if ($upcoming): ?>
+        <ul class="box-account col2-set">
+            <div class="box-head">
+                <h2><?php echo $this->__('Upcoming Events') ?></h2>
+            </div>
+            <?php foreach ($upcoming as $index => $eventData): ?>
+            <?php /** @var $_product Mage_Catalog_Model_Product */ ?>
+            <?php $_product = $eventData['product'] ?>
+            <?php /** @var $typeModel Mediotype_Ticket_Model_Product_Type_Simpleticket */ ?>
+            <?php $typeModel = $_product->getTypeInstance() ?>
+            <li class="col-<?php echo ($index % 2) + 1; ?>">
+                <div class="box-account">
+
+                    <div class="box-head">
+                        <a href="<?php echo $_product->getProductUrl() ?>"><h2>
+                            <?php echo $_product->getName()?>
+                        </h2></a>
+
+                        <?php if($eventData['ticket_available'] == 1): ?>
+                        <a class="button first"
+                           href="<?php echo $this->getEmailUrl($_product) ?>"><img
+                                src="<?php echo $this->getSkinUrl('mediotype_ticket/images/email-tickets.png')?>"
+                                alt="<?php echo $this->__('Email Tickets') ?>"/></a>
+                        <a class="button last"
+                           href="<?php echo $_product->getTypeInstance()->getPrintUrl()?>"
+                           target="_blank"><img
+                                src="<?php echo $this->getSkinUrl('mediotype_ticket/images/print-tickets.png')?>"
+                                alt="<?php echo $this->__('Print Tickets') ?>"/></a>
+                        <?php endif; ?>
+                    </div>
+
+                    <a href="<?php echo $_product->getProductUrl() ?>"><?php
+                        $_img = '<img src="' . Mage::helper('catalog/image')->init($_product, 'image')->resize(265) . '" alt="' . $_product->getName() . '" title="' . $_product->getName() . '" />';
+                        echo $_helper->productAttribute($_product, $_img, 'image');
+                        ?></a>
+
+                    <div class="event-bottom">
+                        <p class="date big"><?php echo $typeModel->getFormatDateTime() ?></p>
+
+                        <p class="description qty-purchased"><?php echo $this->__('Number of tickets purchased') ?>
+                            : <?php echo $eventData['qty_purchased']; ?></p>
+
+                        <p class="description event-dsc"><?php echo $_product->getDescription()?></p>
+                        <?php if ((bool)(int)Mage::getStoreConfig('mediotype_ticket/apple_passbook_settings/passbook_enabled')
+                        && $_product->getPassbookEnabled()
+                    ): ?>
+                        <div id="passbook-link-<?php echo $_product->getName() ?>"
+                             onclick="downloadPassbooks('<?php echo $eventData['passbook_url']?>')" class="hand"><img
+                                src="<?php echo Mage::getBaseUrl('skin') . '/frontend/base/default/mediotype_ticket/images/add-to-passbook.png' ?>"/>
+                        </div>
+                        <a id="iosfix" href="/ticket/" target="_blank"></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </li>
+            <?php endforeach;?>
+        </ul>
+        <?php else: ?>
+        <ul class="box-account col2-set">
+            <div class="box-head">
+                <h2><?php echo $this->__('No upcoming events') ?></h2>
+            </div>
+        </ul>
+        <?php endif;?>
+
+        <?php $past = $this->getPastEvents()?>
+        <?php if ($past): ?>
+        <ul class="box-account col2-set">
+            <div class="box-head">
+                <h2><?php echo $this->__('Past Events') ?></h2>
+            </div>
+            <?php foreach ($past as $index => $eventData): ?>
+            <?php /** @var $_product Mage_Catalog_Model_Product */ ?>
+            <?php $_product = $eventData['product'] ?>
+            <li class="col-<?php echo ($index % 2) + 1; ?>">
+                <div class="box-account">
+
+                    <div class="box-head">
+                        <a href="<?php echo $_product->getProductUrl() ?>"><h2>
+                            <?php echo $_product->getName()?>
+                        </h2></a>
+                    </div>
+
+                    <a href="<?php echo $_product->getProductUrl() ?>"><?php
+                        $_img = '<img src="' . Mage::helper('catalog/image')->init($_product, 'image')->resize(265) . '" alt="' . $_product->getName() . '" title="' . $_product->getName() . '" />';
+                        echo $_helper->productAttribute($_product, $_img, 'image');
+                        ?></a>
+
+                    <div class="event-bottom">
+                        <p class="date big"><?php echo $typeModel->getFormatDateTime() ?></p>
+
+                        <p class="description qty-purchased">Number of tickets purchased
+                            : <?php echo $eventData['qty_purchased']; ?></p>
+
+                        <p class="description event-dsc"><?php echo $_product->getDescription()?></p>
+                    </div>
+                </div>
+            </li>
+            <?php endforeach;?>
+        </ul>
+        <?php endif;?>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function downloadPassbooks(url) {
+        var pUrls = new Array();
+        new Ajax.Request(url, {
+            asynchronous:false,
+            onSuccess:function (transport) {
+                var check = transport.responseText;
+
+                if (!check) {
+                    throw "No response";
+                }
+
+                var response = eval('(' + transport.responseText + ')');
+                for (var i = 0; i < response.length; i++) {
+                    pUrls.push(response[i]);
+                    var clicker = document.getElementById("iosfix");
+                    clicker.setAttribute("href", '/ticket/index/downloadpass/filename/' + response[i]);
+                    clicker.click();
+                }
+            }
+        });
+    }
+
+</script>
