@@ -36,6 +36,8 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css" />
 <link rel="icon" href="images/bolingo_favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="images/bolingo_favicon.ico" type="image/x-icon" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -54,10 +56,43 @@
             </div>
             <div class="footer-container">
                 <div class="footer">
-                    <address class="copyright">Copyright &copy; 2017 Bolingo UG</address>
+                    <address class="copyright">Copyright &copy; 2017 Bolingo UG Bolingo UG (haftungsbeschränkt) >>
+                        Rosenthaler Straße 72a
+                        10119 Berlin
+>>
+                        Telefon: +49 221 25912509
+>>                        E-Mail:    <a class="e_placeholder" style="color: blue;" name="info"></a>
+
+>>                        Internet:    www.bolingo.com
+>>                        Geschäftsführer: Edgar Bongkishiy
+>>                        Steuernummer: 214/5801/5106, Finanzamt Prenzlauer Berg
+>>                        USt-IdNr: DE300818815
+>>                        Amtsgericht Charlottenburg: HRB 177102
+>>                        Sitz der Gesellschaft und Gerichtsstand: Berlin</address>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery(".e_placeholder").each(function() {
+                domain = "bolingo.com";
+                elementHtml = jQuery(this).attr("name")+"@"+domain;
+                jQuery(this).html(elementHtml);
+
+                element = jQuery(this).attr("name")+"@"+domain;
+                jQuery(this).attr("href","mailto:"+element);
+            });
+
+            jQuery(".e_placeholder_siteby").each(function() {
+                domain = "bongkishiy.de";
+
+                element = jQuery(this).attr("name")+"@"+domain;
+                jQuery(this).attr("href","mailto:"+element);
+            });
+        });
+    </script>
 </body>
 </html>
