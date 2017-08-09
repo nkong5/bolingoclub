@@ -434,3 +434,39 @@
 
 .opc-index-index #footer .right,
 .opc-index-index #header .right {float: right!important;}
+
+
+
+.opc-wrapper-opc .payment-block dt#dt_method_paymentnetwork_pnsofortueberweisung > label{
+	background-image: url(../../../images/sofort_payment.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: 0;
+}
+
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express{margin-bottom: 28px; text-align: center;}
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express:after{
+	}
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express > label{
+	background-image: url(../../../images/paypal_payment.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: 0;
+	margin-bottom: 12px;
+}
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express > img,
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express > p{display: inline-block;}
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express > img{margin-right: 5px;}
+.opc-wrapper-opc .payment-block dt#dt_method_paypal_express > p{text-align: left; line-height: 16px; padding-top: 7px;}
+
+
+
+
+
+
+
+
+
+
+
+

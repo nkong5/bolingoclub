@@ -1,0 +1,106 @@
+<?php
+/**
+ * @var AW_Eventbooking_Block_Ticket_View $this
+ * @var AW_Eventbooking_Model_Ticket $ticket
+ * */
+$ticket = $this->getTicket();
+$customer = $this->getCustomer();?>
+
+<div class="awtickets__wrapper">
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <table class="data-table aw-ebk-ticket-view" style="border-collapse: collapse;">
+
+        <tr>
+            <td><?php echo $this->__('Ticket Type') ?></td>
+            <td><?php echo $ticket->getData('ticket_title'); ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Ticket Status') ?></td>
+            <td><?php echo $ticket->getStatusLabel(); ?></td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Event Name') ?></td>
+            <td><?php echo $ticket->getEventName() ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Event Start Date') ?></td>
+            <td><?php echo $this->formatDate($ticket->getData('event_start_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?></td>
+        </tr>
+        <?php if ($ticket->getData('event_end_date')): ?>
+            <tr>
+                <td><?php echo $this->__('Event End Date') ?></td>
+                <td><?php echo $this->formatDate($ticket->getData('event_end_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?></td>
+            </tr>
+        <?php endif; ?>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Event Location') ?></td>
+            <td>
+                <?php if ($ticket->getData('location')): ?>
+                    <span class="nobr"><?php echo $ticket->getData('location') ?></span>
+                <?php else: ?> <span class="nobr"><?php echo $this->__('Location not set') ?></span>
+                <?php endif; ?>
+            </td>
+        </tr>
+        <?php if ($this->getData('FullInfo')): ?>
+            <tr>
+                <td><?php echo $this->__('Order ID') ?></td>
+                <td><span class="nobr">
+                    <a href="<?php echo $this->getOrderUrl($ticket->getOrderId()) ?>"
+                       class="link-reorder"><?php echo $ticket->getData('increment_id') ?></a>
+            </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><?php echo $this->__('Ticket Code') ?></td>
+                <td><?php echo $ticket->getData('code') ?></td>
+            </tr>
+            <tr>
+                <td><?php echo $this->__('Ticket Holder') ?></td>
+                <td><b><?php echo $customer->getName(); ?></b></td>
+            </tr>
+        <?php endif; ?>
+        <?php if ($productOptions = $this->getProductOptions($ticket)): ?>
+            <tr>
+                <td><?php echo $this->__('Ticket Options'); ?></td>
+                <td>
+
+                    <dl class="item-options">
+                        <?php foreach ($productOptions as $label => $value) : ?>
+
+                            <dt><?php echo $label ?></dt>
+                            <dd><?php echo ' ' . $value['value'] ?>
+                            <dd/>
+                        <?php endforeach; ?>
+                    </dl>
+
+                </td>
+            </tr>
+        <?php endif; ?>
+    </table>
+
+
+<?php if ($this->getData('FullInfo')): ?>
+    <br>
+    <?php if ($ticket->isPaid()): ?>
+        <p class="resend-confirmation-email-button">
+            <button type="button" title="<?php echo $this->__('Resend Confirmation Email with this ticket again') ?>"
+                    class="button" onclick="window.location='<?php echo $this->getConfirmationUrl($ticket->getId()); ?>'">
+                <span><span><?php echo $this->__('Resend Confirmation Email again') ?></span></span>
+            </button>
+        </p>
+    <?php endif; ?>
+    <p class="awhdu3-ticket-view__back-button">
+        <a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="button button--invert"><?php echo $this->__('Back To My Tickets') ?></a>
+    </p>
+
+<?php endif; ?>
+</div>

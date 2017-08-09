@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_edit>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>aw_eventbooking/css/style.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>aw_eventbooking/js/popup.js</name></action>
+        </reference>
+        <reference name="product_tabs">
+            <block type="aw_eventbooking/adminhtml_catalog_product_edit_tab_eventbooking" name="aw_eventbooking_tab">
+                <block type="aw_eventbooking/adminhtml_catalog_product_edit_tab_eventbooking_attendees" name="aw_eventbooking_attendees" />
+                <block type="aw_eventbooking/adminhtml_catalog_product_edit_tab_eventbooking_summary" name="aw_eventbooking_summary" />
+            </block>
+            <action method="addTab">
+                <name>aw_eventbooking</name>
+                <block>aw_eventbooking_tab</block>
+            </action>
+            <reference name="js">
+                <block type="core/template" name="aw_eventbooking.product.edit.js" template="aw_eventbooking/product/edit/js.phtml"/>
+            </reference>
+        </reference>
+    </adminhtml_catalog_product_edit>
+    <adminhtml_aweventbooking_products_list>
+        <reference name="content">
+            <block type="aw_eventbooking/adminhtml_products"/>
+        </reference>
+    </adminhtml_aweventbooking_products_list>
+    <adminhtml_aweventbooking_products_ajaxgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_eventbooking/adminhtml_products_grid"/>
+        </block>
+    </adminhtml_aweventbooking_products_ajaxgrid>
+    <adminhtml_aweventbooking_tickets_list>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>aw_eventbooking/js/ticketsGrid.js</name></action>
+        </reference>
+        <reference name="content">
+            <block type="adminhtml/template" name="aw_eventbooking.ticket.list.js" template="aw_eventbooking/ticket/js.phtml"/>
+            <block type="aw_eventbooking/adminhtml_tickets"/>
+        </reference>
+    </adminhtml_aweventbooking_tickets_list>
+    <adminhtml_aweventbooking_tickets_ajaxgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_eventbooking/adminhtml_tickets_grid"/>
+        </block>
+    </adminhtml_aweventbooking_tickets_ajaxgrid>
+
+    <adminhtml_aweventbooking_ext_view>
+        <reference name="root">
+            <action method="setTemplate"><template>aw_eventbooking/ticket/template/view.phtml</template></action>
+        </reference>
+       <reference name="content">
+            <block type="aw_eventbooking/ext_view" name="ticket.view" template="aw_eventbooking/ticket/view.phtml"/>
+       </reference>
+    </adminhtml_aweventbooking_ext_view>
+
+    <adminhtml_aweventbooking_tickets_view>
+        <reference name="root">
+            <action method="setTemplate"><template>aw_eventbooking/ticket/template/view.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="aw_eventbooking/ext_view" name="ticket.view" template="aw_eventbooking/ticket/view.phtml"/>
+        </reference>
+    </adminhtml_aweventbooking_tickets_view>
+
+</layout>

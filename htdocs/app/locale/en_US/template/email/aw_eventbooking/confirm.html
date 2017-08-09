@@ -1,0 +1,16 @@
+<!--@subject {{var store.getFrontendName()}}: Ticket Confirmation @-->
+<p>Hello, {{var customer_name}}!</p>
+<p>Thank you for purchasing the ticket for event "<b>{{var order_item.name}}</b>". </p>
+<p>The Event starts on <b>{{var event_start_date}}</b>.</p>
+{{depend event_end_date}}
+<p>The Event ends on <b>{{var event_end_date}}</b>.</p>
+{{/depend}}
+{{depend event.location}}
+<p>
+    Event Location: <br />
+    {{var event.location}}.
+</p>
+{{/depend}}
+<p>Your order id is <b>{{var order.increment_id}}</b>.</p>
+<p>Your Ticket Type: <b>{{var event_ticket.title}}</b>.</p>
+<p>Number of Tickets: <b>{{var order_item.qty_ordered}}</b>.</p>

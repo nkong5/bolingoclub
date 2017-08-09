@@ -103,12 +103,6 @@
         <block type="core/template" name="bgslider" template="meigee/bgslider.phtml" />
 		<block type="core/template" name="subheader" template="meigee/subheader.phtml" />
         <!--End "Adding items" -->
-		<!-- Google Map -->
-		<block type="core/text" name="google.map">
-			<action method="setText" ifconfig="meigee_unique_general/contactmap/map">
-				<text><![CDATA[<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>]]></text>
-			</action>
-		</block>
 	</reference>
 	<reference name="header">
 		<action method="setTemplate"><template helper="ThemeOptionsUnique/switchHeader" /></action>

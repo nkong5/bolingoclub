@@ -1,0 +1,105 @@
+<?php
+/**
+ * @var AW_Eventbooking_Block_Ticket_Html $this
+ */
+?>
+<table>
+    <tr>
+        <td style="border-right: solid 1px #333333; border-bottom: solid 1px #333333;">
+            <div class="text-center">
+                <img src="<?php echo $this->getLogoSrc() ?>"/>
+            </div>
+            <div class="text-center"><?php echo $this->getStoreName() ?></div>
+            <hr>
+            <h2><?php echo $this->getEventName() ?></h2>
+            <div>
+                <strong class="date-label"><?php echo $this->__('Event Starts') ?></strong>: <?php echo $this->getEventStartDate() ?>
+            </div>
+            <?php if ($this->getEventEndDate()) : ?>
+                <div>
+                    <strong class="date-label"><?php echo $this->__('Event Ends') ?></strong>: <?php echo $this->getEventEndDate() ?>
+                </div>
+            <?php endif ?>
+        </td>
+        <td class="text-center" style="border-left: solid 1px #333333; border-bottom: solid 1px #333333;">
+            <img src="<?php echo $this->getQRImageSrc() ?>"/>
+            <h2><?php echo $this->__('Ticket Code') ?></h2>
+            <div class="ticket-code">
+                <?php echo $this->getTicketCode() ?>
+            </div>
+            <br/>
+        </td>
+    </tr>
+    <tr style="vertical-align: top;">
+        <td style="border-right: solid 1px #333333; border-top: solid 1px #333333;">
+            <div class="text-center">
+                <img src="<?php echo $this->getProductImage() ?>" class="product-image"/>
+            </div>
+            <?php if ($this->getAgreementText()) : ?>
+            <div class="agreements-text"><span class="right-label"><?php echo $this->__('Terms') ?></span><br/>
+                <span class="right-value"><?php echo $this->getAgreementText() ?></span>
+            </div>
+            <?php endif ?>
+        </td>
+        <td style="border-left: solid 1px #333333; border-top: solid 1px #333333;">
+            <div><span class="right-label"><?php echo $this->__('Admission Type') ?></span><br/>
+                <span class="right-value"><?php echo $this->getAdmissionType() ?></span>
+            </div>
+            <div><span class="right-label"><?php echo $this->__('Attendee Name') ?></span><br/>
+                <span class="right-value"><?php echo $this->getAttendeeName() ?></span>
+            </div>
+            <?php if ($this->getLocation()) : ?>
+                <div><span class="right-label"><?php echo $this->__('Location') ?></span><br/>
+                    <span class="right-value"><?php echo $this->getLocation() ?></span>
+                </div>
+            <?php endif ?>
+            <div><span class="right-label"><?php echo $this->__('Order Information') ?></span><br/>
+                <span class="right-value"><strong><?php echo $this->__('Order ID') ?></strong> <?php echo $this->getOrderIncrementId() ?><br/>
+                    <strong><?php echo $this->__('Order Date') ?></strong> <?php echo $this->getOrderDate() ?><br/>
+                </span>
+            </div>
+            <?php if($productOptions = $this->getProductOptions()) : ?>
+            <div><span class="right-label"><?php echo $this->__('Ticket Options') ?></span><br/>
+                <span class="right-value"><?php foreach ($productOptions as $label => $value) : ?><strong><?php echo $label ?></strong> <?php echo $value['value'] ?><br/>
+                <?php endforeach ?>
+                </span>
+            </div>
+            <?php endif ?>
+        </td>
+    </tr>
+</table>
+<style type="text/css">
+    table {
+        width: 100%;
+    }
+
+    table td {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .ticket-code, .right-label {
+        font-weight: bold;
+        font-size: 120%;
+    }
+
+    .right-value {
+        margin-bottom: 1em;
+    }
+
+    .right-value:last-child {
+        margin-bottom: 0;
+    }
+
+    .agreements-text {
+        font-size: 80%;
+    }
+</style>

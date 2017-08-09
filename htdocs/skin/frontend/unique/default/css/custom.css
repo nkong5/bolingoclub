@@ -381,7 +381,6 @@ header#header h2.logo{
 	padding-top: 39px;
 	margin-bottom: 1em;
 	display: inline-block;
-	width: 222px;
 }
 
 /* .products-grid .product-name{word-break: break-all;} */
@@ -677,7 +676,6 @@ nav.breadcrumbs li a:hover{color:#A36F53;}
 
 .products-grid .product-img-box{min-height: 300px; position: relative;}
 .products-grid .product-image{
-	max-width: 200px;
 	width: 100%;
 	position: absolute;
 	left: 0;
@@ -823,5 +821,29 @@ header#header .nav-container a.level-top > span {font-size: 1.5em; line-height: 
 }
 
 .nav-container a.level-top i {display: none;}
+
+.aw-eb-holder{display: table; width: 100%;}
+.aw-eb-float{
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-left-width: 0;
+	border-top-width: 0;
+	margin-right: 0!important;
+	float: none!important;
+	display: table-cell;
+	vertical-align: middle;
+}
+.aw-eb-float.aw-eb-ticket-name{border-left-width: 1px; margin-left: 0; width: 48%;}
+.product-options dt:first-child .aw-eb-float{border-top-width: 1px;}
+.aw-eb-ticket-available-qty {width: 24%!important;}
+.aw-eb-ticket-price{width: 20%;}
+.aw-eb-ticket-qty{width: 5%;}
+
+
+
+
+
+
+
 
 

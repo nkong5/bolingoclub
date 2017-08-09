@@ -7,7 +7,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 ?>
 <div class="opc-wrapper-opc design_package_<?php echo $package;?> design_theme_<?php echo $theme;?>">
     <div class="page-title">
-		<h2 class="opc-title"><?php echo $this->__('Checkout')?></h2>
+		<h2 class="opc-title"><a href="<?php echo Mage::getBaseUrl(); ?>/checkout/cart/"><?php echo $this->__('Checkout')?></a></h2>
 		<div class="subtitle">
 			<?php if(!$is_persistent):?>
 				<?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>

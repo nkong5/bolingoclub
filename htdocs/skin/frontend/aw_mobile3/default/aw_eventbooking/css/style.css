@@ -1,0 +1,44 @@
+.awtickets__wrapper{
+    padding: 15px;
+}
+#my-tickets-table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+#my-tickets-table tr {
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 10px;
+}
+#my-tickets-table td {
+    padding: 5px 0;
+}
+
+.aw-eventbooking-today {
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #14892c;
+    white-space: nowrap;
+    padding: 0px 8px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #14892c;
+    float: right;
+}
+
+.aw-ebk-ticket-view,
+.aw-ebk-ticket-view td {
+    border: 0px !important;
+}
+
+.aw-ebk-ticket-view tr td:first-child {
+    width: 120px;
+    display: block;
+    font-weight: bold;
+}
+.resend-confirmation-email-button{
+    margin-bottom: 5px;
+}

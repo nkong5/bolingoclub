@@ -1,0 +1,15 @@
+<!--@subject {{var store.getFrontendName()}}: Event Reminder @-->
+<p>Hello, {{var customer_name}}!</p>
+<p>We remind you that event "<b>{{var order_item.name}}</b>" starts in <b>{{var event.day_count_before_send_reminder_letter}}</b> days<p>
+<p>The Event starts on <b>{{var event_start_date}}</b>.
+    {{depend event_end_date}}
+    <br />
+    The Event ends on <b>{{var event_end_date}}</b>.
+    {{/depend}}
+</p>
+{{depend event.location}}
+<p>
+    Event Location: <br />
+    {{var event.location}}.
+</p>
+{{/depend}}

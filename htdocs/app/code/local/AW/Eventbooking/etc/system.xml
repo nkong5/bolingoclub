@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <aw_eventbooking translate="label" module="aw_eventbooking">
+            <label>Event Tickets</label>
+            <tab>awall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <allow_buy translate="label">
+                            <label>Allow buy tickets if event already started</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allow_buy>
+                    </fields>
+                </general>
+                <qr translate="label">
+                    <label>QR Codes</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <width translate="label">
+                            <label>Image Size</label>
+                            <comment>QR Code Image Size, px</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-digits required-entry</validate>
+                        </width>
+                    </fields>
+                </qr>
+                <templates translate="label">
+                    <label>Email Templates</label>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <confirmation translate="label">
+                            <label>Confirmation Email</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aw_eventbooking/source_system_email_template</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </confirmation>
+                        <reminder translate="label">
+                            <label>Reminder Email</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aw_eventbooking/source_system_email_template</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </reminder>
+                    </fields>
+                </templates>
+            </groups>
+        </aw_eventbooking>
+    </sections>
+</config>

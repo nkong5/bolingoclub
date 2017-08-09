@@ -1,0 +1,15 @@
+<?php $jsConstants = json_encode(array(
+    'redeemed' => AW_Eventbooking_Model_Ticket::REDEEMED,
+    'not_redeemed' => AW_Eventbooking_Model_Ticket::NOT_REDEEMED,
+    'ps_paid' => AW_Eventbooking_Model_Ticket::PAYMENT_STATUS_PAID,
+    'ps_refunded' => AW_Eventbooking_Model_Ticket::PAYMENT_STATUS_REFUNDED,
+));?>
+<script type="text/javascript">
+    document.observe('dom:loaded', function () {
+        AWEventbookingTicketsGrid.urls = {
+            changeField: '<?php echo $this->getUrl('*/*/ajaxchange')?>',
+            redeem: '<?php echo $this->getUrl('*/*/ajaxredeem')?>',
+            undoRedeem: '<?php echo $this->getUrl('*/*/ajaxundoredeem');?>'};
+        AWEventbookingTicketsGrid.constants = <?php echo $jsConstants;?>;
+    });
+</script>

@@ -1,0 +1,109 @@
+<?php if ($this->getData('searchForm')): ?>
+    <form action="<?php echo $this->getActionUrl(); ?>">
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        <?php if ($this->getSuccess() || $this->getFailed()): ?>
+                            <?php echo $this->__('Redeem another ticket') ?>
+                        <?php else: ?>
+                            <?php echo $this->__('Enter ticket code to redeem') ?>
+                        <?php endif; ?>
+                    </label>
+                </td>
+                <td><input type="text" name="code">
+                    <button class="button" type="submit" value="<?php echo $this->__('Redeem Ticket'); ?>">
+                        <span><span><?php echo $this->__('Redeem Ticket') ?></span></span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+<?php endif; ?>
+<?php if ($this->getSuccess()): ?>
+    <div class="page-title-success">
+        <h1><?php echo $this->__('Success') ?></h1>
+    </div>
+<?php endif; ?>
+
+<?php if ($this->getFailed()): ?>
+    <div class="page-title-failed">
+        <h1><?php echo $this->__('Failed') ?></h1>
+    </div>
+<?php endif; ?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php
+/** @var AW_Eventbooking_Model_Ticket $ticket */
+if ($ticket = $this->getTicket()):
+    /** @var Mage_Customer_Model_Session $customer */
+    $customer = $ticket->getCustomer();?>
+    <table class="data-table">
+        <tr>
+            <td><?php echo $this->__('Ticket Type') ?></td>
+            <td><?php echo $ticket->getData('ticket_title'); ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Ticket Code') ?></td>
+            <td><?php echo $ticket->getData('code'); ?></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Event Name') ?></td>
+            <td><?php echo $ticket->getEventName() ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->__('Event Start Date') ?></td>
+            <td><?php echo $this->formatDate($ticket->getData('event_start_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?></td>
+        </tr>
+        <?php if ($ticket->getData('event_end_date')): ?>
+            <tr>
+                <td><?php echo $this->__('Event End Date') ?></td>
+                <td><?php echo $this->formatDate($ticket->getData('event_end_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?></td>
+            </tr>
+        <?php endif; ?>
+        <tr>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr>
+            <td><?php echo $this->__('Order ID') ?></td>
+            <td><span class="nobr">
+                    <a href="<?php echo $this->getOrderUrl($ticket->getOrderId()) ?>"
+                       class="link-reorder"><?php echo $ticket->getData('increment_id') ?></a>
+            </span>
+            </td>
+        </tr>
+        <?php if ($customer): ?>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td><?php echo $this->__('Customer Name') ?></td>
+                <td><b><?php echo $customer->getName(); ?></b></td>
+            </tr>
+
+            <tr>
+                <td><?php echo $this->__('Customer Email') ?></td>
+                <td><b><?php echo $customer->getEmail(); ?></b></td>
+            </tr>
+
+            <tr>
+                <td><?php echo $this->__('Customer ID') ?></td>
+                <td><b><?php echo $customer->getId(); ?></b></td>
+            </tr>
+        <?php endif; ?>
+    </table>
+
+    <br>
+    <?php if ($ticket->isPaid() && $ticket->getRedeemed() == AW_Eventbooking_Model_Ticket::REDEEMED): ?>
+    <button type="button" title="<?php echo $this->__('Undo Redeem') ?>"
+            class="gray"
+            onclick="window.location='<?php echo $this->getUndoUrl($ticket->getCode(), $ticket->getControlHash()); ?>'">
+        <span><span><?php echo $this->__('Undo Redeem') ?></span></span>
+    </button>
+
+<?php endif; ?>
+<?php endif; ?>

@@ -1,6 +1,7 @@
 <?php
 	$meigee_unique_general = MAGE::helper('ThemeOptionsUnique')->getThemeOptionsUnique('meigee_unique_general');
 	$contactMap = $meigee_unique_general['contactmap']['map'];
+	$contactMapApi = $meigee_unique_general['contactmap']['google_api']; 
 	$contactMapLat = $meigee_unique_general['contactmap']['latitude'];
 	$contactMapLong = $meigee_unique_general['contactmap']['longitude'];
 	$contactMapZoom = $meigee_unique_general['contactmap']['mapzoom'];
@@ -15,6 +16,7 @@
 	$random = rand(5, 1500);
 ?>
 <?php if($contactMap): ?>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js<?php if($contactMapApi){ ?>?key=<?php echo $contactMapApi; } ?>"></script>
 	<div class="map-container">
 		<?php if($contactBlock): ?>
 		<div class="map-block<?php echo ' '.$contactBlockPosition; ?>" style="width:<?php echo $contactBlockWidth; ?>px; height:<?php echo $contactBlockHeight; ?>px;">

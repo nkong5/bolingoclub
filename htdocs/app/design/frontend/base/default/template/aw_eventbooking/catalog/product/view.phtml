@@ -1,0 +1,71 @@
+<?php if ($this->isEventBookingEnabledForProduct()): ?>
+    <?php if ($this->isPersonalizationEnabled()): ?>
+        <script type="text/javascript">
+            var awEventBookingInstance = null;
+            var submitPopupFn = productAddToCartForm.submit;
+
+            document.observe('dom:loaded', function () {
+                awEventBookingInstance = new awEventBooking({
+                    optionsConfig: opConfig.config,
+                    ticketTitles: <?php echo json_encode($this->getTicketTitles());?>,
+                    overlaySelector: '#aw-eb-overlay',
+                    popupClassName: 'aw-eb-popup',
+                    optionsSelector: '.aw_eventbooking-option',
+                    buttonText: '<?php echo Mage::helper('aw_eventbooking')->__('Continue');?>',
+                    popupCssSelector: '#aw-eb-popup',
+                    popupTitle: '<?php echo Mage::helper('aw_eventbooking')->__('Please specify ticket holder informations for each ticket');?>',
+                    customDataInputSelector: '#aw_eventbooking_custom_data',
+                    submitPopupFn: submitPopupFn,
+                    nameLabel: '<?php echo Mage::helper('aw_eventbooking')->__('Name');?>',
+                    emailLabel: '<?php echo Mage::helper('aw_eventbooking')->__('Email');?>',
+                    displayEmail: <?php echo $this->isDisplayEmailEnabled() ? 'true' : 'false';?>
+                });
+            });
+
+            productAddToCartForm.submit = function(){
+                if (awEventBookingInstance.validateOptionsQty()) {
+                    awEventBookingInstance.showPopup();
+                }
+            }
+        </script>
+    <?php else:?>
+        <script type="text/javascript">
+            var awEventBookingInstance = null;
+            var submitPopupFn = productAddToCartForm.submit;
+
+            document.observe('dom:loaded', function () {
+                awEventBookingInstance = new awEventBooking({
+                    overlaySelector: '#aw-eb-overlay',
+                    optionsSelector: '.aw_eventbooking-option'
+                });
+            });
+
+            productAddToCartForm.submit = function(){
+                if (awEventBookingInstance.validateOptionsQty()) {
+                    submitPopupFn();
+                }
+            }
+        </script>
+    <?php endif;?>
+
+    <script type="text/javascript">
+        var reloadTicketPrice = function() {
+            var config = opConfig.config;
+            $$('.aw_eventbooking-option').each(function(element){
+                var optionId = 0;
+                element.name.sub(/[0-9\_]+/, function(match){
+                    optionId = match[0];
+                });
+                if (config[optionId]) {
+                    var configOptions = config[optionId];
+                    var curConfig = {price: 0};
+                    curConfig.price = configOptions.price * parseInt(element.value, 10);
+
+                    optionsPrice.addCustomPrices(optionId, curConfig);
+                    optionsPrice.reload();
+                }
+            });
+        };
+        reloadTicketPrice();
+    </script>
+<?php endif;?>

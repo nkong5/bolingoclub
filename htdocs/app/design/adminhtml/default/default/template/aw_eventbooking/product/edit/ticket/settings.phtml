@@ -1,0 +1,216 @@
+<?php /* @var $this AW_Eventbooking_Block_Adminhtml_Catalog_Product_Edit_Tab_Eventbooking_Ticket */ ?>
+<?php $_htmlId = $this->getElement()->getHtmlId() ?>
+<tr>
+    <td class="label"><?php echo $this->getElement()->getLabel() ?></td>
+    <td colspan="10" class="grid aw_eventbooking_ticket" style="padding-right:3px;">
+        <table id="aw_eventbooking_ticket_types_table" cellspacing="0" class="data border" style="margin-left:5px;width:98%;">
+            <col />
+            <col width="70" />
+            <col width="70" />
+            <col width="70" />
+            <col width="70" />
+            <col width="80" />
+            <col width="135" />
+            <col width="70" />
+            <col width="50" />
+            <thead>
+                <tr class="headings">
+                    <th><?php echo $this->__('Title'); ?> <span class="required">*</span></th>
+                    <th><?php echo $this->__('Price'); ?></th>
+                    <th><?php echo $this->__('Price Type'); ?></th>
+                    <th><?php echo $this->__('SKU'); ?></th>
+                    <th><?php echo $this->__('Qty'); ?></th>
+                    <th><?php echo $this->__('Code Prefix') ?></th>
+                    <th><?php echo $this->__('Confirmation Email'); ?></th>
+                    <th><?php echo $this->__('Sort Order'); ?></th>
+                    <th class="last"><?php echo $this->__('Action') ?></th>
+                </tr>
+            </thead>
+            <tbody id="<?php echo $_htmlId ?>_container"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="8" class="a-right"><?php echo $this->getAddButtonHtml() ?></td>
+                </tr>
+            </tfoot>
+        </table>
+        <script type="text/javascript">
+            //<![CDATA[
+            var awEventbookingTicketRowTemplate =
+                '<tr>' +
+                    '<td>' +
+                        '<input type="text" class="required-entry input-text" id="ticket_{{id}}_title" name="event[ticket_data][{{id}}][value][title]" value="{{title}}" style="width:98%">' +
+                        <?php if ($this->canDisplayUseDefault()) : ?>
+                        '<div>' +
+                            '<input type="checkbox" id="ticket_{{id}}_title_default" class="product-option-scope-checkbox" name="event[ticket_data][{{id}}][default][title]" value="1">' +
+                            '<label class="normal" for="ticket_{{id}}_title_default"><?php echo $this->__('Use Default Value'); ?></label>' +
+                        '</div>' +
+                        <?php endif; ?>
+                    '</td>' +
+                    '<td><input type="text" class="input-text validate-zero-or-greater validate-number product-option-price" id="ticket_{{id}}_price" name="event[ticket_data][{{id}}][global][price]" value="{{price}}"></td>' +
+                    '<td><?php echo $this->getPriceTypeSelectHtml(); ?></td>' +
+                    '<td><input type="text" class="input-text" id="ticket_{{id}}_sku" name="event[ticket_data][{{id}}][global][sku]" value="{{sku}}"></td>' +
+                    '<td><input type="text" class="input-text validate-greater-than-zero" id="ticket_{{id}}_qty" name="event[ticket_data][{{id}}][global][qty]" value="{{qty}}"></td>' +
+                    '<td><input type="text" class="input-text" id="ticket_{{id}}_codeprefix" name="event[ticket_data][{{id}}][global][codeprefix]" value="{{codeprefix}}"></td>' +
+                    '<td>' +
+                        '<?php echo $this->getConfirmationEmailSelectHtml(); ?>' +
+                        <?php if ($this->canDisplayUseDefault()) : ?>
+                        '<div>' +
+                            '<input type="checkbox" id="ticket_{{id}}_confirmation_template_id_default" class="product-option-scope-checkbox" name="event[ticket_data][{{id}}][default][confirmation_template_id]" value="1">' +
+                            '<label class="normal" for="ticket_{{id}}_confirmation_template_id_default"><?php echo $this->__('Use Default Value'); ?></label>' +
+                        '</div>' +
+                        <?php endif; ?>
+                    '</td>' +
+                    '<td>' +
+                        '<input type="text" class="input-text" id="ticket_{{id}}_sort_order" name="event[ticket_data][{{id}}][value][sort_order]" value="{{sort_order}}">' +
+                        <?php if ($this->canDisplayUseDefault()) : ?>
+                        '<div>' +
+                            '<input type="checkbox" id="ticket_{{id}}_sort_order_default" class="product-option-scope-checkbox" name="event[ticket_data][{{id}}][default][sort_order]" value="1">' +
+                            '<label class="normal" for="ticket_{{id}}_sort_order_default"><?php echo $this->__('Use Default Value'); ?></label>' +
+                        '</div>' +
+                        <?php endif; ?>
+                    '</td>' +
+                    '<td class="last">' +
+                        '<input type="hidden" class="delete" id="ticket_{{id}}_delete" name="event[ticket_data][{{id}}][delete]" value="">' +
+                        '<button title="<?php echo $this->__('Delete Ticket Type'); ?>" type="button" class="scalable delete icon-btn delete-product-option<?php echo $this->canDisplayUseDefault() ? ' disabled' : ''; ?>" id="ticket_{{id}}_delete_button" onclick="return awEventbookingTicketControl.deleteItem(event);"<?php echo $this->canDisplayUseDefault() ? ' disabled="disabled"' : ''; ?>>' +
+                            '<span><?php echo $this->__('Delete'); ?></span>' +
+                        '</button>' +
+                    '</td>' +
+                '</tr>';
+
+            var awEventbookingTicketControl = {
+                template: new Template(awEventbookingTicketRowTemplate, new RegExp('(^|.|\\r|\\n)({{\\s*(\\w+)\\s*}})', '')),
+                itemsCount: 0,
+                defaultValues: {
+                    confirmation_template_id: '<?php echo Mage::helper('aw_eventbooking/config')->getTemplatesConfirmation() ?>'
+                },
+                addItem : function (ticketData) {
+                    if (arguments.length == 0) {
+                        ticketData = {
+                            'id' : 'new_ticket_' + new Date().getTime(),
+                            'default' : ''
+                        };
+                    }
+
+                    Element.insert($('<?php echo $_htmlId; ?>_container'), {
+                        bottom : this.template.evaluate(ticketData)
+                    });
+
+                    for (attributeCode in this.defaultValues) {
+                        var el = $('ticket_' + ticketData.id + '_' + attributeCode);
+                        if (!el) {
+                            continue;
+                        }
+                        el.setValue(this.defaultValues[attributeCode]);
+                    }
+
+                    $$('#<?php echo $_htmlId; ?>_container tr').last().select("select").each(function(el){
+                        var pattern = new RegExp("ticket_" + ticketData.id + "_(.*)");
+                        var match = el.id.match(pattern);
+                        if (!match[1] || !ticketData[match[1]]) {
+                            return;
+                        }
+                        var value = ticketData[match[1]];
+                        el.setValue(value);
+                    });
+
+
+                    if (arguments.length > 0) {
+                        for (var attributeCode in ticketData.default) {
+                            this.disableElement($('ticket_' + ticketData.id + '_' + attributeCode));
+                            this.checkElement($('ticket_' + ticketData.id + '_' + attributeCode + '_default'));
+                        }
+                    }
+
+                    $('<?php echo $_htmlId; ?>_container').select('input', 'select').each(function(element) {
+                        Event.observe(element, 'change', element.setHasChanges.bind(element));
+                    });
+
+                    $('<?php echo $_htmlId; ?>_container').select('input[type=checkbox]').each(function(element) {
+                        Event.observe(element, 'change', function() {
+                            awEventbookingTicketControl.toggleElement(element.up().previous(), element.checked);
+                        });
+                    });
+                },
+                toggleElement: function(element, currentStatus) {
+                    if (element) {
+                        if (currentStatus) {
+                            this.disableElement(element);
+                        } else {
+                            this.enableElement(element);
+                        }
+                    }
+                },
+                disableElement: function(element) {
+                    if (element) {
+                        element.disabled = true;
+                        element.addClassName('disabled');
+                    }
+                },
+                enableElement: function(element) {
+                    if (element) {
+                        element.disabled = false;
+                        element.removeClassName('disabled');
+                    }
+                },
+                checkElement: function(element) {
+                    if (element) {
+                        element.checked = 'checked';
+                    }
+                },
+                deleteItem: function(event) {
+                    var tr = Event.findElement(event, 'tr');
+                    if (tr) {
+                        Element.select(tr, '.delete').each(function(element) {
+                            element.value='1';
+                        });
+                        Element.select(tr, ['input', 'select']).each(function(element) {
+                            element.hide();
+                        });
+                        Element.hide(tr);
+                        Element.addClassName(tr, 'no-display template');
+                    }
+                    return false;
+                },
+                count:function(){
+                    var countItem=0;
+                    $$('#<?php echo $_htmlId; ?>_container tr').each(function(el){ countItem++});
+                    return countItem;
+                }
+            };
+            <?php foreach ($this->getValues() as $ticket) : ?>
+                var awEventbookingTicketData = {
+                    'id'                       : <?php echo $ticket['entity_id']; ?>,
+                    'title'                    : '<?php echo Mage::helper('core')->quoteEscape($ticket['title']); ?>',
+                    'price'                    : <?php echo sprintf('%.2f', $ticket['price']); ?>,
+                    'price_type'               : '<?php echo $ticket['price_type']; ?>',
+                    'sku'                      : '<?php echo $ticket['sku']; ?>',
+                    'qty'                      : <?php echo intval($ticket['qty']) ? intval($ticket['qty']) : 0; ?>,
+                    'codeprefix'               : '<?php echo isset($ticket['codeprefix']) ? $ticket['codeprefix'] : ''; ?>',
+                    'confirmation_template_id' : <?php echo $ticket['confirmation_template_id'] ? $ticket['confirmation_template_id'] : 0; ?>,
+                    'sort_order'               : <?php echo intval($ticket['sort_order']) ? intval($ticket['sort_order']) : 0; ?>,
+                    'default'                  : <?php echo isset($ticket['default']) ? Zend_Json::encode($ticket['default']) : "''"; ?>
+                };
+                awEventbookingTicketControl.addItem(awEventbookingTicketData);
+            <?php endforeach; ?>
+            if ($('aw_eventbooking_ticket_add_new_row')) {
+                $('aw_eventbooking_ticket_add_new_row').observe('click', function(event){
+                    awEventbookingTicketControl.addItem();
+                });
+            }
+
+            Event.observe(window, 'load', function() {
+                if(!awEventbookingTicketControl.count() && $('aw_eventbooking_is_enabled').value==1){
+                    awEventbookingTicketControl.addItem();
+                }
+            });
+            $('aw_eventbooking_is_enabled').observe('change', function(event){
+                if(!awEventbookingTicketControl.count()){
+                    awEventbookingTicketControl.addItem();
+                }
+            });
+
+            //]]>
+
+        </script>
+    </td>
+</tr>

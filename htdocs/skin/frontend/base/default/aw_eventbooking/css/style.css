@@ -1,0 +1,54 @@
+.aw-eventbooking-today {
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #14892c;
+    white-space: nowrap;
+    padding: 0px 8px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #14892c;
+    float: right;
+}
+
+.aw-ebk-ticket-view,
+.aw-ebk-ticket-view td {
+    border: 0px !important;
+}
+
+.aw-ebk-ticket-view tr td:first-child {
+    width: 150px;
+}
+
+.aw-eb-ticket-name {
+    width: 20%;
+    margin-left: 15px;
+}
+
+.aw-eb-section-title em {
+    color: red;
+}
+
+.aw-eb-section-title {
+    margin-bottom: 10px;
+}
+
+.aw-eb-ticket-available-qty {
+    width: 12%;
+}
+
+.aw-eb-ticket-price {
+    min-width: 10%;
+    margin-right: 5px;
+}
+
+.aw-eb-float {
+    float: left;
+}
+
+.aw-eb-clearer {
+    clear: both;
+}

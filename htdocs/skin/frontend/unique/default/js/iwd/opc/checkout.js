@@ -1682,8 +1682,7 @@ IWD.OPC.Decorator = {
         //check and setup current active method
         this.setCurrentPaymentActive();
         IWD.OPC.Decorator.decoratePayment(this);
-		aleret('here');
-        $j_opc(document).on('click', '#checkout-payment-method-load dt', function () {
+		$j_opc(document).on('click', '#checkout-payment-method-load dt', function () {
             $j_opc('#checkout-payment-method-load dt').removeClass('active');
             $j_opc(this).addClass('active');
             IWD.OPC.Decorator.decoratePayment(this);

@@ -1,0 +1,70 @@
+<?php
+/**
+ * @var AW_Eventbooking_Block_Ticket_List $this
+ */
+
+$_collection = $this->getCollection();
+?>
+<div class="awtickets__wrapper" id="my-tickets-list">
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <?php if ($_collection->getSize()): ?>
+        <table class="data-table" id="my-tickets-table">
+            <tbody>
+            <?php foreach ($_collection as $_item): ?>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="<?php echo $this->getProductUrl($_item->getData('product_id')) ?>"><?php echo $_item->getEventName() ?></a>
+                            <?php if ($this->isToday($_item)): ?>
+                                <span class="aw-eventbooking-today"><?php echo $this->__('Today') ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div>
+                            <strong><?php echo $this->__('Starts:') ?></strong>
+                            <?php echo $this->formatDate($_item->getData('event_start_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?>
+                        </div>
+                        <?php if ($_item->getData('event_end_date')): ?>
+                        <div>
+                            <strong><?php echo $this->__('Ends:') ?></strong>
+                            <?php echo $this->formatDate($_item->getData('event_end_date'), Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM, true); ?>
+                        </div>
+                        <?php endif; ?>
+
+                        <div>
+                            <?php if ($_item->getData('location')): ?>
+                                <span class="nobr"><?php echo $_item->getData('location') ?></span>
+                            <?php else: ?>
+                                <span class="nobr"><?php echo $this->__('Location not set') ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div>
+                            <?php echo $this->_getFormattedTicketPrice($_item) ?>
+                        </div>
+                        <div>
+                            <strong><?php echo $_item->getData('ticket_title'); ?></strong><br/>
+                            <?php echo $_item->getStatusLabel(); ?><br/>
+                            <span class="nobr">
+                                <a href="<?php echo $this->getViewUrl($_item->id) ?>" class="link-reorder">
+                                    <?php echo $this->__('See Ticket Details') ?>
+                                </a>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php echo $this->getPagerHtml(); ?>
+    <?php else: ?>
+        <p><?php echo $this->__('You have placed no orders.'); ?></p>
+    <?php endif ?>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    if (typeof pager != 'undefined') {
+        pager.containerId = 'my-tickets-list';
+        pager.tableId = 'my-tickets-table';
+    }
+    //]]>
+</script>

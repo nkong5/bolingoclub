@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<attribute>
+    <group>
+        <event>
+            <item>
+                <attribute_code>reminder_template_id</attribute_code>
+            </item>
+            <item>
+                <attribute_code>confirmation_template_id</attribute_code>
+            </item>
+            <item>
+                <attribute_code>ticket_section_title</attribute_code>
+            </item>
+            <item>
+                <attribute_code>terms_id</attribute_code>
+            </item>
+            <item>
+                <attribute_code>personalization_enabled</attribute_code>
+            </item>
+            <item>
+                <attribute_code>personalization_display_email</attribute_code>
+            </item>
+        </event>
+        <ticket>
+            <item>
+                <attribute_code>title</attribute_code>
+            </item>
+            <item>
+                <attribute_code>confirmation_template_id</attribute_code>
+            </item>
+            <item>
+                <attribute_code>sort_order</attribute_code>
+            </item>
+        </ticket>
+    </group>
+</attribute>

@@ -1,0 +1,30 @@
+<?php $_option = $this->getOption(); ?>
+<dt>
+<?php if (!$this->isTicketSectionTitleInserted()): ?>
+    <div class="aw-eb-section-title">
+        <strong><?php echo $this->getTicketSectionTitle();?></strong>&nbsp;<em>*</em>
+    </div>
+<?php endif;?>
+<div class="aw-eb-ticket-name aw-eb-float"<?php if ($_option->getIsRequire()) echo ' class="required"' ?>>
+    <span>
+        <?php echo  $this->escapeHtml($_option->getTitle()) ?>
+    </span>
+</div>
+<div class="aw-eb-ticket-available-qty aw-eb-float">
+    <?php echo Mage::helper('aw_eventbooking')->__('Available Qty:');?>
+    <strong>
+        <?php echo $_option->getAvailableQty();?>
+    </strong>
+</div>
+<div class="aw-eb-ticket-price aw-eb-float">
+    <?php echo $this->getFormatedPrice() ? $this->getFormatedPrice() : $this->getDefaultFormattedPrice();?>
+</div>
+<div class="aw-eb-ticket-qty aw-eb-float">
+    <input type="text" onchange="reloadTicketPrice()"
+           id="options_<?php echo $_option->getId() ?>_text"
+           class="input-text qty<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> aw_eventbooking-option"
+           name="options[<?php echo $_option->getId() ?>]"
+           value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
+</div>
+<div class="aw-eb-clearer"></div>
+</dt>

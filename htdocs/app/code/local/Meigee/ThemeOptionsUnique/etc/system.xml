@@ -784,10 +784,22 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</map>
+						<google_api translate="label">
+							<label>Google Maps API</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Please enter API Key. More information: https://developers.google.com/maps/documentation/javascript/get-api-key</comment>
+							<depends>
+								<map>1</map>
+							</depends>
+						</google_api>
 						<latitude translate="label">
 							<label>Latitude</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>2</sort_order>
+							<sort_order>3</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -799,7 +811,7 @@
 						<longitude translate="label">
 							<label>Longitude</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>3</sort_order>
+							<sort_order>4</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -811,7 +823,7 @@
 						<mapzoom translate="label">
 							<label>Map Zoom</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>4</sort_order>
+							<sort_order>5</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -824,7 +836,7 @@
 							<label>Map Type</label>
 							<frontend_type>Select</frontend_type>
 							<source_model>ThemeOptionsUnique/maptype</source_model>
-							<sort_order>5</sort_order>
+							<sort_order>6</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -837,7 +849,7 @@
 							<label>Marker</label>
 							<frontend_type>Select</frontend_type>
 							<source_model>adminhtml/system_config_source_enabledisable</source_model>
-							<sort_order>6</sort_order>
+							<sort_order>7</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -849,7 +861,7 @@
 						<markertitle translate="label">
 							<label>Marker Title</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>7</sort_order>
+							<sort_order>8</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -862,7 +874,7 @@
 							<label>Details block status</label>
 							<frontend_type>Select</frontend_type>
 							<source_model>adminhtml/system_config_source_enabledisable</source_model>
-							<sort_order>8</sort_order>
+							<sort_order>9</sort_order>
 							<comment>Will show block with detailed information over the Google map</comment>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -874,7 +886,7 @@
 						<blockstatic translate="label">
 							<label>Static Block for Details</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>9</sort_order>
+							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -887,7 +899,7 @@
 						<blockwidth translate="label">
 							<label>Details Block Width</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>10</sort_order>
+							<sort_order>11</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -900,7 +912,7 @@
 						<blockheight translate="label">
 							<label>Details Block Height</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>11</sort_order>
+							<sort_order>12</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -914,7 +926,7 @@
 							<label>Details Block Position</label>
 							<frontend_type>Select</frontend_type>
 							<source_model>ThemeOptionsUnique/mapblockpos</source_model>
-							<sort_order>12</sort_order>
+							<sort_order>13</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
