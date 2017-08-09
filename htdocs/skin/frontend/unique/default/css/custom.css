@@ -229,7 +229,7 @@ header#header.floating .nav-container a.level-top i {color: #451F05;}
 #footer ul.social-links li a:hover i {color: #fff;}
 #footer,
 #footer > .container_12 {background-color: #fff;}
-#footer > .container_12{border-top: 2px solid #222; padding-top: 2.5em;}
+#footer > .container_12{border-top: 1px solid #222; padding-top: 2.5em;}
 #footer > .container_12 button span span {background: #451F05;}
 #footer ul li:before,
 #footer .footer-links li a {background-color: #fff;}
