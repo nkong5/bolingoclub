@@ -836,11 +836,10 @@ header#header .nav-container a.level-top > span {font-size: 1.5em; line-height: 
 .aw-eb-float.aw-eb-ticket-name{border-left-width: 1px; margin-left: 0; width: 48%;}
 .product-options dt:first-child .aw-eb-float{border-top-width: 1px;}
 .aw-eb-ticket-available-qty {width: 24%!important;}
-.aw-eb-ticket-price{width: 20%;}
+.aw-eb-ticket-price{width: 19%;}
 .aw-eb-ticket-qty{width: 5%;}
 
-
-
+header#header .header-blocks > .top-link-wishlist {display: none;}
 
 
 

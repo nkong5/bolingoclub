@@ -62,12 +62,12 @@ class AW_Eventbooking_Helper_Mailer
      */
     protected function _getPDFAttachment(Mage_Sales_Model_Order_Item $orderItem)
     {
-		/** @var AW_Eventbooking_Model_Resource_Ticket_Collection $ticketsCollection */
+        /** @var AW_Eventbooking_Model_Resource_Ticket_Collection $ticketsCollection */
         $ticketsCollection = Mage::getModel('aw_eventbooking/ticket')->getCollection()
-            ->addFieldToFilter('order_item_id', array('eq' => $orderItem->getId()));
-            //->addPaymentStatusFilter();
-		
-		/** @var AW_Eventbooking_Helper_Ticket $ticketHelper */
+            ->addFieldToFilter('order_item_id', array('eq' => $orderItem->getId()))
+            ->addPaymentStatusFilter();
+
+        /** @var AW_Eventbooking_Helper_Ticket $ticketHelper */
         $ticketHelper = Mage::helper('aw_eventbooking/ticket');
         $attachments = $ticketHelper->renderTicketsPdf($ticketsCollection);
 
@@ -84,7 +84,7 @@ class AW_Eventbooking_Helper_Mailer
         $eventTicketCollection = Mage::helper('aw_eventbooking/order')->getEventTicketFromOrderItem($orderItem);
         $eventTicket = $eventTicketCollection->getFirstItem();
         if ($eventTicket->getId()) {
-			$event = $eventTicket->getEventModel();
+            $event = $eventTicket->getEventModel();
             $templateId = $event->getConfirmationTemplateId();
 
             if ($templateId === null) {
@@ -111,7 +111,7 @@ class AW_Eventbooking_Helper_Mailer
             /** @var AW_Rma_Model_Email_Template $emailTemplate */
             $emailTemplate = Mage::getModel('aw_eventbooking/email_template');
             if ($event->getData('generate_pdf_tickets')) {
-				$attachment = $this->_getPDFAttachment($orderItem);
+                $attachment = $this->_getPDFAttachment($orderItem);
                 $emailTemplate->addAttachment(self::PDF_NAME, $attachment);
                 unset($attachment);
             }
