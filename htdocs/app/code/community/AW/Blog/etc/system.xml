@@ -57,6 +57,18 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </description>
+                        <image_meta translate="label">
+                            <label>Image</label>
+                            <comment>This image will be displayed on shared pages in social networks. Minimum size 200x200. Leave blank for default image (logo of the store).</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">blog</upload_dir>
+                            <base_url type="media" scope_info="1">blog</base_url>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_meta>
                         <route translate="label content">
                             <label>Route to Blog</label>
                             <comment>Must NOT contain any slashes. "news" makes the blog accessible from domain.com/news. Leave blank for default value.</comment>

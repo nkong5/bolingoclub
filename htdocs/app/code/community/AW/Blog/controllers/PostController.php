@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -98,19 +98,25 @@ class AW_Blog_PostController extends Mage_Core_Controller_Front_Action
 
             try {
                 if (Mage::getStoreConfig('blog/recaptcha/enabled') && !$session->isLoggedIn()) {
-                    $publickey = Mage::getStoreConfig('blog/recaptcha/publickey');
                     $privatekey = Mage::getStoreConfig('blog/recaptcha/privatekey');
 
                     $resp = recaptcha_check_answer(
-                        $privatekey, $_SERVER["REMOTE_ADDR"], $data["recaptcha_challenge_field"],
-                        $data["recaptcha_response_field"]
+                        $privatekey, $data["g-recaptcha-response"], $_SERVER["REMOTE_ADDR"]
                     );
 
                     if (!$resp->is_valid) {
                         if ($resp->error == "incorrect-captcha-sol") {
-                            $session->addError($helper->__('Your Recaptcha solution was incorrect, please try again'));
+                            $session->addError($helper->__('Your reCAPTCHA solution was incorrect, please try again'));
+                        } elseif ($resp->error == "must-get-api") {
+                            $session->addError($helper->__('To use reCAPTCHA you must get an API key from ' .
+                                '<a href="https://www.google.com/recaptcha">https://www.google.com/recaptcha</a>'));
+                        } elseif ($resp->error == "must-pass-remote-ip") {
+                            $session->addError($helper->__('For security reasons, you must pass the remote ' .
+                                'ip to reCAPTCHA'));
+                        } elseif ($resp->error == "curl-problem") {
+                            $session->addError($helper->__('An error occurred. Please check cURL library'));
                         } else {
-                            $session->addError($helper->__('An error occured. Please try again'));
+                            $session->addError($helper->__('An error occurred. Please try again'));
                         }
                         // Redirect back with error message
                         $session->setBlogPostModel($model);
@@ -161,7 +167,7 @@ class AW_Blog_PostController extends Mage_Core_Controller_Front_Action
                 /* @var $translate Mage_Core_Model_Translate */
                 $translate->setTranslateInline(false);
                 try {
-                    $data["url"] = Mage::getUrl('blog/manage_comment/edit/id/' . $commentId);
+                    $data["url"] = Mage::helper('adminhtml')->getUrl('adminhtml/awblog_manage_comment/edit/id/' . $commentId);
                     $postObject = new Varien_Object();
                     $postObject->setData($data);
                     $mailTemplate = Mage::getModel('core/email_template');

@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -170,11 +170,16 @@ class AW_Blog_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $count = trim($this->conf(self::XML_RECENT_SIZE, $store));
 
-        if (!$count) {
+        if (is_null($count) || $count == '') {
             return self::DEFAULT_PAGE_COUNT;
         }
 
         return $count;
+    }
+
+    public function getDefaultPostsCount()
+    {
+        return self::DEFAULT_PAGE_COUNT;;
     }
 
     public function getUserName()
@@ -324,7 +329,7 @@ class AW_Blog_Helper_Data extends Mage_Core_Helper_Abstract
             Mage::app()->getFrontController()->getResponse()
                 ->setRedirect($url)
                 ->sendResponse();
-            exit;
+            return;
         }
     }
 
@@ -338,5 +343,25 @@ class AW_Blog_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->isModuleOutputEnabled('AW_Mobile')
             && @class_exists('AW_Mobile_Block_Catalog_Product_List_Toolbar')
         ;
+    }
+
+    /**
+     * Checks if tag is available
+     *
+     * @param string $tag
+     * @return bool
+     */
+    public function isTagAvailable($tag)
+    {
+        $store = Mage::app()->getStore();
+        $allStoreTags = Mage::getModel('blog/tag')->getCollection()
+                            ->addStoreFilter($store)
+        ;
+        foreach ($allStoreTags as $storeTag) {
+            if (strtolower($storeTag->getTag()) == strtolower($tag)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -143,7 +143,7 @@ class AW_Blog_Block_Manage_Comment_Grid extends Mage_Adminhtml_Block_Widget_Grid
                      array(
                          'caption' => Mage::helper('blog')->__('View'),
                          'url'     => array(
-                             'base' => '*/manage_blog/edit'
+                             'base' => '*/awblog_manage_comment/edit'
                          ),
                          'field'   => 'id'
                      )

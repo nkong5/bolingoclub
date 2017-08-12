@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -27,6 +27,8 @@
 
 class AW_Blog_Adminhtml_Awblog_Manage_CommentController extends Mage_Adminhtml_Controller_Action
 {
+    protected $_publicActions = array('edit');
+
     public function preDispatch()
     {
         parent::preDispatch();

@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -59,12 +59,22 @@ class AW_Blog_Model_Observer
         unset($collection);
     }
 
-    public function rewriteRssList($observer)
+    public function rewritesEnable($observer)
     {
         if (Mage::helper('blog')->getEnabled()) {
             $node = Mage::getConfig()->getNode('global/blocks/rss/rewrite');
             foreach (Mage::getConfig()->getNode('global/blocks/rss/drewrite')->children() as $dnode) {
                 $node->appendChild($dnode);
+            }
+
+            $moduleName = Mage::app()->getRequest()->getModuleName();
+            $controllerName = Mage::app()->getRequest()->getControllerName();
+            $actionName = Mage::app()->getRequest()->getActionName();
+            if ($moduleName == 'blog' && $controllerName == 'index' && $actionName == 'index') {
+                $node = Mage::getConfig()->getNode('global/blocks/page/rewrite');
+                foreach (Mage::getConfig()->getNode('global/blocks/page/drewrite')->children() as $dnode) {
+                    $node->appendChild($dnode);
+                }
             }
         }
     }

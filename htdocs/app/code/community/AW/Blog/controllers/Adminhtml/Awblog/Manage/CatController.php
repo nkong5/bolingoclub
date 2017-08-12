@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -62,7 +62,7 @@ class AW_Blog_Adminhtml_Awblog_Manage_CatController extends Mage_Adminhtml_Contr
                 ;
 
                 Mage::getSingleton('adminhtml/session')->addSuccess(
-                    Mage::helper('adminhtml')->__('pos was successfully deleted')
+                    Mage::helper('adminhtml')->__('Category was successfully deleted')
                 );
                 $this->_redirect('*/*/');
             } catch (Exception $e) {
@@ -88,7 +88,7 @@ class AW_Blog_Adminhtml_Awblog_Manage_CatController extends Mage_Adminhtml_Contr
                 }
                 Mage::getSingleton('adminhtml/session')->addSuccess(
                     Mage::helper('adminhtml')->__(
-                        'Total of %d comments(s) were successfully deleted', count($blogIds)
+                        'Total of %d category(s) were successfully deleted', count($blogIds)
                     )
                 );
             } catch (Exception $e) {
@@ -186,7 +186,7 @@ class AW_Blog_Adminhtml_Awblog_Manage_CatController extends Mage_Adminhtml_Contr
             try {
                 $model->save();
                 Mage::getSingleton('adminhtml/session')->addSuccess(
-                    Mage::helper('blog')->__('Comment was successfully saved')
+                    Mage::helper('blog')->__('Category was successfully saved')
                 );
                 Mage::getSingleton('adminhtml/session')->setFormData(false);
 

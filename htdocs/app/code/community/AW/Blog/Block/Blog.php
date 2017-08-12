@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -69,7 +69,7 @@ class AW_Blog_Block_Blog extends AW_Blog_Block_Abstract
     protected function _prepareCollection()
     {
         if (!$this->getData('cached_collection')) {
-            $sortOrder = $this->getRequest()->getParam('order', self::DEFAULT_SORT_ORDER);
+            $sortOrder = $this->getCurrentOrder();
             $sortDirection = $this->getCurrentDirection();
             $collection = Mage::getModel('blog/blog')->getCollection()
                 ->addPresentFilter()
@@ -95,5 +95,16 @@ class AW_Blog_Block_Blog extends AW_Blog_Block_Abstract
         }
 
         return Mage::helper('blog')->defaultPostSort(Mage::app()->getStore()->getId());
+    }
+
+    public function getCurrentOrder()
+    {
+        $sortOrder = $this->getRequest()->getParam('order', self::DEFAULT_SORT_ORDER);
+
+        if (in_array($sortOrder, array('created_time', 'user'))) {
+            return $sortOrder;
+        }
+
+        return self::DEFAULT_SORT_ORDER;
     }
 }

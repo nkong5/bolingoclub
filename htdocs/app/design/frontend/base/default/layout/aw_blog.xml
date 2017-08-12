@@ -37,17 +37,14 @@
     </default>
 
     <blog_index_index>
-        <reference name="footer" >
-            <block type="blog/blog" name="copyright.blog.footer" template="aw_blog/copyright.phtml"/>
-        </reference>
         <reference name="content">
             <block type="blog/blog" name="blog" template="aw_blog/blog.phtml"/>
         </reference>
     </blog_index_index>
 
     <blog_index_list>
-        <reference name="footer" >
-            <block type="blog/blog" name="copyright.blog.footer" template="aw_blog/copyright.phtml"/>
+        <reference name="head">
+            <block type="core/template" name="aw_blog_og" as="aw_blog_og" template="aw_blog/opengraph.phtml"/>
         </reference>
         <reference name="content">
             <block type="blog/blog" name="blog" template="aw_blog/blog.phtml">
@@ -57,9 +54,10 @@
             </block>
         </reference>
     </blog_index_list>
+
     <blog_post_view>
-        <reference name="footer" >
-            <block type="blog/blog" name="copyright.blog.footer" template="aw_blog/copyright.phtml"/>
+        <reference name="head">
+            <block type="core/template" name="aw_blog_og" as="aw_blog_og" template="aw_blog/opengraph.phtml"/>
         </reference>
         <reference name="content">
             <block type="blog/post" name="post" template="aw_blog/post.phtml">
@@ -69,9 +67,10 @@
             </block>
         </reference>
     </blog_post_view>
+
     <blog_cat_view>
-        <reference name="footer" >
-            <block type="blog/blog" name="copyright.blog.footer" template="aw_blog/copyright.phtml"/>
+        <reference name="head">
+            <block type="core/template" name="aw_blog_og" as="aw_blog_og" template="aw_blog/opengraph.phtml"/>
         </reference>
         <reference name="content">
             <block type="blog/cat" name="cat" template="aw_blog/cat.phtml">
@@ -83,9 +82,6 @@
     </blog_cat_view>
 
     <blog_rss_index>
-        <reference name="footer" >
-            <block type="blog/blog" name="copyright.blog.footer" template="aw_blog/copyright.phtml"/>
-        </reference>
         <block type="blog/rss" output="toHtml" name="rss.blog.new"/>
     </blog_rss_index>
 </layout>

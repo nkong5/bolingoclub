@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -185,6 +185,11 @@ abstract class AW_Blog_Block_Abstract extends Mage_Core_Block_Template
     {
         if (is_object($meta)) {
             $head = $this->getLayout()->getBlock('head');
+            $openGraph = $head->getChild('aw_blog_og');
+            if ($openGraph) {
+                $openGraph->setData(array('meta' => $meta));
+            }
+
             if ($head) {
                 $head->setTitle($meta->getTitle());
                 $head->setKeywords($meta->getMetaKeywords());

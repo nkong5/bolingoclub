@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -36,7 +36,7 @@ class AW_Blog_Model_Url extends Mage_Core_Model_Url
             $category = Mage::getSingleton('blog/cat');
             $post = Mage::getSingleton('blog/post');
             $tag = $this->getRequest()->getParam('tag', false);
-            if ($isUseCategoryUrl && $category->getCatId()) {
+            if ($category->getCatId()) {
                 $route .= '/' . AW_Blog_Helper_Data::CATEGORY_URI_PARAM . '/' . $category->getIdentifier();
             }
             if ($post->getIdentifier()) {

@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -47,7 +47,7 @@ class AW_Blog_Block_Last extends AW_Blog_Block_Menu_Sidebar implements Mage_Widg
         if ($this->getBlocksCount()) {
             $collection->setPageSize($this->getBlocksCount());
         } else {
-            $collection->setPageSize(Mage::helper('blog')->getRecentPage());
+            $collection->setPageSize(Mage::helper('blog')->getDefaultPostsCount());
         }
 
         if ($collection && $this->getData('categories')) {

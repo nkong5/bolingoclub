@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -58,13 +58,14 @@ class AW_Blog_Model_Mysql4_Tag_Collection extends Mage_Core_Model_Mysql4_Collect
     public function getActiveTags()
     {
         $this->getSelect()
-            ->columns(array('tag_final_count' => 'SUM(tag_count)'))
+            ->columns(array('tag_final_count' => 'COUNT(tag)'))
             ->joinLeft(
                 array("stores" => $this->getTable('blog/store')), 'main_table.store_id = stores.store_id', array()
             )
             ->joinLeft(array("blogs" => $this->getTable('blog/blog')), "stores.post_id = blogs.post_id", array())
             ->where('blogs.status = 1')
             ->where('tag_count > 0')
+            ->where('blogs.created_time <= ?', Mage::getModel('core/date')->gmtDate())
             ->where('FIND_IN_SET(main_table.tag, blogs.tags)')
             ->where('main_table.store_id = ? OR main_table.store_id = 0', Mage::app()->getStore()->getId())
             ->order(array('tag_final_count DESC', 'tag'))

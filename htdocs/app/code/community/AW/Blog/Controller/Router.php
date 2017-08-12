@@ -19,7 +19,7 @@
  *
  * @category   AW
  * @package    AW_Blog
- * @version    1.3.15
+ * @version    tip
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
@@ -40,7 +40,7 @@ class AW_Blog_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstr
             Mage::app()->getFrontController()->getResponse()
                 ->setRedirect(Mage::getUrl('install'))
                 ->sendResponse();
-            exit;
+            return;
         }
 
         $helper = Mage::helper('blog');
@@ -66,24 +66,28 @@ class AW_Blog_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstr
             return true;
         }
 
-        if (strpos($identifier, '/')) {
+        if (strpos($identifier, '/') !== false) {
             $page = substr($identifier, strpos($identifier, '/') + 1);
         }
 
         if (substr($identifier, 0, strlen('tag/')) == 'tag/') {
             $identifier = substr_replace($identifier, '', 0, strlen('cat/'));
 
-            if (strpos($identifier, '/page/')) {
+            if (strpos($identifier, '/page/') !== false) {
                 $page = substr($identifier, strpos($identifier, '/page/') + 6);
                 $identifier = substr_replace($identifier, '', strpos($identifier, '/page/'), strlen($page) + 6);
             }
 
             $rss = false;
-            if (strpos($identifier, '/rss')) {
+            if (strpos($identifier, '/rss') !== false) {
                 $rss = true;
                 $identifier = substr_replace($identifier, '', strpos($identifier, '/rss'), strlen($page) + 4);
             }
             $identifier = str_replace('/', '', $identifier);
+
+            if (!Mage::helper('blog')->isTagAvailable($identifier)) {
+                return false;
+            }
 
             if ($rss) {
                 $request->setModuleName('blog')
@@ -103,19 +107,19 @@ class AW_Blog_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstr
         } elseif (substr($identifier, 0, strlen('cat/')) == 'cat/') {
             $identifier = substr_replace($identifier, '', 0, strlen('cat/'));
 
-            if (strpos($identifier, '/page/')) {
+            if (strpos($identifier, '/page/') !== false) {
                 $page = substr($identifier, strpos($identifier, '/page/') + 6);
                 $identifier = substr_replace($identifier, '', strpos($identifier, '/page/'), strlen($page) + 6);
             }
 
-            if (strpos($identifier, '/post/')) {
+            if (strpos($identifier, '/post/') !== false) {
                 $postident = substr($identifier, strpos($identifier, '/post/') + 6);
                 $identifier = substr_replace($identifier, '', strpos($identifier, '/post/'), strlen($postident) + 6);
                 $postident = str_replace('/', '', $postident);
             }
 
             $rss = false;
-            if (strpos($identifier, '/rss')) {
+            if (strpos($identifier, '/rss') !== false) {
                 $rss = true;
                 $identifier = substr_replace($identifier, '', strpos($identifier, '/rss'), strlen($page) + 4);
             }
