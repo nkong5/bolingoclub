@@ -1060,7 +1060,7 @@ body.boxed-layout #footer.original .container_12 {
 
 header#header.header-2 .slider-with-banners .header-slider-container .iosSlider .slider .item .slider__headline {
 	color: #fff;
-	font-size: 1.3em;
+	font-size: 2em;
 }
 
 header#header.header-2 .slider-with-banners .header-slider-container .iosSlider .slider .item .slider__headline:hover {
@@ -1069,7 +1069,7 @@ header#header.header-2 .slider-with-banners .header-slider-container .iosSlider 
 
 header#header .slider__link_claret {
 	color: #00aeef;
-	font-size: 2.1em;
+	font-size: 1.7em;
 	margin: 0.8em 0;
 	text-transform: uppercase;
 }
