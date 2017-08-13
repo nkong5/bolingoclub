@@ -42,9 +42,9 @@ class AW_Blog_Model_Mysql4_Post extends Mage_Core_Model_Mysql4_Abstract
 
     protected function _beforeSave(Mage_Core_Model_Abstract $object)
     {
-        if (!$this->getIsUniqueIdentifier($object)) {
-            Mage::throwException(Mage::helper('blog')->__('Post Identifier already exist.'));
-        }
+//        if (!$this->getIsUniqueIdentifier($object)) {
+//            Mage::throwException(Mage::helper('blog')->__('Post Identifier already exist.'));
+//        }
 
         if ($this->isNumericIdentifier($object)) {
             Mage::throwException(Mage::helper('blog')->__('Post Identifier cannot consist only of numbers.'));
