@@ -237,3 +237,7 @@
         Deny from all
 
     </Files>
+
+Redirect 301 /de/blog /de/impressions
+Redirect 301 /en/blog /en/impressions
+Redirect 301 /fr/blog /fr/impressions

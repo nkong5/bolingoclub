@@ -20,37 +20,13 @@ class AW_Eventbooking_Block_Catalog_Product_View_Options_Type_Text
     {
         return $this->getProduct()->getPreconfiguredValues()->getData('options/' . $this->getOption()->getId());
     }
-	
-	
-	public function formatOptionPrice($priceStr)
-	{
-		$productPrice = $this->getProduct()->getPrice();
-		$cleanPrice = preg_replace("/[^0-9.,]/","",$priceStr);
-		$fullPrice = $productPrice + $cleanPrice;
-		$fullPrice = number_format($fullPrice, 2, ',', ' ');
-		$priceStr = str_replace($cleanPrice, $fullPrice, $priceStr);
-		$priceStr = str_replace('+', '', $priceStr);
-		return $priceStr;
-	}
-	
-	public function getFormatedPrice()
-	{
-		if ($option = $this->getOption()) {
-			return $this->formatOptionPrice($this->_formatPrice(array(
-				'is_percent'    => ($option->getPriceType() == 'percent'),
-				'pricing_value' => $option->getPrice($option->getPriceType() == 'percent')
-			)));
-		}
-		return '';
-	}
-	
+
     public function getDefaultFormattedPrice()
     {
-		$store = $this->getProduct()->getStore();
-		$priceStr = $this->helper('core')->currencyByStore(0, $store, true, true);
-		$priceStr = '<span class="price-notice">+' . $priceStr . '</span>';
-		$priceStr = $this->formatOptionPrice($priceStr);
-		
+        $store = $this->getProduct()->getStore();
+        $priceStr = $this->helper('core')->currencyByStore(0, $store, true, true);
+        $priceStr = '<span class="price-notice">+' . $priceStr . '</span>';
+
         return $priceStr;
     }
 

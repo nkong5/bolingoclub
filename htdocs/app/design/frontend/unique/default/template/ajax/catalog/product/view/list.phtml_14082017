@@ -193,51 +193,6 @@
 					<?php endif; ?>
 					<?php if($productprice): ?>
 						<?php echo $this->getPriceHtml($_product, true) ?>
-						
-						
-						<?php 
-							
-							
-							$product = Mage::getModel('catalog/product')->load($_product->getId());
-							
-							//Mage::log($_product->getPreconfiguredValues()->getData(), null, 'mygento.log');
-							//Mage::log($product->getPreconfiguredValues()->getData(), null, 'mygento.log');
-							
-							/* foreach($product->getPreconfiguredValues()->getData() as $itemOption){
-								
-								Mage::log($itemOption, null, 'mygento.log');
-								
-								foreach($itemOption as $optionKey => $option){
-									Mage::log('--------------------', null, 'mygento.log');
-									Mage::log($optionKey, null, 'mygento.log');
-								}
-								
-							} */
-							
-							
-							
-							//$this->getOption()
-							
-							Mage::log('==========', null, 'mygento.log');
-							//Mage::log($product->getData('options/'), null, 'mygento.log');
-							
-							//$option = Mage::getModel('catalog/product_option');
-							Mage::log($product->getData(), null, 'mygento.log');
-							
-							
-							
-							/* $store = $product->getStore();
-							$priceStr = Mage::helper('core')->currencyByStore(0, $store, true, true);
-							Mage::log('---Def===', null, 'mygento.log');
-							Mage::log($priceStr, null, 'mygento.log'); */
-							
-							
-							
-							
-							
-						?>
-						
-						
 					<?php endif; ?>
 					<?php if($_product->isSaleable()): ?>
 						<?php if(Mage::getStoreConfig('ajax/general/enabledpro')){ ?>

@@ -4333,7 +4333,9 @@ aside .block-related .related-button a {
 .product-options-block h2 {font-size: 1em; text-transform: uppercase; color: #222; line-height: 1.5em; font-weight: normal;}
 .product-options {border-bottom: dotted 1px #ddd; padding-bottom: 1.5em; margin-bottom: 1.5em;}
 .product-options dl {width: 50%;}
-.product-shop > form > .product-options dl {width: 100%;}
+.product-shop > form  .product-options dl {width: 100%;}
+.product-view .product-shop .with-event .price-box > *:not(.price-info){display: none;}
+
 .product-options input,
 .product-options select,
 .product-options textarea {background-color: #eee; font-size: 11px; color: #54565b; border-radius: 2px; -moz-border-radius: 2px; border-color: #eee;}
