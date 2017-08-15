@@ -195,12 +195,9 @@
 					<h1<?php if($richSnippets['status'] == 1): ?> itemprop="name"<?php endif; ?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 					<?php if ($this->displayProductStockStatus()): ?>
 						<?php if ($_product->isAvailable()): ?>
-						   	<p class="availability in-stock product-availability"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-check-circle-o"></i><?php echo $this->__('In stock') ?></p>
-							<?php if ($_product->getAttributeText('delivery_period')){ ?>
-							<div class="delivery-period product-delivery-period"><?php echo $_product->getAttributeText('delivery_period'); ?></div>
-							<?php } ?>
+						   	<p class="availability in-stock product-availability"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-check-circle-o"></i><?php echo $this->__('Available') ?></p>
 						<?php else: ?>
-						   	<p class="availability out-of-stock product-availability"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Out of stock') ?></p>
+						   	<p class="availability out-of-stock product-availability"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Unavailable') ?></p>
 						<?php endif; ?>
 					<?php endif; ?>
 

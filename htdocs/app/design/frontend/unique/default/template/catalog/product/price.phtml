@@ -424,18 +424,15 @@ $deliveryPeriod = Mage::getModel('catalog/product')->load($_product->getId())->g
             </span>
         <?php endif ?>
     <?php endif; /* if ($this->getDisplayMinimalPrice() && $_minimalPrice && $_minimalPrice < $_finalPrice): */ ?>
-		<div class="price-info"><?php echo $this->__('All prices incl. VAT and possibly plus shipping costs'); ?></div>
+		<div class="price-info"><?php echo $this->__('All prices incl. VAT'); ?></div>
 
         <?php if ($_product->isAvailable()): ?>
             <p class="availability in-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>>
                 <i class="fa fa-check-circle-o"></i>
-                <?php echo $this->__('In stock') ?>
-                <?php if ($deliveryPeriod) : ?>
-                    <?php echo $deliveryPeriod; ?>
-                <?php endif; ?>
+                <?php echo $this->__('Available') ?>
             </p>
         <?php else: ?>
-            <p class="availability out-of-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Out of stock') ?></p>
+            <p class="availability out-of-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Unavailable') ?></p>
         <?php endif; ?>
     </div>
 
@@ -485,18 +482,15 @@ $deliveryPeriod = Mage::getModel('catalog/product')->load($_product->getId())->g
                 </span>
                 <?php endif; ?>
             </p>
-			<div class="price-info"><?php echo $this->__('All prices incl. VAT and possibly plus shipping costs'); ?></div>
+			<div class="price-info"><?php echo $this->__('All prices incl. VAT'); ?></div>
 
             <?php if ($_product->isAvailable()): ?>
                 <p class="availability in-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>>
                     <i class="fa fa-check-circle-o"></i>
-                    <?php echo $this->__('In stock') ?>
-                    <?php if ($deliveryPeriod) : ?>
-                        <?php echo $deliveryPeriod; ?>
-                    <?php endif; ?>
+                    <?php echo $this->__('Available') ?>
                 </p>
             <?php else: ?>
-                <p class="availability out-of-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Out of stock') ?></p>
+                <p class="availability out-of-stock"<?php if(($richSnippets['status'] == 1) and ($richSnippets['product_availability'] == 1)): ?> itemprop="availability"<?php endif; ?>><i class="fa fa-ban"></i><?php echo $this->__('Unavailable') ?></p>
             <?php endif; ?>
         </div>
     <?php endif; /* if ($this->getDisplayMinimalPrice() && $_minimalPrice): */ ?>
