@@ -385,6 +385,11 @@ header#header h2.logo{
 
 /* .products-grid .product-name{word-break: break-all;} */
 
+.products-grid .price-box .price .from-label{
+	font-size: 14px;
+	line-height: 19px;
+}
+
 
 /* top menu */
 header#header.header-2 .nav-wide#nav-wide .menu-wrapper,
@@ -465,7 +470,7 @@ aside.sidebar .widget-static-block h2{
 	padding-bottom: 0.7em;
 }
 
-a#zoom{width: 100%;}
+a#zoom{width: 100%; display: block;}
 #wrap.no-zoom #cloud-zoom-big,
 #wrap.no-zoom #zoom div:not(.cloud-zoom-lens){display: none!important;}
 #wrap.no-zoom .mousetrap{cursor: default!important;}

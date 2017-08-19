@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 class AW_Eventbooking_Model_Observer
 {
@@ -242,7 +242,7 @@ class AW_Eventbooking_Model_Observer
      */
     public function salesOrderInvoicePay($observer)
     {
-        /* $invoice = $observer->getInvoice();
+        $invoice = $observer->getInvoice();
         if ($invoice) {
             $order = $invoice->getOrder();
             if ($order) {
@@ -251,7 +251,7 @@ class AW_Eventbooking_Model_Observer
                 Mage::getModel('aw_eventbooking/observer_event')->sendConfirmationEmail($order);
                 Mage::getModel('aw_eventbooking/observer_event')->sendReminderAfterInvoice($order);
             }
-        } */
+        }
         return $this;
     }
 	

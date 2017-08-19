@@ -132,7 +132,44 @@
 						<?php endif; ?>
 					<?php endif; ?>
 					<?php if($_price): ?>
-						<?php echo $this->getPriceHtml($_product, true) ?>
+						<?php //echo $this->getPriceHtml($_product, true) ?>
+						<?php
+							$product = Mage::getModel('catalog/product')->load($_product->getId());
+							if($product->getPreconfiguredValues()->getData()){
+								$optionKey = 0;
+								$optionPrice = 0;
+								foreach($product->getPreconfiguredValues()->getData() as $itemOption){
+									foreach($itemOption as $key => $option){
+										if(!$optionKey){
+											$optionKey = $key;
+										}
+									}
+								}
+								foreach($product->getOptions() as $key=>$itemData){
+									if($optionKey == $key){
+										foreach($itemData as $data){
+											foreach($data as $key=>$value){
+												if($key == 'price'){
+													$optionPrice = $value;
+												}
+											}
+										}
+									}
+								}
+								$mainPrice = $this->getPriceHtml($_product, true);
+								$cleanPrice = preg_replace('/<div\b[^>]*>(.*?)<\/div>/i', '', $mainPrice);
+								$cleanPrice = preg_replace('/<p\b[^>]*>(.*?)<\/p>/i', '', $cleanPrice);
+								$cleanPrice = strip_tags($cleanPrice);
+								$cleanPrice = preg_replace("/[^0-9.,]/","",$cleanPrice);
+								$fullPrice = $cleanPrice + $optionPrice;
+								$fullPrice = number_format($fullPrice, 2, ',', ' ');
+								$priceStr = str_replace($cleanPrice, $fullPrice, $mainPrice);
+								$priceStr = str_replace('<span class="price">', '<span class="price"><span class="from-label">'.$this->__("From").':</span> ', $priceStr);
+								echo $priceStr;
+							}else{
+								echo $this->getPriceHtml($_product, true);
+							}
+						?>
 					<?php endif; ?>
 					<?php if($_product->isSaleable() and $_addToCart): ?>
 						<?php if(Mage::getStoreConfig('ajax/general/enabledpro')){ ?>

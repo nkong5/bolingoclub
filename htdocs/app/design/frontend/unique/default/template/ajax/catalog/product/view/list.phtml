@@ -192,52 +192,44 @@
 						<?php echo $this->getReviewsSummaryHtml($_product) ?>
 					<?php endif; ?>
 					<?php if($productprice): ?>
-						<?php echo $this->getPriceHtml($_product, true) ?>
-						
-						
-						<?php 
-							
-							
+						<?php //echo $this->getPriceHtml($_product, true) ?>
+						<?php
 							$product = Mage::getModel('catalog/product')->load($_product->getId());
-							
-							//Mage::log($_product->getPreconfiguredValues()->getData(), null, 'mygento.log');
-							//Mage::log($product->getPreconfiguredValues()->getData(), null, 'mygento.log');
-							
-							/* foreach($product->getPreconfiguredValues()->getData() as $itemOption){
-								
-								Mage::log($itemOption, null, 'mygento.log');
-								
-								foreach($itemOption as $optionKey => $option){
-									Mage::log('--------------------', null, 'mygento.log');
-									Mage::log($optionKey, null, 'mygento.log');
+							if($product->getPreconfiguredValues()->getData()){
+								$optionKey = 0;
+								$optionPrice = 0;
+								foreach($product->getPreconfiguredValues()->getData() as $itemOption){
+									foreach($itemOption as $key => $option){
+										if(!$optionKey){
+											$optionKey = $key;
+										}
+									}
 								}
-								
-							} */
-							
-							
-							
-							//$this->getOption()
-							
-							Mage::log('==========', null, 'mygento.log');
-							//Mage::log($product->getData('options/'), null, 'mygento.log');
-							
-							//$option = Mage::getModel('catalog/product_option');
-							Mage::log($product->getData(), null, 'mygento.log');
-							
-							
-							
-							/* $store = $product->getStore();
-							$priceStr = Mage::helper('core')->currencyByStore(0, $store, true, true);
-							Mage::log('---Def===', null, 'mygento.log');
-							Mage::log($priceStr, null, 'mygento.log'); */
-							
-							
-							
-							
-							
+								foreach($product->getOptions() as $key=>$itemData){
+									if($optionKey == $key){
+										foreach($itemData as $data){
+											foreach($data as $key=>$value){
+												if($key == 'price'){
+													$optionPrice = $value;
+												}
+											}
+										}
+									}
+								}
+								$mainPrice = $this->getPriceHtml($_product, true);
+								$cleanPrice = preg_replace('/<div\b[^>]*>(.*?)<\/div>/i', '', $mainPrice);
+								$cleanPrice = preg_replace('/<p\b[^>]*>(.*?)<\/p>/i', '', $cleanPrice);
+								$cleanPrice = strip_tags($cleanPrice);
+								$cleanPrice = preg_replace("/[^0-9.,]/","",$cleanPrice);
+								$fullPrice = $cleanPrice + $optionPrice;
+								$fullPrice = number_format($fullPrice, 2, ',', ' ');
+								$priceStr = str_replace($cleanPrice, $fullPrice, $mainPrice);
+								$priceStr = str_replace('<span class="price">', '<span class="price"><span class="from-label">'.$this->__("From").':</span> ', $priceStr);
+								echo $priceStr;
+							}else{
+								echo $this->getPriceHtml($_product, true);
+							}
 						?>
-						
-						
 					<?php endif; ?>
 					<?php if($_product->isSaleable()): ?>
 						<?php if(Mage::getStoreConfig('ajax/general/enabledpro')){ ?>

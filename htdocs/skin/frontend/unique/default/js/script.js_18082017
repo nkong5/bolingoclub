@@ -969,12 +969,8 @@ jQuery(window).load(function() {
 
 	/* Zoom */
 	if (jQuery('#zoom').length) {
-		if(jQuery('#zoom').width() <= jQuery('#zoom img').width()){
+		if(jQuery('#zoom').width() > jQuery('#zoom img').width()){
 			jQuery('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-		}else{
-			jQuery('a#zoom, a.cloud-zoom-gallery').off().on('click', function(event){
-				event.preventDefault();
-			});
 		}
   	}
 	/* Zoom */

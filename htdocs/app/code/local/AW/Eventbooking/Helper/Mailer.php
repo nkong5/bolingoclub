@@ -64,15 +64,54 @@ class AW_Eventbooking_Helper_Mailer
     {
 		/** @var AW_Eventbooking_Model_Resource_Ticket_Collection $ticketsCollection */
         $ticketsCollection = Mage::getModel('aw_eventbooking/ticket')->getCollection()
-            ->addFieldToFilter('order_item_id', array('eq' => $orderItem->getId()));
-            //->addPaymentStatusFilter();
+            ->addFieldToFilter('order_item_id', array('eq' => $orderItem->getId()))
+            ->addPaymentStatusFilter();
+			//->addPaymentStatusFilter();
 		
 		/** @var AW_Eventbooking_Helper_Ticket $ticketHelper */
         $ticketHelper = Mage::helper('aw_eventbooking/ticket');
         $attachments = $ticketHelper->renderTicketsPdf($ticketsCollection);
-
         return $attachments;
     }
+	
+	
+	protected function saveOrderPdf($pdfContent, $orderNumber)
+	{
+		$pdfFileDir = Mage::getBaseDir('media').'/tickets/'.rand(10000000000000000000, 99000000000000000000);
+		$pdfFileName = $pdfFileDir.'/tickets.pdf';
+		
+		$pdfFile = new Varien_Io_File();
+		$pdfFile->mkdir($pdfFileDir, 0755, true);
+		$pdfFile->write($pdfFileName, $pdfContent);
+		$pdfFile->close();
+		
+		
+		//Mage::log('Pdf File Name:', null, 'mygento.log');
+		//Mage::log($pdfFileName, null, 'mygento.log');
+		
+		//Mage::log('orderId:', null, 'mygento.log');
+		//Mage::log($orderNumber, null, 'mygento.log');
+		
+		
+		$ticketInfo = array($orderNumber  => $pdfFileName);
+		$model = Mage::getModel("sales/order")->setData($ticketInfo);
+		
+		
+		Mage::log('collection:', null, 'mygento.log');
+		
+		try{
+			$model->save();
+		} catch (Exception $e){}
+		
+		
+		
+		//get the model collection  
+		$collection = $model->getCollection();  
+		
+		
+		Mage::log($collection, null, 'mygento.log');
+		
+	}
 
     /**
      * @param Mage_Sales_Model_Order_Item $orderItem
@@ -111,9 +150,10 @@ class AW_Eventbooking_Helper_Mailer
             /** @var AW_Rma_Model_Email_Template $emailTemplate */
             $emailTemplate = Mage::getModel('aw_eventbooking/email_template');
             if ($event->getData('generate_pdf_tickets')) {
+				$this->saveOrderPdf($this->_getPDFAttachment($orderItem), $order->getIncrementId());
 				$attachment = $this->_getPDFAttachment($orderItem);
-                $emailTemplate->addAttachment(self::PDF_NAME, $attachment);
-                unset($attachment);
+				$emailTemplate->addAttachment(self::PDF_NAME, $attachment);
+				unset($attachment);
             }
 
             $orderItemData = new Varien_Object();

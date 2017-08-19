@@ -237,8 +237,8 @@ class AW_Eventbooking_Model_Observer_Event
      */
     public function sendConfirmationEmail($order)
     {
-		if (!$order->getBaseTotalDue()) {
-            $eventBookingItems = Mage::helper('aw_eventbooking/order')->getAllEventbookingItemsFromOrder($order);
+		//if (!$order->getBaseTotalDue()) {
+			$eventBookingItems = Mage::helper('aw_eventbooking/order')->getAllEventbookingItemsFromOrder($order);
             foreach ($eventBookingItems as $item) {
                 try {
                     Mage::helper('aw_eventbooking/mailer')->sendConfirmationEmailForOrderItem($item);
@@ -246,7 +246,7 @@ class AW_Eventbooking_Model_Observer_Event
                     Mage::logException($e);
                 }
             }
-        }
+        //}
         return $this;
     }
 
