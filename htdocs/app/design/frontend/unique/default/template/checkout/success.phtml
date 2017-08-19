@@ -36,8 +36,10 @@
 <?php  else :?>
     <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
 <?php endif;?>
-    <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
-<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+    <p><?php echo $this->__('Your ticket and your invoice have been sent to your email address.') ?></p>
+    <p><?php echo $this->__('Let us know if you have any questions using') ?> <a class="e_placeholder" style="color: blue;" name="service"></a></p>
+    <p><?php echo $this->__('Your') ?> Bolingo Team</p>
+    <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
     <p>
         <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
         <?php echo $this->getChildHtml() ?>
