@@ -77,40 +77,22 @@ class AW_Eventbooking_Helper_Mailer
 	
 	protected function saveOrderPdf($pdfContent, $orderNumber)
 	{
-		$pdfFileDir = Mage::getBaseDir('media').'/tickets/'.rand(10000000000000000000, 99000000000000000000);
+		$ticketUniqueFolder = rand(10000000000000000000, 99000000000000000000);
+		$pdfFileDir = Mage::getBaseDir('media').'/tickets/'.$ticketUniqueFolder;
 		$pdfFileName = $pdfFileDir.'/tickets.pdf';
+		$pathToTicket = 'tickets/'.$ticketUniqueFolder.'/tickets.pdf';
 		
 		$pdfFile = new Varien_Io_File();
 		$pdfFile->mkdir($pdfFileDir, 0755, true);
 		$pdfFile->write($pdfFileName, $pdfContent);
 		$pdfFile->close();
 		
-		
-		//Mage::log('Pdf File Name:', null, 'mygento.log');
-		//Mage::log($pdfFileName, null, 'mygento.log');
-		
-		//Mage::log('orderId:', null, 'mygento.log');
-		//Mage::log($orderNumber, null, 'mygento.log');
-		
-		
-		$ticketInfo = array($orderNumber  => $pdfFileName);
-		$model = Mage::getModel("sales/order")->setData($ticketInfo);
-		
-		
-		Mage::log('collection:', null, 'mygento.log');
-		
-		try{
-			$model->save();
-		} catch (Exception $e){}
-		
-		
-		
-		//get the model collection  
-		$collection = $model->getCollection();  
-		
-		
-		Mage::log($collection, null, 'mygento.log');
-		
+		//database write adapter 
+		$write = Mage::getSingleton('core/resource')->getConnection('core_write');
+		$write->insert(
+			"aw_eventbooking_tickets_pdf", 
+			array("ticket_id" => $orderNumber, "path" => $pathToTicket)
+		);
 	}
 
     /**

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <AW_Eventbooking>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </AW_Eventbooking>
     </modules>
     <global>
@@ -42,6 +42,9 @@
                     <ticket>
                         <table>aw_eventbooking_ticket</table>
                     </ticket>
+					<tickets_pdf>
+                        <table>aw_eventbooking_tickets_pdf</table>
+                    </tickets_pdf>
                 </entities>
             </aw_eventbooking_resource>
             <catalog>

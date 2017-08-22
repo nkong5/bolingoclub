@@ -5203,9 +5203,6 @@ aside.sidebar .block.block-progress dd.complete{}
 .my-account .pager .limiter label {display: inline-block; vertical-align: middle;}
 .my-account .pager .pages{float:right; padding-top:0;}
 .my-account .rating-links { display: none;}
-.my-account .data-table .product-name{float: none;}
-.my-account .item-options{float: none;}
-
 .box-title h2 .separator,
 .box-title h3 .separator,
 .box-title h4 .separator {display: inline-block; margin-top: -2px;}
@@ -5361,10 +5358,6 @@ aside.sidebar .block.block-progress dd.complete{}
 .page-print .print-head img { float:left; }
 .page-print .print-head address { float:left; margin-left:15px; }
 .page-print .col2-set{padding:15px 0;}
-
-.page-print .grid_3{float: left; width: 25%;}
-.page-print #my-orders-table .item-options{float: none;}
-
 
 /* Price Rewrites */
 .page-print .gift-message-link { display:none; }

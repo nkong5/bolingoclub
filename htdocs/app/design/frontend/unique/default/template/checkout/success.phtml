@@ -36,13 +36,10 @@
 <?php  else :?>
     <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
 <?php endif;?>
-    <p><?php echo $this->__('Your ticket and your invoice have been sent to your email address.') ?></p>
-    <p><?php echo $this->__('Let us know if you have any questions using') ?> <a class="e_placeholder" style="color: blue;" name="service"></a>.</p>
-    <p>&nbsp;</p>
-    <p><?php echo $this->__('Your') ?> Bolingo Team!</p>
-    <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+    <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
     <p>
-<!--        --><?php //echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+        <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
         <?php echo $this->getChildHtml() ?>
     </p>
 <?php endif;?>
@@ -63,13 +60,12 @@
 <?php endif;?>
 
 <div class="buttons-set">
+<?php 
+	//database read adapter 
+	$read = Mage::getSingleton('core/resource')->getConnection('core_read'); 
+	$results = $read->fetchAll("select * from aw_eventbooking_tickets_pdf where ticket_id = ".$this->getOrderId()." "); 
+	$link = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$results[0]['path'];
+?>
+	<a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Donnload Ticket in PDF format'); ?></a>
     <button type="button" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
 </div>
-<div style="display: none;">
-<?php 
-	
-?>
-</div>
-
-
-
