@@ -158,15 +158,19 @@
     }
     <?php endif ?>
 
-    PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
-        $('shipping_method'), $('shipping_method_form'), 'details-reload'
-    );
-    PayPalExpressAjax.addPleaseWait($('review-please-wait'));
-
-
     jQuery(document).ready(function() {
         jQuery("#shipping_method").val('flatrate_flatrate');
+
+
+        PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
+            $('shipping_method'), $('shipping_method_form'), 'details-reload'
+        );
+        PayPalExpressAjax.addPleaseWait($('review-please-wait'));
+
     });
+
+
+
 
     //]]>
 </script>
