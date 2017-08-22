@@ -6053,3 +6053,18 @@ header#header:after,
 #dd_method_paymentnetwork_pnsofortueberweisung a {
 	display: none;
 }
+
+.paypal-express-review .box-title h3 {
+	text-transform: none;
+	font-weight: normal;
+}
+
+.paypal-express-review .price {
+	color: #A36F53;;
+
+}
+
+.paypal-express-review #review_button span span {
+	background-color: #6dc5ee;
+	color: white;
+}
