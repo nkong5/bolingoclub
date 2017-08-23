@@ -23,23 +23,33 @@
  * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+
+	//database read adapter
+	$read = Mage::getSingleton('core/resource')->getConnection('core_read');
+	$results = $read->fetchAll("select * from aw_eventbooking_tickets_pdf where ticket_id = ".$this->getOrderId()." ");
+	$link = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$results[0]['path'];
 ?>
 <div class="page-title">
-    <h1><?php echo $this->__('Your order has been received.') ?></h1>
+    <h1><?php echo $this->__('Thanks for you order at') ?> Bolingo.com</h1>
 </div>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
-<h2 class="sub-title"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+
+<p><?php echo $this->__('Your concert tickets including QR code and your invoice have been sent to your email address.') ?></p>
 
 <?php if ($this->getOrderId()):?>
 <?php if ($this->getCanViewOrder()) :?>
-    <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
+
+    <?php echo $this->__('Nevertheless, you can directly download your invoice and tickets with QR code here') ?>:
+    <p>
+        <?php echo $this->__("<a target='_blank' href='%s'>Invoice %s</a>", $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId())) ?>
+    </p>
 <?php  else :?>
-    <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
+    <p><?php echo $this->__('Invoice %s', $this->escapeHtml($this->getOrderId())) ?></p>
 <?php endif;?>
-    <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+    <p> - <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Tickets'); ?></a></p>
 <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
     <p>
-        <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+        <?php echo $this->__('Additionally you can click <a href="%s" onclick="this.target=\'_blank\'">here </a> to view your invoice.', $this->getPrintUrl()) ?>
         <?php echo $this->getChildHtml() ?>
     </p>
 <?php endif;?>
@@ -59,13 +69,23 @@
 </ul>
 <?php endif;?>
 
+<p>
+    <?php echo $this->__('Download your tickets to your smartphone in PDF format and bring them to the concert. Your will be let in after examination of the QR code.'); ?>
+</p>
+<p>
+    <?php echo $this->__('Alternatively, you can print out your tickets and bring them on paper to the concert. In this case, make sure the code is very readable.'); ?>
+</p>
+<p>
+    <?php echo $this->__('We are looking forward to an amazing experience with you.'); ?>
+</p>
+<p>
+    <?php echo $this->__('Thank you for your trust!'); ?>
+</p>
+<p>
+    <?php echo $this->__('Your'); ?> Bolingo.com <?php echo $this->__('Team'); ?>
+</p>
+
+
 <div class="buttons-set">
-<?php 
-	//database read adapter 
-	$read = Mage::getSingleton('core/resource')->getConnection('core_read'); 
-	$results = $read->fetchAll("select * from aw_eventbooking_tickets_pdf where ticket_id = ".$this->getOrderId()." "); 
-	$link = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$results[0]['path'];
-?>
-	<a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Donnload Ticket in PDF format'); ?></a>
     <button type="button" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
 </div>
