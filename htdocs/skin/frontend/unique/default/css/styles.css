@@ -6075,3 +6075,7 @@ header#header:after,
 	background-color: #6dc5ee;
 	color: white;
 }
+
+.checkout-onepage-success p {
+	padding: 0 4px;
+}

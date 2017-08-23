@@ -325,4 +325,5 @@
 "Team","Team"
 "Tickets","Tickets"
 "Invoice","Rechnung"
+"Your", "Ihr"
 "<a target='_blank' href='%s'>Invoice %s</a>","<a target='_blank' href='%s'>Rechnung %s</a>"

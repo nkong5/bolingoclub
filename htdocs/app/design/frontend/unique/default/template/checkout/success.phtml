@@ -37,19 +37,13 @@
 <p><?php echo $this->__('Your concert tickets including QR code and your invoice have been sent to your email address.') ?></p>
 
 <?php if ($this->getOrderId()):?>
-<?php if ($this->getCanViewOrder()) :?>
-
-    <?php echo $this->__('Nevertheless, you can directly download your invoice and tickets with QR code here') ?>:
-    <p>
-        <?php echo $this->__("<a target='_blank' href='%s'>Invoice %s</a>", $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId())) ?>
-    </p>
-<?php  else :?>
-    <p><?php echo $this->__('Invoice %s', $this->escapeHtml($this->getOrderId())) ?></p>
-<?php endif;?>
-    <p> - <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Tickets'); ?></a></p>
 <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
     <p>
-        <?php echo $this->__('Additionally you can click <a href="%s" onclick="this.target=\'_blank\'">here </a> to view your invoice.', $this->getPrintUrl()) ?>
+    <?php echo $this->__('Nevertheless, you can directly download your invoice and tickets with QR code here') ?>:
+    <?php echo $this->__("<a target='_blank' href='%s'>Invoice %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
+    - <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Tickets'); ?></a>
+    </p>
+    <p>
         <?php echo $this->getChildHtml() ?>
     </p>
 <?php endif;?>
