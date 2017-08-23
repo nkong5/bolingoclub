@@ -6076,6 +6076,10 @@ header#header:after,
 	color: white;
 }
 
+.paypal-express-review .data-table .item-options {
+	clear: both;
+}
+
 .checkout-onepage-success p {
 	padding: 4px 0;
 }
