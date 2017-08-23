@@ -34,20 +34,20 @@
 </div>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
-<p><?php echo $this->__('Your concert tickets including QR code and your invoice have been sent to your email address.') ?></p>
-
 <?php if ($this->getOrderId()):?>
 <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
     <p>
-    <?php echo $this->__('Nevertheless, you can directly download your invoice and tickets with QR code here') ?>:
-    <?php echo $this->__("<a target='_blank' href='%s'>Invoice %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
-    - <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Tickets'); ?></a>
+    <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Your Tickets'); ?></a>
+    |
+    <?php echo $this->__("<a target='_blank' href='%s'>Your Invoice No. %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
     </p>
     <p>
         <?php echo $this->getChildHtml() ?>
     </p>
 <?php endif;?>
 <?php endif;?>
+
+<p><?php echo $this->__('Your concert tickets including QR code and your invoice have also been sent to your email address.') ?></p>
 
 <?php if ($this->getAgreementRefId()): ?>
     <p><?php echo $this->__('Your billing agreement # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getAgreementUrl()), $this->escapeHtml($this->getAgreementRefId())))?></p>
