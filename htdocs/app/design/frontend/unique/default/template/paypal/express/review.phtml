@@ -159,8 +159,8 @@
     <?php endif ?>
 
     jQuery(document).ready(function() {
-        jQuery('#shipping_method option[value="flatrate_flatrate"]').attr('selected', true)
-
+        jQuery('#shipping_method option[value="flatrate_flatrate"]').attr('selected', true);
+        jQuery("#shipping_method_form").ajaxSubmit({url: jQuery("#shipping_method_form").attr('action'), type: 'post'})
 
         PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
             $('shipping_method'), $('shipping_method_form'), 'details-reload'
