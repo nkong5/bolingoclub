@@ -37,8 +37,8 @@
 <div>
 <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Your Tickets'); ?></a>
 <?php if ($this->getOrderId()):?>
-    
-    <?php if ($this->getCanPrintOrder()) :?>
+
+    <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
         |
         <?php echo $this->__("<a target='_blank' href='%s'>Your Invoice No. %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
     <?php else:?>
