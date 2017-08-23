@@ -34,18 +34,23 @@
 </div>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
+<div>
+<a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Your Tickets'); ?></a>
 <?php if ($this->getOrderId()):?>
-<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
-    <p>
-    <a href="<?php echo $link; ?>" target="_blank"><?php echo $this->__('Your Tickets'); ?></a>
-    |
-    <?php echo $this->__("<a target='_blank' href='%s'>Your Invoice No. %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
-    </p>
+    
+    <?php if ($this->getCanPrintOrder()) :?>
+        |
+        <?php echo $this->__("<a target='_blank' href='%s'>Your Invoice No. %s</a>", $this->getPrintUrl(), $this->escapeHtml($this->getOrderId())) ?>
+    <?php else:?>
+        |
+        <?php echo $this->__("Your Invoice No. is %s", $this->escapeHtml($this->getOrderId())) ?>
+    <?php endif;?>
+
     <p>
         <?php echo $this->getChildHtml() ?>
     </p>
 <?php endif;?>
-<?php endif;?>
+</div>
 
 <p><?php echo $this->__('Your concert tickets including QR code and your invoice have also been sent to your email address.') ?></p>
 

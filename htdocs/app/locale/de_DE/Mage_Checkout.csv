@@ -326,3 +326,4 @@
 "Your Tickets","Ihre Tickets"
 "Your", "Ihr"
 "<a target='_blank' href='%s'>Your Invoice No. %s</a>","<a target='_blank' href='%s'>Ihre Rechnung Nr. %s</a>"
+"Your Invoice No. is %s","Ihre Rechnung Nr. ist %s"
