@@ -161,13 +161,27 @@
     jQuery(document).ready(function() {
         jQuery('#shipping_method option[value="flatrate_flatrate"]').attr('selected', true);
 
+        jQuery("#shipping_method_form").submit(function(e) {
+
+            var url = jQuery("#shipping_method_form").attr('action'); // the script where you handle the form input.
+
+            jQuery.ajax({
+                type: "POST",
+                url: url,
+                data: jQuery("#shipping_method_form").serialize(), // serializes the form's elements.
+                success: function(data)
+                {
+                }
+            });
+
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+        });
+
         PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
             $('shipping_method'), $('shipping_method_form'), 'details-reload'
         );
         PayPalExpressAjax.addPleaseWait($('review-please-wait'));
-
-        jQuery("#shipping_method_form").ajaxSubmit({url: jQuery("#shipping_method_form").attr('action'), type: 'post'})
-
+        
     });
 
     //]]>
