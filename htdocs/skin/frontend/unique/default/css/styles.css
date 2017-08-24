@@ -4333,10 +4333,9 @@ aside .block-related .related-button a {
 .product-options {border-bottom: dotted 1px #ddd; padding-bottom: 1.5em; margin-bottom: 1.5em;}
 .product-options dl {width: 50%;}
 .product-shop > form  .product-options dl {width: 100%;}
-.product-view .product-shop .with-event .price-box > *:not(.price-info),
 .product-view .product-shop .with-event .add-to-cart .quantity-decrease,
 .product-view .product-shop .with-event .add-to-cart #qty,
-.product-view .product-shop .with-event .add-to-cart .quantity-increase{}
+.product-view .product-shop .with-event .add-to-cart .quantity-increase{display: none;}
 
 .product-options input,
 .product-options select,
