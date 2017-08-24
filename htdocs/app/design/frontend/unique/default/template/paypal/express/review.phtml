@@ -158,31 +158,25 @@
     }
     <?php endif ?>
 
-    jQuery(document).ready(function() {
-        jQuery('#shipping_method option[value="flatrate_flatrate"]').attr('selected', true);
+    var options = $('select#shipping_method');
+    var len = options.length;
+    for (var i = 0; i < len; i++) {
+        if (options[i].value == 'flatrate_flatrate') {
+            options[1].selected = true;
+        }
+    }
 
-        jQuery("#shipping_method_form").submit(function(e) {
-            
-            e.preventDefault(); // avoid to execute the actual submit of the form.
-
-            var url = jQuery("#shipping_method_form").attr('action'); // the script where you handle the form input.
-
-            jQuery.ajax({
-                type: "POST",
-                url: url,
-                data: jQuery("#shipping_method_form").serialize(), // serializes the form's elements.
-                success: function(data)
-                {
-                }
-            });
-        });
-
-
-        PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
-            $('shipping_method'), $('shipping_method_form'), 'details-reload'
-        );
-        PayPalExpressAjax.addPleaseWait($('review-please-wait'));
+    $('shipping_method_form').request({
+        onFailure: function() { .... },
+        onSuccess: function(t) {
+            console.log('a response' + t.responseText);
+        }
     });
+
+    PayPalExpressAjax = new OrderReviewController($('order_review_form'), $('review_button'),
+        $('shipping_method'), $('shipping_method_form'), 'details-reload'
+    );
+    PayPalExpressAjax.addPleaseWait($('review-please-wait'));
 
     //]]>
 </script>

@@ -815,3 +815,4 @@
 "There are no printable documents related to selected orders","Es gibt für die ausgewählten Bestellungen keinen zu druckenden Dokumente"
 "This order contains (%s) items and therefore cannot be edited through the admin interface at this time, if you wish to continue editing the (%s) items will be removed, the order will be cancelled and a new order will be placed","Diese Bestellung enthällt (%s) Artikel und daher können Sie zu diesem Zeitpunkt nicht über die Administration bearbeitet werden, wenn Sie wünschen die Bearbeitung fortzusetzen (%s) Artikel werden entfernt, die Bestellung wird storniert und eine neue erstellt"
 "Tracking Number(s)","Trackingnummer(n)"
+"Please specify a shipping method.","Bitte wählen Sie eine Versandart."
