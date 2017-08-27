@@ -255,6 +255,20 @@ class AW_Eventbooking_Model_Observer
         return $this;
     }
 	
+	
+	 public function salesOrderPaymentPay($observer)
+	{
+		 /**
+		 * @var $invoice Mage_Sales_Model_Order_Invoice
+		 * @var $paymentMethod Mage_Payment_Model_Method_Abstract
+		 */
+		$invoice       = $observer->getEvent()->getInvoice();
+		$paymentMethod = $observer->getEvent()->getPayment()->getMethodInstance();
+		if ($paymentMethod->getCode() == Mage_Paypal_Model_Config::METHOD_WPP_EXPRESS && !$invoice->getEmailSent()){
+			$invoice->sendEmail(TRUE);
+		}
+	}
+	
 	public function checkoutSaveOrder(Varien_Event_Observer $observer)
 	{
 		$order = $observer->getEvent()->getOrder();

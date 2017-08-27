@@ -56,7 +56,20 @@ if (!file_exists($mageFilename)) {
     exit;
 }
 
-if (file_exists($maintenanceFile) && substr($_SERVER['REMOTE_ADDR'], 0, 8) != '10.25.99') {
+$allowed = array(
+    '88.73.46.188',
+    '193.16.160.25',
+    '89.0.226.38',
+    '141.101.26.222',
+    '46.237.207.153'
+);
+
+$ip = $_SERVER['REMOTE_ADDR'];
+if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'], 2)[0];
+}
+
+if (file_exists($maintenanceFile) && !in_array($ip, $allowed)) {
     include_once dirname(__FILE__) . '/errors/503.php';
     exit;
 }
