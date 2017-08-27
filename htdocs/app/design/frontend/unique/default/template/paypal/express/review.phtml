@@ -113,7 +113,6 @@
         $('update_shipping_method_submit').hide();
     }
 
-    <?php if ($this->getUseAjax()):?>
     document.getElementById('shipping_method').value = 'flatrate_flatrate';
 
     new Ajax.Request($('shipping_method_form').action, {
@@ -125,6 +124,8 @@
         },
         onFailure: function() { console.log('Something went wrong...'); }
     });
+
+    <?php if ($this->getUseAjax()):?>
 
     OrderReviewController.prototype._submitOrder = function() {
         if (this._canSubmitOrder) {
