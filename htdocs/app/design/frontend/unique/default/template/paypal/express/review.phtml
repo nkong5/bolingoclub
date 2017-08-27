@@ -43,9 +43,6 @@
                                 <?php $currentRate = $this->getCurrentShippingRate(); ?>
                                 <fieldset>
                                     <select name="shipping_method" id="shipping_method" style="width:250px;" class="required-entry">
-                                        <?php if (!$currentRate):?>
-                                            <option value=""><?php echo $this->__('Please select a shipping method...') ?></option>
-                                        <?php endif;?>
                                         <?php foreach ($groups as $code => $rates):?>
                                             <optgroup label="<?php echo $this->escapeHtml($this->getCarrierName($code)) ?>" style="font-style:normal;">
                                                 <?php foreach ($rates as $rate):?>
