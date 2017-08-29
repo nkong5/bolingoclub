@@ -3126,6 +3126,11 @@
 	header#header .header-bottom-right .slider-banners {margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px;}
 	header#header .header-bottom-right .slider-banners > div {margin-right: -30px;}
 	header#header .slider-banners .banner-content h2 {width: 69%!important;}
+
+	header#header.header-2 .slider-with-banners .header-slider-holder {
+		display: none;
+	}
+
 	header#header .header-bottom-right .slider-with-banners .slider .item p {font-size: 11px; line-height: 16px; width: 85%;}
 	header#header .header-bottom-right .slider-with-banners .slider .item h4 {width: 65%;}
 	header#header.header-2 .header-slider-container .iosSlider .slider .item .slide-container p {
