@@ -3194,6 +3194,14 @@
 	header#header.header-2 .header-bottom {margin: 0; padding: 0;}
 }
 
+/* mobile */
+@media only screen and (max-width: 480px) {
+
+	header#header.header-2 .slider-with-banners .header-slider-holder {
+		display: none;
+	}
+}
+
 
 /* `Clear Floated Elements
 ----------------------------------------------------------------------------------------------------*/
